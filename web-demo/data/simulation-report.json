@@ -1,0 +1,2705 @@
+{
+  "schema_version": "simulation-0.4",
+  "source_demo": "demo-0.1",
+  "source_model": "2.1",
+  "seed": 20260927,
+  "runs_per_cohort": 10000,
+  "country_count": 109,
+  "cohorts": [
+    {
+      "name": "偏中间独立随机答卷",
+      "runs": 10000,
+      "top1_max_share": 0.2132,
+      "top1_effective_country_count": 12.381668395147582,
+      "top1_normalized_entropy": 0.6822831692753956,
+      "never_top1": [
+        "S30",
+        "F29",
+        "F38",
+        "B32",
+        "B39",
+        "R62",
+        "F98",
+        "F66",
+        "B54",
+        "H14",
+        "F28",
+        "Y90",
+        "J84",
+        "A21",
+        "H81",
+        "Z60",
+        "V24",
+        "Y92",
+        "Y01",
+        "Z99"
+      ],
+      "mean_top1_top2_score_gap": 1.2215342817889068,
+      "countries": [
+        {
+          "tag": "A95",
+          "name_zh": "瑟玛伦",
+          "top1_count": 2132,
+          "top1_share": 0.2132,
+          "top5_count": 5202,
+          "top5_share": 0.5202
+        },
+        {
+          "tag": "A82",
+          "name_zh": "纳普斯湾",
+          "top1_count": 1347,
+          "top1_share": 0.1347,
+          "top5_count": 3522,
+          "top5_share": 0.3522
+        },
+        {
+          "tag": "A16",
+          "name_zh": "葡萄酒港",
+          "top1_count": 614,
+          "top1_share": 0.0614,
+          "top5_count": 3009,
+          "top5_share": 0.3009
+        },
+        {
+          "tag": "H84",
+          "name_zh": "群山之鲨",
+          "top1_count": 491,
+          "top1_share": 0.0491,
+          "top5_count": 1835,
+          "top5_share": 0.1835
+        },
+        {
+          "tag": "Z03",
+          "name_zh": "贝拉凯尔",
+          "top1_count": 490,
+          "top1_share": 0.049,
+          "top5_count": 1488,
+          "top5_share": 0.1488
+        },
+        {
+          "tag": "S57",
+          "name_zh": "舍洛克门吉",
+          "top1_count": 349,
+          "top1_share": 0.0349,
+          "top5_count": 1617,
+          "top5_share": 0.1617
+        },
+        {
+          "tag": "L36",
+          "name_zh": "丰水城",
+          "top1_count": 311,
+          "top1_share": 0.0311,
+          "top5_count": 1496,
+          "top5_share": 0.1496
+        },
+        {
+          "tag": "Z18",
+          "name_zh": "冻喉",
+          "top1_count": 308,
+          "top1_share": 0.0308,
+          "top5_count": 1755,
+          "top5_share": 0.1755
+        },
+        {
+          "tag": "I19",
+          "name_zh": "独孤领地",
+          "top1_count": 266,
+          "top1_share": 0.0266,
+          "top5_count": 997,
+          "top5_share": 0.0997
+        },
+        {
+          "tag": "Z52",
+          "name_zh": "林木之墙",
+          "top1_count": 263,
+          "top1_share": 0.0263,
+          "top5_count": 1914,
+          "top5_share": 0.1914
+        },
+        {
+          "tag": "I04",
+          "name_zh": "羊爵之门",
+          "top1_count": 205,
+          "top1_share": 0.0205,
+          "top5_count": 1306,
+          "top5_share": 0.1306
+        },
+        {
+          "tag": "R36",
+          "name_zh": "湮度毗",
+          "top1_count": 187,
+          "top1_share": 0.0187,
+          "top5_count": 1149,
+          "top5_share": 0.1149
+        },
+        {
+          "tag": "B50",
+          "name_zh": "新夏尔",
+          "top1_count": 184,
+          "top1_share": 0.0184,
+          "top5_count": 994,
+          "top5_share": 0.0994
+        },
+        {
+          "tag": "L62",
+          "name_zh": "繁地坡",
+          "top1_count": 165,
+          "top1_share": 0.0165,
+          "top5_count": 787,
+          "top5_share": 0.0787
+        },
+        {
+          "tag": "A45",
+          "name_zh": "伊斯特拉洛尔",
+          "top1_count": 160,
+          "top1_share": 0.016,
+          "top5_count": 1294,
+          "top5_share": 0.1294
+        },
+        {
+          "tag": "I29",
+          "name_zh": "塞纳氏族",
+          "top1_count": 160,
+          "top1_share": 0.016,
+          "top5_count": 1291,
+          "top5_share": 0.1291
+        },
+        {
+          "tag": "A05",
+          "name_zh": "瑞维利亚",
+          "top1_count": 158,
+          "top1_share": 0.0158,
+          "top5_count": 1228,
+          "top5_share": 0.1228
+        },
+        {
+          "tag": "Y63",
+          "name_zh": "东乡堡",
+          "top1_count": 155,
+          "top1_share": 0.0155,
+          "top5_count": 1368,
+          "top5_share": 0.1368
+        },
+        {
+          "tag": "J53",
+          "name_zh": "伟大骑手",
+          "top1_count": 154,
+          "top1_share": 0.0154,
+          "top5_count": 916,
+          "top5_share": 0.0916
+        },
+        {
+          "tag": "A61",
+          "name_zh": "蓝鹿",
+          "top1_count": 151,
+          "top1_share": 0.0151,
+          "top5_count": 2140,
+          "top5_share": 0.214
+        },
+        {
+          "tag": "I28",
+          "name_zh": "德雷嫩氏族",
+          "top1_count": 126,
+          "top1_share": 0.0126,
+          "top5_count": 883,
+          "top5_share": 0.0883
+        },
+        {
+          "tag": "I02",
+          "name_zh": "冰霜锻炉",
+          "top1_count": 124,
+          "top1_share": 0.0124,
+          "top5_count": 881,
+          "top5_share": 0.0881
+        },
+        {
+          "tag": "I14",
+          "name_zh": "西山驿",
+          "top1_count": 124,
+          "top1_share": 0.0124,
+          "top5_count": 599,
+          "top5_share": 0.0599
+        },
+        {
+          "tag": "A55",
+          "name_zh": "梅尼博尔",
+          "top1_count": 94,
+          "top1_share": 0.0094,
+          "top5_count": 1684,
+          "top5_share": 0.1684
+        },
+        {
+          "tag": "Y58",
+          "name_zh": "洛德康",
+          "top1_count": 92,
+          "top1_share": 0.0092,
+          "top5_count": 993,
+          "top5_share": 0.0993
+        },
+        {
+          "tag": "B58",
+          "name_zh": "阿德尼卡",
+          "top1_count": 89,
+          "top1_share": 0.0089,
+          "top5_count": 425,
+          "top5_share": 0.0425
+        },
+        {
+          "tag": "F21",
+          "name_zh": "比尔萨坦舍斯",
+          "top1_count": 82,
+          "top1_share": 0.0082,
+          "top5_count": 499,
+          "top5_share": 0.0499
+        },
+        {
+          "tag": "Z15",
+          "name_zh": "乌尔维克斯滕",
+          "top1_count": 79,
+          "top1_share": 0.0079,
+          "top5_count": 509,
+          "top5_share": 0.0509
+        },
+        {
+          "tag": "L95",
+          "name_zh": "拉亚兹",
+          "top1_count": 70,
+          "top1_share": 0.007,
+          "top5_count": 573,
+          "top5_share": 0.0573
+        },
+        {
+          "tag": "A80",
+          "name_zh": "伊奥尚",
+          "top1_count": 68,
+          "top1_share": 0.0068,
+          "top5_count": 510,
+          "top5_share": 0.051
+        },
+        {
+          "tag": "Z38",
+          "name_zh": "科彼尔德桑",
+          "top1_count": 68,
+          "top1_share": 0.0068,
+          "top5_count": 296,
+          "top5_share": 0.0296
+        },
+        {
+          "tag": "Z51",
+          "name_zh": "绿原",
+          "top1_count": 62,
+          "top1_share": 0.0062,
+          "top5_count": 415,
+          "top5_share": 0.0415
+        },
+        {
+          "tag": "B24",
+          "name_zh": "混眼",
+          "top1_count": 61,
+          "top1_share": 0.0061,
+          "top5_count": 656,
+          "top5_share": 0.0656
+        },
+        {
+          "tag": "G38",
+          "name_zh": "蔚梓法德蔡",
+          "top1_count": 55,
+          "top1_share": 0.0055,
+          "top5_count": 413,
+          "top5_share": 0.0413
+        },
+        {
+          "tag": "Y15",
+          "name_zh": "北渡港",
+          "top1_count": 34,
+          "top1_share": 0.0034,
+          "top5_count": 299,
+          "top5_share": 0.0299
+        },
+        {
+          "tag": "Z22",
+          "name_zh": "凯尔马尔多",
+          "top1_count": 31,
+          "top1_share": 0.0031,
+          "top5_count": 356,
+          "top5_share": 0.0356
+        },
+        {
+          "tag": "Y85",
+          "name_zh": "金陵",
+          "top1_count": 31,
+          "top1_share": 0.0031,
+          "top5_count": 380,
+          "top5_share": 0.038
+        },
+        {
+          "tag": "B33",
+          "name_zh": "刀锋边区",
+          "top1_count": 29,
+          "top1_share": 0.0029,
+          "top5_count": 269,
+          "top5_share": 0.0269
+        },
+        {
+          "tag": "V25",
+          "name_zh": "呼斯巴勒",
+          "top1_count": 29,
+          "top1_share": 0.0029,
+          "top5_count": 165,
+          "top5_share": 0.0165
+        },
+        {
+          "tag": "I20",
+          "name_zh": "酒匠大厅",
+          "top1_count": 28,
+          "top1_share": 0.0028,
+          "top5_count": 199,
+          "top5_share": 0.0199
+        },
+        {
+          "tag": "L96",
+          "name_zh": "阿萨尔塔",
+          "top1_count": 26,
+          "top1_share": 0.0026,
+          "top5_count": 188,
+          "top5_share": 0.0188
+        },
+        {
+          "tag": "V05",
+          "name_zh": "苍畿",
+          "top1_count": 25,
+          "top1_share": 0.0025,
+          "top5_count": 246,
+          "top5_share": 0.0246
+        },
+        {
+          "tag": "R11",
+          "name_zh": "佉地悉罗补罗",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 120,
+          "top5_share": 0.012
+        },
+        {
+          "tag": "Y89",
+          "name_zh": "远西",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 179,
+          "top5_share": 0.0179
+        },
+        {
+          "tag": "A77",
+          "name_zh": "阿德蕾西娅骑士团",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 144,
+          "top5_share": 0.0144
+        },
+        {
+          "tag": "Y20",
+          "name_zh": "飞腾",
+          "top1_count": 20,
+          "top1_share": 0.002,
+          "top5_count": 188,
+          "top5_share": 0.0188
+        },
+        {
+          "tag": "I98",
+          "name_zh": "众氏族之国",
+          "top1_count": 19,
+          "top1_share": 0.0019,
+          "top5_count": 208,
+          "top5_share": 0.0208
+        },
+        {
+          "tag": "H91",
+          "name_zh": "大路勇士",
+          "top1_count": 18,
+          "top1_share": 0.0018,
+          "top5_count": 118,
+          "top5_share": 0.0118
+        },
+        {
+          "tag": "I12",
+          "name_zh": "琉璃领主之地",
+          "top1_count": 17,
+          "top1_share": 0.0017,
+          "top5_count": 198,
+          "top5_share": 0.0198
+        },
+        {
+          "tag": "H76",
+          "name_zh": "宝石边境",
+          "top1_count": 15,
+          "top1_share": 0.0015,
+          "top5_count": 177,
+          "top5_share": 0.0177
+        },
+        {
+          "tag": "Z17",
+          "name_zh": "欧泊特罗",
+          "top1_count": 11,
+          "top1_share": 0.0011,
+          "top5_count": 134,
+          "top5_share": 0.0134
+        },
+        {
+          "tag": "L55",
+          "name_zh": "娜蕾妮",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 111,
+          "top5_share": 0.0111
+        },
+        {
+          "tag": "F42",
+          "name_zh": "瓦拉姆哈尔",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 182,
+          "top5_share": 0.0182
+        },
+        {
+          "tag": "B37",
+          "name_zh": "罗吉尔利亚",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 102,
+          "top5_share": 0.0102
+        },
+        {
+          "tag": "B59",
+          "name_zh": "帕沙埃内",
+          "top1_count": 8,
+          "top1_share": 0.0008,
+          "top5_count": 37,
+          "top5_share": 0.0037
+        },
+        {
+          "tag": "F22",
+          "name_zh": "达塔克斯格丁姆",
+          "top1_count": 8,
+          "top1_share": 0.0008,
+          "top5_count": 74,
+          "top5_share": 0.0074
+        },
+        {
+          "tag": "F78",
+          "name_zh": "大氏族",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 60,
+          "top5_share": 0.006
+        },
+        {
+          "tag": "V26",
+          "name_zh": "宗克库勒格",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 72,
+          "top5_share": 0.0072
+        },
+        {
+          "tag": "R77",
+          "name_zh": "繁罗曷",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 69,
+          "top5_share": 0.0069
+        },
+        {
+          "tag": "F27",
+          "name_zh": "阿娅拉伦",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 70,
+          "top5_share": 0.007
+        },
+        {
+          "tag": "J33",
+          "name_zh": "湖地联邦",
+          "top1_count": 6,
+          "top1_share": 0.0006,
+          "top5_count": 35,
+          "top5_share": 0.0035
+        },
+        {
+          "tag": "S23",
+          "name_zh": "希索斯特亚莫克",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 74,
+          "top5_share": 0.0074
+        },
+        {
+          "tag": "A33",
+          "name_zh": "弗恩",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 62,
+          "top5_share": 0.0062
+        },
+        {
+          "tag": "F62",
+          "name_zh": "杜瓦尔卡尼",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 60,
+          "top5_share": 0.006
+        },
+        {
+          "tag": "F48",
+          "name_zh": "锡亚丹",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 67,
+          "top5_share": 0.0067
+        },
+        {
+          "tag": "G52",
+          "name_zh": "阿墨翁",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 36,
+          "top5_share": 0.0036
+        },
+        {
+          "tag": "I55",
+          "name_zh": "黑色牧群",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 51,
+          "top5_share": 0.0051
+        },
+        {
+          "tag": "Y91",
+          "name_zh": "努格丹察莱",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 17,
+          "top5_share": 0.0017
+        },
+        {
+          "tag": "I41",
+          "name_zh": "汁液砍刀",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 42,
+          "top5_share": 0.0042
+        },
+        {
+          "tag": "A59",
+          "name_zh": "科乌里亚",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 41,
+          "top5_share": 0.0041
+        },
+        {
+          "tag": "B02",
+          "name_zh": "科琳塔尔",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 25,
+          "top5_share": 0.0025
+        },
+        {
+          "tag": "I90",
+          "name_zh": "苍空之父",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 16,
+          "top5_share": 0.0016
+        },
+        {
+          "tag": "F46",
+          "name_zh": "贾达尔军团",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 30,
+          "top5_share": 0.003
+        },
+        {
+          "tag": "Y99",
+          "name_zh": "一侠",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 22,
+          "top5_share": 0.0022
+        },
+        {
+          "tag": "L68",
+          "name_zh": "卡拉斯克",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 15,
+          "top5_share": 0.0015
+        },
+        {
+          "tag": "B38",
+          "name_zh": "埃利坎德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 21,
+          "top5_share": 0.0021
+        },
+        {
+          "tag": "F50",
+          "name_zh": "穆兰",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 38,
+          "top5_share": 0.0038
+        },
+        {
+          "tag": "Z35",
+          "name_zh": "罗桑德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 41,
+          "top5_share": 0.0041
+        },
+        {
+          "tag": "F30",
+          "name_zh": "库马尔坎德",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 15,
+          "top5_share": 0.0015
+        },
+        {
+          "tag": "Y86",
+          "name_zh": "阿兹卡雷",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 29,
+          "top5_share": 0.0029
+        },
+        {
+          "tag": "Y26",
+          "name_zh": "隐泉",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 10,
+          "top5_share": 0.001
+        },
+        {
+          "tag": "Z88",
+          "name_zh": "万格海姆",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 58,
+          "top5_share": 0.0058
+        },
+        {
+          "tag": "G60",
+          "name_zh": "厄尔提坎",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 24,
+          "top5_share": 0.0024
+        },
+        {
+          "tag": "U39",
+          "name_zh": "奥伦瓦利亚姆",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 15,
+          "top5_share": 0.0015
+        },
+        {
+          "tag": "H83",
+          "name_zh": "影梦者",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 24,
+          "top5_share": 0.0024
+        },
+        {
+          "tag": "B48",
+          "name_zh": "渡鸦边区",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 27,
+          "top5_share": 0.0027
+        },
+        {
+          "tag": "H16",
+          "name_zh": "盖姆拉德库特",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 5,
+          "top5_share": 0.0005
+        },
+        {
+          "tag": "H73",
+          "name_zh": "穿刺飞龙",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 54,
+          "top5_share": 0.0054
+        },
+        {
+          "tag": "H67",
+          "name_zh": "雷赞坎德",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 16,
+          "top5_share": 0.0016
+        },
+        {
+          "tag": "S30",
+          "name_zh": "亡使眼镜蛇",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "F29",
+          "name_zh": "佐迦",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "F38",
+          "name_zh": "凤凰帝国",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "B32",
+          "name_zh": "卡斯塔诺",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "B39",
+          "name_zh": "双足飞龙之心",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "R62",
+          "name_zh": "命令秩序",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 3,
+          "top5_share": 0.0003
+        },
+        {
+          "tag": "F98",
+          "name_zh": "哈比伦",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "F66",
+          "name_zh": "哥诺勒哈特普",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "B54",
+          "name_zh": "埃斯蒂尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "H14",
+          "name_zh": "埃查德",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 16,
+          "top5_share": 0.0016
+        },
+        {
+          "tag": "F28",
+          "name_zh": "得露革得",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "Y90",
+          "name_zh": "楚伊斯塔呼勒",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "J84",
+          "name_zh": "泰琴德帝国",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "A21",
+          "name_zh": "维奈尔／埃纳尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "H81",
+          "name_zh": "蒙面屠夫",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 8,
+          "top5_share": 0.0008
+        },
+        {
+          "tag": "Z60",
+          "name_zh": "蹴桥",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "V24",
+          "name_zh": "阿夏格库勒格",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "Y92",
+          "name_zh": "隆伊格集",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "Y01",
+          "name_zh": "鬼居",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "Z99",
+          "name_zh": "黑暗领域",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        }
+      ]
+    },
+    {
+      "name": "五档均匀独立随机答卷",
+      "runs": 10000,
+      "top1_max_share": 0.1191,
+      "top1_effective_country_count": 19.915066225561226,
+      "top1_normalized_entropy": 0.7541581703437599,
+      "never_top1": [
+        "S30",
+        "B32",
+        "R62",
+        "F66",
+        "B54",
+        "F28",
+        "Y90",
+        "B02",
+        "A21",
+        "V24",
+        "Y92",
+        "Y01",
+        "Z99"
+      ],
+      "mean_top1_top2_score_gap": 1.152127657879751,
+      "countries": [
+        {
+          "tag": "A82",
+          "name_zh": "纳普斯湾",
+          "top1_count": 1191,
+          "top1_share": 0.1191,
+          "top5_count": 3610,
+          "top5_share": 0.361
+        },
+        {
+          "tag": "A95",
+          "name_zh": "瑟玛伦",
+          "top1_count": 1186,
+          "top1_share": 0.1186,
+          "top5_count": 3906,
+          "top5_share": 0.3906
+        },
+        {
+          "tag": "Z03",
+          "name_zh": "贝拉凯尔",
+          "top1_count": 851,
+          "top1_share": 0.0851,
+          "top5_count": 2019,
+          "top5_share": 0.2019
+        },
+        {
+          "tag": "A16",
+          "name_zh": "葡萄酒港",
+          "top1_count": 491,
+          "top1_share": 0.0491,
+          "top5_count": 2534,
+          "top5_share": 0.2534
+        },
+        {
+          "tag": "L36",
+          "name_zh": "丰水城",
+          "top1_count": 459,
+          "top1_share": 0.0459,
+          "top5_count": 1491,
+          "top5_share": 0.1491
+        },
+        {
+          "tag": "H84",
+          "name_zh": "群山之鲨",
+          "top1_count": 377,
+          "top1_share": 0.0377,
+          "top5_count": 1466,
+          "top5_share": 0.1466
+        },
+        {
+          "tag": "I19",
+          "name_zh": "独孤领地",
+          "top1_count": 313,
+          "top1_share": 0.0313,
+          "top5_count": 1056,
+          "top5_share": 0.1056
+        },
+        {
+          "tag": "S57",
+          "name_zh": "舍洛克门吉",
+          "top1_count": 297,
+          "top1_share": 0.0297,
+          "top5_count": 1258,
+          "top5_share": 0.1258
+        },
+        {
+          "tag": "Z18",
+          "name_zh": "冻喉",
+          "top1_count": 281,
+          "top1_share": 0.0281,
+          "top5_count": 1596,
+          "top5_share": 0.1596
+        },
+        {
+          "tag": "L62",
+          "name_zh": "繁地坡",
+          "top1_count": 279,
+          "top1_share": 0.0279,
+          "top5_count": 1044,
+          "top5_share": 0.1044
+        },
+        {
+          "tag": "J53",
+          "name_zh": "伟大骑手",
+          "top1_count": 266,
+          "top1_share": 0.0266,
+          "top5_count": 1127,
+          "top5_share": 0.1127
+        },
+        {
+          "tag": "A61",
+          "name_zh": "蓝鹿",
+          "top1_count": 218,
+          "top1_share": 0.0218,
+          "top5_count": 2429,
+          "top5_share": 0.2429
+        },
+        {
+          "tag": "R36",
+          "name_zh": "湮度毗",
+          "top1_count": 215,
+          "top1_share": 0.0215,
+          "top5_count": 1251,
+          "top5_share": 0.1251
+        },
+        {
+          "tag": "I14",
+          "name_zh": "西山驿",
+          "top1_count": 200,
+          "top1_share": 0.02,
+          "top5_count": 682,
+          "top5_share": 0.0682
+        },
+        {
+          "tag": "A45",
+          "name_zh": "伊斯特拉洛尔",
+          "top1_count": 195,
+          "top1_share": 0.0195,
+          "top5_count": 1162,
+          "top5_share": 0.1162
+        },
+        {
+          "tag": "I04",
+          "name_zh": "羊爵之门",
+          "top1_count": 173,
+          "top1_share": 0.0173,
+          "top5_count": 1004,
+          "top5_share": 0.1004
+        },
+        {
+          "tag": "B50",
+          "name_zh": "新夏尔",
+          "top1_count": 162,
+          "top1_share": 0.0162,
+          "top5_count": 876,
+          "top5_share": 0.0876
+        },
+        {
+          "tag": "Z52",
+          "name_zh": "林木之墙",
+          "top1_count": 161,
+          "top1_share": 0.0161,
+          "top5_count": 1083,
+          "top5_share": 0.1083
+        },
+        {
+          "tag": "Y58",
+          "name_zh": "洛德康",
+          "top1_count": 155,
+          "top1_share": 0.0155,
+          "top5_count": 1049,
+          "top5_share": 0.1049
+        },
+        {
+          "tag": "Z51",
+          "name_zh": "绿原",
+          "top1_count": 154,
+          "top1_share": 0.0154,
+          "top5_count": 705,
+          "top5_share": 0.0705
+        },
+        {
+          "tag": "A05",
+          "name_zh": "瑞维利亚",
+          "top1_count": 129,
+          "top1_share": 0.0129,
+          "top5_count": 936,
+          "top5_share": 0.0936
+        },
+        {
+          "tag": "Y63",
+          "name_zh": "东乡堡",
+          "top1_count": 125,
+          "top1_share": 0.0125,
+          "top5_count": 1206,
+          "top5_share": 0.1206
+        },
+        {
+          "tag": "Z38",
+          "name_zh": "科彼尔德桑",
+          "top1_count": 119,
+          "top1_share": 0.0119,
+          "top5_count": 461,
+          "top5_share": 0.0461
+        },
+        {
+          "tag": "I28",
+          "name_zh": "德雷嫩氏族",
+          "top1_count": 109,
+          "top1_share": 0.0109,
+          "top5_count": 656,
+          "top5_share": 0.0656
+        },
+        {
+          "tag": "A80",
+          "name_zh": "伊奥尚",
+          "top1_count": 102,
+          "top1_share": 0.0102,
+          "top5_count": 540,
+          "top5_share": 0.054
+        },
+        {
+          "tag": "B58",
+          "name_zh": "阿德尼卡",
+          "top1_count": 102,
+          "top1_share": 0.0102,
+          "top5_count": 477,
+          "top5_share": 0.0477
+        },
+        {
+          "tag": "F21",
+          "name_zh": "比尔萨坦舍斯",
+          "top1_count": 99,
+          "top1_share": 0.0099,
+          "top5_count": 542,
+          "top5_share": 0.0542
+        },
+        {
+          "tag": "I29",
+          "name_zh": "塞纳氏族",
+          "top1_count": 87,
+          "top1_share": 0.0087,
+          "top5_count": 755,
+          "top5_share": 0.0755
+        },
+        {
+          "tag": "I02",
+          "name_zh": "冰霜锻炉",
+          "top1_count": 84,
+          "top1_share": 0.0084,
+          "top5_count": 661,
+          "top5_share": 0.0661
+        },
+        {
+          "tag": "G38",
+          "name_zh": "蔚梓法德蔡",
+          "top1_count": 84,
+          "top1_share": 0.0084,
+          "top5_count": 499,
+          "top5_share": 0.0499
+        },
+        {
+          "tag": "Z15",
+          "name_zh": "乌尔维克斯滕",
+          "top1_count": 80,
+          "top1_share": 0.008,
+          "top5_count": 633,
+          "top5_share": 0.0633
+        },
+        {
+          "tag": "Y15",
+          "name_zh": "北渡港",
+          "top1_count": 71,
+          "top1_share": 0.0071,
+          "top5_count": 449,
+          "top5_share": 0.0449
+        },
+        {
+          "tag": "A55",
+          "name_zh": "梅尼博尔",
+          "top1_count": 70,
+          "top1_share": 0.007,
+          "top5_count": 1633,
+          "top5_share": 0.1633
+        },
+        {
+          "tag": "I98",
+          "name_zh": "众氏族之国",
+          "top1_count": 65,
+          "top1_share": 0.0065,
+          "top5_count": 365,
+          "top5_share": 0.0365
+        },
+        {
+          "tag": "B33",
+          "name_zh": "刀锋边区",
+          "top1_count": 63,
+          "top1_share": 0.0063,
+          "top5_count": 394,
+          "top5_share": 0.0394
+        },
+        {
+          "tag": "L95",
+          "name_zh": "拉亚兹",
+          "top1_count": 56,
+          "top1_share": 0.0056,
+          "top5_count": 481,
+          "top5_share": 0.0481
+        },
+        {
+          "tag": "Z22",
+          "name_zh": "凯尔马尔多",
+          "top1_count": 50,
+          "top1_share": 0.005,
+          "top5_count": 398,
+          "top5_share": 0.0398
+        },
+        {
+          "tag": "B24",
+          "name_zh": "混眼",
+          "top1_count": 47,
+          "top1_share": 0.0047,
+          "top5_count": 494,
+          "top5_share": 0.0494
+        },
+        {
+          "tag": "Y89",
+          "name_zh": "远西",
+          "top1_count": 44,
+          "top1_share": 0.0044,
+          "top5_count": 289,
+          "top5_share": 0.0289
+        },
+        {
+          "tag": "H91",
+          "name_zh": "大路勇士",
+          "top1_count": 41,
+          "top1_share": 0.0041,
+          "top5_count": 254,
+          "top5_share": 0.0254
+        },
+        {
+          "tag": "V25",
+          "name_zh": "呼斯巴勒",
+          "top1_count": 40,
+          "top1_share": 0.004,
+          "top5_count": 245,
+          "top5_share": 0.0245
+        },
+        {
+          "tag": "Y20",
+          "name_zh": "飞腾",
+          "top1_count": 39,
+          "top1_share": 0.0039,
+          "top5_count": 315,
+          "top5_share": 0.0315
+        },
+        {
+          "tag": "R77",
+          "name_zh": "繁罗曷",
+          "top1_count": 37,
+          "top1_share": 0.0037,
+          "top5_count": 285,
+          "top5_share": 0.0285
+        },
+        {
+          "tag": "V05",
+          "name_zh": "苍畿",
+          "top1_count": 36,
+          "top1_share": 0.0036,
+          "top5_count": 338,
+          "top5_share": 0.0338
+        },
+        {
+          "tag": "I20",
+          "name_zh": "酒匠大厅",
+          "top1_count": 29,
+          "top1_share": 0.0029,
+          "top5_count": 236,
+          "top5_share": 0.0236
+        },
+        {
+          "tag": "J33",
+          "name_zh": "湖地联邦",
+          "top1_count": 28,
+          "top1_share": 0.0028,
+          "top5_count": 162,
+          "top5_share": 0.0162
+        },
+        {
+          "tag": "B37",
+          "name_zh": "罗吉尔利亚",
+          "top1_count": 26,
+          "top1_share": 0.0026,
+          "top5_count": 155,
+          "top5_share": 0.0155
+        },
+        {
+          "tag": "L96",
+          "name_zh": "阿萨尔塔",
+          "top1_count": 26,
+          "top1_share": 0.0026,
+          "top5_count": 211,
+          "top5_share": 0.0211
+        },
+        {
+          "tag": "Z17",
+          "name_zh": "欧泊特罗",
+          "top1_count": 24,
+          "top1_share": 0.0024,
+          "top5_count": 206,
+          "top5_share": 0.0206
+        },
+        {
+          "tag": "V26",
+          "name_zh": "宗克库勒格",
+          "top1_count": 23,
+          "top1_share": 0.0023,
+          "top5_count": 140,
+          "top5_share": 0.014
+        },
+        {
+          "tag": "Y85",
+          "name_zh": "金陵",
+          "top1_count": 22,
+          "top1_share": 0.0022,
+          "top5_count": 316,
+          "top5_share": 0.0316
+        },
+        {
+          "tag": "A77",
+          "name_zh": "阿德蕾西娅骑士团",
+          "top1_count": 22,
+          "top1_share": 0.0022,
+          "top5_count": 138,
+          "top5_share": 0.0138
+        },
+        {
+          "tag": "H76",
+          "name_zh": "宝石边境",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 231,
+          "top5_share": 0.0231
+        },
+        {
+          "tag": "Y86",
+          "name_zh": "阿兹卡雷",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 137,
+          "top5_share": 0.0137
+        },
+        {
+          "tag": "Z88",
+          "name_zh": "万格海姆",
+          "top1_count": 18,
+          "top1_share": 0.0018,
+          "top5_count": 158,
+          "top5_share": 0.0158
+        },
+        {
+          "tag": "Y91",
+          "name_zh": "努格丹察莱",
+          "top1_count": 18,
+          "top1_share": 0.0018,
+          "top5_count": 50,
+          "top5_share": 0.005
+        },
+        {
+          "tag": "S23",
+          "name_zh": "希索斯特亚莫克",
+          "top1_count": 18,
+          "top1_share": 0.0018,
+          "top5_count": 174,
+          "top5_share": 0.0174
+        },
+        {
+          "tag": "F48",
+          "name_zh": "锡亚丹",
+          "top1_count": 18,
+          "top1_share": 0.0018,
+          "top5_count": 128,
+          "top5_share": 0.0128
+        },
+        {
+          "tag": "R11",
+          "name_zh": "佉地悉罗补罗",
+          "top1_count": 17,
+          "top1_share": 0.0017,
+          "top5_count": 144,
+          "top5_share": 0.0144
+        },
+        {
+          "tag": "F78",
+          "name_zh": "大氏族",
+          "top1_count": 17,
+          "top1_share": 0.0017,
+          "top5_count": 115,
+          "top5_share": 0.0115
+        },
+        {
+          "tag": "I12",
+          "name_zh": "琉璃领主之地",
+          "top1_count": 17,
+          "top1_share": 0.0017,
+          "top5_count": 269,
+          "top5_share": 0.0269
+        },
+        {
+          "tag": "A59",
+          "name_zh": "科乌里亚",
+          "top1_count": 17,
+          "top1_share": 0.0017,
+          "top5_count": 79,
+          "top5_share": 0.0079
+        },
+        {
+          "tag": "F62",
+          "name_zh": "杜瓦尔卡尼",
+          "top1_count": 16,
+          "top1_share": 0.0016,
+          "top5_count": 123,
+          "top5_share": 0.0123
+        },
+        {
+          "tag": "G52",
+          "name_zh": "阿墨翁",
+          "top1_count": 16,
+          "top1_share": 0.0016,
+          "top5_count": 106,
+          "top5_share": 0.0106
+        },
+        {
+          "tag": "L55",
+          "name_zh": "娜蕾妮",
+          "top1_count": 14,
+          "top1_share": 0.0014,
+          "top5_count": 144,
+          "top5_share": 0.0144
+        },
+        {
+          "tag": "F42",
+          "name_zh": "瓦拉姆哈尔",
+          "top1_count": 13,
+          "top1_share": 0.0013,
+          "top5_count": 230,
+          "top5_share": 0.023
+        },
+        {
+          "tag": "F46",
+          "name_zh": "贾达尔军团",
+          "top1_count": 13,
+          "top1_share": 0.0013,
+          "top5_count": 81,
+          "top5_share": 0.0081
+        },
+        {
+          "tag": "H83",
+          "name_zh": "影梦者",
+          "top1_count": 12,
+          "top1_share": 0.0012,
+          "top5_count": 74,
+          "top5_share": 0.0074
+        },
+        {
+          "tag": "I55",
+          "name_zh": "黑色牧群",
+          "top1_count": 12,
+          "top1_share": 0.0012,
+          "top5_count": 116,
+          "top5_share": 0.0116
+        },
+        {
+          "tag": "U39",
+          "name_zh": "奥伦瓦利亚姆",
+          "top1_count": 10,
+          "top1_share": 0.001,
+          "top5_count": 60,
+          "top5_share": 0.006
+        },
+        {
+          "tag": "A33",
+          "name_zh": "弗恩",
+          "top1_count": 10,
+          "top1_share": 0.001,
+          "top5_count": 89,
+          "top5_share": 0.0089
+        },
+        {
+          "tag": "L68",
+          "name_zh": "卡拉斯克",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 58,
+          "top5_share": 0.0058
+        },
+        {
+          "tag": "B59",
+          "name_zh": "帕沙埃内",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 75,
+          "top5_share": 0.0075
+        },
+        {
+          "tag": "J84",
+          "name_zh": "泰琴德帝国",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 38,
+          "top5_share": 0.0038
+        },
+        {
+          "tag": "H67",
+          "name_zh": "雷赞坎德",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 47,
+          "top5_share": 0.0047
+        },
+        {
+          "tag": "B38",
+          "name_zh": "埃利坎德",
+          "top1_count": 6,
+          "top1_share": 0.0006,
+          "top5_count": 44,
+          "top5_share": 0.0044
+        },
+        {
+          "tag": "F22",
+          "name_zh": "达塔克斯格丁姆",
+          "top1_count": 6,
+          "top1_share": 0.0006,
+          "top5_count": 118,
+          "top5_share": 0.0118
+        },
+        {
+          "tag": "F27",
+          "name_zh": "阿娅拉伦",
+          "top1_count": 6,
+          "top1_share": 0.0006,
+          "top5_count": 107,
+          "top5_share": 0.0107
+        },
+        {
+          "tag": "Y26",
+          "name_zh": "隐泉",
+          "top1_count": 6,
+          "top1_share": 0.0006,
+          "top5_count": 35,
+          "top5_share": 0.0035
+        },
+        {
+          "tag": "F98",
+          "name_zh": "哈比伦",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 13,
+          "top5_share": 0.0013
+        },
+        {
+          "tag": "H14",
+          "name_zh": "埃查德",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 56,
+          "top5_share": 0.0056
+        },
+        {
+          "tag": "I90",
+          "name_zh": "苍空之父",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 39,
+          "top5_share": 0.0039
+        },
+        {
+          "tag": "Z60",
+          "name_zh": "蹴桥",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 12,
+          "top5_share": 0.0012
+        },
+        {
+          "tag": "Y99",
+          "name_zh": "一侠",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 39,
+          "top5_share": 0.0039
+        },
+        {
+          "tag": "B39",
+          "name_zh": "双足飞龙之心",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 10,
+          "top5_share": 0.001
+        },
+        {
+          "tag": "F30",
+          "name_zh": "库马尔坎德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 17,
+          "top5_share": 0.0017
+        },
+        {
+          "tag": "I41",
+          "name_zh": "汁液砍刀",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 67,
+          "top5_share": 0.0067
+        },
+        {
+          "tag": "B48",
+          "name_zh": "渡鸦边区",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 29,
+          "top5_share": 0.0029
+        },
+        {
+          "tag": "H73",
+          "name_zh": "穿刺飞龙",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 128,
+          "top5_share": 0.0128
+        },
+        {
+          "tag": "Z35",
+          "name_zh": "罗桑德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 75,
+          "top5_share": 0.0075
+        },
+        {
+          "tag": "F38",
+          "name_zh": "凤凰帝国",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 17,
+          "top5_share": 0.0017
+        },
+        {
+          "tag": "G60",
+          "name_zh": "厄尔提坎",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 34,
+          "top5_share": 0.0034
+        },
+        {
+          "tag": "F29",
+          "name_zh": "佐迦",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 5,
+          "top5_share": 0.0005
+        },
+        {
+          "tag": "H16",
+          "name_zh": "盖姆拉德库特",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 21,
+          "top5_share": 0.0021
+        },
+        {
+          "tag": "F50",
+          "name_zh": "穆兰",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 54,
+          "top5_share": 0.0054
+        },
+        {
+          "tag": "H81",
+          "name_zh": "蒙面屠夫",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 31,
+          "top5_share": 0.0031
+        },
+        {
+          "tag": "S30",
+          "name_zh": "亡使眼镜蛇",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "B32",
+          "name_zh": "卡斯塔诺",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 7,
+          "top5_share": 0.0007
+        },
+        {
+          "tag": "R62",
+          "name_zh": "命令秩序",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 25,
+          "top5_share": 0.0025
+        },
+        {
+          "tag": "F66",
+          "name_zh": "哥诺勒哈特普",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 10,
+          "top5_share": 0.001
+        },
+        {
+          "tag": "B54",
+          "name_zh": "埃斯蒂尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "F28",
+          "name_zh": "得露革得",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "Y90",
+          "name_zh": "楚伊斯塔呼勒",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 14,
+          "top5_share": 0.0014
+        },
+        {
+          "tag": "B02",
+          "name_zh": "科琳塔尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 22,
+          "top5_share": 0.0022
+        },
+        {
+          "tag": "A21",
+          "name_zh": "维奈尔／埃纳尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 5,
+          "top5_share": 0.0005
+        },
+        {
+          "tag": "V24",
+          "name_zh": "阿夏格库勒格",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "Y92",
+          "name_zh": "隆伊格集",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "Y01",
+          "name_zh": "鬼居",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 4,
+          "top5_share": 0.0004
+        },
+        {
+          "tag": "Z99",
+          "name_zh": "黑暗领域",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        }
+      ]
+    },
+    {
+      "name": "相关潜在人格答卷",
+      "runs": 10000,
+      "top1_max_share": 0.1252,
+      "top1_effective_country_count": 18.835087507816564,
+      "top1_normalized_entropy": 0.7435423092294376,
+      "never_top1": [
+        "S30",
+        "F29",
+        "B32",
+        "B54",
+        "Y90",
+        "A21",
+        "V24",
+        "Y92",
+        "Z99"
+      ],
+      "mean_top1_top2_score_gap": 1.1749820126370716,
+      "countries": [
+        {
+          "tag": "A82",
+          "name_zh": "纳普斯湾",
+          "top1_count": 1252,
+          "top1_share": 0.1252,
+          "top5_count": 3624,
+          "top5_share": 0.3624
+        },
+        {
+          "tag": "A95",
+          "name_zh": "瑟玛伦",
+          "top1_count": 1214,
+          "top1_share": 0.1214,
+          "top5_count": 4157,
+          "top5_share": 0.4157
+        },
+        {
+          "tag": "Z03",
+          "name_zh": "贝拉凯尔",
+          "top1_count": 841,
+          "top1_share": 0.0841,
+          "top5_count": 2101,
+          "top5_share": 0.2101
+        },
+        {
+          "tag": "A16",
+          "name_zh": "葡萄酒港",
+          "top1_count": 476,
+          "top1_share": 0.0476,
+          "top5_count": 2491,
+          "top5_share": 0.2491
+        },
+        {
+          "tag": "L36",
+          "name_zh": "丰水城",
+          "top1_count": 471,
+          "top1_share": 0.0471,
+          "top5_count": 1629,
+          "top5_share": 0.1629
+        },
+        {
+          "tag": "H84",
+          "name_zh": "群山之鲨",
+          "top1_count": 467,
+          "top1_share": 0.0467,
+          "top5_count": 1657,
+          "top5_share": 0.1657
+        },
+        {
+          "tag": "I19",
+          "name_zh": "独孤领地",
+          "top1_count": 394,
+          "top1_share": 0.0394,
+          "top5_count": 1121,
+          "top5_share": 0.1121
+        },
+        {
+          "tag": "L62",
+          "name_zh": "繁地坡",
+          "top1_count": 325,
+          "top1_share": 0.0325,
+          "top5_count": 1078,
+          "top5_share": 0.1078
+        },
+        {
+          "tag": "A61",
+          "name_zh": "蓝鹿",
+          "top1_count": 292,
+          "top1_share": 0.0292,
+          "top5_count": 2476,
+          "top5_share": 0.2476
+        },
+        {
+          "tag": "J53",
+          "name_zh": "伟大骑手",
+          "top1_count": 284,
+          "top1_share": 0.0284,
+          "top5_count": 1164,
+          "top5_share": 0.1164
+        },
+        {
+          "tag": "Z18",
+          "name_zh": "冻喉",
+          "top1_count": 248,
+          "top1_share": 0.0248,
+          "top5_count": 1379,
+          "top5_share": 0.1379
+        },
+        {
+          "tag": "S57",
+          "name_zh": "舍洛克门吉",
+          "top1_count": 245,
+          "top1_share": 0.0245,
+          "top5_count": 1275,
+          "top5_share": 0.1275
+        },
+        {
+          "tag": "Y63",
+          "name_zh": "东乡堡",
+          "top1_count": 199,
+          "top1_share": 0.0199,
+          "top5_count": 1481,
+          "top5_share": 0.1481
+        },
+        {
+          "tag": "Y58",
+          "name_zh": "洛德康",
+          "top1_count": 187,
+          "top1_share": 0.0187,
+          "top5_count": 1059,
+          "top5_share": 0.1059
+        },
+        {
+          "tag": "R36",
+          "name_zh": "湮度毗",
+          "top1_count": 164,
+          "top1_share": 0.0164,
+          "top5_count": 1171,
+          "top5_share": 0.1171
+        },
+        {
+          "tag": "Z52",
+          "name_zh": "林木之墙",
+          "top1_count": 155,
+          "top1_share": 0.0155,
+          "top5_count": 1176,
+          "top5_share": 0.1176
+        },
+        {
+          "tag": "I04",
+          "name_zh": "羊爵之门",
+          "top1_count": 154,
+          "top1_share": 0.0154,
+          "top5_count": 955,
+          "top5_share": 0.0955
+        },
+        {
+          "tag": "I14",
+          "name_zh": "西山驿",
+          "top1_count": 130,
+          "top1_share": 0.013,
+          "top5_count": 510,
+          "top5_share": 0.051
+        },
+        {
+          "tag": "Y15",
+          "name_zh": "北渡港",
+          "top1_count": 129,
+          "top1_share": 0.0129,
+          "top5_count": 641,
+          "top5_share": 0.0641
+        },
+        {
+          "tag": "Z51",
+          "name_zh": "绿原",
+          "top1_count": 127,
+          "top1_share": 0.0127,
+          "top5_count": 687,
+          "top5_share": 0.0687
+        },
+        {
+          "tag": "A45",
+          "name_zh": "伊斯特拉洛尔",
+          "top1_count": 119,
+          "top1_share": 0.0119,
+          "top5_count": 913,
+          "top5_share": 0.0913
+        },
+        {
+          "tag": "F21",
+          "name_zh": "比尔萨坦舍斯",
+          "top1_count": 119,
+          "top1_share": 0.0119,
+          "top5_count": 519,
+          "top5_share": 0.0519
+        },
+        {
+          "tag": "I28",
+          "name_zh": "德雷嫩氏族",
+          "top1_count": 111,
+          "top1_share": 0.0111,
+          "top5_count": 717,
+          "top5_share": 0.0717
+        },
+        {
+          "tag": "B50",
+          "name_zh": "新夏尔",
+          "top1_count": 107,
+          "top1_share": 0.0107,
+          "top5_count": 695,
+          "top5_share": 0.0695
+        },
+        {
+          "tag": "B58",
+          "name_zh": "阿德尼卡",
+          "top1_count": 100,
+          "top1_share": 0.01,
+          "top5_count": 450,
+          "top5_share": 0.045
+        },
+        {
+          "tag": "L95",
+          "name_zh": "拉亚兹",
+          "top1_count": 98,
+          "top1_share": 0.0098,
+          "top5_count": 656,
+          "top5_share": 0.0656
+        },
+        {
+          "tag": "B33",
+          "name_zh": "刀锋边区",
+          "top1_count": 92,
+          "top1_share": 0.0092,
+          "top5_count": 540,
+          "top5_share": 0.054
+        },
+        {
+          "tag": "Z15",
+          "name_zh": "乌尔维克斯滕",
+          "top1_count": 91,
+          "top1_share": 0.0091,
+          "top5_count": 727,
+          "top5_share": 0.0727
+        },
+        {
+          "tag": "A05",
+          "name_zh": "瑞维利亚",
+          "top1_count": 78,
+          "top1_share": 0.0078,
+          "top5_count": 788,
+          "top5_share": 0.0788
+        },
+        {
+          "tag": "A55",
+          "name_zh": "梅尼博尔",
+          "top1_count": 75,
+          "top1_share": 0.0075,
+          "top5_count": 1747,
+          "top5_share": 0.1747
+        },
+        {
+          "tag": "A80",
+          "name_zh": "伊奥尚",
+          "top1_count": 74,
+          "top1_share": 0.0074,
+          "top5_count": 477,
+          "top5_share": 0.0477
+        },
+        {
+          "tag": "G38",
+          "name_zh": "蔚梓法德蔡",
+          "top1_count": 71,
+          "top1_share": 0.0071,
+          "top5_count": 507,
+          "top5_share": 0.0507
+        },
+        {
+          "tag": "I02",
+          "name_zh": "冰霜锻炉",
+          "top1_count": 64,
+          "top1_share": 0.0064,
+          "top5_count": 548,
+          "top5_share": 0.0548
+        },
+        {
+          "tag": "I29",
+          "name_zh": "塞纳氏族",
+          "top1_count": 60,
+          "top1_share": 0.006,
+          "top5_count": 733,
+          "top5_share": 0.0733
+        },
+        {
+          "tag": "Z38",
+          "name_zh": "科彼尔德桑",
+          "top1_count": 56,
+          "top1_share": 0.0056,
+          "top5_count": 285,
+          "top5_share": 0.0285
+        },
+        {
+          "tag": "J33",
+          "name_zh": "湖地联邦",
+          "top1_count": 54,
+          "top1_share": 0.0054,
+          "top5_count": 239,
+          "top5_share": 0.0239
+        },
+        {
+          "tag": "B24",
+          "name_zh": "混眼",
+          "top1_count": 53,
+          "top1_share": 0.0053,
+          "top5_count": 495,
+          "top5_share": 0.0495
+        },
+        {
+          "tag": "R77",
+          "name_zh": "繁罗曷",
+          "top1_count": 43,
+          "top1_share": 0.0043,
+          "top5_count": 269,
+          "top5_share": 0.0269
+        },
+        {
+          "tag": "H91",
+          "name_zh": "大路勇士",
+          "top1_count": 40,
+          "top1_share": 0.004,
+          "top5_count": 274,
+          "top5_share": 0.0274
+        },
+        {
+          "tag": "I20",
+          "name_zh": "酒匠大厅",
+          "top1_count": 40,
+          "top1_share": 0.004,
+          "top5_count": 295,
+          "top5_share": 0.0295
+        },
+        {
+          "tag": "L96",
+          "name_zh": "阿萨尔塔",
+          "top1_count": 40,
+          "top1_share": 0.004,
+          "top5_count": 318,
+          "top5_share": 0.0318
+        },
+        {
+          "tag": "Z22",
+          "name_zh": "凯尔马尔多",
+          "top1_count": 38,
+          "top1_share": 0.0038,
+          "top5_count": 393,
+          "top5_share": 0.0393
+        },
+        {
+          "tag": "Y89",
+          "name_zh": "远西",
+          "top1_count": 35,
+          "top1_share": 0.0035,
+          "top5_count": 310,
+          "top5_share": 0.031
+        },
+        {
+          "tag": "I98",
+          "name_zh": "众氏族之国",
+          "top1_count": 33,
+          "top1_share": 0.0033,
+          "top5_count": 262,
+          "top5_share": 0.0262
+        },
+        {
+          "tag": "V25",
+          "name_zh": "呼斯巴勒",
+          "top1_count": 31,
+          "top1_share": 0.0031,
+          "top5_count": 133,
+          "top5_share": 0.0133
+        },
+        {
+          "tag": "H76",
+          "name_zh": "宝石边境",
+          "top1_count": 30,
+          "top1_share": 0.003,
+          "top5_count": 216,
+          "top5_share": 0.0216
+        },
+        {
+          "tag": "A59",
+          "name_zh": "科乌里亚",
+          "top1_count": 28,
+          "top1_share": 0.0028,
+          "top5_count": 173,
+          "top5_share": 0.0173
+        },
+        {
+          "tag": "Y20",
+          "name_zh": "飞腾",
+          "top1_count": 25,
+          "top1_share": 0.0025,
+          "top5_count": 189,
+          "top5_share": 0.0189
+        },
+        {
+          "tag": "L55",
+          "name_zh": "娜蕾妮",
+          "top1_count": 23,
+          "top1_share": 0.0023,
+          "top5_count": 191,
+          "top5_share": 0.0191
+        },
+        {
+          "tag": "V05",
+          "name_zh": "苍畿",
+          "top1_count": 23,
+          "top1_share": 0.0023,
+          "top5_count": 219,
+          "top5_share": 0.0219
+        },
+        {
+          "tag": "F46",
+          "name_zh": "贾达尔军团",
+          "top1_count": 22,
+          "top1_share": 0.0022,
+          "top5_count": 84,
+          "top5_share": 0.0084
+        },
+        {
+          "tag": "F62",
+          "name_zh": "杜瓦尔卡尼",
+          "top1_count": 21,
+          "top1_share": 0.0021,
+          "top5_count": 137,
+          "top5_share": 0.0137
+        },
+        {
+          "tag": "Z88",
+          "name_zh": "万格海姆",
+          "top1_count": 20,
+          "top1_share": 0.002,
+          "top5_count": 161,
+          "top5_share": 0.0161
+        },
+        {
+          "tag": "F78",
+          "name_zh": "大氏族",
+          "top1_count": 20,
+          "top1_share": 0.002,
+          "top5_count": 140,
+          "top5_share": 0.014
+        },
+        {
+          "tag": "Z17",
+          "name_zh": "欧泊特罗",
+          "top1_count": 19,
+          "top1_share": 0.0019,
+          "top5_count": 176,
+          "top5_share": 0.0176
+        },
+        {
+          "tag": "I12",
+          "name_zh": "琉璃领主之地",
+          "top1_count": 16,
+          "top1_share": 0.0016,
+          "top5_count": 144,
+          "top5_share": 0.0144
+        },
+        {
+          "tag": "Y85",
+          "name_zh": "金陵",
+          "top1_count": 16,
+          "top1_share": 0.0016,
+          "top5_count": 265,
+          "top5_share": 0.0265
+        },
+        {
+          "tag": "V26",
+          "name_zh": "宗克库勒格",
+          "top1_count": 15,
+          "top1_share": 0.0015,
+          "top5_count": 102,
+          "top5_share": 0.0102
+        },
+        {
+          "tag": "S23",
+          "name_zh": "希索斯特亚莫克",
+          "top1_count": 15,
+          "top1_share": 0.0015,
+          "top5_count": 160,
+          "top5_share": 0.016
+        },
+        {
+          "tag": "B37",
+          "name_zh": "罗吉尔利亚",
+          "top1_count": 15,
+          "top1_share": 0.0015,
+          "top5_count": 106,
+          "top5_share": 0.0106
+        },
+        {
+          "tag": "Y91",
+          "name_zh": "努格丹察莱",
+          "top1_count": 13,
+          "top1_share": 0.0013,
+          "top5_count": 51,
+          "top5_share": 0.0051
+        },
+        {
+          "tag": "F48",
+          "name_zh": "锡亚丹",
+          "top1_count": 12,
+          "top1_share": 0.0012,
+          "top5_count": 142,
+          "top5_share": 0.0142
+        },
+        {
+          "tag": "A77",
+          "name_zh": "阿德蕾西娅骑士团",
+          "top1_count": 12,
+          "top1_share": 0.0012,
+          "top5_count": 83,
+          "top5_share": 0.0083
+        },
+        {
+          "tag": "I55",
+          "name_zh": "黑色牧群",
+          "top1_count": 12,
+          "top1_share": 0.0012,
+          "top5_count": 127,
+          "top5_share": 0.0127
+        },
+        {
+          "tag": "F27",
+          "name_zh": "阿娅拉伦",
+          "top1_count": 11,
+          "top1_share": 0.0011,
+          "top5_count": 122,
+          "top5_share": 0.0122
+        },
+        {
+          "tag": "H83",
+          "name_zh": "影梦者",
+          "top1_count": 10,
+          "top1_share": 0.001,
+          "top5_count": 109,
+          "top5_share": 0.0109
+        },
+        {
+          "tag": "F22",
+          "name_zh": "达塔克斯格丁姆",
+          "top1_count": 10,
+          "top1_share": 0.001,
+          "top5_count": 124,
+          "top5_share": 0.0124
+        },
+        {
+          "tag": "H14",
+          "name_zh": "埃查德",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 64,
+          "top5_share": 0.0064
+        },
+        {
+          "tag": "I41",
+          "name_zh": "汁液砍刀",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 132,
+          "top5_share": 0.0132
+        },
+        {
+          "tag": "Y86",
+          "name_zh": "阿兹卡雷",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 85,
+          "top5_share": 0.0085
+        },
+        {
+          "tag": "G52",
+          "name_zh": "阿墨翁",
+          "top1_count": 9,
+          "top1_share": 0.0009,
+          "top5_count": 70,
+          "top5_share": 0.007
+        },
+        {
+          "tag": "L68",
+          "name_zh": "卡拉斯克",
+          "top1_count": 8,
+          "top1_share": 0.0008,
+          "top5_count": 72,
+          "top5_share": 0.0072
+        },
+        {
+          "tag": "H73",
+          "name_zh": "穿刺飞龙",
+          "top1_count": 8,
+          "top1_share": 0.0008,
+          "top5_count": 197,
+          "top5_share": 0.0197
+        },
+        {
+          "tag": "R11",
+          "name_zh": "佉地悉罗补罗",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 88,
+          "top5_share": 0.0088
+        },
+        {
+          "tag": "F42",
+          "name_zh": "瓦拉姆哈尔",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 199,
+          "top5_share": 0.0199
+        },
+        {
+          "tag": "Z35",
+          "name_zh": "罗桑德",
+          "top1_count": 7,
+          "top1_share": 0.0007,
+          "top5_count": 102,
+          "top5_share": 0.0102
+        },
+        {
+          "tag": "G60",
+          "name_zh": "厄尔提坎",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 39,
+          "top5_share": 0.0039
+        },
+        {
+          "tag": "R62",
+          "name_zh": "命令秩序",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 16,
+          "top5_share": 0.0016
+        },
+        {
+          "tag": "B59",
+          "name_zh": "帕沙埃内",
+          "top1_count": 5,
+          "top1_share": 0.0005,
+          "top5_count": 44,
+          "top5_share": 0.0044
+        },
+        {
+          "tag": "Y99",
+          "name_zh": "一侠",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 36,
+          "top5_share": 0.0036
+        },
+        {
+          "tag": "A33",
+          "name_zh": "弗恩",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 71,
+          "top5_share": 0.0071
+        },
+        {
+          "tag": "J84",
+          "name_zh": "泰琴德帝国",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 29,
+          "top5_share": 0.0029
+        },
+        {
+          "tag": "I90",
+          "name_zh": "苍空之父",
+          "top1_count": 4,
+          "top1_share": 0.0004,
+          "top5_count": 46,
+          "top5_share": 0.0046
+        },
+        {
+          "tag": "U39",
+          "name_zh": "奥伦瓦利亚姆",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 27,
+          "top5_share": 0.0027
+        },
+        {
+          "tag": "F30",
+          "name_zh": "库马尔坎德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 19,
+          "top5_share": 0.0019
+        },
+        {
+          "tag": "H16",
+          "name_zh": "盖姆拉德库特",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 31,
+          "top5_share": 0.0031
+        },
+        {
+          "tag": "F50",
+          "name_zh": "穆兰",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 25,
+          "top5_share": 0.0025
+        },
+        {
+          "tag": "Z60",
+          "name_zh": "蹴桥",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 11,
+          "top5_share": 0.0011
+        },
+        {
+          "tag": "H67",
+          "name_zh": "雷赞坎德",
+          "top1_count": 3,
+          "top1_share": 0.0003,
+          "top5_count": 43,
+          "top5_share": 0.0043
+        },
+        {
+          "tag": "F38",
+          "name_zh": "凤凰帝国",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 17,
+          "top5_share": 0.0017
+        },
+        {
+          "tag": "B48",
+          "name_zh": "渡鸦边区",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 26,
+          "top5_share": 0.0026
+        },
+        {
+          "tag": "B02",
+          "name_zh": "科琳塔尔",
+          "top1_count": 2,
+          "top1_share": 0.0002,
+          "top5_count": 23,
+          "top5_share": 0.0023
+        },
+        {
+          "tag": "B39",
+          "name_zh": "双足飞龙之心",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 13,
+          "top5_share": 0.0013
+        },
+        {
+          "tag": "F98",
+          "name_zh": "哈比伦",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 7,
+          "top5_share": 0.0007
+        },
+        {
+          "tag": "F66",
+          "name_zh": "哥诺勒哈特普",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 10,
+          "top5_share": 0.001
+        },
+        {
+          "tag": "F28",
+          "name_zh": "得露革得",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 6,
+          "top5_share": 0.0006
+        },
+        {
+          "tag": "B38",
+          "name_zh": "埃利坎德",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 23,
+          "top5_share": 0.0023
+        },
+        {
+          "tag": "H81",
+          "name_zh": "蒙面屠夫",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 31,
+          "top5_share": 0.0031
+        },
+        {
+          "tag": "Y26",
+          "name_zh": "隐泉",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 22,
+          "top5_share": 0.0022
+        },
+        {
+          "tag": "Y01",
+          "name_zh": "鬼居",
+          "top1_count": 1,
+          "top1_share": 0.0001,
+          "top5_count": 11,
+          "top5_share": 0.0011
+        },
+        {
+          "tag": "S30",
+          "name_zh": "亡使眼镜蛇",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "F29",
+          "name_zh": "佐迦",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "B32",
+          "name_zh": "卡斯塔诺",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "B54",
+          "name_zh": "埃斯蒂尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 2,
+          "top5_share": 0.0002
+        },
+        {
+          "tag": "Y90",
+          "name_zh": "楚伊斯塔呼勒",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 7,
+          "top5_share": 0.0007
+        },
+        {
+          "tag": "A21",
+          "name_zh": "维奈尔／埃纳尔",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 9,
+          "top5_share": 0.0009
+        },
+        {
+          "tag": "V24",
+          "name_zh": "阿夏格库勒格",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 1,
+          "top5_share": 0.0001
+        },
+        {
+          "tag": "Y92",
+          "name_zh": "隆伊格集",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        },
+        {
+          "tag": "Z99",
+          "name_zh": "黑暗领域",
+          "top1_count": 0,
+          "top1_share": 0.0,
+          "top5_count": 0,
+          "top5_share": 0.0
+        }
+      ]
+    }
+  ],
+  "algorithm_version": "0.3-salience"
+}

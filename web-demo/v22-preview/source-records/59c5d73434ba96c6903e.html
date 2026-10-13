@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/佐迦-F29.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 佐迦（Zokka，F29）证据页
+
+核验日：2026-09-16  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：Tag、中文名、1444身份、任务归属和核心风格已确认；英文离线Wiki已补充沙牙族群、佐迦—特鲁克特联盟及官方设定结局。
+
+## 身份与开局历史
+
+- Tag：`common/country_tags/anb_countries.txt:211`，F29指向`countries/Zokka.txt`。
+- 当前中文名：汉化`localisation/anb_countries_l_english.yml:332-333`的精确键经项目解码器读取为“佐迦”；评分表“佐伽”是旧译／异写，不覆盖当前显示名。
+- 1444起始国：`common/bookmarks/d_bulwar.txt:3-16`列出`F29 #Zokka`。
+- 历史与统治者：`history/countries/F29 - Zokka.txt:1-54`。确认部落制、沙牙豺狼人、哈佐布秘教、首都571；佐迦1435年在位，王朝头衔`Devourer-of-Suns`，1/3/5，勇猛战士、军事巫师，历史魔法等级4。
+- 开局战争：`events/Flavour_ZokkaJaddariWar.txt:4-333`。确认F29与F46的决定性冲突、双方统治者死亡结果，以及玩家失败后从佐迦切换到图鲁克特F28。
+
+## 任务与核心机制
+
+- 任务文件：`missions/Zokka_Missions.txt`，当前文件58个带`position`的F29直接任务；不同阶段会按国家旗标切换显示任务组。
+- 形成关系：未发现佐迦任务或专属事件使用`change_tag`建立后继国。`events/Flavour_Zokka_F29.txt:2397-2411`使用`override_country_name = SUNKILLER_XHAZ`，只是改名为“弑日者哈兹”，Tag仍为F29。
+- 国家理念：`common/ideas/anb_country_ideas.txt:22925-22961`；重点包括步兵冲击、属国独立倾向、省份战争分数、劫掠、人力恢复、围城和文化转换。
+- 吞噬统治者：`common/peace_treaties/anb_eat_the_ruler.txt:1-81`；控制敌国首都后可使用特殊和平条约，使敌国释放可释放国家与属国。汉化`Flavour_Zokka_F29_l_english.yml:707-708`确认按被吞噬统治者能力获得君主点。
+- 双阶层：任务`Zokka_Missions.txt:934-1029`及汉化`:612-618,721`。学者奴隶强调整合、保存、发现；恶魔之仆强调毁灭、献祭与传统；宠信会影响后期奖励。
+- 宗教与终局：任务代表节点见`:1224-1410,1717-1959`；`events/Flavour_Zokka_F29.txt:2335-2522`确认吞月、弑日者改名和逼近太阳。旧DOCX镜像`已实装任务树存档.md:5561-5581`仅用于定位总体叙事。
+
+## 本地离线Wiki
+
+- [Zokka](https://anbennar.fandom.com/wiki/Zokka)：英文离线页`page_id=917`、`revision_id=32372`；已读取`anbennar-offline/output/chunks/en/md/917/003-01-Zokka.md`与`anbennar-offline/output/chunks/en/md/917/015-01-Succeeded by.md`。页面确认其纹章为吞噬血红太阳的豺狼人头骨，并在官方设定时间线中由贾达尔势力继承。
+- [Tluukt](https://anbennar.fandom.com/wiki/Tluukt)：英文离线页`page_id=916`、`revision_id=21322`；已读取`anbennar-offline/output/chunks/en/md/916/018-01-Alliance with Zokka.md`。页面记载佐迦势力从远萨拉哈德延伸到上苏兰、向数城收贡；1443年镇压受阿兹卡—苏尔与萨雷扬德支持的人类叛乱，随后与特鲁克特约定瓜分苏兰。官方设定中佐迦于1445年向贾达尔军团开战，在“太阳眷顾之战”被贾达尔亲手杀死，部众随后解体、逃往特鲁克特或被贾德教同化。
+- [Sandfang Gnoll](https://anbennar.fandom.com/wiki/Sandfang_Gnoll)：英文离线页`page_id=2883`、`revision_id=32494`；已读取`anbennar-offline/output/chunks/en/md/2883/001-01-Sandfang Gnoll.md`。页面把沙牙豺狼人描述为布勒瓦尔南部沙漠的古老族群，并将其贫困化、恶魔崇拜与周期性反攻作为佐迦崛起的长期背景。
+
+## Reddit官方开发日志
+
+- [Dev Diary 21: Development Roadmap](https://www.reddit.com/r/Anbennar/comments/qa3rlm/anbennar_dev_diary_21_development_roadmap/)：2021-10-17；提供哈佐布秘教劫掠、献祭、恶魔之力和仪式的早期设计语境，不证明当前数值。
+- [Dev Diary #68: Religions of Sarhal](https://www.reddit.com/r/Anbennar/comments/1fbxr19/dev_diary_68_religions_of_sarhal/)：2024-09-08；说明豺狼人政府与哈佐布秘教重做、火堆和哈佐比内等机制的开发语境。
+- [EU4 Dev Diary #84: Devour the Sun](https://www.reddit.com/r/Anbennar/comments/1k9goj5/eu4_dev_diary_84_devour_the_sun/)：2025-04-27；佐迦专属日志，确认与贾达尔相反的历史路线、吞噬太阳目标、57任务发布时计数、双阶层、高阶神庙与地狱门设计。
+
+## Reddit社区体验（恰选两篇）
+
+- [Struggling to get Zokka off the ground. Tips?](https://www.reddit.com/r/Anbennar/comments/1mbmsjz/struggling_to_get_zokka_off_the_ground_tips/)：2025-07-28；未注明子Mod或开发分支。正文与回复支持早期人力、金钱、君主点和恶魔之力压力，以及夷平、佣兵、沿海劫掠的玩家经验。
+- [I conquered the world as Zokka by 1501](https://www.reddit.com/r/Anbennar/comments/1w2occ8/i_conquered_the_world_as_zokka_by_1501/)：2026-08-30；作者说明1497年前为铁人，之后为开启因斯亚使用控制台，且保留两个附庸。只用于展示扩张上限与后期痛点，不作为无修改世界征服证明。
+
+## 冲突与待核实
+
+- 中文名冲突：旧DOCX与评分表混用“佐卡／佐伽／佐迦”，当前汉化精确键为“佐迦”。
+- 数量冲突：2025-04-27官方日志称57任务；当前本地脚本计数58个直接任务。当前实装以58为准，日志数字保留为发布时记录。
+- 离线正文把佐迦战死置于1445年的官方设定时间线；这解决了旧搜索摘要的年份不确定性，但仍属于1444分歧后的设定未来，不能写成玩家开局已经发生或必然发生。
+- 未逐事件审计双阶层所有结局，也未进行运行时开档测试；这些缺口不影响身份、核心机制和玩法风格判断。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AF29)的`eu4:F29`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。目录对1444开局领土与核心身份提供定位，尚不能独立锁定1443—1452各方关系变化；没有回读新增原件，也不把1445设定死亡当玩家必然战果。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F29 / F29_ideas`：`mod/common/ideas/anb_country_ideas.txt:22925-22962`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

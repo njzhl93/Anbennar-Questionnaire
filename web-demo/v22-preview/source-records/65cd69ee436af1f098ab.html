@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/阿墨翁-G52.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 阿墨翁／那居拉（G52 ↔ G00）精简证据页
+
+核验日期：2026-09-23  
+核验版本：本地 Mod 与汉化 `v1.37.5.0`
+
+## 结论简表
+
+| 项目 | 结论 | 可信度 | 主要证据 |
+|---|---|---|---|
+| 身份 | G52，英文`Ameion`，当前中文名“阿墨翁” | 高 | Tag、国家历史、当前汉化 |
+| 开局 | 安布亨文化、刻伊翁主义共和国；拉斯卡里斯为4/5/6统治者兼将领 | 高 | `G52 - Ameion.txt` |
+| 直接任务数 | 55 | 高 | `anbennar-local`确定性索引 |
+| 连续阵营 | G00那居拉；内战可切换，和G52共享全部55个任务 | 高 | 国家包、任务潜在条件、`flavor_ameion.54` |
+| 可选换树 | J99瓦利达尼亚；政变成功后交换非通用任务 | 高 | `Flavour_Ameion_G52.txt:500-574` |
+| 核心风格 | 命定征服者、政治滑杆、凯奥奈化与附庸、先驱考古、帝国内战 | 高 | 当前历史、任务、事件、政府与灾难脚本 |
+| 道德倾向 | 邪恶，善良度30 | 高 | 强制同化、土地剥夺和劳役；自治、共存与社会上升构成有限修正 |
+| Wiki | 完整快照可用；读取国家页及两个关联页 | 高（状态）／中高（背景） | `doctor.py status=ok`及Markdown正文 |
+
+## 本地证据边界
+
+- `history/countries/G52 - Ameion.txt:1-73`：共和国、文化、宗教、首都、拉斯卡里斯的统治者与将领数据。
+- `localisation/anb_countries_l_english.yml:478,1692,2592`：经结构化缓存解码确认“阿墨翁”“那居拉”“瓦利达尼亚”。
+- `missions/Ameion_Missions.txt:1-3357`：55个直接任务；任务组同时允许G52与G00。
+- `events/Flavour_Ameion_G52.txt:1-590`：预言寿命、死亡与J99改道；`:2580-3590`：G52/G00君主派内战；`:4415-5759`：政治选举、遗迹发掘与塔塞尼搜索。
+- `common/government_mechanics/anb_ameion_keintagogists.txt:1-82`与`government_reforms/02_government_reforms_republics.txt:3427-3462`：阿墨翁共和国政治滑杆。
+- `common/disasters/ameion_monarchist.txt:1-163`：内战触发、进度、惩罚与结束条件。
+- `common/personal_deities/anb_kheionist_philosophies.txt:664-744`、`common/holy_orders/anb_holy_orders.txt:3101-3190`：拉斯卡里斯信条及其传播层级。
+- `common/event_modifiers/anb_ameion_modifiers.txt:475-570`：考古、塔塞尼搜索及主要国家修正。
+
+任务数只统计当前`Ameion_Missions.txt`中的直接任务实体，不把事件、灾难、圣团和J99任务计入。
+
+项目文档镜像`skills/anbennar-country-guide/references/documents/已实装任务树存档.md:2446-2474`记录了重制作者及城市建设、拉兰卡尔战争、泰琴德整合、特殊附庸、考古与君主派灾难等总体方向。它属于有日期的二级概述，只用于交叉确认叙事轮廓，不覆盖当前脚本与汉化。
+
+## 本地离线Wiki
+
+`anbennar-offline/tools/doctor.py`在库目录返回`status=ok`；快照更新于2026-09-17，含英文3718页、中文1136页。
+
+- [Republic of Ameion](https://anbennar.fandom.com/wiki/Republic_of_Ameion)：英文`page_id=749`、`revision_id=31892`；已读`anbennar-offline/output/en/markdown/Republic of Ameion__1ed16435.md`。支持684年流亡建国、共和国制度、安布亨帝国扩张及长期衰落的Wiki时间线；不用于证明当前任务机制。
+- [Wars of Two Heroes](https://anbennar.fandom.com/wiki/Wars_of_Two_Heroes)：英文`page_id=3938`、`revision_id=31754`；已读`chunks/en/md/3938/001-01-Wars of Two Heroes.md`与`001-02-Wars of Two Heroes.md`。支持拉斯卡里斯与埃兰卡尔的预言、战事和命定冲突。
+- [Kheionism](https://anbennar.fandom.com/wiki/Kheionism)：英文`page_id=1545`、`revision_id=32062`；已读`chunks/en/md/1545/001-01-Kheionism.md`。支持无神论、城市国家、共和理想及国家引导等背景。
+
+## 官方开发资料
+
+- [Dev Diary #14 — Upcoming Changes to Aelantir](https://www.reddit.com/r/Anbennar/comments/n9xipz/anbennar_dev_diary_14_upcoming_changes_to_aelantir/)（2021-05-11）：早期官方介绍阿墨翁处在刻伊俄奈与泰琴德交界、已在泰琴德夺取大片领土并与拉兰卡尔对峙；属于旧版本设计史。
+- [Dev Diary #66 — Ruins, Revolts, and Revelations Part 1](https://www.reddit.com/r/Anbennar/comments/1d6f7hd/dev_diary_66_ruins_revolts_and_revelations_part_1/)（2024-06-02）：说明奥伦奈鲁灾难和泰琴德反阿墨翁内容，是阿墨翁重制所处的地区机制语境。
+- [Dev Diary #74 — Gods of Chaos and Godless Order](https://www.reddit.com/r/Anbennar/comments/1gis5e1/dev_diary_74_gods_of_chaos_and_godless_order/)（2024-11-03）：明确宣布阿墨翁任务树与刻伊翁主义重制，并把它放在“无神秩序”与泰琴德新内容的对照中。
+- [Fires of Conviction Release](https://www.reddit.com/r/Anbennar/comments/1he79o3/fires_of_conviction_release/)（2024-12-14）：正式发布重制任务树，官方概括为恢复混乱艾兰提尔的秩序并夺回毁灭前文明的继承权。
+
+按Ameion、Laskaris、Kheionism、Taychend、Godless Order与Fires of Conviction去重检索后，上述为直接说明该国身份、地区作用或本次重制的官方日志／公告。2026年开发日志仅顺带称其为“不可动摇的方阵”，未提供该国新机制，因此不作为实质证据。
+
+## 玩家观点及限制
+
+- [Really Enjoying the Reworked Ameion Missions](https://www.reddit.com/r/Anbennar/comments/1j2pqg8/really_enjoying_the_reworked_ameion_missions/)（2025-03-03）：重制版玩家称赞节奏、故事、拉斯卡里斯事件，以及文化、宗教和属国玩法的深度；评论指出前期经济与君主点紧张，需要保持高速战争。
+- [So, Ameion or Larankar?](https://www.reddit.com/r/Anbennar/comments/1kkzlmt/so_ameion_or_larankar/)（2025-05-12）：玩家把两国都视为高征服量、高写作质量路线；对阿墨翁的概括是前期快速征服、后期同化整合，并提醒泰琴德整体不适合厌恶扩张的玩家。
+
+旧版2022—2024玩家帖关于强制释放领土、任务树惩罚玩家和极端铁路化的批评，在2024-12重制后已失去直接版本适用性，未混入当前玩法判断。
+
+## 同轮检查
+
+1. 身份：G52／Ameion／阿墨翁一致；G00／Nákyra／那居拉一致。
+2. 形成关系：G00是可切换内战阵营并共享任务；J99交换任务，只列可选改道。
+3. 历史边界：684—1444背景、开局状态、任务未来和Wiki后世时间线已分开。
+4. 核心机制：命定寿命、政治滑杆、属国与同化、考古、内战均有当前脚本支持。
+5. 人格：EOIV，依据高速扩张、帝国秩序、制度与考古创新、文明复兴理想。
+6. 道德：邪恶30；稳定和有限自治不能抵消系统性同化、土地剥夺、劳役与帝国征服。
+7. 来源分层：当前本地脚本与汉化 &gt; 离线Wiki／官方开发资料 &gt; 旧讨论 &gt; 玩家观点。
+8. 非核心缺口：未逐项审计55个任务奖励；未实机测试灾难强度与AI外交结果。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AG52)的`eu4:G52`为`registered`，站点快照`2026-09-23T07:23:00Z`，国家注释未提供可回读的新沿革原件。现有684—1444叙述已有本地与既往离线Wiki来源，故不从地图补写历史。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文，不改变现行本地脚本结论。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `G52 / G52_ideas`：`mod/common/ideas/anb_country_ideas.txt:5642-5678`；身份筛选结果：`identity_filter_matches`。
+- `G00 / G00_ideas`：`mod/common/ideas/anb_country_ideas.txt:5681-5722`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

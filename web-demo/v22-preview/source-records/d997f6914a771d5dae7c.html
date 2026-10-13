@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/拉兰卡尔-G64.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 拉兰卡尔／Larankar／G64 精简证据
+
+核验：2026-10-12。当前本体、汉化descriptor均为supported_version=v1.37.5.0，Workshop ID分别1385440355、2818493730；manifest分别2812922911103828520、7518363337005727349。版本号是支持版本，不是发布年份。仅用当前基础Mod，没有安装子Mod，未做实机验证。
+
+## 本轮维护与身份
+
+- `resume_sync.py`仅一次：`{&quot;status&quot;:&quot;ok&quot;,&quot;action&quot;:&quot;already_complete&quot;}`。doctor解析status=ok，英文3735／中文1136页，快照updated_at=2026-10-01T08:04:33.526085+00:00。
+- 本地Mod更新status=unchanged，结构库doctor.status=ok。采用现有快照；未联网Wiki或使用浏览器补洞。
+- 英文队列第36、当前首个未完成项；中文原榜没有对应项，保留原队列及Markdown，不新增名次。
+- G64国家键：本体`common/country_tags/anb_countries.txt:342`；英文国名本体`localisation/anb_countries_l_english.yml:683`；汉化同名文件`:502`，只读解码得到“拉兰卡尔”。本体任务文件和历史文件构成另外两个身份关联点。
+- 两份descriptor文件mtime分别2026-07-09 21:53:36与21:46:48（本机时间）；不是任务树首次发布日，亦不以此宣称内容新旧质量。
+- 完整354项评分地区快照直接匹配Larankar：South Aelantir／南埃兰提尔。新增country_matches G64对应；不借用J84前身／后继关系推断分区。
+
+## 当前本地证据
+
+以下本体相对路径根为`[local source path omitted]`；汉化根为`[local source path omitted]`。完整定位及Wiki／网页元数据保存在[主JSON](../_data/拉兰卡尔-G64.json)。
+
+| 问题 | 文件及行号 | 结论与边界 |
+|---|---|---|
+| 1444开局 | `history/countries/G64 - Larankar.txt:1-63` | 君主、文化、宗教、首都2487、G52宿敌、埃兰卡尔5/3/6；脚本历史死亡日期不能当成实际存档必死时间 |
+| 既成历史与人物 | `localisation/Flavour_Larankar_G64_l_english.yml:7-29,64-88` | 1437败战、家族复仇与重建的剧情回顾；两英雄与毁城属于未来事件，不能混为已发生史 |
+| 独立任务与形成继承 | `missions/Larankar_Missions.txt:1-15,742-755`；`decisions/SouthAelantirFormables.txt:252-319` | G64或曾为G64的J84；形成后保留G64任务并进入J84共同树。信仰改革、发展900/特定旗标700、稳定1、和平等门槛 |
+| 恐惧与附庸 | `missions/Larankar_Missions.txt:500-535`；`events/Flavour_Larankar_G64.txt:404-445`；`common/event_modifiers/anb_mission_modifiers.txt:33255-33258` | 孤儿兄弟会、伊马申德关系及阿墨翁状态；事件支持附庸意见、外交关系和部队上限 |
+| 贪欲与奴工 | `missions/Larankar_Missions.txt:1400-1569`；上述修正文件`:33270-33285` | 合格属国25年独立倾向-20%，每个增0.25腐败；至少2合格供奴省；每个供奴省对应高地2随机省各+2/2/2、25年开发修正；供奴省本身不直接增加发展。开发成本-25%、叛乱+15、治理成本+5%，随机极端局面未实测 |
+| 城市与道路 | `missions/Larankar_Missions.txt:1067-1213,1319-1398`；修正文件`:33265-33297` | 北弧贸易与逐省驻军、南弧建筑、首都35发展；废城修复和贸易建设支持公共利益 |
+| 骑兵与牧群 | `missions/Larankar_Missions.txt:1733-1911,1613-1643` | 3畜牧省各发展4次、各驻2骑兵，奖励会消耗骑兵；不把普通军力奖励包装为独立新资源体系 |
+| 两英雄任务可用条件 | `missions/Larankar_Missions.txt:537-603` | 阿墨翁在泰琴德非岛屿领土需清除；拉斯卡里斯不再为君主，或埃兰卡尔在位且决斗旗标存在，均有可完成路径。玩家旧帖的岛屿说法不覆盖此条件 |
+| 继承 | `missions/Larankar_Missions.txt:681-738`；`events/Flavour_Larankar_G64.txt:614-1367` | 埃兰卡尔在位时可预先选择；另有手足战争后完成路径。娜拉蒂雅／特沙拉达不能简单归成善恶两分支，全部实机后果未核 |
+| 处决、毁城、克制 | `localisation/Flavour_Larankar_G64_l_english.yml:65-76`；`events/Flavour_Larankar_G64.txt:62-141` | 剧情含复仇处决；选项a允许停止抢掠，b/c让2556省荒废+50、三项发展各-2并改文化。不是每局必选毁城，不把原文“焚城”扩大为未证实灭绝规模 |
+| 当前中文显示 | 汉化`localisation/Flavour_Larankar_G64_l_english.yml`代表任务／事件键；`prov_names_l_english.yml:2487` | 埃兰卡尔、乌尔万德、铸以恐惧、缚于贪婪、铺砌北弧、扩大牧群及继承者；用现有解码器只读确认 |
+| DOCX镜像 | `安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:2659-2685` | 旧归档导航；当前任务、数值与任务保留以源文件为准 |
+
+任务长度：既有随机国家工具的确定性索引约24项，含`Caergaraen_Missions.txt`关联，不代表24项独占。健康结构库`tools/query.py country G64 --json`中mission_count=19，19项均来自Larankar_Missions.txt；采用此直接定义数，不逐任务审计。J84直接任务及其他前身数不能直接叠加为G64单局总数。
+
+## 离线Wiki与历史地图
+
+已读取Markdown chunk，不用搜索摘要证明事实。三个英文页面分别为：
+
+- Larankarha Empire：page_id=4767、revision_id=29984，章节Larankarha Empire；本地`anbennar-offline/output/chunks/en/md/4767/001-01-Larankarha Empire.md`及001-03、001-04、001-05同标题chunk。来源URL保存在JSON。早期建立年份1433/1434冲突；后世帝国结构可补背景，不证1444全境统治或G64必然结局。
+- Wars of Two Heroes：page_id=3938、revision_id=31754，章节Wars of Two Heroes；本地`anbennar-offline/output/chunks/en/md/3938/001-01-Wars of Two Heroes.md`及001-02同标题chunk。描述后世战争，正文不逐年重建未来战局。
+- Larankarha-Ambhen Wars：page_id=4768、revision_id=26709，章节同标题；本地`anbennar-offline/output/chunks/en/md/4768/001-01-Larankarha-Ambhen Wars.md`。历史衰亡不能当任务强制失败。
+
+中文国史页没有直接命中：`OFFLINE_WIKI_NO_RESULT`。相邻军事史页只作定位，未用于填补本国叙事。英文主页面以历史政权标题命中，不记作“Wiki无资料”。
+
+[研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)／[参考目录](https://shen-hhao.github.io/anbennar-timeline/references.html)：站点修订optional-fullscreen-20261003，社区候选0.25.0。记录`eu4:G64`仅登记独立身份，年代、关系、来源、领土均待审。参考记录`manual:ss26-liz-mod-0a2e1bbbabe0020a`是另一研究中的本地化存档线索，非独立证据；当前本地原件另按Mod等级采用。没有引用地图推演或Vic3投影来确认EU4正史。
+
+## Reddit目录与体验边界
+
+本轮按Larankar、G64、Erankar、Taychendi Empire／J84、Vainglory、Fires of Conviction组合搜索并去重；直接相关官方材料实际找到1篇，另取恰好2篇玩家帖。读取正文和可见相关评论，不展开整棵评论树。已删除或未索引材料仍可能遗漏，不声称穷尽Reddit。
+
+- [Dev Diary #74: Gods of Chaos and Godless Order](https://www.reddit.com/r/Anbennar/comments/1gis5e1/dev_diary_74_gods_of_chaos_and_godless_order/)，2024-11-03。编号日志、Dev Diary标记、Blaziy发布、正文Takasaki开发者自述与制作署名确认官方语境；读取Larankar与Taychend formable完整文本段。支持人物、附庸、骑兵帝国和继承设计；“下一更新”不能证明当前实装。其他地区日志仅背景提名，未当本国专属日志。
+- [Does anyone have a guide for Larankar?](https://www.reddit.com/r/Anbennar/comments/1hfzjow/does_anyone_have_a_guide_for_larankar/)，2024-12-17。作者承认cheats／console；只记录连续扩张和任务摩擦的个人体验，不作为正常难度或机制证据。精确版本不明。
+- [So, Ameion or Larankar?](https://www.reddit.com/r/Anbennar/comments/1kkzlmt/so_ameion_or_larankar/)，2025-05-12。完整帖子及可见讨论，赞赏写作、骑兵与长续篇，也提到持续扩张与叛乱疲劳。未注明精确版本或子Mod，限于社区观点。
+
+## v2.1定标与剩余缺口
+
+跨国完整镜像109项全部读取比较；新增G64后覆盖110/110。人格E91/A90/M-T50/I18/P30；价值20/55/18/20→28.25→28，evil／mixed／medium。与L62=23、J84=22、G52=47等锚点核对奴役、公共建设及强制层级；更严重的材料化、献祭、灭绝没有确证，不猜加。战争、集权、君主制和文化统一本身不扣分。
+
+主要未决：建国年份、全部继承分支实机结局、随机高地奖励在极端局面的执行、难度与精确玩家版本。G64前传画像不概括J84全续篇人格，不擅改J84或任何旧国评分。Haless项目显示译名为东洲；英文键与源文本不变，本篇新叙事没有旧译名。
+
+## 2026-10-13 分歧人格补录
+
+本轮只回查专属继承与地区治理，不重做任务树全审计。结构库doctor为ok，manifest与上次相同；既有v2.1评分和J84研究评分不变。
+
+- `larankar_events.9`（事件614–633行）设置支持旗标；`larankar_events.100/.101`（637–801行）进入实际继承及后续战争。支持、在位、实际终战与提前死亡分别判断，不能由选择旗标直接宣布胜利。
+- `larankar_events.106/.107`（1182–1233、1236–1287行）与英文同名`.d`剧情说明两位胜利者的王权／诸侯关系。由此分别写G64和曾为G64的J84画像；适用Tag不同，继承各自共同基线，只改有剧情差异的权力集中和新秩序轴。未声称完成全部实机路径。
+- `larankar_events.3.a/.b/.c`（145–345行；专属任务调用900–942行）确有直接接收指定地区、较小附庸、强J85边疆国的区别。只选a/c两端调整权力轴；这是可改变的地区治理政策，不是永久全国宪制二择。
+- `larankar_events.2`（62–141行）停止抢掠／毁城只保留价值维度影响，未因此新增五轴画像或重算价值分；共同奴工主线仍在。通用形成决议也不另造人格。
+
+当前本体文件SHA256：
+
+```text
+events/Flavour_Larankar_G64.txt 922828ae19542b522a8673a62a340bdc3152606192c6fe85544be8e028a9383a
+missions/Larankar_Missions.txt 8da8a77ea81340ce920b2f0312f024b6f70fdc9e6252f07a605620df3fb6dadd
+```
+
+[v2.2非生产画像](../_data/personality-route-profiles-v2.2/G64.json)共6个条件向量：两个继承结果各分G64/J84身份，加两个地区政策端点；不是6个互斥结局。具体五轴为解释性人工分档，不按君主属性、侵略扩张或附庸奖励等比换算。地方治理与继承可并存，但没有为任意组合编造全国制度。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-12；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `G64 / G64_ideas`：`mod/common/ideas/anb_country_ideas.txt:33325-33363`；身份筛选结果：`identity_filter_matches`。
+- `J84 / J84_ideas`：`mod/common/ideas/anb_country_ideas.txt:33245-33283`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

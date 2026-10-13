@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "pairs": {
+    "Z35": {
+      "tag": "B04",
+      "evidence": "本地EscannFormables.txt的universal_escann_nation有B04专属地域条件(1859-1868)，effect仅在limit={tag=B04}时change_tag=Z35并换树(1948-1952)；全文检索decisions/events/missions/common/scripted_effects未找到其他Z35换Tag入口。国家主JSON明确B04前身，atlas确认B04于1444持有817。专属的是B04→Z35映射，不把通用决议名称当成国家独占政策。",
+      "relative_path": "decisions/EscannFormables.txt",
+      "source_sha256": "99d32ee0ccaa12a736b0c71c8ba2076a8821cfee36155d80d9b20dd14a07b0a9",
+      "line_start": 1948,
+      "line_end": 1952,
+      "raw_script_excerpt": "\t\t\telse_if = { #Rosande\n\t\t\t\tlimit = { tag = B04 }\n\t\t\t\tchange_tag = Z35\n\t\t\t\tswap_non_generic_missions = yes\n\t\t\t}"
+    }
+  }
+}

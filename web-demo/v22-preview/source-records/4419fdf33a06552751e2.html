@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/埃查德-H14.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 埃查德 H14：证据与边界
+
+核验日2026-10-08；本体／汉化支持 EU4 `v1.37.5.0`，Workshop ID分别1385440355／2818493730。结构库健康状态ok，本体manifest `2812922911103828520`、汉化 `7518363337005727349`。结构库只是缓存，以下本体路径均相对于 `[local source path omitted]`，汉化相对于 `[local source path omitted]`。
+
+| 结论 | 实际读取原件 | 边界 |
+|---|---|---|
+| 1444秋庭神权、图查克、Danaran、宿敌H16 | 本体 `history/countries/H14 - Eighard.txt:2-25` | “No previous file”是维护注释，不是建国日期。 |
+| 圣战、丰获皇冠死亡、旧盟友分裂 | 本体 `localisation/anb_powers_and_ideas_l_english.yml:10033`；汉化同文件`:5913` | 叙事中的前史；未给确切年份，不推算。 |
+| 60个任务实体 | 结构库country H14确定性索引；本体 `missions/Eighard_Missions.txt` | 接受／拒绝腐烂的任务组互斥，不是单局同时可见60个。 |
+| 接受腐烂、教会特权与拒绝者死亡 | 本体 `events/Flavour_Eighard_H14.txt:495-576`；汉化 `localisation/Flavour_Eighard_H14_l_english.yml:217-219` | 任务事件未来，不写成开局已完成政变。 |
+| 流哈格卡尔／巴瑙查德 | 本体事件同文件`:710,1051-1057`；本体Flavour本地化`:310,371`；汉化同文件`:246,304` | `override_country_name`，H14不变；Reddit的Bannoghard拼法和推译不覆盖当前Banoghard／巴瑙查德。 |
+| H21条件性形成 | 本体 `decisions/NorthAelantirFormables.txt:750-829`、`events/Flavour_Eordand.txt:2480-2498`；汉化国名`:614` | 排除H14_accepted_rot；事件改Tag并换树，不是腐烂路线兼容的必然终局。 |
+| 御寒和分解能源 | 本体 `localisation/Flavour_Eighard_H14_l_english.yml:9-35`、理念`:10035-10037`；特殊工程 `common/custom_gui/magic_unique_projects.txt:1282-1359` | 操作前置可见；三级总成本、计时及惩罚未全核，不据DOCX填数值。 |
+| 明确的人格侵害 | 本体理念`:10044-10045`，汉化`:5924-5925` | 囚禁异端／囚犯直至死亡腐烂、骸骨威慑。理念回顾口吻与事件式路线选择并列保留，不倒灌1444开局。 |
+
+## 离线Wiki与历史地图
+
+Wiki健康状态ok。采用 `Early Modern Eordand Timeline`，page_id **5615**、revision_id **31672**，章节同题；实际读取 `anbennar-offline/output/chunks/en/md/5615/001-02-Early Modern Eordand Timeline.md`（尤其21、23行）。[原始URL](https://anbennar.fandom.com/wiki/Early_Modern_Eordand_Timeline)。1589攻取Sinnsarfearg、1628征服Strutmar、1713圣战结束均为Wiki后世设定，不是1444前史或玩家必然未来。该chunk还写教派残酷声名，但价值主证据采用当前理念，不用年表替代本地路线。
+
+Eighard独立主页面及Banoghard／Bannoghard有限查询无可用命中，保留 `OFFLINE_WIKI_NO_RESULT`；国家目录的Scarbag Eighard只作定位，不作独立历史证据。未访问线上Fandom。哈兰历史地图[研究页](https://shen-hhao.github.io/anbennar-timeline/research.html)与[参考材料页](https://shen-hhao.github.io/anbennar-timeline/references.html)未取得正文，未采用记录或推演。
+
+## Reddit：实际正文与版本语境
+
+- 官方直接：[EU4 Dev Diary #110: Ruined Rotten Rapscallions](https://www.reddit.com/r/Anbennar/comments/1rujusu/eu4_dev_diary_110_ruined_rotten_rapscallions/)，2026-03-15，读取埃查德段及相关作者回复。说明重制、秋冬矛盾、专属魔法、独特路线与地区统一的设计；不作为当前实装证明。
+- 玩家1：[The heresies of Summer, Spring and Winter…](https://www.reddit.com/r/Anbennar/comments/1vrawpo/the_heresies_of_summer_spring_and_winter_all_have/)，2026-08-18，读腐烂路线战报及少量开发者评论。扩张、中段殖民／转化等待是个人战局；未注明精确版本、子Mod或改档。评论所说修复属于开发版，不归作本地已经修复。
+- 玩家2：[Groundhawk and the hidden rewards of Anbennar MTs](https://www.reddit.com/r/Anbennar/comments/1tdmhoz/groundhawk_and_the_hidden_rewards_of_anbennar_mts/)，2026-05-15，正文以埃查德法师研究选择举例。不是完整战报；版本、子Mod、改档未说明。只支持前置提示可能让玩家等待的体验。
+
+DOCX镜像 `安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:1925-1973` 用于导航；30—40项旧记录与当前60定义不同，保留版本／统计边界。
+
+## 评分与缺口
+
+主坐标E91/A94/M98/I96/P12描述接受腐烂的独特延伸；早期和拒绝路线保留较低集权与较高多元的阶段坐标。价值四维16/40/16/16加权 **22.0→22，邪恶**；轨迹branch_dependent。初期55、接受22、拒绝60为同一模型的编辑定标，不是机制值或已测结果。拒绝教派是明确分支，但其完整居民待遇不详，不能升级为全面善良。战争、神权、秋庭与魔法分解本身不扣分。未全面追踪特殊工程和全部下游事件，未实机验证。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `H14 / H14_ideas`：`mod/common/ideas/anb_country_ideas.txt:21193-21228`；身份筛选结果：`identity_filter_matches`。
+- `H21 / H21_ideas`：`mod/common/ideas/anb_country_ideas.txt:5893-5932`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

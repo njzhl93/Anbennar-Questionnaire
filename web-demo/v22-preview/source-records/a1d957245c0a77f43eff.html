@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/阿兹卡雷-Y86.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 阿兹卡雷 Y86 → 日升帝国 Y00：精简证据与边界
+
+核验：2026-09-29。本体 Workshop `1385440355`、汉化 `2818493730` 均声明支持 `v1.37.5.0`。本地结构化库 `doctor.py` 状态 `ok`，manifest 分别为 `2812922911103828520` 与 `7518363337005727349`；下表路径以对应 Workshop 根目录为起点，资料库仅作定位，判断回溯原件。
+
+| 判断 | 源文件与位置 | 边界 |
+|---|---|---|
+| Y86身份与开局 | 本体 `common/country_tags/anb_countries.txt:1396`、`history/countries/Y86 - Azkare.txt:1-33`；汉化 `localisation/anb_countries_l_english.yml:1365`、`localisation/anb_cultures_l_english.yml:294`、`localisation/anb_regions_l_english.yml:259` | 当前名阿兹卡雷；1444四盖共和国，希德里翁1438年上台；Wiki宗教称谓与当前脚本不一致，按脚本 |
+| 希德里翁前史 | 本体 `localisation/Flavour_Azkare_Y86_l_english.yml:14`；汉化同名文件`:3` | 精灵农民出身、后获收养是当前任务叙事，不可推成所有东洲人的共同记忆 |
+| Y86任务与议会 | 本体 `missions/Azkare_Missions.txt:16-29,335-406,3139-3173`；`common/scripted_effects/anb_scripted_effects_for_sunrise_empire.txt:5-102`；`common/scripted_triggers/anb_scripted_triggers_sunrise_empire.txt:2-89` | 本地库统计61项Y86直接任务；代表度是任务门槛；议会实机UI未核验 |
+| 专属形成Y00 | 本体 `events/Flavour_Azkare_Y86.txt:1507-1589`；`decisions/HalessFormables.txt:813-885`；汉化 `localisation/anb_countries_l_english.yml:1577` | 任务触发`azkare.42`改Tag Y00，通用决议排除Y86；Y00当前汉化名日升帝国 |
+| 继承、后续与军事 | 本体 `missions/Azkare_Missions.txt:2646-2660,3192-3555,3679-3688` | Y00关联任务124项，含阶段关联，不与61简单相加；军制分支只概述主题，未逐任务审计 |
+| 继承改道Z62 | 本体 `events/Flavour_Azkare_Y86.txt:4080-4194`；汉化 `localisation/anb_countries_l_english.yml:1620` | 希德里翁死亡、此前统一乡邦且选四盖继任者时可变Z62并换树；非主线 |
+
+## 英文离线 Wiki 与地图
+
+- [Township of Azkare](https://anbennar.fandom.com/wiki/Township_of_Azkare)：`lang=en`、`page_id=2390`、当前`revision_id=33089`、`section=Township of Azkare`；已重读`anbennar-offline/output/chunks/en/md/2390/001-01-Township of Azkare.md`。除盖邦乡邦与精灵统治者背景外，现行页面明确记1438年希德里翁当选和1441年莱克通迈之战；后者只作Wiki开局前史，不覆盖当前脚本的宗教、政府或任务要求。
+- [Sunrise Empire](https://anbennar.fandom.com/wiki/Sunrise_Empire)：`lang=en`、`page_id=2305`、`revision_id=23578`、`section=Sunrise Empire`；正文范围为`anbennar-offline/output/chunks/en/md/2305/001-01-Sunrise Empire.md`完整短页。称帝国为希德里翁的理论构想，并列出批评与未实现的历史叙述；不能否定游戏中可走的Y86→Y00路线。离线库在其工具目录运行`doctor.py`为`ok`，从项目根运行会因相对路径误报失败。
+- [哈兰历史地图Y86入口](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AY86)已通过站点静态快照`data/research-index.json`取得；站点资料时间`2026-09-23T07:23:00+00:00`，记录`eu4:Y86`为`in_progress`。目录中的1549、1599等中间年份属反向推演／`hypothesis`，不采作固定国史；1441年战事仅由上述离线Wiki原件支持。此前的网页访问缺口已解除。
+
+## Reddit：官方设计语境与玩家体验
+
+与本国直接相关的官方帖：
+
+1. [Dev Diary #30: A Sun Rises in the East](https://www.reddit.com/r/Anbennar/comments/sg7og5/dev_diary_30_a_sun_rises_in_the_east/)，2022-01-30，已读主帖中乡邦、希德里翁、议会、日升构想与任务树段落；是当时的开发日志，不证明2026现行数值。
+2. [Warlords of Haless Release](https://www.reddit.com/r/Anbennar/comments/v69vmv/warlords_of_haless_release/)，2022-06-06，已读正文中阿兹卡雷、日升帝国及议会相关段落；只证明当时发布语境。
+
+两篇玩家帖：
+
+- [Inform me on Azkare, please.](https://www.reddit.com/r/Anbennar/comments/udkj0k/inform_me_on_azkare_please/)，2022-04-28，发布前Bitbucket测试分支语境；已读主帖和少量高相关回复。提到脆弱开局、周边战争及文化代表；其中疑似事件故障不能当成当前Bug。
+- [How to Azakare?](https://www.reddit.com/r/Anbennar/comments/189lwiv/how_to_azakare/)，2023-12-03，版本未精确标出；已读主帖及少量相关回复。强邻命令秩序、边防／大华压力等属个人经验和局势变量。
+
+## 评分与待核实
+
+价值四维暂评：尊严80、公共利益86、人格承认78、克制55；加权77.25，取整77，为善良档。理由是政治代表、反贵族出身垄断和公共建设，与战争、精灵仲裁和文化边界长期并存。人格坐标的拓疆92、多元90基于任务目的和议会门槛；专制55反映共和机构与日升精灵主导并存；魔法／奇械方向50、强度14表示两者均非核心主轴。均为解读性评分，不是脚本数值。
+
+未进行游戏内运行测试；议会界面的实际操作体验、所有分支结局、玩家帖子所涉补丁及Wiki宗教条目的版本差异待核。没有把历史构想、任务未来、官方开发计划和社区反馈混为同一证据层。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Y86 / Y86_ideas`：`mod/common/ideas/anb_country_ideas.txt:20679-20715`；身份筛选结果：`identity_filter_matches`。
+- `Y00 / Y00_ideas`：`mod/common/ideas/anb_country_ideas.txt:19454-19491`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

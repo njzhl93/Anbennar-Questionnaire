@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔国家位置</title>
+<style>
+body{margin:0;background:#172731;color:#f0eadc;font:16px system-ui,sans-serif}header,footer{padding:16px 24px}header{display:flex;align-items:center;gap:12px;flex-wrap:wrap}a{color:#c5e1e6}select,button{font:inherit;padding:8px;border-radius:6px;border:1px solid #6d8486;background:#243b44;color:#fff}h1{font-size:22px;margin:0}#stage{height:65vh;min-height:360px;position:relative;border-block:1px solid #506773}canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}#note{margin:0 0 8px}#details{color:#bacbd0;font-size:14px}footer p{max-width:1000px;line-height:1.7}#error{color:#ffd1a8}button{cursor:pointer}
+</style></head><body>
+<header><h1 id="title">1444开局地图</h1><select id="country" aria-label="选择百科国家"></select><button id="zoomIn" aria-label="放大">＋</button><button id="zoomOut" aria-label="缩小">－</button><button id="fit">定位国家</button><button id="world">世界全图</button><a href="index.html">返回人格测试</a></header>
+<div id="stage"><canvas id="map" aria-label="可拖动缩放的安本纳尔地图；金色标出选择的开局疆域"></canvas></div>
+<footer><p id="note">正在加载本地地图缓存……</p><p id="details"></p><p id="error"></p><p>金色为所选开局疆域，圆点定位首都省份中心，不代表精确城市坐标。拖动平移，滚轮或按钮缩放；点击省份可查看名称和所属国家。形成国仅显示已确认前身，不代表形成后疆域。日期：1444年11月11日；不执行游戏开局事件，不展示历史推演。底色为识别配色，不是游戏国色。</p><small>底图与省份来源：本地Anbennar Mod；世界设定和原地图归Anbennar及相关权利方。本页未复制哈兰历史地图代码或网站数据。</small></footer>
+<script src="map.js"></script></body></html>

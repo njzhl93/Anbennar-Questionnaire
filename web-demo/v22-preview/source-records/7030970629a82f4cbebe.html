@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/卡拉斯克-L68.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 卡拉斯克（L68）／卡塔拉什亚（S81）证据页
+
+核验日：2026-09-16  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：L68与S81身份、任务归属、形成锁、核心机制和终局危机均已确认。
+
+## 身份与形成关系
+
+- L68标签：`common/country_tags/anb_countries.txt:739`；S81标签：同文件`:1171`，指向`countries/Khatalashya.txt`。
+- L68开局：`history/countries/L68 - Karassk.txt:1-43`，确认首都、宗教、文化、改革、君主和历史对手。
+- S81定义：`history/countries/S81 - Khatalashya.txt:1-9`，确认帝国等级、文化与安扎尔卡察信仰。
+- 当前汉化键将L68与S81显示为“卡拉斯克”“卡塔拉什亚”；本地英文实现统一为`Khatalashya`。
+- 形成决议：`decisions/EastSarhalFormables.txt:275-398`，要求和平、蜥蜴人、安扎尔卡察、塔尼亚斯75省和至少6个关键省。
+- L68的`L68_dont_form_till_done`在末段事件前锁住形成；证据见`events/Flavour_Karassk_L68.txt:17-25,907-915`。
+
+## L68形成前内容
+
+- `missions/Karassk_Missions.txt`：35个L68直接任务。
+- Khair家族治理：`:299-337`。
+- 海民劳工、舰队与运河：`:367-510,1738-1797`。
+- 旧殖民地与朝贡网络：`:649-715`及后续相关任务。
+- 恐惧政治与强制朝贡：`:1537-1736`。
+- 专属海权改革：`common/government_reforms/06_government_reforms_common.txt:7617-7656`。
+
+## S81形成后内容
+
+- `missions/Khatalashya_Missions.txt`：5个任务组，均以`tag = S81`分配，共48个顶层任务块；48个都含`position`字段。
+- 预言合法性与纳迦统治：任务`:1098-1127,1831-1903`及本地化六档信仰修正。
+- 突变控制、血咒和暗沼：任务`:1922-2055,2360-2554`；终结血咒后可提高突变上限。
+- 尖塔与星际殖民：任务`:1704-1817,2282-2346,2555-2619`。
+- 蜂巢意识灾难：`common/disasters/khatalashya_space_war.txt:2-70`，确认高动乱、军事惩罚、禁止宣战和摧毁敌方核心的结束条件。
+- L68与S81不是共享任务节点；S81以独立任务树替换，但保留海民运河、旧Tag与专属事件兼容逻辑。
+
+## Reddit官方材料
+
+- [Dev Diary #52](https://www.reddit.com/r/Anbennar/comments/13ua6z9/dev_diary_52_baashidi_lore_dev_diary/)：2023-05-16；补充卡拉斯克早期扩张和衰落史。
+- [Dev Diary #64](https://www.reddit.com/r/Anbennar/comments/1cwgwal/dev_diary_64_mission_trees_of_west_sarhal/)：2024-05-20；补充第333帝国预言。
+- [Final Empire预告](https://www.reddit.com/r/Anbennar/comments/1l4xrwa/anbennar_the_final_empire_announcement_trailer/)：2025-06-06；正文证据较弱，仅支持发布语境。
+- [Dev Diary #92](https://www.reddit.com/r/Anbennar/comments/1lc1vrr/eu4_dev_diary_92_the_333rd_lizardfolk_empire/)：2025-06-15；卡拉斯克与卡塔拉什亚核心专题。
+- [Dev Diary #94](https://www.reddit.com/r/Anbennar/comments/1lni063/eu4_anbennar_dev_diary_94_welcome_to_anbenland/)：2025-06-29；发布前简短确认。
+- [Final Empire发布公告](https://www.reddit.com/r/Anbennar/comments/1lshhva/the_final_empire_is_out_now/)：2025-07-05；确认更新发布及形成国星辰方向。
+- [Sarhal负责人AMA](https://www.reddit.com/r/Anbennar/comments/1t1pfo8/sarhal_lead_ama/)：2026-05-02；支持作者与开发状态。
+- [Dev Diary #124](https://www.reddit.com/r/Anbennar/comments/1t5ydki/eu4_dev_diary_124_charkuchin/)：2026-05-07；仅支持卡拉斯克文字作者署名和发布状态。
+
+## Reddit社区体验
+
+- [Asarta→Khatalashya→The Eternal Empire](https://www.reddit.com/r/Anbennar/comments/1rc0dau/asartakhatalashyathe_eternal_empire/)：2026-02-22；支持长战役、后期灾难和星际内容体验，非卡拉斯克专门开局攻略。
+- [Nations with trees that are new](https://www.reddit.com/r/Anbennar/comments/1vt0gwf/nations_with_trees_that_are_new/)：2026-08-19；支持卡拉斯克两线开局、海峡与舰队建议，具体数值可能随热修复变化。
+
+## Wiki、冲突与缺口
+
+- 完整离线库中没有Karassk、Katalashya或Khatalashya的独立正文页，状态`OFFLINE_WIKI_NO_RESULT`；原先浏览器看到的Karassk空页仍不向正文提供事实。
+- [Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)的“Aspiring Polities”证据块仅把Khatalashya列为候选政体（`page_id=1100`、`revision_id=32841`，`anbennar-offline/output/chunks/en/md/1100/046-01-Aspiring Polities.md`），没有提供历史、制度或形成关系，不能覆盖当前本地脚本。
+- 官方网页同时出现`Katalashya`与`Khatalashya`；本地实现统一为`Khatalashya`，中文名以当前汉化为准。
+- “第333帝国”是宗教与政治宣称；实际游戏仍通过L68→S81完成Tag变化。
+- 48个S81任务是静态直接任务数，不代表每局无条件开放；完整随机事件与所有奖励未逐项审计。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AL68)的`eu4:L68`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。其中阿萨尔塔—卡拉斯克冲突、旧帝国分裂和边界属于进一步追源线索；没有回读新增原件，不能据地图重建锁定早期战事日期或L68→S81唯一史实顺序。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `L68 / L68_ideas`：`mod/common/ideas/anb_country_ideas.txt:31523-31562`；身份筛选结果：`identity_filter_matches`。
+- `S81 / S81_ideas`：`mod/common/ideas/anb_country_ideas.txt:33969-34007`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

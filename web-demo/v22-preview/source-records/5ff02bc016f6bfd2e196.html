@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/港口城-F23.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 港口城／Ovdal Tûngr／F23 精简证据
+
+核验：2026-10-13。本体及汉化均supported_version=v1.37.5.0；本体manifest 2812922911103828520，汉化7518363337005727349。支持版本不是模组发布号。本轮未实机游玩、未安装子Mod、未提交或推送。
+
+## 维护与身份
+
+- resume_sync仅一次：status=ok，action=already_complete；doctor解析status=ok，英3735／中1136页，快照2026-10-01T08:04:33.526085+00:00。
+- Mod update=unchanged，本地结构库doctor=ok；使用现有快照，无线上Wiki兜底。
+- 英文第38是首个可处理项；中文原榜第234、队列235，仅同步完成状态，不重排榜单。
+- 英文国家键F23为Ovdal Tûngr：本体`localisation/anb_countries_l_english.yml:406`；汉化同文件`:320-321`只读解码F23与F23_ADJ均为港口城。调查表省略变音符写Ovdal Tungr；Tag与当前本地化确认同一国家。
+- 完整354项地区快照匹配Ovdal Tungr→Bulwar／布勒瓦尔，快照2026-10-09；country_matches新增经当前身份核验的F23记录。分区不决定地图、疆域或评分。
+- 任务文件mtime为2026-09-07 21:54:16，本体descriptor mtime同日21:53:36；本机时间不是开发或发布日期。
+
+## 本地来源与核心边界
+
+以下本体根为`[local source path omitted]`，汉化根为`[local source path omitted]`。完整来源对象见[主JSON](../_data/港口城-F23.json)。
+
+| 问题 | 文件及行号 | 结论与边界 |
+|---|---|---|
+| 开局 | `history/countries/F23 - Ovdal Tungr.txt:1-31` | 共和、铜矮人、祖灵崇拜、首都526；1442.6.20统治者Magni，历史友好U17、宿敌U14/U18 |
+| 独立任务 | `missions/Ovdal_Tungr_Missions.txt:9-3471` | 结构库确认38项F23任务，含旗标解锁续段；不将条件续段数误作38项开局同时可见 |
+| 海贸、排水和海底工程 | 同文件`:1176-1815,2554-3067,3077-3471` | 阳洲、东洲航线，强吼技术及海洋领地；工程是任务未来 |
+| 改革时点 | `events/Flavour_OvdalTungr_F23.txt:483-515` | 立即改革或暂缓获取改革进度；不是已证永久互斥政治路线 |
+| 克拉萨诺关系 | 任务`:471-555`；事件`:381-478` | U17选择附庸或盟友，不写成F23主动二选一；接受附庸还有当地地精移除后果 |
+| 必经地精移除 | 任务`:204-269` | 527改文化宗教，移除地精少数群体，荒废+25，损失本国两队步兵；不把少数群体移除进一步推成已证全面灭绝 |
+| 条件地精移除 | 事件`:75-104` | 地精文化未被接纳时移除巴哈尔地精少数群体；通用接纳文化不是独特国家路线，不能删除共同527省政策 |
+| 人类与矮人合作 | 事件`:395-478`；汉化本地化`:722` | 容忍及少数群体变化，人类桨手文本为雇佣，未据其推断奴役 |
+| 蒸汽船与海洋领地成本 | 任务`:3016-3067,3203-3269` | 蒸汽阶段按条件消耗5000/10000；海洋领地按创新度消耗250000—500000，581生产25；实际DLC条件不作全组合实测 |
+| 海堡操作 | `decisions/OvdalTungrDecisions.txt:2-37`；事件`:1342-1567` | 停靠维护升级是工程操作；海洋领地不是形成国、不是互斥意识形态 |
+| 当前中文任务、氏族 | 汉化`localisation/Flavour_OvdalTungr_F23_l_english.yml:22,114,122-123,181,413` | 海扉贸易站、强吼协会、海洋领地、人类桨手；第181行当前文本确认海扉氏族，不沿用DOCX音译充当现汉化 |
+| 文档导航 | `安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:5713-5733` | 旧主题记录；机制与当前汉化以现脚本为准 |
+
+## 离线Wiki与历史目录
+
+正式使用已阅读Markdown chunk，不将检索摘要作证据。英文主页及关联页合计3页；中文快照命中国家页（584/1185），内容仍为英文及原始模板；该页旧Elite Monarchy与旧理念不覆盖当前本地共和和理念。只有Tag F23查询为OFFLINE_WIKI_NO_RESULT，不能扩大为该国语料缺失。
+
+| lang / title | section | page_id / revision_id | local_source | source_url |
+|---|---|---|---|---|
+| en / Hold of Ovdal Tûngr | Pre-Reclamation；Reclamation under Iraskar the Benevolent；War of the Sorcerer-King and the Jaherian Blockade | 909 / 27258 | `anbennar-offline/output/chunks/en/md/909/017-01-Pre-Reclamation.md`、`018-01-Reclamation under Iraskar the Benevolent.md`、`020-01-War of the Sorcerer-King and the Jaherian Blockade.md` | https://anbennar.fandom.com/wiki/Hold_of_Ovdal_T%C3%BBngr |
+| en / Irsakar the Benevolent | article | 2756 / 12819 | `anbennar-offline/output/chunks/en/md/2756/001-01-Irsakar the Benevolent.md` | https://anbennar.fandom.com/wiki/Irsakar_the_Benevolent |
+| en / Segbandal | Settlers of Ovdal Tûngr | 2455 / 27249 | `anbennar-offline/output/chunks/en/md/2455/001-03-Segbandal.md` | https://anbennar.fandom.com/wiki/Segbandal |
+| zh / Hold of Ovdal Tûngr | Hold of Ovdal Tûngr | 584 / 1185 | `anbennar-offline/output/chunks/zh/md/584/001-01-Hold of Ovdal Tûngr.md` | https://anbennar.fandom.com/zh/wiki/Hold_of_Ovdal_T%C3%BBngr |
+
+Wiki古代水下爆破（6276 BA）与迁入重建仅作该修订叙述；神王重建的确切年份尚有来源差异，正文不选一个数字冒充一致结论。1010—1162封锁来自主页；不能自动与后世目录1473交易连成同一封锁。
+
+[研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)／[参考目录](https://shen-hhao.github.io/anbennar-timeline/references.html)是非官方社区资料入口，目录updatedAt=2026-09-20T19:34:18Z。记录`eu4:F23`及`ca09-text-bwc26-ph-four-power-campaign-1452`、`manual:bwc26-ph-reuyel-deal-1473`、`bwmap26-ph-reuyel-fall-1549`、`sarhal-endpoint-observation-526`仅作来源线索。登记的研究归档路径在本checkout不存在；Bulwar Timeline文档原件未读取，不能采其后世政治关系或Vic3投影作EU4既成史。已采用的Wiki原件实际从上述本地修订chunk取得。
+
+## Reddit来源
+
+- 官方Dev Diary #69，2024-09-22，Gillygamesh：[Nice! (To be back in Bulwar)](https://www.reddit.com/r/Anbennar/comments/1fn45n4/dev_diary_69_nice_to_be_back_in_bulwar/)。Dev Diary标识、作者团队开发语境，已读正文港口城段和相关说明；提Magnive设计、克拉萨诺合作、贸易复兴、强吼与海堡。只证明当时设计方向，更新日期公告不是已上线确认。
+- 官方发布公告，2022-11-18，ragingrage：[Children of Ruin Release](https://www.reddit.com/r/Anbennar/comments/yyqij8/children_of_ruin_release/)。已读正文更新清单，Ovdal Tûngr (rework)是较早重制记录，不冒称当前38项任务的发布公告。
+- 玩家1，2024-08-18：[Ovdal Tungr, tallest hold West of the Command](https://www.reddit.com/r/Anbennar/comments/1ev4lpp/ovdal_tungr_tallest_hold_west_of_the_command/)。读正文及相关评论；作者明确Bitbucket测试版，少量省份、海军贸易和海堡操作反馈仅属当时体验，不将旧疑似bug写成当前故障。
+- 玩家2，2025-03-28：[Me and my friend&#x27;s experience playing Ovdal Tûngr and Crathánor so far](https://www.reddit.com/r/Anbennar/comments/1jlihmz/me_and_my_friends_experience_playing_ovdal_t%C3%BBngr/)。正文梗图说明及相关评论；无精确版本，宗主方向、财政补贴与贸易权只作该组联机经验。
+
+实际采用玩家材料固定2篇。检索通道为筛候选另读取了3篇非采用玩家帖，未完全遵守“恰好读取两篇”的操作上限；已停止继续读取，偏差如实保存在本轮研究包，不将额外材料补入正文或来源数组。未确认2024年12月本国任务树的专门正式发布公告。
+
+## 评分与路线处理
+
+v2.1为58/58/18/88/52；尊严45、公共80、人格45、克制35→52.25→52，中立，mixed。已读取全部110国校准人格、价值、理由与阶段资料，未改既有评分；建设与具体族群驱逐相抵，未把海军扩张或共和名称当价值证据。人格阶段为氏族议会35/技术强度25→海扉影响58/强吼技术88；未证20分以上价值阶段差。
+
+独立[v2.2路线文件](../_data/personality-route-profiles-v2.2/F23.json)完整基线72/58/18/52/88，profiles=[]，production_matching_eligible=false。改革时间、技术连续阶段、U17选择及海堡操作均不强造F23人格分支；地精文化接纳通用操作不构成独特路线，共同527省政策保留。数字是编辑定标，未机械转换v2.1，未迁移Demo。
+
+仍有缺口：古代重建年份、1452联盟与1454和约归属、后世封锁衔接、海堡全升级／DLC／联机组合、实机难度与完整居民后果。非核心缺口保留，不影响已确认F23身份与专属实装。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-13；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F23 / F23_ideas`：`mod/common/ideas/anb_country_ideas.txt:2374-2412`；身份筛选结果：`identity_filter_matches`。
+
+理念单位缺口：工具的外交声誉“+100%”及创新获取“+0.5”不能凭通用文本格式确认；本条改为原键／原值1、0.5并注明单位待核实。传统与野心未定义说明，明确标记，不造描述。
+
+地图缓存updated；完整大区导出generated=78、not_applicable_no_unique_predecessor=32、unresolved=1。F23按当前continent原始africa及核准范围归Sarhal／阳洲，实际1444持地525、526，图片1920×1080。该游戏地理大区不同于评分表Bulwar／布勒瓦尔。导出跳过71篇脏或未跟踪正文，含本轮自有新文；本轮仅在新建F23正文用render_md_block补入地图，共享脏文保持保护。派生图未上传。
+
+### 七项理念的汉化物理行号
+
+汉化来源均为`[local source path omitted]`；以物理LF行号及结构库定位为准，原始控制字符不作换行。
+
+| 理念 | 名称行 | 说明行 |
+|---|---:|---:|
+| 神王重建之地 | 8422 | 8423 |
+| 众氏族共和国 | 8424 | 8425 |
+| 古代贸易路线 | 8426 | 8427 |
+| 布勒瓦尔债主 | 8428 | 8429 |
+| 造船大师 | 8430 | 8431 |
+| 深渊探险家 | 8432 | 8433 |
+| 蒸汽动力 | 8434 | 8435 |
+</pre></main></body></html>

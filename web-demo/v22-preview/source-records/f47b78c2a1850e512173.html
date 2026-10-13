@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/一侠-Y99.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 一侠（Y99）证据页
+
+## 身份与范围
+
+- 当前本体 `common/country_tags/anb_countries.txt:1409` 将 Y99 指向 `countries/One Xia.txt`；本地汉化解码器读取 `anb_countries_l_english.yml:1373-1374`，确认中文名“一侠”。版本边界：本体/汉化 descriptor 均为 `v1.37.5.0`，本体 Workshop ID `1385440355`，汉化 Workshop ID `2818493730`。
+- Y99 形成后历史/国家定义：`history/countries/Y99 - One Xia.txt:1-10`、`common/countries/One Xia.txt:1-30`。它不是1444独立起始国；“侠客国家”按一条形成链录入。
+- 结构化查询 `python -X utf8 anbennar-local/tools/query.py country Y99 --json` 确定 `missions/Xia_Missions.txt` 中 Y99 直接任务数为 **87**，分属 `xia_chi`、`xia_heroes`、`xia_legend`、`xia_consolidation_1/2`、`xia_onexia_1-5`。
+
+## 形成关系与代表机制
+
+- `decisions/OneXia.txt:5-96`：战争形成入口要求 Wulin 拥有 Xiaken 属国，或使用独立 Xiaken 改革；拥有 4559、至少30个带 `rightful_xia_territory` 的省份、Y99不存在且无战争后改为 Y99、移除 Wulin、加入 `one_xia` 并替换非通用任务。
+- `decisions/OneXia.txt:108-184`：和平形成入口要求相关 Xiaken/独立 Xiaken 不再存在，随后同样改为 Y99并换树。
+- `missions/01_Xiaken_Missions.txt:1-456`：`has_government_attribute = is_in_xia` 的共享任务；`common/government_reforms/03_government_reforms_theocracies.txt:1170-1240`：`xiaken` 与 `indep_xiaken` 改革。它们是 Y99 前身/共享制度，不应另立“一侠国家”条目。
+- 当前历史开局确认的标准入口仅列：Y28 江流寺（`add_government_reform = wulin`）、Y31 舞虹门（`add_government_reform = xiaken`）、Y35 六和行者（`add_government_reform = xiaken`）、Y39 风舞者（`add_government_reform = xiaken`），分别见 `history/countries/Y28 - Jiangliusi.txt:3-4`、`Y31 - Rang Nartak.txt:3-4`、`Y35 - Liuhexingzhe.txt:3-4`、`Y39 - P&#x27;ezarang.txt:3-4`。Y58 洛德康开局为君主制／Teplinbasiyeti／高等哲学，Y89 远西开局为寡头共和国／吞噬之道；二者不列为标准Y99前身。Y89仅备注为非标准偏航，另有任务主线，不把后期条件转换当作开局改革。
+- `missions/Xia_Missions.txt:1-365,731-1058,1060-1495,1497-2395,2398-2865,2867-3300`：气、武学、英雄、怪物/恶魔、使者、东洲解放、道路与寺院任务组；任务计数采用结构化解析，不人工逐项数。
+- 克制相关英文文本：`localisation/Flavour_OneXia_Y99_l_english.yml:20` 把终身驻仙道院的寺院代表称作可能的“hostage”；`:27-29` 将统一与和平路线分别写成强制统一或谦卑团结；`:300-302` 提供“不加入便强行纳入”及“夺地/摧毁”的选项；`:473` 写明向暴政者索地、否则摧毁。正面证据见 `:439`（解放暴君与压迫者统治下的村庄）、`:481`（朝圣者安全与道路/寺院建设）、`:469`（普通民众参与讨论与教育）。因此克制35来自具体的人质化治理与强制政策，同时保留解放、保护和公共建设证据，不从战争规模抽象扣分。
+
+## 外部与旧文档
+
+- DOCX 镜像 `推荐国文档3.0（上古文档仅供参考）.md:3993-4041` 已读，明确把“江流寺→一侠→仙侠”作为连续体验；`已实装任务树存档.md:4493-4513` 已读，记录侠客/左道交互。两者均为旧资料，只作导航和社区体验参考。
+- Reddit 正文实际读取并记录官方相关日志：Dev Diary #29（2022-01-23，直接介绍 Xiaken/One Xia）、#58（2023-11-08，东洲/仙界更新）、#93（2025-06-23，侠客与腐化语境）；玩家帖恰为两篇——`One Xia`（2025-03-12）与 `One Xia Complaint`（2023-01-27）。社区内容不证明当前任务条件或最优路线。
+- 离线 Wiki：严格在 `[local source path omitted]` cwd 运行 `.venv/Scripts/python.exe -X utf8 tools/doctor.py`，结果 `status=ok`，快照 `updated_at=2026-10-01T08:04:33.526085+00:00`。`Xiaken` 直接页已读：page_id 1278、revision_id 26158、section `Xiaken`、`anbennar-offline/output/chunks/en/md/1278/001-01-Xiaken.md`、`https://anbennar.fandom.com/wiki/Xiaken`；正文仅说 Xiaken 是仙界正道追随者。`One Xia`、`Y99`、`Xia` 精确标题均无结果，保留 `OFFLINE_WIKI_NO_RESULT`，不采用模糊摘要。
+- 哈兰历史地图按 `references/halann-timeline.md` 检索，未得到可读取的 Y99/Xiaken 原件，正式采用数 **0**。
+
+## 冲突与缺口
+
+- 用户原称“侠客国家”可能指前身集合、Y99形成国或旧文档中的三段链；当前本体唯一合法共同结果是 Y99。一侠的前身种族/文化会改变前期体验，因此 JSON 只记录集合入口，不捏造单一前身。
+- Reddit/旧 DOCX 对“强度”“难度”和后续国家名称存在版本差异；当前形成关系以 `OneXia.txt` 决议为准。两篇玩家帖正文均已读：2025-03-12 帖未注明本地Mod支持版本或子Mod；2023-01-27 帖提到 Warlords of Haless 发布背景，但未给当前支持版本，也未见子Mod说明。
+- values 重算为尊严64、公共利益70、人格承认72、克制35，加权63；档位阈值为0-32邪恶、33-67中立、68-100善良。当前脚本未找到活祭、奴役、一般人口资源化或强制人格剥夺节点；已记录的负面是终身驻院且被称作可能人质、强行纳入与夺地/摧毁选项，正面则是解放村庄、保护正道民众、道路建设与公共讨论。因此没有因为神权、恶魔清剿、统一或战争范围本身降低克制。
+
+- 价值轨迹采用branch_dependent：认可拒绝者与强制纳入是可选政策，不把所有强制选项都写成每局必经。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Y99 / Y99_ideas`：`mod/common/ideas/anb_country_ideas.txt:18597-18634`；身份筛选结果：`identity_filter_matches`。
+- `Y28 / Y28_ideas`：`mod/common/ideas/anb_country_ideas.txt:16723-16759`；身份筛选结果：`identity_filter_matches`。
+- `Y31 / Y31_ideas`：`mod/common/ideas/anb_country_ideas.txt:18803-18840`；身份筛选结果：`identity_filter_matches`。
+- `Y35 / Y35_ideas`：`mod/common/ideas/anb_country_ideas.txt:18722-18759`；身份筛选结果：`identity_filter_matches`。
+- `Y39 / Y39_ideas`：`mod/common/ideas/anb_country_ideas.txt:18637-18674`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/新漫游者-埃利坎德-B15-B38.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 新漫游者 B15 → 埃利坎德 B38：精简证据与边界
+
+核验：2026-10-03。本体Workshop `1385440355`与汉化`2818493730`均声明支持EU4 `v1.37.5.0`；本地结构化库`doctor.py`为`ok`，manifest与前次正式快照一致。国旗分别由本体`gfx/flags/B15.tga`、`gfx/flags/B38.tga`转换，未写入原Mod。
+
+| 判断 | 当前本体／汉化原始证据 | 边界 |
+|---|---|---|
+| 名称与身份 | 本体`common/country_tags/anb_countries.txt:117,140`；汉化`localisation/anb_countries_l_english.yml:228,274`，用只读解码器按B15/B38核对 | B15当前显示**新漫游者**，旧推荐文档“新流浪者”为旧称；B38当前显示**埃利坎德**。旧文档“伊利坎德”不用作现版显示名。 |
+| 1444开局 | 本体`history/countries/B15 - New Wanderers.txt:1-36`；`history/provinces/769 - Rohibon.txt:4-14`；`localisation/Escann_Adventurers_Intro_l_english.yml:34` | B15是神权制＋冒险团改革、`elikhetist`信仰、首都769、恩特夫·维布努阿特统治。`1438.3.10`是统治者历史条目的日期，出生日期另为`1405.12.3`，不能误作出生于1438。 |
+| 形成关系 | 本体`decisions/EscannFormables.txt:1763-1799,1892-1895` | B15满足冒险团建国改革、和平、行政科技7并在指定地区拥有土地，才通过通用决议`change_tag = B38`并`swap_non_generic_missions`；无固定历史形成日。B38独立`history/countries/B38 - Elikhand.txt:1-11`不是1444已完成此路线的证明。 |
+| 专属任务数量 | 结构化库`query.py country B15/B38 --json`；本体`missions/Elikhand_Missions.txt:3-4396` | B15未检出直接专属任务；B38有73项直接任务定义，11个任务组不计入数量。恩特夫归来后的`B38_mummy_lord`任务组要求国家旗标，不是每局同时可见的73个目标。未逐项审计全部奖励。 |
+| 安家与建设 | 本体`missions/Elikhand_Missions.txt:12-590,1032-1403,3106-3658,4060-4241`；本体风味`localisation/Flavour_Elikhand_B38_l_english.yml:4-35,102-155` | 粮食、棉花、集市、大学、金字塔／奇观与东坎诺旧城重建构成建设主线；金字塔有省份发展、金钱与人力门槛，不是开局免费建筑。 |
+| 达尔卡巴与政体 | 本体`events/Flavour_Elikhand_B38.txt:173-218,500-533`；`missions/Elikhand_Missions.txt:592-1024,1411-1843` | B15开局为`elikhetist`；B38历史静态文件为`regent_court`，任务事件再宣告`dalcabba`。Wiki资料写Dalcabba不能替代当前路线的时序。后续君主制／神权制事件为选择，不是单一终局。 |
+| 恩特夫归来 | 本体`events/Flavour_Elikhand_B38.txt:361-476`；`missions/Elikhand_Missions.txt:2401-2505,4249-4396`；风味`localisation/Flavour_Elikhand_B38_l_english.yml:331,340,157` | 遗体保存、金字塔及魔法门槛后触发；世界观称保存遗体的木乃伊，脚本以`lich = yes`的强大法师能力实现。亡灵军队是后续部分任务门槛，不可说形成B38自动得到。 |
+| 兽人、地精政策 | 本体`missions/Elikhand_Missions.txt:536-588,1532-1601,1932-2018`；风味`localisation/Flavour_Elikhand_B38_l_english.yml:53,73` | 接纳路线设`b38_love_greens`并提升容忍／发展；驱逐或清洗路线设`b38_hate_greens`，脚本增加`genocide`类行动。人格与价值判断必须写分支，不能把驱逐写成全路线必然。 |
+
+## 离线英文Wiki
+
+- [New Wanderers](https://anbennar.fandom.com/wiki/New_Wanderers)：`page_id=846`，`revision_id=26947`，实读`anbennar-offline/output/chunks/en/md/846/011-01-Religion(s).md`及该页Region、Government等chunk。正文支持“来自赫特拉塔的西卡斯特诺冒险团，恩特夫领导”；其“Khetism／Adventurer Duchy”与当前B15历史脚本`elikhetist／theocracy+adventurer_reform`不同，仅作宽泛设定，不用于现版机制。
+- [Elikhand](https://anbennar.fandom.com/wiki/Elikhand)：`page_id=2401`，`revision_id=29311`，实读`anbennar-offline/output/chunks/en/md/2401/001-01-Elikhand.md`。页面只有信息框，写西卡斯特诺、前身New Wanderers与Dalcabba；没有历史正文或形成年份。当前本体形成决议与任务事件才决定Tag和宗教时序。
+- [Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)：`page_id=1100`，`revision_id=32841`，实读`anbennar-offline/output/chunks/en/md/1100/016-02-Escanni Countries Established by Marcher Lords.md`中的Elikhand行；仅旁证前身关系，不给固定形成时间。
+- 哈兰历史地图本轮未采用独立历史年份或疆界结论：上述当前脚本与Wiki足够支持身份和起源，站点可能的中间年份仍须回读其原件，故没有填入固定建国年。
+
+## Reddit：官方发布语境与玩家体验
+
+- 官方[Dev Diary 21: Development Roadmap](https://www.reddit.com/r/Anbennar/comments/qa3rlm/anbennar_dev_diary_21_development_roadmap/)（2021-10-17，Lead Writer署名，实读涉及Elikhand的路线图段）：《光与暗》将加入Elikhand任务树；当时仍为计划，不能据此证明已实装。
+- 官方[Light and Dark Release](https://www.reddit.com/r/Anbennar/comments/r3r2d5/light_and_dark_release/)（2021-11-28，EU4 1.32语境，实读更新清单）：宣布发布Elikhand任务树、达尔卡巴宗教与相关赫特内容；现版机制仍由本地Mod证实。本轮直接相关官方日志／公告去重后2篇。
+- 玩家[Advice for New Wanderers / Elikhand](https://www.reddit.com/r/Anbennar/comments/1ezkxro/advice_for_new_wanderers_elikhand/)（2024-08-23，帖文与少量评论实读，未给精确模组构建号）：讨论强大法师开局、兽人政策、奇观建设；评论对亡灵军队是否必得相互纠正，脚本支持“非自动必得”。
+- 玩家[Elikhand MT Question](https://www.reddit.com/r/Anbennar/comments/1illc3r/elikhand_mt_question/)（2025-02-09，帖文与少量评论实读，未给精确模组构建号）：神权玩家反映后段强大法师门槛可能阻塞任务；只是当时体验，现版具体条件见任务脚本。
+
+结论边界：本地脚本决定开局、形成、任务归属及条件；本地汉化决定中文显示；离线Wiki仅补起源及前身；官方Reddit只证当年的发布计划／版本，玩家帖只证主观体验。未启动游戏实测，未把旧DOCX“轻松形成／必得亡灵军队”的说法升级成当前实装。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `B38 / B38_ideas`：`mod/common/ideas/anb_country_ideas.txt:4417-4451`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

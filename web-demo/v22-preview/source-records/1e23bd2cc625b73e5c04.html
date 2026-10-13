@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/德雷嫩氏族-I28.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 德雷嫩氏族 I28：证据与边界
+
+核验日：2026-10-08；本体与汉化均为 EU4 `v1.37.5.0`。当前汉化名为德雷嫩氏族，来源为 `[local source path omitted]`。
+
+| 判断 | 实际原件与行号 | 边界 |
+|---|---|---|
+| 开局身份 | `[local source path omitted] - Salla Drennen.txt:1-70` | 纳拉温、妖精庭、人物特性与历史友好是本地1444状态。 |
+| 直接任务数 | `country I28 --json` 的结构库 `mission_count=36`；`Counter(m.source_path)` 为 `Salla_Drennen_Missions.txt:22`、`WoodElves_Missions.txt:14`，36个 `entity_id` 唯一 | Salla 文件确定性正则匹配31个 `I28_*` 定义块，其中9个是 `I28_column*` 容器，实际唯一任务实体22；`I28_the_pact_fufilled` 与 `_real` 是不同ID的未显露/显露分支，各索引一次，不是重复ID。14个 WoodElves 实体在 `country_tags` 中显式含 I28，故总数是22专属+14共享=36，不是31+5。 |
+| 血仇路线实际效果 | `missions/Salla_Drennen_Missions.txt:407-444`；`events/Flavour_Salla_Drennen_I28.txt:71-101` | `I28_blood_and_bone`要求 I29 骨林归属与首都发展，完成后触发事件；事件定义两名独有女性顾问并 `inherit = I29`，确证为吞并型路线。 |
+| 修复/妖精路线实际效果 | `missions/Salla_Drennen_Missions.txt:761-809`、`:858-883`；`events/Flavour_Salla_Drennen_I28.txt:211-238` | 修复任务添加 `I28_veil_resonance`、设置 `I28_reveal`并换任务；妖精事件设置 `I28_petition_archfey_unlock`，非君主制时首都获得30封建制制度传播。 |
+| 关系修复路线 | `missions/Salla_Drennen_Missions.txt:620-685` | I30/I33高关系条件下，核心省份改木精灵/妖精庭并归还，同时互加历史朋友；不是通用木精灵标题推断。 |
+
+离线 Wiki 为 `Salla Drennen`，`page_id=3109`、`revision_id=17153`，实际读取 `001-01-Salla Drennen.md`、`001-02-Salla Drennen.md`。Wiki叙述1442—1443年会议；本地历史另记录1430年氏族友好等状态，叙述范围不同，友好关系标记不等于大会成立日期，不能据此制造同一事件的年份冲突。
+
+Reddit 实际读取 2 篇玩家帖： [What are the best countries to try in current dev version?](https://www.reddit.com/r/Anbennar/comments/1qfuwty)（2026-01-18，正文读到 Salla Drennen 游玩体验）；[Lost and confused in the Deepwoods](https://www.reddit.com/r/Anbennar/comments/18de1x6)（2023-12-08，正文读到 I28 与翠绿契约释放氏族时序）。前帖标题明确为开发版体验，未注明具体提交号；两帖均未注明子模组，只作体验与版本敏感线索。官方 [Dev Diary #88](https://www.reddit.com/r/Anbennar/comments/1kv4w41/)（2025-05-25）正文提供深林/翠绿契约背景，不证明 I28 每项当前机制；哈兰历史页打不开，未采用。
+
+价值四维为尊严70、公共利益78、人格承认80、克制55；加权原值为72.25，按四舍五入为72。吞并与归还是政治路线差异，不自动构成价值观转折；轨迹采用stable，中等置信度，未知后果留在证据缺口。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I28 / I28_ideas`：`mod/common/ideas/anb_country_ideas.txt:7544-7581`；身份筛选结果：`identity_filter_matches`。
+- `I45 / I45_ideas_legacy`：`mod/common/ideas/anb_country_ideas.txt:8201-8245`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_elyn`：`mod/common/ideas/anb_country_ideas.txt:8248-8286`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_drennen`：`mod/common/ideas/anb_country_ideas.txt:8289-8326`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_cenag`：`mod/common/ideas/anb_country_ideas.txt:8329-8367`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_ayeth`：`mod/common/ideas/anb_country_ideas.txt:8370-8409`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_fealgarn`：`mod/common/ideas/anb_country_ideas.txt:8412-8450`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_myna`：`mod/common/ideas/anb_country_ideas.txt:8453-8491`；身份筛选结果：`runtime_condition`。
+</pre></main></body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/维奈尔-埃纳尔-A21-Z43.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 维奈尔 A21 → 埃纳尔 Z43：精简证据与边界
+
+核验：2026-10-03。当前本体Workshop `1385440355`及汉化`2818493730`的`descriptor.mod`均标`v1.37.5.0`（EU4支持版本）。本地结构化库`doctor.py`为`ok`且manifest与源目录一致；`missions/Venail_Missions.txt`和`missions/Aelnar_Missions.txt`本地修改时间为2026-07-09，不等于官方发布或重制时间。两面国旗由本体`gfx/flags/A21.tga`、`Z43.tga`转换为PNG，源Mod未修改。
+
+| 判断 | 本体／汉化原始证据 | 边界 |
+|---|---|---|
+| 身份与1444 | 本体`common/country_tags/anb_countries.txt:22,1453`、`history/countries/A21 - Venail.txt:1-57`、`history/countries/Z43 - Aelnar.txt:1-38`；`history/provinces/1 - Far_Isle.txt:5`、`93 - Venail.txt:4`、`94 - Edilliande.txt:4`、`127 - Firstsight.txt:4`；汉化`localisation/anb_countries_l_english.yml:42,1459` | A21=维奈尔，本地省份历史直接确认1444四省持有；Z43=埃纳尔，国家历史文件是形成后模板，未见1444持地。 |
+| A21任务及迁国 | 本体`missions/Venail_Missions.txt:504-704`；结构化`query.py country A21 --json` | 19项A21直接任务。新的开始要求诺鲁因殖民国家规模，之后处理资源与旧地、迁都并取得形成旗标；不是决议自动替玩家完成前传。 |
+| Z43形成决议 | 本体`decisions/ColonialFormables.txt:2-39` | 仅A21、和平、自由/朝贡资格、Z43不存在、精灵复兴旗标及首都在诺鲁因时可形成；决议换Tag与任务。别国不能仅占诺鲁因直接点此决议。 |
+| Z43任务统计 | 本体`missions/Aelnar_Missions.txt:1-5742`；结构化`query.py country Z43 --json` | 155项Z43任务定义；含不同`rianvisa_*_rule`下显示的互斥组及Elsa/Elissa等附加模块。不是每局可顺序完成155项，更不能与A21的19项相加成固定174项单局清单。 |
+| 启明之战 | 本体`common/disasters/aelnar_civil_war.txt:2-145`；`events/Flavour_Aelnar_Z43.txt:822-850,1159-1481`；汉化`localisation/Flavour_Aelnar_Z43_l_english.yml:393` | 有具体潜在条件、进度、严重惩罚和多个派系处理要求。Z69—Z73是可释放并可切换的争权派系，不是A21→Z43后逐个形成的固定后继。时间与规模非每局相同。 |
+| 共通清洗任务 | 本体`missions/Aelnar_Missions.txt:2321-2328,2715-2785`；本体`localisation/Flavour_Aelnar_Z43_l_english.yml:545-546`；汉化同名文件`:462-463` | `aelnar_3`组仅要求Z43，任务描述明确要完全消除当地人口，效果强制改为星精灵文化并加`aelnar_genocide`修正。此为具体严重侵害证据，不能美化为普通文化融合；脚本不足以量化实际死亡人数。 |
+| 分支侵害 | 本体`missions/Aelnar_Missions.txt:611-687,3375-3402,4355-4383`；本体`localisation/Flavour_Aelnar_Z43_l_english.yml:125-126,154-163` | 达赫瓦尔要求多族群清洗修正；莉希尔路线建立二等身份；埃莉莎相关叙事把遗迹精灵用作活体魔法电池。这些不是所有派系必经的同一动作序列。通用兽人奴役决议存在，但本轮未证明是埃纳尔专属任务核心。 |
+
+## 离线Wiki与哈兰历史地图
+
+- 英文 [Elfrealm of Venáil](https://anbennar.fandom.com/wiki/Elfrealm_of_Ven%C3%A1il)：`lang=en`、`page_id=683`、`revision_id=32093`；实读`anbennar-offline/output/chunks/en/md/683/015-01-Early history.md`（`section=Early history`）与`016-01-Migration to Aelantir.md`（`section=Migration to Aelantir`）。用于最初的维奈尔岛、战争后精灵政权及迁往埃兰提尔的设定脉络；不证明1444后玩家一定按该年份迁国。
+- 英文 [Empire of Aelnar](https://anbennar.fandom.com/wiki/Empire_of_Aelnar)：`lang=en`、`page_id=714`、`revision_id=17057`；实读`anbennar-offline/output/chunks/en/md/714/022-01-Early history.md`、`023-01-Rianvisa.md`、`024-01-Downfall.md`。用于形成后的设定历史、启明之战与旧Wiki未来；修订较旧，Wiki所述后世毁灭不作为EU4强制结局。
+- [哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AA21)登记A21的1444四省及A21→Z43线索；四省持有已由上述当前本地省份历史独立核对。1533年岛群转属等后续节点仍未回读原件，不据地图重建固定年份或中间疆界。站点约2026-09-23快照的阶段推演不是玩家任务未来。
+
+## Reddit：官方材料与两篇玩家帖
+
+- 官方 [Dev Diary #14: Upcoming Changes to Aelantir](https://www.reddit.com/r/Anbennar/comments/n9xipz/anbennar_dev_diary_14_upcoming_changes_to_aelantir/)（2021-05-11，正文第16—80行，作者Nopani）：当时介绍维奈尔过渡与启明之战2.0，文中仍属计划/测试、EU4 1.30.6语境，不能代替现版脚本。
+- 官方 [Dev Diary #15: Upcoming Changes to Aelantir pt II](https://www.reddit.com/r/Anbennar/comments/nfhraa/anbennar_dev_diary_15_upcoming_changes_to_aelantir_pt_II/)（2021-05-18，正文第76—126行，作者Nopani）：当时介绍多胜者路线、相对缓和分支及莉希尔魔法电池设想；是否实装由本地任务和事件另证。本轮核实到直接相关官方日志2篇；未用一般提名公告凑数。
+- 玩家 [A guide from Venail to Aelnar (1.31)](https://www.reddit.com/r/Anbennar/comments/po48yn/a_guide_from_venail_to_aelnar_131/)（主指南正文第17—145行；页面未显示准确发帖日，标题注明EU4 1.31）：强调探索、外交、殖民与内战准备；版本落后，不证明当前机制。
+- 玩家 [Venail to Aelnar](https://www.reddit.com/r/Anbennar/comments/1nkes99/venail_to_aelnar/)（2025-09-18，主帖及少量相关评论第17—172行；具体版本未说明）：有人认为迁国前过度扩张会使灾难更难；个别叛军规模只是玩家经历，不当作固定规则。两篇均未证明使用额外子Mod。
+
+旧DOCX中未来任务段标为暂停，不能推翻当前本地脚本已存在的任务。六派胜出与Elsa/Elissa附加模块不完全同一层级；本条目只判定主线边界、共同侵害与代表性分支，不逐任务审计数值。人格分数评价可玩的国家路线而非精灵种族或玩家本人，并用阶段分区分A21早期与Z43后期。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `A21 / A21_ideas`：`mod/common/ideas/anb_country_ideas.txt:755-795`；身份筛选结果：`identity_filter_matches`。
+- `Z43 / Z43_ideas`：`mod/common/ideas/anb_country_ideas.txt:5934-5978`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

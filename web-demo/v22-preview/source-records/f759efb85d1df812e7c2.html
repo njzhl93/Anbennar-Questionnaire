@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/卡斯塔诺-B32.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 卡斯塔诺 B32：精简证据与边界
+
+核验：2026-10-02。本体 Workshop `1385440355`、汉化 `2818493730` 的 `descriptor.mod` 均标 `supported_version=&quot;v1.37.5.0&quot;`；这是 EU4 支持版本，并非安本纳尔独立发布号。本地 `missions/Castanor_Missions.txt` 文件时间为2026-09-07，不能单凭文件时间判定内容在该日重制。结构化库状态 `ok`；其计数和定位须回溯以下 Workshop 原件。
+
+| 判断 | 当前原始证据 | 边界 |
+|---|---|---|
+| B32身份／中文名 | `mod/common/country_tags/anb_countries.txt:134`；`mod/history/countries/B32 - Castanor.txt:1-20`；`translation/localisation/anb_countries_l_english.yml:262` | Castanor=B32=卡斯塔诺；历史文件是形成后模板，未见1444省份历史将领地赋给B32。 |
+| 形成资格 | `mod/decisions/EscannFormables.txt:220-318`；`mod/events/EscanniWars.txt:654` | 可由改革冒险团、若干已形成国家或B36取得决议资格；另需战争选项解锁、卡斯托纳斯地区与840、显贵阶层、人类行政、和平及试炼生涯条件。B31卡斯泰利尔不是唯一前身；Z34黑卡斯塔诺被排除。 |
+| 真正改Tag | `mod/decisions/EscannFormables.txt:302-318`；`mod/events/CastanorTrials.txt:230-238,1234-1320` | 玩家点击决议只标记试炼；通过后事件才改B32、转文化、迁都840、授予宣称和换任务。决议中的直接改Tag只在AI分支执行。未穷尽失败与重试全部事件。 |
+| 任务数量与内战边界 | `mod/missions/Castanor_Missions.txt:1-10930`；`anbennar-local/tools/query.py country B32 --json` | 结构化库定位156项B32直接任务；文件末尾15项 `potential={tag=B61}` 属龙之子内战对手，不可加为171项B32任务或一局顺序全部完成。部分地区任务按草原局势分支。 |
+| 核心玩法 | `mod/missions/Castanor_Missions.txt:16-137,4087-4580,8232-8881`；`mod/decisions/CastanorDecisions.txt:3-189`；`mod/common/disasters/castanor_succession_war.txt` | 军团、城堡、道路、显贵与自治领、继承战争构成主轴。未逐任务审计奖励与实机完成时长。 |
+| 地精驱逐 | `mod/missions/Castanor_Missions.txt:624-714`；`translation/localisation/Flavour_Castanor_B32_l_english.yml:561` | 巴哈尔、奥尔迪亚等地地精省份被改宗改文化并加50荒废；地精少数群体被移除，汉化直接称“驱逐”并按人口提供金钱。不是普通同化。 |
+| 豺狼人驱逐 | `mod/missions/Castanor_Missions.txt:976-1095,3180-3210`；`translation/localisation/Flavour_Castanor_B32_l_english.yml:566` | 对豺狼人实施同类移除，且降低容忍度；不因战争、君主制或帝国化本身扣价值分。脚本不能单独量化实际死亡人数，故不写成“已证实屠杀”。 |
+
+## 离线 Wiki 与历史地图
+
+- 英文 [Castanor](https://anbennar.fandom.com/wiki/Castanor)：`page_id=245`、`revision_id=30778`；已读 `anbennar-offline/output/chunks/en/md/245/001-01-Castanor.md` 和全文 `output/en/markdown/Castanor__21b8e82a.md`。用于帝国各阶段、巫王战争后解体及骑士东坎诺延续的世界史；不证明本地形成条件。
+- 英文 [Early Castan&#x27;s Empire](https://anbennar.fandom.com/wiki/Early_Castan%27s_Empire)：`page_id=1402`、`revision_id=25835`；已读 `output/chunks/en/md/1402/001-01-Early Castan&#x27;s Empire.md`。用于卡斯坦出谷与早期帝国的背景。
+- 英文 [Late Castan&#x27;s Empire](https://anbennar.fandom.com/wiki/Late_Castan%27s_Empire)：`page_id=2633`、`revision_id=26139`；已读 `output/chunks/en/md/2633/001-01-Late Castan&#x27;s Empire.md`。该页相关战争章节是未完成提纲，不据此补写巫王战争细节。中文快照仅辅助“卡斯坦一世”等译名；游戏当前国名以本地汉化为准。
+- [哈兰历史地图资料目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AB32)仅作原件定位线索；未将中间年份领土推演或跨游戏端点写作B32的固定未来。
+
+## Reddit：官方材料与两篇玩家帖
+
+- 官方 [Dev Diary 21: Development Roadmap](https://www.reddit.com/r/Anbennar/comments/qa3rlm/anbennar_dev_diary_21_development_roadmap/)（2021-10-17；正文第37—42行）：当时预告卡斯塔诺的试炼、军团与文化路线；不等于现版机制。
+- 官方 [Dev Diary 25: The Silver Dragon Alights](https://www.reddit.com/r/Anbennar/comments/qttknr/dev_diary_25_the_silver_dragon_alights/)（2021-11-14；正文第21—81行）：历史框架及当时任务设计，所称150+任务、200+事件与形成门槛不直接替代本地计数与决议。
+- 官方 [Light and Dark Release Announcement](https://www.reddit.com/r/Anbennar/comments/r3r2d5/light_and_dark_release/)（2021-11-28；EU4 1.32发布语境，正文第46—80、117—128行）：确认当时正式发布卡斯塔诺任务树，不证明现版全部数值未变。
+- 玩家 [Is the Castanor Mission Tree Even possible to complete before 1821?](https://www.reddit.com/r/Anbennar/comments/wtrids/is_the_castanor_mission_tree_even_possible_to/)（2022-08-21；正文第50—57行、少量高相关评论）：旧版玩家以伯爵联盟→卡斯泰利尔→B32游玩，认为内容极长；具体版本及子Mod未说明，不证明现版期限。
+- 玩家 [Historical/Archaeological Mission Trees?](https://www.reddit.com/r/Anbennar/comments/w9gknz/historicalarchaeological_mission_trees/)（2022-07-27；正文第16—20行、相关评论）：以历史考古式叙事推荐卡斯塔诺；非独立史实来源，具体版本及子Mod未说明。
+
+旧DOCX镜像没有可用于当前B32机制核验的独立专节；未来计划不能替代已实装脚本。试炼失败分支、完整继承战争进程、全部任务奖励和实机难度未逐项验证。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `B32 / B32_ideas`：`mod/common/ideas/anb_country_ideas.txt:11177-11221`；身份筛选结果：`identity_filter_matches`。
+- `B31 / B31_ideas`：`mod/common/ideas/anb_country_ideas.txt:8770-8808`；身份筛选结果：`identity_filter_matches`。
+- `B58 / B58_ideas`：`mod/common/ideas/anb_country_ideas.txt:8811-8846`；身份筛选结果：`identity_filter_matches`。
+- `B33 / B33_ideas`：`mod/common/ideas/anb_country_ideas.txt:2197-2243`；身份筛选结果：`identity_filter_matches`。
+- `B60 / B60_upgraded_ideas`：`mod/common/ideas/anb_country_ideas.txt:18344-18386`；身份筛选结果：`runtime_condition`。
+- `B60 / B60_ideas`：`mod/common/ideas/anb_country_ideas.txt:18389-18428`；身份筛选结果：`identity_filter_matches`。
+- `B02 / B02_ideas`：`mod/common/ideas/anb_country_ideas.txt:2111-2152`；身份筛选结果：`identity_filter_matches`。
+- `B36 / B36_ideas`：`mod/common/ideas/anb_country_ideas.txt:10818-10854`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/阿德蕾西娅骑士团-A77.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 阿德蕾西娅骑士团 A77：证据与边界
+
+核验日2026-10-08。本体Workshop `1385440355`与汉化`2818493730`均为EU4 `v1.37.5.0`；结构化库状态`ok`，manifest分别为`2812922911103828520`、`7518363337005727349`。本页Mod路径相对于`[local source path omitted]`；中文键相对于`2818493730/`。当前国名由现有只读解码器核对：`localisation/anb_countries_l_english.yml:154`，`A77=阿德蕾西娅骑士团`。
+
+| 判断 | 实际原件 | 边界 |
+|---|---|---|
+| 身份与任务 | `history/countries/A77 - Orda Aldresia.txt:1-35`；`missions/Orda_Aldresia_Missions.txt:1-1395` | 19直接专属任务，已包含宗教路线；不能把任务分组数当阶段数。 |
+| 护民与装备 | `localisation/Flavour_OrdaAldresia_A77_l_english.yml:197-246`及对应任务 | 枪刃、混合魔法、档案馆、遗物与保护弱者；危险遗物、军事化本身不作为邪恶事实。 |
+| 强制政治 | `events/Flavour_OrdaAldresia_A77.txt:2058-2108` | .38对有occupied_by_second_sons旗标国家，杀君主/继承人、扶植Valan并附庸；限事件到达及作用对象，不称所有国家必然遭此。 |
+| 条件后继 | 同文件`:2142-2163`；`events/Flavour_Anbenncost_A38.txt:896-912` | .48可继承A38，有A77_ravelian_option时继承Z97、改Z97、换树；不是额外A77文件无条件追加。 |
+| 历史 | Wiki444、29511，History/Founding/Bodyguards/Greentide Schism；关联Magisterium165、32651的Rivalry | 1424分裂属于前史；后来的遇刺、改宗和远征不倒灌开局。 |
+
+离线英文Wiki：Orda Aldresia，page_id=444，revision_id=29511；实际读到的主块`anbennar-offline/output/chunks/en/md/444/020-01-Greentide Schism.md`，完整章节范围见上表。原URL：[Orda Aldresia](https://anbennar.fandom.com/wiki/Orda_Aldresia)。快照健康状态ok（2026-10-01），不声称是线上实时页。
+其他实际章节：`anbennar-offline/output/chunks/en/md/444/015-01-Religion(s).md`、`017-01-History.md`、`018-01-Aldresian Crusade and Founding.md`、`019-01-Bodyguards of the Emperor.md`；关联块`anbennar-offline/output/chunks/en/md/165/026-01-Rivalry with the Orda Aldresia.md`。
+
+Reddit官方材料：
+
+- [Dev Diary #71](https://www.reddit.com/r/Anbennar/comments/1g2uejz/)：2024-10-13，OFFICIAL_CONTEXT；读取与该国相关的正文，设计/发布语境不替代本地实装。
+- [Dev Diary #85](https://www.reddit.com/r/Anbennar/comments/1keiyuz/)：2025-05-04，RELATED_CONTEXT；读取与该国相关的正文，设计/发布语境不替代本地实装。
+
+玩家材料（只作经验，未取得确定分支/子Mod/存档修改信息，不假设没有）：
+
+- [Orda Aldresia crazy MT](https://www.reddit.com/r/Anbennar/comments/1pe4nga/)：2025-12-04；正文及少量相关评论，具体Mod版本未证实，旧数值不采用。
+- [Orda Aldresia impressions](https://www.reddit.com/r/Anbennar/comments/1u1hhuv/)：2026-06-09；正文及少量相关评论，具体Mod版本未证实，旧数值不采用。
+非待核的绝对日期来自检索卡日期元数据，而非由Reddit ID反推；日期待核材料不用于任务更新时点。官方材料无直接国家主题者明确列为区域相关，标题/摘要不替代已读正文。
+
+哈兰历史地图：research.html、references.html及首页返回“URL is not accessible via this tool”；可用浏览器库存为空，未取得国家记录及原件。没有采用推演、跨游戏端点或网页摘要作历史。不能由读取失败推断站点无资料。
+
+人格五维80/75/50/92/55；价值四维50/78/57/25，35/25/25/15加权为55，中立，branch_dependent。保护无法自救者、以安全和繁荣争取民众提供积极证据；次子事件会杀死被占国统治者与继承人、扶植傀儡并附庸。危险遗物、神权、军事化和战争本身不扣分。最终宗教国家路径有条件，不能归作所有玩家必经。
+阶段78（保护重建）→45（次子强制政治路线）是条件路线评价，不是按年代自动变化；Z97完整后继树未作逐项审计。
+
+未实机测试，不把脚本存在等同于测试过每条路线；只读代表性机制与形成入口，未进行全任务奖励审计。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `A77 / A77_ideas`：`mod/common/ideas/anb_country_ideas.txt:8691-8729`；身份筛选结果：`identity_filter_matches`。
+- `Z97 / Z97_ideas`：`mod/common/ideas/anb_country_ideas.txt:19327-19366`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

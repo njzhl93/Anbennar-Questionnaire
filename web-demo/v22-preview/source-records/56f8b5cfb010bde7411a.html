@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/伊斯特拉洛尔-A45.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 伊斯特拉洛尔（Istralore，A45）证据页
+
+核验日：2026-09-16  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：Tag、中文名、1444身份、独特任务树、达梅里亚形成分支和核心风格已确认；英文国家页与两个人物页已从本地离线Wiki复核。
+
+## 身份与历史
+
+- Tag：`common/country_tags/anb_countries.txt:46`，A45指向`countries/Istralore.txt`。
+- 当前中文名：汉化`localisation/anb_countries_l_english.yml:90`经项目解码器读取为“伊斯特拉洛尔”。
+- 1444开局：`history/countries/A45 - Istralore.txt:3-49`确认半精灵君主制、东达梅里亚文化、摄政王庭、首都277、选帝侯、奥坎娜一世及其配偶Ricain。
+- 历史起源：`localisation/anb_startup_screen_l_english.yml:34-35`与`anb_powers_and_ideas_l_english.yml:515-527`记载伊斯特拉兰尼亚·战歌者、遗民舰队、报丧女妖、西利斯特拉家族、帝国元帅和达梅里亚忠臣传统。
+- 丁香战争结局：`localisation/anb_lilac_wars_l_english.yml:48-49`确认达梅里亚覆亡后，伊斯特拉洛尔准备以“第二银色家族”继承其帝国事业。
+
+## 任务、分支与机制
+
+- 任务文件：`missions/Istralore_Missions.txt:1-2664`；项目确定性脚本按`A45_* = {`统计得到38个直接任务。
+- 身份分支：`missions/Istralore_Missions.txt:811-875`触发`istralore.10`；`events/Flavour_Istralore_A45.txt:348-458`确认形成达梅里亚（`change_tag = A58`）或保留A45并设置`A45_part_2`、阻止日后形成达梅里亚。
+- 达梅里亚通用形成条件：`decisions/WescannFormables.txt:2-196`；伊斯特拉洛尔专属事件是本战役链的直接分支证据。
+- 后半任务：`missions/Istralore_Missions.txt:1306-2664`只在A45拥有`A45_part_2`时显示，覆盖科琳教权威、皇帝军制、旧盟归附、布西诺尔与萨哈尔、海军和第五次丁香战争。
+- 报丧女妖与改革：`missions/Istralore_Missions.txt:105-250,418-484,1316-1430`；议会议题见`common/parliament_issues/anb_istralore.txt:1-181`。
+- 帝国与外交：`missions/Istralore_Missions.txt:1741-2292`确认婚姻合法性、月党旧盟、皇帝目标、解放与帝国扩张。
+- 当前汉化任务名：`Flavour_Istralore_A45_l_english.yml:10,18,30,46,68,74`分别确认“劳动妇女”“复兴报丧女妖”“达梅里亚的继承人”“科琳之剑”“安本纳尔意为……”与“第五次丁香战争”。
+
+## 本地离线Wiki
+
+- [Duchy of Istralore](https://anbennar.fandom.com/wiki/Duchy_of_Istralore)：英文离线页`page_id=644`、`revision_id=31323`；已读取`anbennar-offline/output/chunks/en/md/644/013-01-Religion(s).md`。正文补充遗民舰队Estádha率先追随穆纳斯、报丧女妖参与巫王战争、达莱矿区支撑军事传统，以及达梅里亚覆亡后伊斯特拉洛尔成为事实继承者的设定。
+- [Istralania Warsinger](https://anbennar.fandom.com/wiki/Istralania_Warsinger)：英文离线页`page_id=1450`、`revision_id=27155`；已读取`anbennar-offline/output/chunks/en/md/1450/001-01-Istralania Warsinger.md`。正文确认她是月精灵、报丧女妖领袖和Silistra家族创始人，战后与Sideric the Patient成婚，并由Marion Firstborn授予伊斯特拉洛尔公国。
+- [Aucanna Silistra](https://anbennar.fandom.com/wiki/Aucanna_Silistra)：英文离线页`page_id=4763`、`revision_id=28650`；已读取`anbennar-offline/output/chunks/en/md/4763/001-01-Aucanna Silistra.md`。正文确认奥坎娜于1443—1467年统治，是达梅里亚覆亡后首位统治伊斯特拉洛尔的公爵，并把其早期统治置于丁香战争创伤、玫瑰党冲突和重建压力中。
+- 国家页把创始人另拼为“Istralara”，人物页为“Istralania”；正文继续采用本地剧情文本与人物页一致的“Istralania”，并将其视为Wiki内部异拼。
+
+## Reddit官方项目材料
+
+- [EU4 Dev Diary #91: Anbennar Means Unity](https://www.reddit.com/r/Anbennar/comments/1laf26k/eu4_dev_diary_91_anbennar_means_unity/)：2025-06-13；Final Empire开发阶段。Istralore段落直接说明两阶段任务树、达梅里亚/伊斯特拉洛尔身份选择、帝国扩张与解放后加入帝国的设计意图。
+- [The Final Empire is out NOW!](https://www.reddit.com/r/Anbennar/comments/1lshhva/the_final_empire_is_out_now/)：2025-07-05；官方发布公告。确认Istralore重制任务树随Final Empire发布，并与重制后的安本纳尔帝国系统联动。
+- [Wiki Wednesdays #113: Aucanna “Ironside” Silistra](https://www.reddit.com/r/Anbennar/comments/1jkj4eb/wiki_wednesdays_113_aucanna_ironside_silistra/)：2025-03-26；官方背景预热而非正式Dev Diary。用于补充奥坎娜的忠诚、反威克斯立场和重制预告，不证明当前机制。
+- 本轮以Istralore、Aucanna Silistra、Dameria、Wex、Corinite、Moon Party、Marshal、Empire of Anbennar和Final Empire组合检索，未发现其他正文直接讨论该国且能确认官方语境的独立日志。
+
+## Reddit社区体验（恰选两篇）
+
+- [In the Name of Corin, Dameria, and Anbennar — An Istralore AAR](https://www.reddit.com/r/Anbennar/comments/1tz63nu/in_the_name_of_corin_dameria_and_anbennar_an/)：2026-06-07；Final Empire版本，Very Easy难度。完整战报认为故事与帝国玩法优秀，并记录侵略扩张、非法领土要求、选帝外交和治理容量压力；难度结论不外推至标准难度。
+- [Best easy countries?](https://www.reddit.com/r/Anbennar/comments/1tox8w8/best_easy_countries/)：2026-05-27；Final Empire语境。高相关评论把Istralore与Verne列为适合熟悉帝国系统的相对轻松国家；只作社区推荐，不证明当前数值。
+
+## 冲突与待核实
+
+- Wiki国家主页面已经离线取得，但它仍是世界观叙述，不能覆盖当前脚本中的任务归属、形成分支或机制。
+- 本地历史文件写`monarch`奥坎娜一世和`queen`里凯恩；本文按脚本称其为统治者及配偶，不额外推断称号或关系细节。
+- 任务分支明确证明形成A58或保留A45；形成达梅里亚后交换到哪一版完整任务树未逐任务审计。
+- 38是确定性脚本统计的直接`A45_*`任务数，不包含共享帝国任务、事件和达梅里亚形成后的其他任务。
+- 未逐项审计全部奖励、议会数值或运行时开档测试；这些缺口不影响身份、历史边界、分支关系和核心风格判断。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AA45)的`eu4:A45`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。它提醒恢复A58与保留A45是可选分支；这与现有本地脚本分层一致。无关键新增历史原件，故未据地图改写正文或设定必然国界。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `A45 / A45_ideas`：`mod/common/ideas/anb_country_ideas.txt:1495-1533`；身份筛选结果：`identity_filter_matches`。
+- `A58 / A58_ideas`：`mod/common/ideas/anb_country_ideas.txt:1701-1740`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

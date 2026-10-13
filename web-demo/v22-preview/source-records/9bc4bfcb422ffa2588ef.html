@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/奥伦瓦利亚姆-U39.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 奥伦瓦利亚姆 U39：证据与边界
+
+核验：2026-09-30。本体 Workshop `1385440355`、汉化 `2818493730`；本体 descriptor 声明兼容 EU4 `v1.37.5.0`，不是独立 Anbennar 发布号。本地结构化库 `doctor.py` 为 `ok`。下述 `mod/` 和 `translation/` 均指两份 Workshop 原件；结构化库仅作可回溯缓存。
+
+| 判断 | 原始文件与位置 | 边界 |
+|---|---|---|
+| U39身份与中文名 | `mod/common/country_tags/anb_countries.txt:1238`；`translation/localisation/anb_countries_l_english.yml:2300` | 当前汉化为“奥伦瓦利亚姆”，英文Orenvalyam；不能以搜索译名另立Tag |
+| 1444是否已存在 | `mod/history/countries/U39 - Orenvalyam.txt:2-39`；`mod/decisions/SouthAelantirFormables.txt:430-510`；1444省份历史未检出U39所有者 | 国家历史是形成国模板；不能把其中1444政府设置当作地图上既成领土。省份历史检查只做精确owner/controller检索，未作游戏内开局实测 |
+| 形成条件 | `mod/decisions/SouthAelantirFormables.txt:433-470,473-510` | 奥伦·纳伊鲁改革宗教、泰琴德900发展度、110个符合宗教条件的省份、稳定度与独立等；可由合格前身形成，未确定唯一叙事前身 |
+| 形成后政体 | `mod/decisions/SouthAelantirFormables.txt:507-510`；`mod/events/Flavour_Orenvalyam_U39.txt:525-545`；`mod/common/government_reforms/03_government_reforms_theocracies.txt:6952-6985` | 决议先设置君主制，紧随开场事件改神权并赋卡瓦拉利神权民主、三派系特权；不能只看决议的一行判政体 |
+| 任务数量与路线 | `mod/missions/Zz_Orenvalyam_Missions.txt:6-3959` | 结构化库直接任务实体40项；含条件显示的替代任务，不是单局必做40项。末段“终点”后依旗标开放分支 |
+| 魔法工程 | `mod/missions/Zz_Orenvalyam_Missions.txt:2144-2201` | 法师塔、三级塑能与战斗法师学院均为“黎明之刃”当前触发条件；项目结果与实机平衡未核 |
+| 价值观分叉 | `mod/events/Flavour_Orenvalyam_U39.txt:1237-1284,1520-1546,1751-1806` | 包含强制改文化/宗教和破坏、派系宪制选择、对殖民者的夺回／重塑／复仇分支；不能把最坏选项说成每局必然 |
+
+## 英文离线 Wiki 与历史地图
+
+- [Elrandar Silverspite](https://anbennar.fandom.com/wiki/Elrandar_Silverspite)：英文离线页 `4916`、修订 `31838`，已读 `anbennar-offline/output/chunks/en/md/4916/001-01-Elrandar Silverspite.md`。银刺1583年出生，1609年取得铠甲，1612年统合奥伦·纳伊鲁，1627年身亡。属于1444之后的设定史，不证明玩家必然失败。
+- [Kamrayakval&#x27;s War](https://anbennar.fandom.com/wiki/Kamrayakval%27s_War)：英文离线页 `5618`、修订 `31840`，已读 `anbennar-offline/output/chunks/en/md/5618/001-01-Kamrayakval&#x27;s War.md`。主战期1612—1627，1627后仍有局部战事。正文出现与上下文不合的“1519年进攻阿墨翁”，不采纳这个年份。
+- [哈兰历史地图 U39 研究入口](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AU39)：`registered`，仅有身份和首都锚点，无经审校年代史节点；不据此写具体领土年表。
+
+## Reddit：官方资料与玩家体验
+
+官方开发／发布资料，只证明当时的设计意图或公布状态；当前机制以本地脚本为准：
+
+1. [EU4 Dev Diary #107: Dream by Delirium, Dawn by Flame](https://www.reddit.com/r/Anbennar/comments/1rbq273/eu4_dev_diary_107_dream_by_delirium_dawn_by_flame/)（2026-02-22）：Orenvalyam 专题，讨论反奴役、神权议会、魔法路线及远征构想；开发时尚未公布精确后续版本号。
+2. [Inheritors of Insyaa is out NOW!](https://www.reddit.com/r/Anbennar/comments/1t7me5o/inheritors_of_insyaa_is_out_now/)（2026-05-08）：发布帖列出 Orenvalyam 任务内容；未用帖子推断当前任务奖励。
+
+两篇玩家帖子（精确补丁及子Mod组合未核，不作机制证据）：
+
+- [Orenvalyam Non-Silverspite](https://www.reddit.com/r/Anbennar/comments/1u2b8jr/and_so_they_fought_the_hero_and_the_dragon_at_the/)（2026-06-10）：称赞任务、银刺／埃卡里斯角色对决和结尾文本；属于主观体验。
+- [Highlight MTs of the Insyaa update?](https://www.reddit.com/r/Anbennar/comments/1tj0v5p/highlight_mts_of_the_insyaa_update/)（2026-05-20）：有玩家称其为有趣的“正义征服”路线，另有单局强度报告；后者不作通用数值事实。
+
+## 评分解释与待核实
+
+人格坐标是解释性估计：拓疆97、专制68、魔法方向96、主题强度91、多元68。价值四维为尊严60、公共利益74、人格承认58、克制23；加权 `60×0.35+74×0.25+58×0.25+23×0.15=57.45`，取57，归中立。协商与承认地方主体性的路线可升至善良区间；复仇与强制改造路线可降至邪恶区间；两个阶段分数仅用于展示选择张力，并非每局实测。银刺是否存活、分支具体可见性、任务实机难度与最终结局文本未完整跑局核验。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `U39 / U39_ideas`：`mod/common/ideas/anb_country_ideas.txt:43759-43800`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

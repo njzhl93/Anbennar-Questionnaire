@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/繁地坡-L62.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 繁地坡 Vandipha／L62：精简证据
+
+核验：2026-10-09；本体/汉化均v1.37.5.0。国家标签、当前汉化与专属任务归属已确认；未进行实机游玩。三通道均使用gpt-6-luna，由当前主代理合并；未安排第二个Sol审核。
+
+## 同步及地区
+
+离线Wiki本轮唯一一次resume_sync返回`ok / already_complete`，doctor解析JSON `status=ok`；英3735页、中1136页，快照2026-10-01。未联网续抓或访问线上Wiki。Mod update返回`unchanged`，本地doctor `status=ok`；本体manifest `2812922911103828520`，汉化 `7518363337005727349`。
+
+完整354项地区快照中Vandipha（英文第35）独立对应Sarhal→阳洲；没有借用前身或共享组。保留地理region，写survey_region及镜像；地区原值与快照日期沿用2026-10-09来源，不刷新榜单，不影响人格或价值分。
+
+## 当前本地原件
+
+以下路径前缀M=`[local source path omitted]`；Z=`[local source path omitted]`。缓存只用于定位，下列Workshop原件为事实来源。
+
+| 结论 | 原件与行号 | 可信度/边界 |
+|---|---|---|
+| L62身份与1444开局 | M history/countries/L62 - Vandipha.txt:1-50；M localisation/anb_countries_l_english.yml:2080；任务potential tag L62 | 高；开局宗教、文化、政府，不提供具年建国史 |
+| 当前中文名繁地坡 | Z localisation/anb_countries_l_english.yml:1837；只读解码器encoded=true | 高；不是依据排行推译 |
+| 36项直接任务 | M missions/Vandipha_Missions.txt:6-2228；既有random_country.py确定性build_candidates筛L62、score_candidates单候选 | 高；36定义，不等于每局可达36。旧DOCX估25—35；不使用随机抽样作本国计数 |
+| 任务文件新旧 | 文件mtime 2026-09-07 21:54:22本机时间；两descriptor.mod | 高；不是首次发布日期 |
+| 售奴解锁与决议 | 任务318-380、1067-1119；M decisions/MengiDecisions.txt:3-30 | 高；潜在旗标、进行中交易及短缺门槛；点击本身不扣库存/金钱 |
+| 售奴买家/结算/周期 | M events/Flavour_Vandipha_L62.txt:643-728,737-1399；M common/scripted_effects/anb_scripted_effects_for_missions.txt:18416-18554 | 高；10/5年短缺周期，不混35年显赫奴隶时间窗。买家接受/拒绝、半年收入自购；不推实机人物数值 |
+| 海权改革 | 任务1868-1898；M common/government_reforms/01_government_reforms_monarchies.txt:14310-14340 | 高；扣50改革进度，海军陆战队及属国征水手支架 |
+| 属国海军资源/门吉伙伴 | M common/subject_types/00_subject_types.txt:390-418；M common/event_modifiers/anb_mission_modifiers.txt:35614-35617；M common/estate_privileges/anb_privileges.txt:13999-14022；事件448-477 | 高；每属国2000水手/+2限额，不检查港口。门吉高等哲学属国特权另给+20%税/+10%商品产出，文本写稳定供奴 |
+| 静波法令 | 任务1175-1352；事件248-313；M common/event_modifiers/anb_mission_modifiers.txt:35580-35592 | 高；接受/拒绝效果及贸易冲突，不测AI选择概率 |
+| 奴隶城、建设与人口缓和 | 任务588-660,1362-1492,1575-1636；同名本体剧情与汉化 | 高；减少豺狼人奴役人口修正、增加少数群体与容忍，不扩大为灭绝或全面废奴 |
+| 跨海终局与文化影响 | 任务2035-2228 | 高；贸易公司地区、宫殿及港口条件，未来不是既成史 |
+| 理念与未来风味 | M common/ideas/anb_country_ideas.txt:30924-30961；M localisation/anb_powers_and_ideas_l_english.yml:15221-15234；汉化同名文件12216-12218,16819-16831 | 高；奴隶行会、导师/顾问及未来内战文本，不证明当前可玩内战 |
+
+DOCX镜像：`安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:6371-6401`，仅旧导航/作者评价，不采用旧数值、估数作当前事实。
+
+## 离线Wiki与历史来源发现
+
+英文专页/title Vandipha及Vandipha L62未命中，保留`OFFLINE_WIKI_NO_RESULT`；不解释为Wiki没有任何国家背景。已读取唯一相关英文Markdown chunk：语言en，标题Harimari，章节Demography，page_id=398，revision_id=30547，local_source=`anbennar-offline/output/chunks/en/md/398/022-01-Demography.md`，source_url=[Harimari](https://anbennar.fandom.com/wiki/Harimari)。支持数世纪罗祆/门吉交流形成阳洲东岸社群、繁地坡漫游虎人；无具年建国史。
+
+中文辅助：语言zh，标题/章节Harimari，page_id=470，revision_id=957，local_source=`anbennar-offline/output/chunks/zh/md/470/001-03-Harimari.md`，source_url=[中文Harimari](https://anbennar.fandom.com/zh/wiki/Harimari)。编码显示受损，未用其覆盖当前汉化或英文背景。
+
+[历史研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)与[参考目录](https://shen-hhao.github.io/anbennar-timeline/references.html)：浏览读取失败后只读HTTP页面/公开data/research-index.json、data/reference-index.json可读。记录`eu4:L62`、`setup-L62`仅登记1444的6592省。2026-10-09为访问日，站点材料快照日期未确认；条件性汉化目录不是独立史料。未取得可采用的具年开局前原件；后续沿用归属明确是显示政策。只作社区线索，不采用边界延拓、Vic3投影或条件未来作EU4正史。
+
+## Reddit：官方1篇，玩家恰好2篇
+
+- 官方：[Dev Diary #79: Gulf of Rahen - Sarhal Edition](https://www.reddit.com/r/Anbennar/comments/1haekhb/dev_diary_79_gulf_of_rahen_sarhal_edition/)，2024-12-09；5camps，正文自称LVT，Dev Diary flair；读取Vandipha独立段落及相关评论。介绍销售、附庸网与远洋港口。高置信的发布前设计语境，不证明当前实装。
+- 玩家：[underrated mission trees](https://www.reddit.com/r/Anbennar/comments/1j8r28f/with_the_fires_of_conviction_update_being_out_for/)，2025-03-11，Skhgdyktg主帖及Supersoldier152等相关评论；明确Fires of Conviction发布后语境。喜欢第二个罗阇式网络与法令事件。具体构建号未报；社区体验中等可信。
+- 玩家：[Secret op nations](https://www.reddit.com/r/Anbennar/comments/1ksa3cc/secret_op_nations_that_not_many_people_know/)，2025-05-22，KsanteOnlyfans相关评论和前后问答；日期可核，精确版本未知，赞赏海军陆战队与步兵能力组合。个人强度说法可信度低至中，不证明现行平衡。
+
+检索Vandipha、L62、Harimari、Sarhal及海贸相关词并去重。额外打开[2024-12-14 Fires of Conviction Release](https://www.reddit.com/r/Anbennar/comments/1he79o3/fires_of_conviction_release/)完整正文：没有Vandipha独立段落，未列为本国官方证据。仅检索到1篇可直接采用官方日志，不能宣称未来永无其他材料。没有访问线上Wiki或用搜索摘要证明正文。
+
+## 定标与剩余缺口
+
+完整读取v2.1规范并比较当时108国校准镜像。E82/A86/M-T50/I12/P35；魔奇低强度不显著参与方向匹配。尊严15/公共44/人格15/克制20，35/25/25/15加权23，邪恶stable；对照罗桑德22、科乌里亚23、得露革得6、舍洛克门吉56。港口/海防和局部缓和给有限公共利益；核心奴役不被繁荣抵消；普通战争/君主制/文化整合不扣分。无约20分以上已核阶段价值或人格跃迁；理念未来内战不足以生成阶段分。
+
+未核：建国/迁徙日期，完整实机难度，动态人口实际执行，AI法令选择，所有通用形成改道，理念未来内战是否对应可玩链。均非当前Tag/汉化/专属路线冲突，不伪造填补。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `L62 / L62_ideas`：`mod/common/ideas/anb_country_ideas.txt:30925-30962`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

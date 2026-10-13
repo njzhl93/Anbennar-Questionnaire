@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/灰烬玫瑰骑士团-罗桑德-B04-Z35.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 灰烬玫瑰骑士团→罗桑德（B04→Z35）证据
+
+## 结论与范围
+
+- 【版本边界】本体 `[local source path omitted]` 与汉化 `[local source path omitted]` 均声明 `supported_version = v1.37.5.0`；本轮结构库 doctor 已确认本体 manifest `2812922911103828520`、汉化 manifest `7518363337005727349`。
+- 【确认】B04 = Order of the Ashen Rose = 灰烬玫瑰骑士团；Z35 = Rósande = 罗桑德。当前本体 `common/country_tags/anb_countries.txt:106,1445` 与当前汉化 `anb_countries_l_english.yml:206,1443` 分别确认 Tag 和中文显示名；汉化值由 `decode_localisation.py` 只读解码。
+- 【确认】这是单一连续链。`decisions/EscannFormables.txt:1948-1952` 的 Rosande 分支要求 `tag = B04` 后执行 `change_tag = Z35` 和 `swap_non_generic_missions = yes`。B04 定居条件在同文件约 `1850-1860` 的 Rosande 条件块中要求刃脉、胡马克弗罗德或特明地区的任一领土。
+- 【确认】本地结构库 `country Z35 --json` 返回 `mission_count: 35`，全部来自 `missions/Rosande_Missions.txt` 的 Z35 专属组；没有 B04 专属任务组，故不把前身误计为另一个独立任务树。
+
+## 当前本体与汉化
+
+- `history/countries/B04 - Order of the Ashen Rose.txt:1-22`：神权、冒险者改革、高洛伦特什文化、摄政宫廷、首都 817；1400 年骑士团冒险者标记；1431 年毛古尼娅统治。
+- `history/countries/Z35 - Rosande.txt:1-10`：君主制、冒险王国改革、罗桑达文化、摄政宫廷、首都 817；1000 年法师组织公会特权。
+- `common/countries/Rosande.txt`：罗桑德定义与理念/单位来源；结构库检索确认历史理念包括扩张、探索、数量、外交、进攻、防御、经济、创新。
+- `localisation/Flavour_Rosande_Z35_l_english.yml:2-101`：代表性任务和事件中文文本，包括骑士阴影过去、锁链作响、耻辱贵族、酸涩滋味、现代问题、创造新事物、伟大的陨落与永无尽头的舞会。
+
+## 机制证据
+
+- `missions/Rosande_Missions.txt:5-110`：Z35 专属树；“骑士奴隶猎人”要求兽人族群与军队条件，添加 `Z35_orcish_workforce`、改葡萄酒并降低兽人容忍度。
+- `missions/Rosande_Missions.txt:163-284`：市场任务要求贸易份额、至少八个劳动力/农场省份；把奴隶商品改为葡萄酒，铺设永久劳动力修正，并触发葡萄酒时代事件。
+- `decisions/RosandeDecisions.txt:1-116`：建立种植园决议的金钱/军事点成本、兽人族群限制、文化/宗教变化、杀死五个单位、葡萄酒转换与容忍度下降。
+- `missions/Rosande_Missions.txt:287-443,814-951`：定居后深林/逃亡者/无偿劳工/鲜花之城分支；不把它误说成前身任务。
+- `missions/Rosande_Missions.txt:959-1605`：骑士阴影过去、锁链、葡萄酒、清理侧翼、王权和贵族分支；`1607-1699` 进一步进入猩红王冠与灰烬绽放分支。
+- `missions/Rosande_Missions.txt:1707-2184`：罗桑德骑士、贵族时尚、宏图、狮鹫领主、伟大陨落、猩红铸造与超越旧物等后期任务。
+- `events/Flavour_Rosande_Z35.txt:159-194`：形成后可选择改信 Infernal Court，并改宗首都及五个省份；这是分支，不是所有路线必然结果。
+- `events/Flavour_Rosande_Z35.txt:400-437`：现代问题事件为半兽人增加人口效果，文本显示双方社会排斥。
+- `events/Flavour_Rosande_Z35.txt:440-528`：卡斯托纳斯灾后重建事件，既有具体破坏也有定居/财政/发展效果，不能只按战争数量评价价值。
+- `events/Flavour_Rosande_Z35.txt:1803-1905`：兽人族群规模修正按领土、兽人/半兽人族群与奴役标记进入低/中/大/巨量阶段。
+- `common/event_modifiers/anb_rosande_modifiers.txt:29-177`：奴隶主、劳动力、骑士、城市、贸易、森林与兽人数量修正的实际数值；用于 gameplay 评分，不把修正本身夸大成独立玩法。
+
+## 外部与离线来源
+
+### 离线 Wiki
+
+1. `page_id=2409, revision_id=31904`，正式 chunk `output/chunks/en/md/2409/001-01-Rósande.md`（完整镜像 `output/en/markdown/Rósande__ec615f19.md`）：罗桑德主页面为简短条目，明确前身字段为 Order of the Ashen Rose；已实际读取正式 chunk。
+2. `page_id=825, revision_id=31906`，`output/chunks/en/md/825/013-01-Succeeded by.md`：灰烬玫瑰来自伊利辛公国，由毛古尼娅率领进入埃斯坎抗击绿潮，定居南卡斯塔诺后改组为罗桑德；已实际读取。该页同一主页面的地理、政体、宗教和人物 chunk 也已读取，未把其旧概览覆盖当前脚本。
+3. `page_id=471, revision_id=32576`，`output/chunks/en/md/471/046-01-Wood Elf Wine.md`：补充罗桑德葡萄酒与木精灵葡萄酒背景；已实际读取。
+
+### Reddit
+
+- 官方日志：未找到正文实质讨论本国的专属 EU4 Dev Diary/公告。`EU4 Anbennar Dev Diary #94` 正文已打开，但罗桑德只在评论区被顺带提及，标为 `NO_DIRECT_BODY_EVIDENCE`，不用于机制或历史结论。
+- 玩家帖 1：`Peak Rosande gameplay`，2026-02-16，URL：&lt;https://www.reddit.com/r/Anbennar/comments/1r639ft/peak_rosande_gameplay/&gt;；已读取正文 1 段及约 5 条可见评论，评论涉及葡萄酒种植园、兽人邻国与将兽人用于采葡萄的回应。正文未注明具体本体版本，也未注明是否启用子Mod、开发分支或存档修改；不能假定无子Mod。仅支持“种植园将兽人劳动力与葡萄酒联系起来”的玩家体验。
+- 玩家帖 2：`Rósande mid-game AAR`，2025-01-28，URL：&lt;https://www.reddit.com/r/Anbennar/comments/1ic4ad6/r%C3%B3sande_midgame_aar/&gt;；已读取正文主要叙事段落（前身、早期统治、重骑兵、深林与奴役），评论区本轮未展开读取。正文未注明具体本体版本，也未注明是否启用子Mod、开发分支或存档修改；不能假定无子Mod。仅支持长战役中前身、重骑兵、深林扩张和奴役叙事的社区解读。
+
+### 哈兰历史地图
+
+`https://shen-hhao.github.io/anbennar-timeline/research.html` 与 `/references.html` 经常规网页读取均不可访问；内置浏览器状态为无可用浏览器，未采用站点摘要或推断，保留为 `UNAVAILABLE`。
+
+## 评价与不确定性
+
+- 人格坐标依据当前任务的扩张、王权贵族、超自然分支与社会成员政策；魔法/奇械强度仅中等，不从地狱宫廷选项机械推成纯魔法国家。
+- 价值分依据具体奴役、锁链劳动、兽人商品化、半兽人排斥和部分建设/贸易公共收益；战争、征服、君主制、宗教转向和统一本身不扣分。
+- `trajectory=branch_dependent` 保留地狱宫廷、深林、半兽人及贸易路线差异，但所有已确认路线仍共享奴役核心证据；没有为未证实的“救赎路线”虚构 phase_scores。
+- `evidence_completeness=86` 是本条目来源覆盖估计，不代表全库或全批次验收。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Z35 / Z35_ideas`：`mod/common/ideas/anb_country_ideas.txt:3775-3813`；身份筛选结果：`identity_filter_matches`。
+- `B04 / lorentish_culture_ideas`：`mod/common/ideas/anb_group_ideas.txt:866-902`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

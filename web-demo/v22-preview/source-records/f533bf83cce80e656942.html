@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/娜蕾妮-L55.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 娜蕾妮 L55：精简证据与边界
+
+核验：2026-10-03。当前本体Workshop `1385440355`与汉化`2818493730`为`v1.37.5.0`；本地结构化库`doctor.py`为`ok`，两个manifest与源目录一致。`missions/Naleni_Missions.txt`文件修改于2026-07-09，不等于官方发布或重制日。国旗由本体`gfx/flags/L55.tga`转换，未写入原Mod。
+
+| 判断 | 本体／汉化原始证据 | 边界 |
+|---|---|---|
+| 身份与译名 | 本体`common/country_tags/anb_countries.txt:726`、`history/countries/L55 - Naleni.txt:1-57`；汉化`localisation/anb_countries_l_english.yml:1825` | L55=Naléni，当前汉化**娜蕾妮**。评分表“娜蕾尼”是旧表名，保留检索但不冒充现版显示名。 |
+| 1444开局 | 本体`history/countries/L55 - Naleni.txt:1-10,37-53`；`history/provinces/6659 - Jezarpizu.txt:3`等L55开局owner；本体`events/Flavour_Naleni_L55.txt:4-27` | 起始共和国，首都6659、女族长海盗改革，比莫吉雷统治；历史文件和省份owner支持开局存在，不是后期女王国已存在。 |
+| 开局政治与前史 | 本体`localisation/Flavour_Naleni_F55_l_english.yml:165`，汉化同名文件`:109`；本体`common/ideas/anb_country_ideas.txt:33862-33884` | 《穆雷达协议》与船长共治是开局背景；旧伊尔坎·埃帕尔塔为风味历史前身，不是须游玩的形成链。文件名中的F55不是国家Tag。 |
+| 31项专属任务 | 本体`missions/Naleni_Missions.txt:1-1534`；结构化`query.py country L55 --json`之`mission_count=31` | 31项为L55直接任务定义；前后段按`L55_part_two`旗标切换，不能当成两个Tag相加。未逐项审计所有奖励。 |
+| 船长兵变及瑞瓦 | 本体`missions/Naleni_Missions.txt:448-475,1044-1073`；`events/Flavour_Naleni_L55.txt:210-335,408-445,468-529`；`common/government_reforms/01_government_reforms_monarchies.txt:13935-13958`；汉化`localisation/Flavour_Naleni_F55_l_english.yml:272` | 兵变事件改为君主制并换任务；“新娜蕾妮”覆盖国名为瑞瓦娜蕾妮且升政府等级，**仍为L55**。低/中/高女族长权威改变叛军与合法性，细节不当成恒定单局结果。 |
+| 海权、塞壬及社会统治 | 本体`missions/Naleni_Missions.txt:11-49,130-222,484-630,812-959,994-1264`；`common/scripted_effects/anb_scripted_effects_naleni.txt:1-145`；本体`localisation/Flavour_Naleni_F55_l_english.yml:1-90,203-229` | 海盗港、登陆、贸易、歌厅、塞壬、海湾控制是主玩法。“改造奴隶港”不等于本国废奴；后期商船安全附带收费，不能写成普遍无条件保护。 |
+| 价值观反证 | 本体`localisation/Flavour_Naleni_F55_l_english.yml:236,252,266,288`的商人、门吉女性与强迫配偶事件；任务`missions/Naleni_Missions.txt:130-222,574-630` | 部分事件可承认门吉女性的能力，也有强迫配偶安排、劫掠与臣民工具化。对智慧族群统一按人格主体计分；具体选项是可选事件，不写成每局全部发生。 |
+
+## 离线Wiki与历史地图
+
+- 英文 [Queendom of Naléni](https://anbennar.fandom.com/wiki/Queendom_of_Nal%C3%A9ni)：`lang=en`，`page_id=4447`，`revision_id=25718`，实读`anbennar-offline/output/chunks/en/md/4447/001-01-Queendom of Naléni.md`。支持11世纪流亡、山地分居、1176年穆雷达统一、13世纪伊尔坎·埃帕尔塔崩溃。统一战争缺书面记录，不能细写。页面首部的后世“女王国”描述不是1444本地Mod政体证据。
+- 英文 [Nalénian Harpy](https://anbennar.fandom.com/wiki/Nal%C3%A9nian_Harpy)：`lang=en`，`page_id=4658`，`revision_id=32215`，实读`anbennar-offline/output/chunks/en/md/4658/001-01-Nalénian Harpy.md`。支持锡亚丹伦迁徙、门吉文化影响、后世天空领域和拉维利安信仰变化；1589瑞瓦改革是Wiki世界观，不是任务强制日期。
+- 英文 [Harpy：Naléni节](https://anbennar.fandom.com/wiki/Harpy)：`lang=en`，`page_id=397`，`revision_id=32594`，实读`anbennar-offline/output/chunks/en/md/397/042-01-Naléni.md`；作为族群旁证，不用于当前任务机制。
+- [哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AL55)的`eu4:L55`记录为`in_progress`，其布西拉尔`A29_one_dove`路线只是条件重组线索；未据此推定娜蕾妮必然沦为附庸或固定年份。开局与形成关系由上述本地脚本独立核对。
+
+## Reddit：官方设计语境与玩家体验
+
+- 官方 [Dev Diary #79: Gulf of Rahen - Sarhal Edition](https://www.reddit.com/r/Anbennar/comments/1haekhb/dev_diary_79_gulf_of_rahen_sarhal_edition/)（2024-12-09，Fires of Conviction发布前，实读正文中Naléni段）：设计者介绍海军陆战队、海盗与塞壬、女族长—船长矛盾、门吉海岸与拉亨方向。描述的是当时目标，现版由Mod脚本证实或修正。本轮找到直接相关的官方开发日志1篇。
+- 玩家 [Privateers, not Pirates - A Naléni AAR](https://www.reddit.com/r/Anbennar/comments/1ttktf9/privateers_not_pirates_a_nal%C3%A9ni_aar/)（正文未见可核验绝对日期／版本）：强调早期外交孤立、经济脆弱、海军强势与陆战压力；仅主观战报，不证明现版机制数值。
+- 玩家 [I&#x27;m playing Naléni and can&#x27;t find matriarch authority modifier](https://www.reddit.com/r/Anbennar/comments/1hfmby6/im_playing_nal%C3%A9ni_and_cant_find_matriarch/)（2024-12-16，作者称“最新版本”但未写具体版本）：当时的可读性疑问与社区解释；不能断言2026年界面仍如此。
+
+判断边界：历史与族群脉络由当前Mod风味文本和离线Wiki支持；任务未来由本地脚本支持；Reddit不替代当前实装。当前本地Mod未检出L55专属换Tag形成国，但没有逐项遍历所有通用形成决议；本文只称其**专属主线同Tag改制**。人格和价值评分是有依据的可修订解释，不是游戏官方属性。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `L55 / L55_ideas`：`mod/common/ideas/anb_country_ideas.txt:33848-33885`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

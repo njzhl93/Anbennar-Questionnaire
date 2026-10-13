@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/西山驿-I14.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 西山驿 I14：证据与边界
+
+核验：2026-10-01。本体 Workshop `1385440355`、汉化 `2818493730` 的 descriptor 均声明兼容 EU4 `v1.37.5.0`；本地库 `update.py` 为 `unchanged`，manifest 为 `2812922911103828520`／`7518363337005727349`。本轮离线Wiki续传一次，返回 `status=ok, action=already_complete`；`doctor.py`解析 `status=ok`，英文3718页、中文1136页。
+
+## 当前本地 Mod 与汉化
+
+下表 `mod/` 指 `[local source path omitted]`；`translation/` 指同级 `2818493730/`。DOCX镜像只作辅助定位。
+
+| 判断 | 原件与位置 | 边界 |
+|---|---|---|
+| I14身份、当前中文名 | `mod/common/country_tags/anb_countries.txt:494`；`mod/history/countries/I14 - Gor Vazumbrog.txt:1-11`；`translation/localisation/anb_countries_l_english.yml:786`，经 `scripts/decode_localisation.py --key I14` 得“西山驿” | 国家历史是形成后模板，不能据此认定1444地图上已有I14 |
+| 形成路线 | `mod/decisions/DiggyDwarvenFormables.txt:459-493` | 控制4217号旧堡且满足矮人冒险团据点条件，以 `adventurer_hold_formation` 换至I14；不是唯一固定前身 |
+| 任务归属与长度 | `mod/missions/Gor_Vazumbrog_Missions.txt:15-2300` | 11个I14专属任务组、结构化查询37个直接任务实体；未逐任务审计每条触发 |
+| 流亡与旧秘库 | `mod/localisation/Flavour_GorVazumbrog_I14_l_english.yml:491-522` | 本地剧情文本讲旧秘库、钛金难民及龙伤，不是确定形成年表 |
+| 猎魔决议 | `mod/decisions/GorVazumbrogDecisions.txt:1-75` | 冒险者猎魔人特权、目标条件和近期狩猎限制由脚本确认；每个猎物收益未逐一核对 |
+| 针对兽人社群的政策 | `mod/missions/Gor_Vazumbrog_Missions.txt:311-355`；`mod/events/Flavour_GorVazumbrog_I14.txt:13-39`；本体风味本地化`:683-690` | 任务要求周边没有兽人文化所有者；触发事件对已控制兽人文化省份增加15荒废、减少1发展并改文化宗教，降低兽人容忍。古代杀尽兽人的誓言是人物原话，不能与事件效果混为一项 |
+| 魔像、秘库与终章 | `mod/missions/Gor_Vazumbrog_Missions.txt:1303-1354,2157-2223,2280-2300` | 魔像设施与补给条件、10次发掘、终章5000金币和事件调用已定位；结尾实机表现未验证 |
+
+`已实装任务树存档.md:3219-3263`把本路线归入已实装任务树并描述钛金修会、怪物狩猎、秘库和龙伤；当前脚本优先。任务文件本地修改时间为2026-09-07 21:54:16（本机时间），不是更新公告发布日期。
+
+## 离线Wiki与哈兰历史地图
+
+- [Hold of Gor Vazumbrog](https://anbennar.fandom.com/wiki/Hold_of_Gor_Vazumbrog)：`lang=en`；`title=Hold of Gor Vazumbrog`；`section=Hold of Gor Vazumbrog`；`page_id=2454`；`revision_id=24546`；已读 `anbennar-offline/output/chunks/en/md/2454/001-01-Hold of Gor Vazumbrog.md` 与 `001-02-Hold of Gor Vazumbrog.md`。支持古代泰坦矮人要塞、危险遗物与龙醒毁灭的设定背景，不证明现代I14已于1444存在。
+- [Segbandal](https://anbennar.fandom.com/wiki/Segbandal)：`lang=en`；`title=Segbandal`；`section=Segbandal`；`page_id=2455`；`revision_id=27249`；已读 `anbennar-offline/output/chunks/en/md/2455/001-01-Segbandal.md` 与 `001-02-Segbandal.md`。仅支持旧联盟脉络。英文主页面和这一关联页占用两页名额，未另增第三页。
+- 中文快照查“西山驿”、`Gor Vazumbrog`、`Hold of Gor Vazumbrog`，没有专属国家页；仅有国家列表及龙醒背景命中。记录 `OFFLINE_WIKI_NO_RESULT（专属中文国家页）`，中文译名仍以当前本地汉化为准。
+- [哈兰历史地图研究目录 I14](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AI14)：记录 `eu4:I14`、`st26-wd-dossier-vazumbrog`，站点快照标注2026-09-23 15:23 +08:00，状态 `in_progress`。目录指出古代要塞与现代形成国需分开核验；采用的古史回读了上述本地剧情文本及离线Wiki固定修订。其现代存在期、推演年表和跨游戏投影没有进入正文。
+- [参考材料目录](https://shen-hhao.github.io/anbennar-timeline/references.html)只列出一份来源族尚待识别的本地社群文件 `西山驿.txt`；没有可回读原件，故只作线索，不作事实。
+
+## Reddit：官方语境与两篇玩家体验
+
+下列官方材料只支持发布日期附近的设定或发布语境，当前实装仍以本地Mod为准：
+
+1. [Dev Diary #65: Down into the Dwarovar](https://www.reddit.com/r/Anbennar/comments/1d18406/dev_diary_65_down_into_the_dwarovar/)（2024年 Forbidden Valley 更新语境）：正文在介绍穿刺飞龙时实质提及西山驿毁灭与周边德拉孔来源，是**相关地区日志**，不是I14任务树专题日志。
+2. [Inheritors of Insyaa is out NOW!](https://www.reddit.com/r/Anbennar/comments/1t7me5o/inheritors_of_insyaa_is_out_now/)（2026-05-08，发布公告）：正文直接列出 Gor Vazumbrog 新任务树与地下巨龙主题；公告身份由帖子公告语境支持，当前文件仍独立核实。未发现正文和身份均可核实的I14专属独立开发日志。
+
+恰好两篇直接相关的玩家体验：
+
+- [Praise for Gor Vazumbrog](https://www.reddit.com/r/Anbennar/comments/1tnbd7d/praise_for_gor_vazumbrog/)（约2026-05-25，Insyaa发布更新语境）：称赞魔法系统、狩猎与离开山脉的节奏，认为一些补给任务重复、结尾略悬；属于主观体验。
+- [the new Dwarf tag (Gor Vazumbrog) in serpentspine broke me](https://www.reddit.com/r/Anbennar/comments/1rsuvau/the_new_dwarf_tag_gor_vazumbrog_in_serpentspine/)（约2026-03-13，Bitbucket开发分支）：玩家报告连续灾难、债务与叛军造成弃档；与发布版玩家体验版本不同，不可升格为当前稳定版必然结果。
+
+## 定标与未核实项
+
+人格为 E82／A64／M-T15／I91／P25。按27国冻结基准，西山驿的远征程度低于纯征服国、魔奇强度接近高奇械任务国，多元程度受已确认的兽人强制政策压低。价值四维尊严40、公共利益70、人格承认35、克制40；`40×0.35+70×0.25+35×0.25+40×0.15=46.25`，四舍五入为46，归中立，轨迹为 `mixed`。古代誓言不能单独证明玩家实际实施灭绝；具体荒废与强制改造已写入当前事件。没有足够证据建立相差约20分的阶段价值分或人格阶段画像。
+
+尚未实机核验全部猎物奖励、矮人灾难与龙伤的交互、特定冒险团的最优开局、终章事件各选项以及旧钛金政权与现代I14的完整历史连续性。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I14 / I14_ideas`：`mod/common/ideas/anb_country_ideas.txt:6951-6987`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

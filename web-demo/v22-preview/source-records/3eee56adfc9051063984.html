@@ -1,0 +1,83 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/隐泉-Y26.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 隐泉／灵域（Y26 → R86）精简证据页
+
+核验日期：2026-09-23  
+核验版本：本地 Mod 与汉化 `v1.37.5.0`
+
+## 结论简表
+
+| 项目 | 结论 | 可信度 | 主要证据 |
+|---|---|---|---|
+| 身份 | Y26，英文`Yinquan`，当前中文名“隐泉” | 高 | Tag、国家历史、当前汉化解码 |
+| 形成国 | 完成“圣狐大婚”后形成R86 `Lingyuk`，当前中文名“灵域” | 高 | `HalessFormables.txt`、当前汉化 |
+| 连续性 | R86交换理念与任务，但后半任务接受“曾为Y26＋狐仙已解锁”，是一条连续战役链 | 高 | 形成决议与任务组`potential` |
+| 直接任务数 | 51，全部以Y26任务键收录；R86无独立命名任务实体 | 高 | `anbennar-local`确定性索引 |
+| 核心风格 | 温泉朝圣、荷丽与狐仙、主动裂界、安抚大精怪、精怪军队、仕女神权革命 | 高 | 当前任务、事件与决议 |
+| 道德倾向 | 邪恶，善良度16 | 高 | 分田等积极改革与主线屠杀、清洗、强制服从和灭绝目标并存，后者决定性质 |
+| Wiki | 完整离线快照命中3个英文页面；国家页是存根 | 高（状态）／中（背景） | `doctor.py status=ok`与三个Markdown chunk |
+
+## 本地证据边界
+
+- `common/country_tags/anb_countries.txt:1336`：Y26映射到Yinquan；`:1086`：R86映射到Lingyuk。
+- `history/countries/Y26 - Yinquan.txt:1-34`：寡头共和国、冈巾文化、增生道、烟申科技组、首都4931及荷丽·冷的统治者与法师属性。
+- `history/countries/R86 - Lingyuk.txt:1-9`：神权、仕女评议会、冈巾文化、密契和同一首都。
+- `localisation/anb_countries_l_english.yml:1590,2148`：经现有只读解码链确认“隐泉”与“灵域”。
+- `missions/Yinquan_Missions.txt:1-2885`：结构化资料库统计51个直接任务；前段收复牟林、温泉和神社，中段荷丽、狐仙与裂界，后段仕女革命、灵域和十全十美。
+- `missions/Yinquan_Missions.txt`后期任务组：允许当前Y26，或曾为Y26且拥有`huszien_special_aspect_unlocked`的国家，证明R86继续同一任务树。
+- `decisions/HalessFormables.txt:1613-1668`：形成R86、交换理念和任务、解锁狐仙特殊相位及中央集权。
+- `decisions/YinquanDecisions.txt:1-55`：高殿调查与狐仙复活。
+- `events/Flavour_Yinquan_Y26.txt:1430-2035`：仕女夺权、土地国有与分田、商人屠杀、将领和官僚清洗。
+- `events/Flavour_Yinquan_Y26.txt`后续终局：对拒绝新秩序的地精、虎人和食人魔采取灭绝性处理。
+
+任务数量是结构化索引对当前文件内直接任务实体的确定性计数；不把事件、决议或大精怪通用任务算入，也不表示R86形成后只有零项内容。
+
+## 本地离线Wiki
+
+在`anbennar-offline/`目录运行`tools/doctor.py`返回`status=ok`；快照更新时间为2026-09-17，含英文3718页、中文1136页。未访问线上Wiki。
+
+- [Republic of Yinquan](https://anbennar.fandom.com/wiki/Republic_of_Yinquan)：英文`page_id=4501`、`revision_id=31511`；已读`anbennar-offline/output/chunks/en/md/4501/001-01-Republic of Yinquan.md`。支持地区、首都、荷丽、宗教变化和裂界关联；页面为存根。
+- [Holi Leng](https://anbennar.fandom.com/wiki/Holi_Leng)：英文`page_id=4278`、`revision_id=31810`；已读`anbennar-offline/output/chunks/en/md/4278/001-01-Holi Leng.md`。支持荷丽是狐精人格碎片，并在狐仙重组后成为主导人格。
+- [Rending of Realms](https://anbennar.fandom.com/wiki/Rending_of_Realms)：英文`page_id=3278`、`revision_id=32362`；已读`anbennar-offline/output/chunks/en/md/3278/001-01-Rending of Realms.md`。支持高殿守护网失效、大精怪获释和正史年代背景。游戏路线可以提前触发裂界，两种时间语境不能混写。
+
+## 官方开发资料
+
+- [Dev Diary #58 — The Rending of the Realms](https://www.reddit.com/r/Anbennar/comments/17qtf40/dev_diary_58_the_rending_of_the_realms/)（2023-11-08）：直接解释裂界、压制／腐化／安抚路线、精怪军队，并预告隐泉的巫女、温泉、狐灵和精怪女王主题。
+- [Scions of Sarhal Release](https://www.reddit.com/r/Anbennar/comments/17zwu18/scions_of_sarhal_release/)（2023-11-20）：发布公告确认裂界及33棵任务树的版本语境，但正文没有逐名列出隐泉，故只作间接发布背景。
+- [The Forbidden Valley Release](https://www.reddit.com/r/Anbennar/comments/1dfz3kz/the_forbidden_valley_release/)（2024-06-14）：开发者在评论中回答“Yinquan is good to go”。这是当时可玩状态的开发者回复，不是该发布日志正文，也不取代当前文件核验。
+
+检索Yinquan、Lingyuk、Holi Leng、Huszien、Rending及任务标题后，没有把只在评论中提问但未获得实质回答的日志计为该国开发资料。
+
+## 玩家观点及限制
+
+- [My experience with Yinquan](https://www.reddit.com/r/Anbennar/comments/1w3e4qk/my_experience_with_yinquan/)（2026-08-31）：玩家认为前半段有趣、与命令秩序的战争有张力，但大精怪要求不可预览，部分请求需要等待或占领特定省份，后期转为多方向征服。仅代表该次体验。
+- [Why is there Kitsune cultural revolution lmao?](https://www.reddit.com/r/Anbennar/comments/1vbts1w/why_is_there_kitsune_cultural_revolution_lmao/)（2026-07-31）：玩家对贵族、商人、将领和官僚清洗的突然程度感到意外，评论对铺垫是否充分存在分歧。清洗本身由本地脚本确认，社区材料只用于说明玩家感受。
+
+## 同轮检查
+
+1. 身份：Y26／Yinquan／隐泉与R86／Lingyuk／灵域一致。
+2. 形成关系：Y26专属形成R86，任务通过历史Tag连续，不拆分条目。
+3. 历史边界：灰烬天幕后迁徙只作旧资料补充；任务未来没有写成1444既成史。
+4. 核心机制：狐仙复活、裂界、密契、大精怪、精怪军队和仕女神权均有当前本地脚本支持。
+5. 人格：EOTV，依据跨区域征服、极权秩序、古老灵性传统和总体乌托邦愿景。
+6. 道德：邪恶16；积极分田与精怪保护不足以抵消制度化屠杀、清洗、强制归顺和灭绝。
+7. 来源分层：当前本地脚本与汉化 &gt; 离线Wiki &gt; 旧资料 &gt; Reddit官方语境 &gt; 玩家观点。
+8. 非核心缺口：未逐项审计51个任务奖励；未实机复现大精怪请求的等待时长。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AY26)的`eu4:Y26`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。其中灵灾设定年与游戏触发时点分属不同层级；姐妹关系、迁徙及失地前史不能由地图时间轴直接补成年表。离线Wiki从工具目录复查为`status=ok`；下方补充针对该问题回读的本地文本和Wiki原件，并非重审全部旧引文。
+
+### 前史与裂界原件回读
+
+- 当前本体`localisation/Flavour_Yinquan_Y26_l_english.yml:15-16`明确以故事叙事称隐泉在“灰烬天幕”以前属于Y27，关系由母女转为姐妹；它不提供分离确年、人口迁徙路线或完整谱系。`history/countries/Y26 - Yinquan.txt:16-45`仅确认1444年荷丽·冷的统治者与狐精庇护属性，不证明她在1444年前已是重组狐仙的人格碎片。
+- 英文离线Wiki [Rending of Realms](https://anbennar.fandom.com/wiki/Rending_of_Realms)，`page_id=3278`、`revision_id=32362`，实读`anbennar-offline/output/chunks/en/md/3278/001-01-Rending of Realms.md`开头与`001-02-Rending of Realms.md`的“Reaction”段：设定中的裂界约1751—1783年发生，后文把隐泉、狐仙与灵域放入该设定背景。
+- 当前本体`missions/Yinquan_Missions.txt:1697-1751`的`Y26_huszien_restored`效果在全局启动尚未完成时设置`start_rending_of_realms_earlier`，并`days=1`触发`spirits.700`。这里一天是启动事件的脚本延迟，**不是**全球裂界全部阶段完成所需时间。灰烬天幕确年、隐泉自Y27分离具体事件及迁徙细节仍为`INSUFFICIENT EVIDENCE`。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Y26 / Y26_ideas`：`mod/common/ideas/anb_country_ideas.txt:20962-20997`；身份筛选结果：`identity_filter_matches`。
+- `R86 / R86_ideas`：`mod/common/ideas/anb_country_ideas.txt:35447-35485`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

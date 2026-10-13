@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/比尔萨坦舍斯-F21.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 比尔萨坦舍斯 F21：精简证据与边界
+
+核验：2026-10-03。本体Workshop `1385440355`、汉化`2818493730`均声明支持EU4 `v1.37.5.0`；结构化库`doctor.py`为`ok`。`query.py country F21 --json`给出25项直接任务，来自`missions/Birsartanses_Missions.txt`。国旗由本体`gfx/flags/F21.tga`转换，未修改原Mod。
+
+| 判断 | 当前原始证据 | 边界 |
+|---|---|---|
+| 身份与译名 | 本体`common/country_tags/anb_countries.txt:203`、`localisation/anb_countries_l_english.yml:402`；汉化`localisation/anb_countries_l_english.yml:316` | F21=Birzartanšes，当前汉化**比尔萨坦舍斯**。评分表“比尔撒坦舍斯”为旧检索名。文件名`Birsartanses`不是另一国。 |
+| 1444开局 | 本体`history/countries/F21 - Birzartanses.txt:1-51`、`history/diplomacy/bulwar.txt:83-90`及`history/provinces/549 - Birsartansbar.txt:4-6`等 | 太阳精灵君主国、新日崇拜、首都549、凯拉多拉一世、盖尔卡利斯附庸、F22/F34宿敌是开局事实。没有把未来征服倒灌为开局疆域。 |
+| 25项直接任务 | 本体`missions/Birsartanses_Missions.txt:1-1377`；结构化库F21国家包 | 25是确定性任务定义数，非逐项可完成数；本页只查历史和代表性玩法，不审计所有奖励。 |
+| 行政—考试—计划 | 本体`missions/Birsartanses_Missions.txt:647-814`、`decisions/BirsartansesDecisions.txt:1-216`、`common/government_reforms/01_government_reforms_monarchies.txt:10371-10407` | 25年计划需任务解锁、中央行政改革；能力、顾问等影响失败率，失败有惩罚。不能写成开局即用或稳定永久加成。 |
+| 火炮、贸易和族群 | 本体`missions/Birsartanses_Missions.txt:129-241,394-625,958-1054`、`decisions/BirsartansesDecisions.txt:217-295`、`common/event_modifiers/anb_mission_modifiers.txt:1180-1227`；本体风味`localisation/Flavour_Birsartanses_F21_l_english.yml:1-55` | 矮人、鹰身女妖、人类和地精的吸纳大多以国家效用为核心；地精整合有额外前置条件。火炮增加战力但有成本。 |
+| 形成边界 | 本体`decisions/BulwarFormables.txt:333-430`、`missions/Birsartanses_Missions.txt:7-18,250-261,634-645,823-832,1103-1112`、`decisions/BirsartansesDecisions.txt:3-18` | F21没有已证专属强制变国；符合通用条件可形成F38，特定首都位置可为F97。曾为F21者保留F21任务/计划资格；F38/F97独立任务不并入25项。 |
+| 价值与分支 | 本体`events/Flavour_Birsartanses_F21.txt:96-113,203-247`；本体风味`localisation/Flavour_Birsartanses_F21_l_english.yml:21-31,100-127` | 可选掠夺、驱逐、处决与流放存在分支；AI倾向处决不等于玩家必选。精英官僚与多族任用不等于完全平权。评分是项目解释，不是官方属性。 |
+
+## 离线Wiki与历史地图
+
+- 英文[Kingdom of Birzartanšes](https://anbennar.fandom.com/wiki/Kingdom_of_Birzartan%C5%A1es)：`page_id=905`、`revision_id=27543`，实读`anbennar-offline/output/chunks/en/md/905/013-01-Religion(s).md`。支持凤凰帝国后继、阿玛莉恩总督领地、1444年前战争和叛乱削弱。页面的“银色时代”是世界观叙事，不是玩家必定实现的未来。
+- 英文[Amarien I](https://anbennar.fandom.com/wiki/Amarien_I)：`page_id=2308`、`revision_id=18773`，实读`anbennar-offline/output/chunks/en/md/2308/001-01-Amarien I.md`。支持迁徙精灵定居、城镇恢复与折断长矛的象征。该页信息栏总督任期写1006年起，国家页写1009年任命，故正文不采用精确授任年份。
+- 英文[The Baharkandi-Birsartanšesi War](https://anbennar.fandom.com/wiki/The_Baharkandi-Birsartan%C5%A1esi_War)：`page_id=326`、`revision_id=19136`，实读`anbennar-offline/output/chunks/en/md/326/008-01-Overview.md`及战争各阶段和结果chunk。页面自述为待更新旧稿；仅作战争和人类叛乱的大致背景，不采精确年代、结果和疆界。
+- [哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AF21)登记了F21与若干省级投影，但1453/1454存在冲突，1484、1529、1652等节点主要是重建推断。本轮其登记原件未能在工作区回读；不写成确证史实，不据此给出F21固定灭亡年。
+
+## Reddit：官方设计语境与玩家体验
+
+- 官方[Dev Diary #24: The Ashes of the Phoenix](https://www.reddit.com/r/Anbennar/comments/qosri4/dev_diary_24_the_ashes_of_the_phoenix/)（2021-11-07）：直接讨论F21的现代官僚、考试、长期规划、多族群政策与炮兵。它是当年设计语境，现版事实仍以本地脚本为准。
+- 官方[The 1.29 update is live!](https://www.reddit.com/r/Anbennar/comments/dr856m/the_129_update_is_live/)（2019-11-03）：仅证实当年更新介绍过F21任务，不当成当前版本的机制说明。本轮发现直接相关的官方日志/公告共2篇。
+- 玩家[What’s your favorite Sun Elven nation to play?](https://www.reddit.com/r/Anbennar/comments/v0brwc/whats_your_favorite_sun_elven_nation_to_play/)（2022-05-29，未给精确版本）：主观偏好F21及其凤凰帝国延伸。
+- 玩家[Rating Every Nation in Anbennar (B Part 2)](https://www.reddit.com/r/Anbennar/comments/1dgx3sb/rating_every_nation_in_anbennar_b_part_2/)（2024-06-16，未给精确版本）：认为F21开局较强、适合学习布勒瓦尔；仅版本受限的个人评价。
+
+最终边界：1444既成事实看本体国家/省份历史；前史用本体风味与离线Wiki相互参照；玩家未来看现行任务/事件/决议；历史地图只作线索，Reddit只作开发语境与主观体验。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F21 / F21_ideas`：`mod/common/ideas/anb_country_ideas.txt:22319-22356`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

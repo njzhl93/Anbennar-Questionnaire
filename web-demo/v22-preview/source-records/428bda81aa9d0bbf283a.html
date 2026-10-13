@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/塞纳氏族-I29.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 塞纳氏族 I29：证据与边界
+
+核验日2026-10-08。本体Workshop `1385440355`与汉化`2818493730`均为EU4 `v1.37.5.0`；结构化库状态`ok`，manifest分别为`2812922911103828520`、`7518363337005727349`。本页Mod路径相对于`[local source path omitted]`；中文键相对于`2818493730/`。当前国名由现有只读解码器核对：`localisation/anb_countries_l_english.yml:816`，`I29=塞纳氏族`。
+
+| 判断 | 实际原件 | 边界 |
+|---|---|---|
+| 身份与任务 | `history/countries/I29 - Salla Cenag.txt:1-76`；`missions/Salla_Cenag_Missions.txt:1-1155` | 29专属+13木精灵共享+2普通；分支定义数量不等于每条路线同时可见数量。 |
+| 分支与人物 | `localisation/anb_deepwoods_l_english.yml:1113-1142,1248-1249`；当前汉化对应键 | 地精政策依选择；亲族、婚姻与森林外探索为代表叙事，不人为规定全部玩家善恶。 |
+| 形成 | `decisions/DeepwoodsFormables.txt:4-38`；`common/scripted_effects/deepwoods_scripted_effects.txt:298-325` | 合格木精灵、深林首都等条件，和平并控制至少30深林省；换I45西兰瓦尔并swap_non_generic_missions。I29本国组只接受I29。 |
+| 年代冲突 | 本地历史1430契约与友好；Wiki3313、17120的1441联盟叙事 | 不拼成精确一致时间线，当前开局关系从本地；Wiki亲族文化与处罚为设定背景。 |
+
+离线英文Wiki：Salla Cenág，page_id=3313，revision_id=17120；实际读到的主块`anbennar-offline/output/chunks/en/md/3313/001-01-Salla Cenág.md`，完整章节范围见上表。原URL：[Salla Cenág](https://anbennar.fandom.com/wiki/Salla_Cen%C3%A1g)。快照健康状态ok（2026-10-01），不声称是线上实时页。
+同页第二块：`anbennar-offline/output/chunks/en/md/3313/001-02-Salla Cenág.md`。
+
+Reddit官方材料：
+
+- [Dev Diary #88: Tales from the Deepwoods](https://www.reddit.com/r/Anbennar/comments/1kv4w41/)：2025-05-25，OFFICIAL_WIP_CONTEXT；读取与该国相关的正文，设计/发布语境不替代本地实装。
+
+玩家材料（只作经验，未取得确定分支/子Mod/存档修改信息，不假设没有）：
+
+- [Comparison of Salla clans](https://www.reddit.com/r/Anbennar/comments/1o8nbn2/)：2025-10-17；正文及少量相关评论，具体Mod版本未证实，旧数值不采用。
+- [Coop nations with girlfriend](https://www.reddit.com/r/Anbennar/comments/1s7t9fk/)：日期元数据冲突，待核；正文及少量相关评论，具体Mod版本未证实，旧数值不采用。
+合作帖正确ID为1s7t9fk，撤回此前误记1t9sk7f；搜索卡绝对日期与页面相对时间不一致，日期保留待核。
+非待核的绝对日期来自检索卡日期元数据，而非由Reddit ID反推；日期待核材料不用于任务更新时点。官方材料无直接国家主题者明确列为区域相关，标题/摘要不替代已读正文。
+
+哈兰历史地图：research.html、references.html及首页返回“URL is not accessible via this tool”；可用浏览器库存为空，未取得国家记录及原件。没有采用推演、跨游戏端点或网页摘要作历史。不能由读取失败推断站点无资料。
+
+人格五维68/48/86/68/70；价值四维68/74/60/50，35/25/25/15加权为65，中立，branch_dependent。保护亲族、重建联盟与可选地精接纳提供积极依据；Wiki中的强制处罚、旧仇与排斥路线限制高分。文化统一、精灵身份或对侵略者战争不自动扣分，分支的具体待遇须区分。
+
+未实机测试，不把脚本存在等同于测试过每条路线；只读代表性机制与形成入口，未进行全任务奖励审计。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I29 / I29_ideas`：`mod/common/ideas/anb_country_ideas.txt:7584-7621`；身份筛选结果：`identity_filter_matches`。
+- `I45 / I45_ideas_legacy`：`mod/common/ideas/anb_country_ideas.txt:8201-8245`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_elyn`：`mod/common/ideas/anb_country_ideas.txt:8248-8286`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_drennen`：`mod/common/ideas/anb_country_ideas.txt:8289-8326`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_cenag`：`mod/common/ideas/anb_country_ideas.txt:8329-8367`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_ayeth`：`mod/common/ideas/anb_country_ideas.txt:8370-8409`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_fealgarn`：`mod/common/ideas/anb_country_ideas.txt:8412-8450`；身份筛选结果：`runtime_condition`。
+- `I45 / I45_ideas_myna`：`mod/common/ideas/anb_country_ideas.txt:8453-8491`；身份筛选结果：`runtime_condition`。
+</pre></main></body></html>

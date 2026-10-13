@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/飞腾-Y20.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 飞腾 Y20：精简证据与边界
+
+核验日期：2026-10-01。本体 Workshop `1385440355`、汉化 `2818493730`，两份 `descriptor.mod` 均声明支持 EU4 `v1.37.5.0`（并非 Anbennar 独立发布号）。本地结构化库仅作为可追溯缓存；下表行号指向真实 Workshop 原件。
+
+| 判断 | 原始位置 | 证据边界 |
+|---|---|---|
+| 身份与开局 | `mod/common/country_tags/anb_countries.txt:1330`；`mod/history/countries/Y20 - Feiten.txt:1-30`；`mod/history/provinces/4878、4879、4881、4883、4884、4885、4886` 相应文件开头 | Y20为1444现存共和国；1440年统治者设置不能写成1444年即位。七省归属按省份历史确认，而不是只凭国家模板。 |
+| 当前中文名 | `translation/localisation/anb_countries_l_english.yml:1240`；`anbennar-local/tools/query.py country Y20 --json` | 特殊编码经既有解码逻辑为“飞腾”；英文 Feiten。 |
+| 任务树 | `mod/missions/Feiten_Missions.txt:1-4620` | SQLite按源文件定位20个任务组、80项任务定义；`query.py country Y20` 返回 `mission_count=0` 是动态 `event_target:feiten_or_was_feiten_target` 未归属到Y20的缓存缺口，不能据此称飞腾无任务。任务分阶段解锁，不是80项全都可立即完成。 |
+| 技术与商贸 | `mod/missions/Feiten_Missions.txt:3984-4198,2913-3004,1443-1588,4259-4418`；`mod/events/Flavour_Feiten_Y20.txt:4-280,2964-2990`；`mod/common/ideas/anb_country_ideas.txt:18019-18054` | 捕鲸、气球、工程、天空港、飞艇、全球贸易有当前脚本；实际战力与经济强度未实机验证。 |
+| 天楼分支及价值 | `mod/missions/Feiten_Missions.txt:1919-1960`；`mod/events/Flavour_Feiten_Y20.txt:1468-1525,1708-1872`；`mod/common/ideas/anb_country_ideas.txt:18034-18054` | 围城轰炸造成荒废、发展及寺庙损失；已控制城市则可能进入贸易协议事件。理念注释说明大量船员来自被强征的囚犯；据此扣尊严与克制，而非因经商、殖民或共和国身份直接加减善恶。 |
+| 因斯亚未完成段 | `mod/missions/Feiten_Missions.txt:1277-1348` | “突破风暴门”等相连四项的触发/效果为 `TODO once Insyaa is in` 占位；开发日志谈扩展不改变当前本地脚本状态。 |
+
+## 离线 Wiki 与历史地图
+
+- 英文 [League of Feiten](https://anbennar.fandom.com/wiki/League_of_Feiten)：`page_id=2960`、`revision_id=31510`，已读 `anbennar-offline/output/chunks/en/md/2960/001-01-League of Feiten.md`。正文主要是国家信息框，支持海岸、首都、统治者与宗教身份，不含可用建国年代。信息框与Mod一致的部分仍以Mod为准。
+- 中文 [飞腾联盟](https://anbennar.fandom.com/zh/wiki/%E9%A3%9E%E8%85%BE%E8%81%94%E7%9B%9F)：`page_id=256`、`revision_id=2396`，已读 `anbennar-offline/output/chunks/zh/md/256/001-01-飞腾联盟.md`。“历史”段叙述贾赫军团难民南迁、后裔组成联盟；无准确建国年份。“主题”段是任务愿景，不是1444史实。该页理念数值与当前本体脚本有差异，不引用旧数值。
+- [哈兰历史地图资料目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AY20)：Y20状态 `in_progress`。`setup-Y20` 的七省可与当前Mod独立交叉比对；关于1523年西云终结、1780年代 Tikok 归属等记录仍属未核定推演，本条目不当作历史事实。
+
+## Reddit：开发语境与玩家体验
+
+本次找到四篇直接点名飞腾的官方开发材料，未找到一篇以Y20为唯一主题的专属开发日志：
+
+- [Dev Diary #78: Gulf of Rahen – Haless Edition](https://www.reddit.com/r/Anbennar/comments/1h58hz7/dev_diary_78_gulf_of_rahen_haless_edition/)（2024-12-02）：把飞腾作为东部贸易网络参照；不是飞腾当前机制说明。
+- [Dev Diary #93: Gods and Monsters](https://www.reddit.com/r/Anbennar/comments/1li44ny)（2025-06-23）：提及飞腾空艇与特殊佣兵能力；当时发布语境，不证明现行数值。
+- [Dev Diary #117: Welcome to Insyaa](https://www.reddit.com/r/Anbennar/comments/1sfx29k/eu4_dev_diary_117_welcome_to_insyaa/)（2026-04-08）：正文用飞腾气球驾驶员切入因斯亚贸易；开发者评论称飞腾与贝克杜冈因斯亚任务已填充。当前本地文件仍有占位，以文件为准。
+- [Dev Diary #119: Insyaa’s Great Plateau](https://www.reddit.com/r/Anbennar/comments/1sq20kp)（2026-04-19）：开发者回复谈飞腾旧内容扩展／重做，以及天楼和终局写作；计划或开发进度不等于本地实装。
+
+两篇版本受限的玩家体验：[The Feiten experience](https://www.reddit.com/r/Anbennar/comments/vfg2pj)（2022-06-18）称奇械、戈莫合作和全球空港有风味，也嫌彼时萨哈尔／因斯亚内容不足；[How to Feiten?](https://www.reddit.com/r/Anbennar/comments/1hhc7fr)（2024-12-18）集中讨论早期更强邻国与经济军力压力，并有玩家认为后期很富。这些只能说明旧版玩家感受，不能证明当前任务奖励或平衡。
+
+## 同轮检查
+
+身份Y20、汉化飞腾、1444七省、同Tag任务、版本和80任务定义已交叉核对。未实机验证任务触发、因斯亚占位能否被游戏UI显示、飞腾的最终数值强弱及天楼各路径实际出现频率；本文不把这些写成定论。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Y20 / Y20_ideas`：`mod/common/ideas/anb_country_ideas.txt:18020-18056`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

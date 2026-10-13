@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/冻喉-Z18.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 冻喉 Z18：证据与边界
+
+核验日：2026-10-08；本体与汉化支持 EU4 `v1.37.5.0`。Z18为1444灰兽人部族；`missions/Frozenmaw_Missions.txt`有20项直接任务，分5组。Z50当前汉化精确名称为“格罗姆巴尔”；旧稿中的“戈姆巴尔”是旧译，不是当前显示值。
+
+| 判断 | 原件 | 边界 |
+|---|---|---|
+| 灰兽人建国 | `[local source path omitted] - Frozenmaw.txt`；`missions/Frozenmaw_Missions.txt` | 聚居、军制、袭击、宗教和人口整合属于不同阶段，不能写成开局完成。 |
+| 格罗姆巴尔入口 | `decisions/GerudianFormables.txt:258-318` | 转为Z50后改Tag并替换国家任务；Z18直接任务不合并计数。 |
+| 中文名与旧译差异 | `[local source path omitted]` | 当前汉化为“格罗姆巴尔”；旧稿“戈姆巴尔”仅为旧译，不能继续作为当前名称。 |
+| 形成条件与后继清理 | `decisions/GerudianFormables.txt:258-318` | 本文Z18灰兽人入口：potential与allow须同时满足；封建制、行政科技7、和平、杰鲁迪亚至少10省；形成后清理冻喉危机与莫斯卡修正。 |
+| Z50直接任务 | `missions/Grombar_Missions.txt:1-3535`；结构库 DB 50项 | 直接定义50项；确定性随机国家脚本候选返回55，口径不同，不把55写成直接任务数。 |
+| 后继路线效果 | `missions/Grombar_Missions.txt:2485-3535` | 鱼市、奢侈品、铁矿、熔炉、海军与殖民，以及人类隔离/半兽人融合，是形成后的路线证据，不倒灌Z18原评分。 |
+
+优先读取英文离线Wiki [Great Clan of Frozenmaw](https://anbennar.fandom.com/wiki/Great_Clan_of_Frozenmaw)，`page_id=977`、`revision_id=26401`、`anbennar-offline/output/en/markdown/Great Clan of Frozenmaw__99393e7d.md:55-71`。其旧史叙述布拉苏尔带领被逐灰兽人西进、1420年攻破弗罗伦王国，1428年前后建立灰兽人统治；它继续叙述的1483年前发展不是现行战役的既定结局。中文快照 `Kingdom of Grombar` 为 `page_id=666`、`revision_id=1347`，实际读取 `001-01` 至 `001-03` chunks，补充灰潮、1420年渡过弗罗伦与后续多族群背景。Wiki不证明现行任务效果。
+
+官方Reddit：[Dev Diary #12: Gray King in the North](https://www.reddit.com/r/Anbennar/comments/jo7u7n/)（2020-11-04，正文读到格罗姆巴尔并不存在于1444、常由冻喉形成及兽人至包容路线语境），属于官方开发日志，不证明当前本地任务奖励。玩家两帖：[New frozenmaw/Grombar](https://www.reddit.com/r/Anbennar/comments/1lw73mb/)（2025-07-10）与[Grombar Updates?](https://www.reddit.com/r/Anbennar/comments/1m7v74f/)（2025-07-24）仅读到冻喉/格罗姆巴尔重制与任务体验讨论；均未把本地当前版本或子模组写作可验证规则。
+
+人格E82/A68/M-T50/I15/P63；价值四维60/58/55/38，加权55，中立。总体改为branch_dependent并保留55分。Z50融合阶段75分、多元82，依据三族容忍与共同体承认；强权阶段40分、多元28，依据重置定居、发展损失与隔离。追加原件missions/Grombar_Missions.txt:551-811,3202-3332；阶段分是编辑定标，不是脚本数值，未实机验证。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Z18 / Z18_ideas`：`mod/common/ideas/anb_country_ideas.txt:3170-3207`；身份筛选结果：`identity_filter_matches`。
+- `Z50 / Z50_ideas`：`mod/common/ideas/anb_country_ideas.txt:3898-3937`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

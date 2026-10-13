@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/众氏族之国-I98.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 众氏族之国 I98：精简证据与边界
+
+核验：2026-09-29。本体 Workshop `1385440355`、汉化 `2818493730`，`descriptor.mod` 均支持 `v1.37.5.0`；本地结构化库 `doctor.py` 返回 `status=ok`，manifest 分别为 `2812922911103828520` 与 `7518363337005727349`。本地路径以下均相对于这两个 Workshop 根目录。资料库只用于定位，事实仍回溯源文件。
+
+| 判断 | 本地原件 | 边界 |
+|---|---|---|
+| I98身份与中文名 | 本体 `common/country_tags/anb_countries.txt:578`、`localisation/anb_countries_l_english.yml:1166`；汉化同名文件`:1569`；`history/countries/I98 - Ves Udzenklan.txt:1-5` | 汉化解码为“众氏族之国”；I98国家定义不等于1444已存在 |
+| 五个可选前身 | `decisions/DwarovarMonstrousFormables.txt:4-84` | H75、H84、H85、H89、H90任一合格者形成；不是依次继承。现有决议要求西部山脉100省、4119与2931等条件 |
+| 任务归属 | `missions/Allclan_Missions.txt:1-2990`；`missions/Cave_Goblin.txt` | 结构化查询可见54项 I98 专属任务与23项洞穴哥布林共享任务；不是77项全部专属 |
+| 五派、狂飙 | `common/government_reforms/02_government_reforms_republics.txt:8707-8759`；`common/government_mechanics/anb_allclan_pandemonium.txt:1-49` | 政府改革与资源刻度均为当前脚本；不保证任一前身形成时立即自动取得所有后续改革 |
+| 建造狂热、亲族内斗 | `missions/Allclan_Missions.txt:13-45,136-181`；`common/disasters/allclan_erecting_frenzy.txt:1-50`；`common/disasters/allclan_funny_disaster.txt:1-96` | 建造狂热由任务推进；亲族内斗有狂飙高阈值。灾难全部结束分支未逐项审计 |
+| 工业事故与武器 | 本体 `localisation/Flavour_Allclan_I98_l_english.yml:155-168`（按事件键复核）；`decisions/AllclanDecisions.txt:82-124`；`events/Flavour_Allclan_I98.txt:2508-2591` | 事故文本用于评价叙事责任；武器有条件与冷却，非无限次常规操作 |
+
+## 离线 Wiki 与历史地图
+
+- [Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)：`lang=en`，`title=Countries after the 1444 Divergence`，`section=Aspiring Polities`，`page_id=1100`，`revision_id=32841`，`source_url=https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence`；已读 `anbennar-offline/output/chunks/en/md/1100/031-01-Aspiring Polities.md`。仅支持 I98 为1444分歧后的潜在政体，不给成立确年。
+- [Cave goblin](https://anbennar.fandom.com/wiki/Cave_goblin)：`lang=en`，`title=Cave goblin`，`section=Cave goblin`，`page_id=1372`，`revision_id=17385`，`source_url=https://anbennar.fandom.com/wiki/Cave_goblin`；已读 `anbennar-offline/output/chunks/en/md/1372/001-01-Cave goblin.md`。只作族群地理背景。
+- [Mountainshark Clan](https://anbennar.fandom.com/wiki/Mountainshark_Clan)：`lang=en`，`title=Mountainshark Clan`，`section=Mountainshark Clan`，`page_id=2533`，`revision_id=28122`，`source_url=https://anbennar.fandom.com/wiki/Mountainshark_Clan`；已读 `anbennar-offline/output/chunks/en/md/2533/001-01-Mountainshark Clan.md`。1428年起源是 H84 的前史，不是 I98 的建国年份。
+- `query.py --title &quot;Ves Udzenklan&quot; --json` 与 `--title &quot;Vez Udzenklan&quot; --json` 均未找到独立国家页：`OFFLINE_WIKI_NO_RESULT`。英文列表使用 `Vez`，当前本体国家文件使用 `Ves`，正文按当前本体拼写。
+- [Countries at the start of the Empyreal Age](https://anbennar.fandom.com/wiki/Countries_at_the_start_of_the_Empyreal_Age)：`lang=en`，`title=Countries at the start of the Empyreal Age`，`section=Countries at the start of the Empyreal Age`，`page_id=6256`，`revision_id=32913`，已读 `anbennar-offline/output/chunks/en/md/6256/001-01-Countries at the start of the Empyreal Age.md`；`source_url=https://anbennar.fandom.com/wiki/Countries_at_the_start_of_the_Empyreal_Age`。该列表把 `Vez Udzenklan` 列在1820年Dwarovar政体中，不能据此反推EU4形成确年。
+- [可成立国家](https://anbennar.fandom.com/zh/wiki/%E5%8F%AF%E6%88%90%E7%AB%8B%E5%9B%BD%E5%AE%B6)：`lang=zh`，`title=可成立国家`，`section=可成立国家`，`page_id=276`，`revision_id=2612`，已读 `anbennar-offline/output/chunks/zh/md/276/001-01-可成立国家.md`；`source_url=https://anbennar.fandom.com/zh/wiki/%E5%8F%AF%E6%88%90%E7%AB%8B%E5%9B%BD%E5%AE%B6`。中文页列出众氏族之国与五个可选形成者，仅作译名和背景交叉核对。
+- [哈兰历史地图 `eu4:I98`](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AI98)：站点快照 `2026-09-23T07:23:00Z`，记录 `spm26-nw-allclan-union` 与 `spm26-nw-allclan-north-rail` 均为 `hypothesis`；1600与1650是可替换地图节点，不采用为史实。页面称 I98 历史仍 `in_progress`。
+
+## Reddit：官方记录与玩家体验分层
+
+直接以 Allclan 为标题的独立官方 Dev Diary 未检到；核验到三份含该国实质内容的 r/Anbennar 官方发布公告：
+
+1. [Gods and Gears Release](https://www.reddit.com/r/Anbennar/comments/oqmq0n/gods_and_gears_release/)，2021-07-24，正文第53–59与165–176行，EU4 1.31.5 语境；当时 Allclan 仍属 WIP，提及哥布林任务与工业方向。
+2. [Children of Ruin Release](https://www.reddit.com/r/Anbennar/comments/yyqij8/children_of_ruin_release/)，2022-11-18，正文第556–574行，EU4 1.34.4 语境；说明旧树因重制暂时禁用。
+3. [Scions of Sarhal Release](https://www.reddit.com/r/Anbennar/comments/17zwu18/scions_of_sarhal_release/)，2023-11-20，正文第25–42行；宣布 Allclan 从头重做，以“不稳定国家的治理”为题。三个公告均非2026当前脚本证据。
+
+[Anbennar Dev Diary #19: Artificers and their Workings](https://www.reddit.com/r/Anbennar/comments/op7d9v/anbennar_dev_diary_19_artificers_and_their/)，2021-07-22，作者在正文自称 Lead Writer；已读正文提及洞穴哥布林形成 Allclan 的段落。属于早期奇械设计语境，其中的“半独特任务树”描述不代表当前54项任务的状态。[Dev Diary #39: Cave Goblin Rework](https://www.reddit.com/r/Anbennar/comments/y5npop/dev_diary_39_cave_goblin_rework/)正文主要讨论六个西蛇脊前身；作者评论才提到 Allclan 当时因开发问题被停用，按开发者回复而非该国专属日志记录。
+
+两篇玩家帖：
+
+- [The goblin Allclan mission tree is a very mixed bag](https://www.reddit.com/r/Anbennar/comments/1e5d478/the_goblin_allclan_mission_tree_is_a_very_mixed/)，2024-07-17，已读主帖第21–28行；作者自述 H75 前身、约1670年形成，称赞叙事与狂飙，但抱怨门槛和等待，并承认使用控制台绕过疑似卡住的事件。仅为个人体验。
+- [Speaking of AllClans...](https://www.reddit.com/r/Anbennar/comments/1rdmcq0/speaking_of_allclans/)，2026-02-24，已读主帖及高相关评论第75–148行；对亲族内斗与前身选择有相互不确定的看法，不据此断言当前奖励或可规避性。
+
+## 待核实与评分理由
+
+离线 Wiki 没有 I98 独立国史，形成确年、完整历史成员与跨游戏延续均不写成定论。当前形成决议只证明五个**可形成者**，不证明它们在设定史中恰好且永远是全部五派来源。国家价值分32（尊严20、公共利益48、人格承认45、克制10）是根据住房与经济利益、明知危险仍转嫁灾害成本等具体脚本/叙事作出的中置信评价；不因统一、哥布林身份或共和国本身扣分。亲族内斗结束分支、工业事故的实机路线与玩家帖所涉精确补丁尚未核定。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I98 / I98_ideas`：`mod/common/ideas/anb_country_ideas.txt:16312-16352`；身份筛选结果：`identity_filter_matches`。
+- `H75 / H75_ideas`：`mod/common/ideas/anb_country_ideas.txt:15848-15884`；身份筛选结果：`identity_filter_matches`。
+- `H84 / H84_ideas`：`mod/common/ideas/anb_country_ideas.txt:15805-15845`；身份筛选结果：`identity_filter_matches`。
+- `H85 / H85_ideas`：`mod/common/ideas/anb_country_ideas.txt:15887-15929`；身份筛选结果：`identity_filter_matches`。
+- `H89 / H89_ideas`：`mod/common/ideas/anb_country_ideas.txt:15720-15760`；身份筛选结果：`identity_filter_matches`。
+- `H90 / H90_ideas`：`mod/common/ideas/anb_country_ideas.txt:15680-15717`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/欧泊特罗-Z17.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 欧泊特罗 Z17 → 格鲁达戈特 Z74：精简证据与边界
+
+核验：2026-10-01。本体 Workshop `1385440355`、汉化 `2818493730`；两份 `descriptor.mod` 的 `supported_version` 均为 EU4 `v1.37.5.0`，不是安本纳尔独立发布号。本地任务文件修改日期为2026-09-07。本文涉及的脚本行号均回溯真实 Workshop 原件。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| 身份／中文名 | `mod/common/country_tags/anb_countries.txt:1427,1484`；`translation/localisation/anb_countries_l_english.yml:1407,1567` | Z17=Obrtrol=欧泊特罗，Z74=Gerudaghot=格鲁达戈特；中文值由本地结构化库既有解码逻辑取得。 |
+| 1444开局 | `mod/history/countries/Z17 - Obrtrol.txt:1-46`；`mod/history/provinces/995 - Murtrhol.txt:1-29`；省份历史精确 `owner=Z17` 九省 | Z17是起始国、首都995、定居部落改革、峡湾巨魔、山脉守望者；Svala于1437年进入统治者历史，不能说1444即位。首都已有受压迫人类少数群体；没有查到“1444-12-11必然被宣战”的当前脚本。 |
+| 形成Z74 | `mod/missions/Obrtrol_Missions.txt:637-688`；`mod/history/countries/Z74 - Gerudaghot.txt:1-9` | 在和平、控制995与985且完成三前置任务时，若Z74不存在，改Tag、改君主制、改革、等级并换任务；若Z74已存在只得金币。Z74模板不是1444持地证明。 |
+| 任务数量 | `mod/missions/Obrtrol_Missions.txt:1-2463`；`anbennar-local/tools/query.py country Z17/Z74 --json` | 确定性结构化库：25项同时对Z17与Z74开放，另30项仅Z74开放。连续战役总55项直接任务；不能把Z17的25与Z74的55相加成80。 |
+| 核心风格 | `mod/missions/Obrtrol_Missions.txt:246-321,519-635,1241-1339,1457-1558,1619-1840,1959-2150`；`mod/events/Flavour_Obrtrol_Z17.txt:363-520` | 奴工建设、古锻炉与首都、猛犸、全区繁荣、公共学校、符文／圣地、巨人宫殿和遗物事件是当前任务／事件叙事。完成难度、实际强度未实机测评。 |
+| 族群与价值 | `mod/events/Flavour_Obrtrol_Z17.txt:129-320`；`mod/missions/Obrtrol_Missions.txt:1851-1908,2249-2343`；`mod/history/provinces/995 - Murtrhol.txt:20-29` | 可选接纳灰兽人与食人魔；另一方面永久奴隶矿、降低人类容忍度与四座矮人矿堡的主动毁坏有直接脚本。价值评分只针对具体侵害，不因巨魔种族、战争或王权自动扣分。 |
+
+## 离线 Wiki 与历史地图
+
+- 英文 [Obrtrol](https://anbennar.fandom.com/wiki/Obrtrol)：`page_id=976`、`revision_id=28440`。已读 `anbennar-offline/output/chunks/en/md/976/020-01-Origins.md`、`021-01-Early History.md`、`022-01-Pre-History.md`及完整页 `output/en/markdown/Obrtrol__397229d0.md`。记述霜巨人侍从、巨人衰落、人类推进与后来的山地退缩；“霜巨人创造巨魔”是页内有争议的自述。`Early History`把357 BA战争结束与373 BA后续入侵按逆向纪年写成相反先后，故不采用具体古代年份。`Modern`和`After Occupation`章节标记 Work in Progress／May not be Canon，不作已定史。
+- 英文 [Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)：`page_id=1100`、`revision_id=32841`，已读 `anbennar-offline/output/chunks/en/md/1100/025-01-Aspiring Polities.md`，只将 Gerudaghot 列为后1444可能政权，不提供唯一形成年份或当前实装条件。后者以本地任务为准。
+- [哈兰历史地图资料目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AZ17)与[连续推演](https://shen-hhao.github.io/anbennar-timeline/continuity.html)是非官方社区研究。1720、1725和1770年前后的巨魔旧地归属属场景推演；欧泊特罗的灭国年份和Z74结局均不能由这些地图节点确定。本条目未采用任何推演年份作历史事实。
+
+## Reddit：直接相关官方材料与两篇玩家帖
+
+- 官方 [Light and Dark Release](https://www.reddit.com/r/Anbennar/comments/r3r2d5/light_and_dark_release/)（2021-11-28）：当时发布公告把格鲁达戈特任务树与山脉守望者圣地列入更新，语境为EU4 1.32；不能推定当前数值未变。
+- 官方 [Dev Diary #61: Unlocking Cannor](https://www.reddit.com/r/Anbennar/comments/1cfc94w/dev_diary_61_unlocking_cannor/)（2024-04-28）：直接提及欧泊特罗周围格鲁迪亚重做、更多省份与森林巨魔空间，属于当时设计计划，是否全部进入本地版本仍需脚本证明。2026-09-27区域日志未直接点名Z17/Z74，不列为该国日志。
+- 玩家 [Just formed Gerudaghot](https://www.reddit.com/r/Anbennar/comments/pk1dy2/just_formed_gerudaghot_fjord_troll_formable/)（2021-09-08）：认为前20年艰难，利用山地消耗；当时评论称后续任务仍在制作。早于2021-11发布公告，不能代表当前完整度；帖子未明示具体版本。
+- 玩家 [Obrtrol tips?](https://www.reddit.com/r/Anbennar/comments/1l2me6m/obrtrol_tips/)（2025-06-03）：讨论对比亚恩的冬季山地防御、佣兵或超编等不同战法；属有日期但具体版本不明的社区经验，不保证当前最优。
+
+旧推荐文档 `安本纳尔/skills/anbennar-country-guide/references/documents/推荐国文档3.0（上古文档仅供参考）.md:805-839` 只作旧版玩法印象：其中固定宣战日期、奖励数值和“机制少”评价未经当前版本实机复核，不作为本文当前机制证据。
+
+同轮核对：Tag、英中名、九省开局、Z17→Z74形成、25+30任务计数与价值评分已交叉检查。未实机验证开局战术、终局任务完成耗时、圣地祝福数值、古巨人远古纪年与地图推演结局。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Z17 / Z17_ideas`：`mod/common/ideas/anb_country_ideas.txt:3127-3167`；身份筛选结果：`identity_filter_matches`。
+- `Z74 / Z74_ideas`：`mod/common/ideas/anb_country_ideas.txt:21503-21539`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

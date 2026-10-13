@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/帕沙埃内-B59.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 帕沙埃内 B59 → 安本纳尔帝国 Z01：精简证据与边界
+
+核验：2026-09-30。本体 Workshop `1385440355`、汉化 `2818493730`，均声明支持`v1.37.5.0`；本地结构化库`doctor.py`为`ok`，manifest为`2812922911103828520`与`7518363337005727349`。下述`mod/`、`translation/`路径分别回溯两份Workshop原件，结构化库只用于定位。
+
+| 判断 | 源文件与位置 | 边界 |
+|---|---|---|
+| B59与Z01身份 | `mod/common/country_tags/anb_countries.txt:161`；`mod/history/countries/B59 - Pashaine.txt:1-8`；`translation/localisation/anb_countries_l_english.yml:1493,1375` | B59汉化帕沙埃内，Z01汉化安本纳尔帝国；B59历史文件是形成国模板，不证明1444已存在或形成后政体必固定 |
+| 形成范围 | `mod/decisions/WescannFormables.txt:305-438`；`mod/common/scripted_triggers/anb_scripted_triggers_missions.txt:2336-2347`；`mod/missions/LRM_Missions.txt:881-930` | 九个月河小国含四自由城；通用潜在条件还有东达梅里亚、弗恩或帕沙埃内文化，不能说只能由四自由城形成；月河小国另须完成“谢幕” |
+| B59任务归属 | `mod/missions/Pashaine_Missions.txt:10-1499` | 本地库定位53项B59战役关联任务；含后续Z01阶段的重叠实体，不可另加17项 |
+| 法师灾难与议会 | `mod/common/disasters/pashaine_prelude_to_greatness.txt:1-141`；`mod/common/parliament_issues/anb_pashaine.txt:1-264`；`mod/events/Flavour_Pashaine_B59.txt:1576-1671` | 需稳定度及六项法案结束；法师叛军、塔楼拆除与奇械开放为当前脚本；实机触发节奏未核 |
+| 专属Z01续篇 | `mod/missions/Pashaine_Missions.txt:1989-2027,2597-2617,2735-2751`；`mod/events/Flavour_Pashaine_B59.txt:1219-1281` | “梦想依旧”触发事件改Z01；后续任务同时要求曾为B59、完成前置与Z01，非所有帝国通用 |
+| 终局称号 | `mod/events/Flavour_Pashaine_B59.txt:1247-1281`；`translation/localisation/Flavour_Pashaine_B59_l_english.yml:529-533` | 黑火药安本纳尔、皇权安本纳尔帝国、安本纳尔共和国是可选显示名，不是三个Tag |
+
+## 离线英文Wiki与历史地图
+
+- `Pashaine`、`Pashainé`、`B59` 均未命中独立国家主页面：`OFFLINE_WIKI_NO_RESULT`；离线库从`anbennar-offline/`目录运行`doctor.py`为`ok`（英文3718页、中文1136页）。
+- [Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)：`lang=en`、`section=Aspiring Polities`、`page_id=1100`、`revision_id=32841`；已读`anbennar-offline/output/chunks/en/md/1100/006-01-Aspiring Polities.md`。仅将Pashainé列为1444分歧后潜在政体，不给成立确年。
+- [Bhailines](https://anbennar.fandom.com/wiki/Bhailines)：`lang=en`、`section=Bhailines`、`page_id=6151`、`revision_id=32425`；已读`anbennar-offline/output/chunks/en/md/6151/001-01-Bhailines.md`。介绍西坎诺的城市行会政体及若干帕沙埃内城市自称继承达梅里亚共和国，但称这种连续性通常可疑；它是**地区制度背景**，不能证明B59国家在古代存在。
+- [哈兰历史地图研究入口](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AB59)：B59记录为`reviewLevel=seed`、`records=[]`、`sourceIds=[]`；站点尚无可回读的建国年或领土史料，不采纳推演日期。
+
+## Reddit：官方日志与社区体验
+
+直接相关的官方资料（均仅作当时开发／发布语境）：
+
+1. [EU4 Dev Diary #85: Cannor, Reintroduced](https://www.reddit.com/r/Anbennar/comments/1keiyuz/)，2025-05-04；已读正文月河小国、影响力、相关城市与形成构想段。发布前预告，未注明精确补丁号。
+2. [EU4 Dev Diary #91: Anbennar Means Unity](https://www.reddit.com/r/Anbennar/comments/1laf26k/)，2025-06-13；已读正文帕沙埃内、帝国首相、法师危机、帝国战争及后续路线段。最直接的国家开发日志，发布前语境。
+3. [The Final Empire is out NOW!](https://www.reddit.com/r/Anbennar/comments/1lshhva/)，2025-07-05；已读正文月河小国形成帕沙埃内及黑火药安本纳尔段。确认当时发布，当前条件回归本地脚本。
+
+两篇玩家帖（不证明当前机制）：
+
+- [Pashaine/Luna River Minors Completed Campaign](https://www.reddit.com/r/Anbennar/comments/1lwlmft/)，2025-07-10；已读主帖，从梅尼博尔起步，认为前50年独特，但到1600年前出现较长等待。精确补丁号、子Mod情况未声明。
+- [In praise of Pashaine!](https://www.reddit.com/r/Anbennar/comments/1ng9704/)，2025-09-13；已读主帖，赞赏月河影响力与政治文本，抱怨早期议会冷却；精确补丁号、Mod组合未声明。帖子对Vic3的疑问不能作为实现证据。
+
+## 评分与待核实
+
+人格坐标为解释性估计：拓疆84、专制61、魔法／奇械方向20、强度82、多元67。前期城市协商／法师政治与后期中央火药国家差异明显，JSON设阶段轮廓。价值四维：尊严63、公共利益76、人格承认62、克制54；加权64.65，四舍五入65，归中立。具体加分是法律约束、公共秩序与城市建设；减分来自法师叛乱处理、拆塔与帝国机构操纵，而非战争或帝国化本身。Wiki无B59独立历史，建国确年与设定史最终版图不知；灾难实机节奏、所有称号分支和任务可见性未完整运行测试。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `B59 / B59_ideas`：`mod/common/ideas/anb_country_ideas.txt:17486-17528`；身份筛选结果：`identity_filter_matches`。
+- `A55 / A55_ideas`：`mod/common/ideas/anb_country_ideas.txt:19494-19532`；身份筛选结果：`identity_filter_matches`。
+- `A82 / A82_ideas`：`mod/common/ideas/anb_country_ideas.txt:19650-19686`；身份筛选结果：`identity_filter_matches`。
+- `A61 / A61_ideas`：`mod/common/ideas/anb_country_ideas.txt:19535-19570`；身份筛选结果：`identity_filter_matches`。
+- `Z03 / Z03_ideas`：`mod/common/ideas/anb_country_ideas.txt:19573-19609`；身份筛选结果：`identity_filter_matches`。
+- `Z01 / Z01_blackpowder_ideas`：`mod/common/ideas/anb_country_ideas.txt:12-51`；身份筛选结果：`runtime_condition`。
+- `Z01 / Z01_ideas`：`mod/common/ideas/anb_country_ideas.txt:54-95`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

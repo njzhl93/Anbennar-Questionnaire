@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/苍空之父-I90.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 苍空之父 I90：精简证据与边界
+
+核验：2026-10-02。当前本体 Workshop `1385440355`、汉化 `2818493730` 的 `descriptor.mod` 均标 `supported_version=&quot;v1.37.5.0&quot;`，这是 EU4 支持版本，不是安本纳尔单独发行号。本地任务文件 `missions/Maghargma_Missions.txt` 修改于2026-09-07。结构化库只作可追溯缓存；以下行号均指向 Workshop 原件。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| 身份与中文名 | `mod/common/country_tags/anb_countries.txt` 的 I90；`translation/localisation/anb_countries_l_english.yml:938-939` | I90=Maghargma=苍空之父；译名经现有结构化库解码。 |
+| 开局与属国 | `mod/history/countries/I90 - Maghargma.txt:1-47`；`mod/history/diplomacy/ogre_diplomacy.txt:1-47`；省份历史 `owner=I90` 四个文件（5034、5036、5037、5038） | 1444起始国，厚皮食人魔、诸神之宴、首都5037；三个普通附庸J35/J36/J37与三个朝贡国J38/J39/J40。济尔塔格君主条目在1438年。 |
+| 任务与分支 | `mod/missions/Maghargma_Missions.txt:1-3668`；`anbennar-local/tools/query.py country I90 --json` | 结构化库计73个任务定义；含六组动态分支的隐藏 `always = no` 占位，另有互斥路线。局内可完成数不能等同73。只审查代表性任务，不逐项核对奖励。 |
+| 早期压力与特殊属国 | `mod/missions/Maghargma_Missions.txt:12-98,100-201,215-452`；`mod/common/religions/00_anb_religion.txt:8264-8305`；`mod/common/subject_types/00_subject_types.txt:5288-5309` | 首项任务要求诸神之宴第一改革和90%兵力；宗教使用Doom。特殊从属领地不占外交槽，独立倾向计算方式不同于普通附庸。无证据称I90有单独专属灾难。 |
+| 价值分支 | `mod/missions/Maghargma_Missions.txt:277-452`；`mod/events/Flavour_Magharma_I90.txt:26-45,85-175`；`translation/localisation/anb_missions_l_english.yml:970-981,1018-1023` | 占领西部边区可拆设施并削减城市发展；合作可扶植人类领主并增加容忍；哥布林可获共存容忍。奴隶市场与强迫劳动见任务叙事。宗教战争、征服和食人魔身份本身不作价值扣分。 |
+| 帝国未来与未完段 | `mod/events/Flavour_Magharma_I90.txt:841-855,1013-1030`；`mod/missions/Maghargma_Missions.txt:1786-1800,1927-1957,2770-2784` | 帝国改革和巨人身份是后续事件，非1444开局。因斯亚相关节点仍为WIP tooltip；任务文件没有可确认的强制改Tag终章。 |
+
+## 离线 Wiki 与历史地图
+
+- 英文 [Kingdom of Maghargma](https://anbennar.fandom.com/wiki/Kingdom_of_Maghargma)，`page_id=3528`、`revision_id=31880`，实读 `anbennar-offline/output/chunks/en/md/3528/001-01-Kingdom of Maghargma.md` 等分块。用于王室与大氏族分权、半人马入侵、巨人遗址和济尔塔格整顿的历史脉络。该页把即位写作1440年，而当前国家历史文件设1438年；正文优先采用本地开局脚本，不给Wiki年份确定性。
+- 英文 [Ogre Valley Timeline](https://anbennar.fandom.com/wiki/Ogre_Valley_Timeline)，`page_id=3818`、`revision_id=32460`，实读 `anbennar-offline/output/chunks/en/md/3818/001-01-Ogre Valley Timeline.md` 等分块。用于云巨人城市坠落与砾皮王朝早期背景。旧王姓名在不同本地文本与年表中有冲突，不强行归一。两页所述1444年以后的发展不得倒写为开局事实。
+- 上述两页的证据字段：`lang=en`；`title=Kingdom of Maghargma / Ogre Valley Timeline`；`section=Kingdom of Maghargma / Ogre Valley Timeline`；`source_url` 分别为两条标题链接；实际读取的 Markdown chunk 另包括 `anbennar-offline/output/chunks/en/md/3528/001-02-Kingdom of Maghargma.md`、`001-03-Kingdom of Maghargma.md`、`001-04-Kingdom of Maghargma.md` 与 `anbennar-offline/output/chunks/en/md/3818/001-07-Ogre Valley Timeline.md`。
+- 英文 [Ogre](https://anbennar.fandom.com/wiki/Ogre)：`lang=en`，`title=Ogre`，`section=Origins / The Hunger`，`page_id=710`，`revision_id=32338`，`local_source=anbennar-offline/output/chunks/en/md/710/017-01-Origins.md; 021-01-The Hunger.md`，`source_url=https://anbennar.fandom.com/wiki/Ogre`。仅补充食人魔渊源及饥饿背景。
+- 中文离线 Wiki 对本国无可用正文：`OFFLINE_WIKI_NO_RESULT`。当前中文名直接取本地汉化，不用中文Wiki猜补。
+- [哈兰历史地图研究页](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AI90)为2026-09-23非官方快照，国家记录ID `eu4:I90`、材料记录 `setup-I90`；后续 `hlc26-maghargma-northern-nominal-control-1460` 与 `hlm26-pg-backcast-maghargma-centralization-1475` 标假说／背景线索。站点仍标 `in_progress` 且 `mapAdoption=false`；只作定位，不将1460年以后节点、领土边界或命运当作已证实历史。
+
+## Reddit：直接相关官方材料与两篇玩家帖
+
+- 官方 [Dev Diary #77 – Monster Madness](https://www.reddit.com/r/Anbennar/comments/1gz7pf3/dev_diary_77_monster_madness/)（2024-11-25）：重做设计意图涉及诸神之宴改革、饥饿、特殊属国、直接统治及巨人继承。不能代替当前脚本。
+- 官方 [Fires of Conviction Release](https://www.reddit.com/r/Anbennar/comments/1he79o3/fires_of_conviction_release/)（2024-12-14）：发布公告确列苍空之父重做，不证明每项任务现已成熟或数值未变。
+- 玩家 [How do I play Ogres](https://www.reddit.com/r/Anbennar/comments/1nz428e/how_do_i_play_ogres/)（2025-10-05）：重做后玩家讨论饥饿、贡国、定居与特殊属国；未给本地精确补丁号。
+- 玩家 [Magharma](https://www.reddit.com/r/Anbennar/comments/1t4i9dk/magharma/)（2026-05-05）：玩家讨论改革后财政、属国忠诚与定居速度；单局经验，不能当机制保证。
+
+旧 DOCX 任务树归档 `安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:4057-4087` 只写“很长（50+）”，只作导航，不与当前任务定义计数冲突裁决。同轮核对身份、四省与六属国类型、宗教门槛、动态分支、WIP远征及价值观证据；未实机测量完成时长、最佳战术或游戏内事件触发稳定性。价值四维25/45/30/25加权31.25→31；合作与畜养路线暂估40／15，故采用`branch_dependent`。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I90 / I90_ideas`：`mod/common/ideas/anb_country_ideas.txt:12825-12863`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

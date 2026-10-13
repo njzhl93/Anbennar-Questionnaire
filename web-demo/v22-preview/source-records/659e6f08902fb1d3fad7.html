@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/亡使眼镜蛇-S30.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 亡使眼镜蛇（S30）／暗界契约（S90）证据页
+
+核验日：2026-09-17  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：中文名、S30→S90事件链、通用形成条件、专属任务树与主要核心机制已确认；非背叛终点的运行时衔接仍待实机验证。
+
+## 身份与形成关系
+
+- S30标签与开局：`common/country_tags/anb_countries.txt`；`history/countries/S30 - Death_Bringing_Cobra.txt:1-45`。
+- S90标签：`common/country_tags/anb_countries.txt:1180`；`history/countries/S90 - Umbral Covenant.txt:1-8`只定义形成后身份，不是独立1444开局。
+- 当前汉化解码：`anb_countries_l_english.yml:1951`为“亡使眼镜蛇”，`:2650`为“暗界契约”。
+- 专属衔接：`events/Flavour_DeathBringingCobra_S30.txt:53-67`直接执行`form_umbral_covenant=yes`并触发S90开篇事件。
+- 统一形成效果：`common/scripted_effects/sarhal_scripted_effects.txt:4110-4128`，负责切换S90、帝国等级、任务、神权与专属改革。
+- 通用形成：`decisions/EastSarhalFormables.txt:751-800`。要求暗影契约信仰、指定萨哈尔范围、至少30个符合条件的非沼泽省份、和平、自由或朝贡身份、非Dakinshi军阀政府且S70存在。
+- 队列中的“暗界契约”和“亡使眼镜蛇”属于同一条S30→S90连续战役链。
+
+## 历史与叙事来源
+
+- `history/countries/S30 - Death_Bringing_Cobra.txt:1-45`：Kuende、暗影契约信仰、政府、文化、首都与开局魔法能力。
+- `history/wars/KwizeraUsurpation.txt:8-12`：1439年清洗战争的本地历史记录。
+- `localisation/Group_Flavour_Inyaswarosa_l_english.yml:9`：旧Bamaliwuni秩序、政变、逃亡与女巫交易的剧情文本。
+- `localisation/Flavour_DeathBringingCobra_U24_l_english.yml:34-58`：三份赠礼、亲族和胎儿献祭、形成提示；属于剧情文本，不等同于历史脚本。
+- `history/countries/S90 - Umbral Covenant.txt:1-8`：形成后神权、魔政、帝国等级、echenka文化与首都；没有独立1444人物史。
+
+## 任务树与核心机制
+
+- `missions/DeathBringingCobra_Missions.txt`：按`S30_*`顶层任务块确定性统计为10个。
+- `missions/UmbralCovenant_Missions.txt`：按`S90_*`顶层任务块确定性统计为87个；包括按旗标切换的动态地区任务，87不等于每局同时可见的固定任务数量。
+- 暗影赋能解锁：`missions/UmbralCovenant_Missions.txt:2634-2647`；政府界面入口：`common/custom_gui/countrygovernmentview.txt:1524-1567`。
+- 赋能维护与冷却：`common/scripted_effects/umbral_covenant_scripted_effects.txt:620-672`；五档维护为5／15／30／45／45暗影精华，切换冷却1825日。
+- 主／小暗影裂隙：同脚本`:232-295`；动态地区任务完成文本说明主裂隙增加5容量、小裂隙各增加1容量。
+- 物质虚构：任务`:102-145`解锁；当前汉化说明发展省份时有33%概率再获得同类发展度。
+- 熵之驾驭：任务`:2759-2791`要求100次焚掠、100万伤亡、50场统治者战斗与战斗法师学院；脚本`:965-972`与本地化说明焚掠点数提高50%。
+- 鬼雾：任务`:2679-2728`；当前汉化说明其从法师塔扩散，对敌方提高动乱并降低省份战争分数花费，对己方增加税收并降低动乱。
+- 文化同化：`decisions/UmbralCovenantDecisions.txt`；包含14个文化组条件，执行统一同化效果。
+- 双终局：任务`:3060-3150`。未背叛的`S90_the_end`普通触发含`always=no`，本地化写明仪式完成并“你输掉游戏”；背叛路线为`S90_i_will_not_go_gentle`。是否由事件绕过普通触发仍待实机验证。
+- 当前脚本未发现属于S90的`covenant_influence`资源；同名影响力命中的是其他国家内容，未写入正文。
+
+## Reddit官方材料
+
+- [EU4 Dev Diary #80: Light and Dark 2 Mengi Edition](https://www.reddit.com/r/Anbennar/comments/1jib1jb/dev_diary_80_light_and_dark_2_mengi_edition/)：2025-03-23；作者`5camps`，`Dev Diary`标记，正文介绍暗影契约信仰、女巫与S90形成概念，并明确当时S90还没有任务树。只支持开发时间线。
+- [EU4 Dev Diary #103: The Night Hags Greatest Pawn](https://www.reddit.com/r/Anbennar/comments/1qmgvv8/eu4_dev_diary_103_the_night_hags_greatest_pawn/)：2026-01-25；作者`5camps`，`Dev Diary`标记；全文实质讨论亡使眼镜蛇、暗影武士、S90形成、暗影赋能、不死统治者与三项魔法工程。属于开发版／预发布语境，当前实装仍以本地脚本为准。
+- 检索词组合包括英文国名、S30、S90、形成关系、Shadow Essence、Shadow Empowerments、Dev Diary与Announcement；未核验到额外直接相关发布公告。
+
+## Reddit社区体验
+
+- [Umbral Covenant - Tips and Tricks for potential players](https://www.reddit.com/r/Anbennar/comments/1svcenb/umbral_covenant_tips_and_tricks_for_potential/)：2026-04-25；作者明确使用最新GitLab版本，并称Steam版本尚待发布。支持宽扩张、赋能易漏、人力压力与文化同化体验，不证明当前数值。
+- [Umbral Covenant has really cool mechanics, but...](https://www.reddit.com/r/Anbennar/comments/1rc9wnh/umbral_covenant_has_really_cool_mechanics_but/)：2026-02-23；明确处于开发中版本。主帖认为前期过强，评论补充人力、腐化、恶名和后期挑战；只作为争议性的社区体验。
+
+## 本地离线Wiki与资料缺口
+
+- Umbral Covenant与Death Bringing Cobra没有独立正文页；[Countries after the 1444 Divergence](https://anbennar.fandom.com/wiki/Countries_after_the_1444_Divergence)只在“Aspiring Polities”列出Umbral Covenant（`page_id=1100`、`revision_id=32841`，`en:1100:046:01`），不足以证明其历史和制度。
+- [Shadow Covenant](https://anbennar.fandom.com/wiki/Shadow_Covenant)：英文离线页`page_id=3304`、`revision_id=16330`；已读取`anbennar-offline/output/chunks/en/md/3304/001-01-Shadow Covenant.md`。页面描述的是源自刺杀贾赫尔者、使用暗影魔法并逐渐转为幕后操纵政治的全球秘密犯罪组织；它与游戏形成国名称相近，但不能据此认定二者完全同一实体。
+- [Coven of Yezel Mora](https://anbennar.fandom.com/wiki/Coven_of_Yezel_Mora)：英文离线页`page_id=3945`、`revision_id=27787`；已读取`anbennar-offline/output/chunks/en/md/3945/001-03-Coven of Yezel Mora.md`。页面明确把亡使眼镜蛇首领列为受Ilfanill直接培养的对象，并称其以自己的孩子交换鬼婆力量，该孩子后来成为“The Vile One”；这为S30序章中的黑暗契约提供了世界观背景。
+- 当前没有逐项审计87个S90任务的所有奖励、全部赋能、随机预兆与仪式，也没有完成非背叛终点的运行时验证。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AS30)的`eu4:S30`为`in_progress`，站点快照`2026-09-23T07:23:00Z`；国家注释未提供可独立回读的前史。本轮未采用地图推演或把同名的Shadow Covenant秘密组织等同于S90国家。S30→S90仍是**可玩形成链**，跨萨哈尔与仪式终局为任务未来；普通终局运行时继续待验证。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `S30 / S30_ideas`：`mod/common/ideas/anb_country_ideas.txt:34799-34839`；身份筛选结果：`identity_filter_matches`。
+- `S90 / S90_ideas`：`mod/common/ideas/anb_country_ideas.txt:46799-46838`；身份筛选结果：`runtime_condition`。
+- `S90 / S90_ideas_S30`：`mod/common/ideas/anb_country_ideas.txt:46840-46879`；身份筛选结果：`runtime_condition`。
+</pre></main></body></html>

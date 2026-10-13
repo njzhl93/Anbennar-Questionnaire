@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>安本纳尔国家性格测试 Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="question-layout.css">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">ANBENNAR · PERSONALITY MATCH · DEMO 0.3</p>
+        <h1>你最适合统治哪个国家？</h1>
+        <p class="lede">基于现有 27 个已校准国家的 v2.1 人格、价值观与玩法数据。完成 20 道情境题，得到 1 个最佳匹配和 4 个相似选择。</p>
+      </div>
+      <span class="pill">27 国封闭候选池</span>
+    </header>
+
+    <section id="intro" class="panel hero-panel">
+      <div class="hero-grid">
+        <div>
+          <h2>第一版验证目标</h2>
+          <p>这一版主要验证题目、玩家向量、匹配算法和结果卡是否符合直觉，不代表整个安本纳尔国家池。</p>
+          <div class="stat-row">
+            <div><strong>20</strong><span>固定题</span></div>
+            <div><strong>27</strong><span>候选国家</span></div>
+            <div><strong>Top 5</strong><span>推荐结果</span></div>
+          </div>
+        </div>
+        <div class="model-box">
+          <h3>匹配结构</h3>
+          <p><b>45%</b> 国家人格 · <b>40%</b> 玩法偏好 · <b>15%</b> 价值观</p>
+          <p class="muted">候选池方差标准化 + 用户偏好显著度加权；越明确的回答越影响距离，减少“万能中间型国家”吸附。</p>
+        </div>
+      </div>
+      <div class="intro-actions">
+        <button id="startBtn" class="primary">开始测试</button>
+        <label class="debug-toggle">
+          <input id="debugMode" type="checkbox">
+          <span><strong>调参模式</strong><small>结果页显示分项距离、原始排名和主要失配项；不改变推荐。</small></span>
+        </label>
+      </div>
+    </section>
+
+    <section id="quiz" class="panel hidden" aria-live="polite">
+      <div class="progress-head">
+        <span id="progressText">1 / 20</span>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+      <div id="questionCard" class="question-card"></div>
+      <div class="nav-row">
+        <button id="backBtn" class="ghost">上一题</button>
+        <button id="nextBtn" class="primary" disabled>下一题</button>
+      </div>
+    </section>
+
+    <section id="filters" class="panel hidden">
+      <p class="eyebrow">最后一步</p>
+      <h2>有没有你明确不想碰的玩法？</h2>
+      <p class="muted">这些属于强避雷项。候选足够时会直接排除；如果排除后不足 5 国，则改为大额扣分。</p>
+      <div id="filterGrid" class="filter-grid"></div>
+      <div class="nav-row">
+        <button id="filterBackBtn" class="ghost">返回题目</button>
+        <button id="resultBtn" class="primary">查看结果</button>
+      </div>
+    </section>
+
+    <section id="results" class="hidden">
+      <div class="result-head panel">
+        <div>
+          <p class="eyebrow">你的画像</p>
+          <h2 id="resultTitle">匹配完成</h2>
+          <p id="resultNote" class="muted"></p>
+        </div>
+        <button id="restartBtn" class="ghost">重新测试</button>
+      </div>
+
+      <div id="profileBars" class="panel profile-bars"></div>
+      <div id="topResult"></div>
+
+      <section id="diagnostics" class="panel diagnostics hidden">
+        <div class="diagnostic-head">
+          <div>
+            <p class="eyebrow">调参模式</p>
+            <h2>单次匹配诊断</h2>
+          </div>
+          <button id="copyDiagnosticBtn" class="ghost">复制诊断 JSON</button>
+        </div>
+        <div id="diagnosticSummary"></div>
+        <div class="table-scroll">
+          <table class="diagnostic-table">
+            <thead>
+              <tr>
+                <th>展示</th><th>国家</th><th>总分</th><th>人格</th><th>玩法</th><th>价值</th><th>原始</th><th>主要失配</th>
+              </tr>
+            </thead>
+            <tbody id="diagnosticTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="section-title">
+        <h2>另外 4 个相似选择</h2>
+        <p>在高匹配候选里做轻量多样性重排，避免结果全部挤在同一地区或同一玩法。</p>
+      </div>
+      <div id="otherResults" class="result-grid"></div>
+
+      <section id="feedback" class="panel feedback-panel">
+        <p class="eyebrow">真人校准</p>
+        <h2>这次推荐准不准？</h2>
+        <p class="muted">这里不会上传任何内容。评分会和本次20题答卷、用户向量、Top 5 一起导出成 JSON，便于后续校准 v0.4。</p>
+        <div class="feedback-grid">
+          <label class="feedback-item">
+            <span><strong>最终人格画像像不像你？</strong><output id="feedbackProfileOut">3 / 5</output></span>
+            <input id="feedbackProfile" type="range" min="1" max="5" step="1" value="3">
+          </label>
+          <label class="feedback-item">
+            <span><strong>#1 国家让你有多想开一局？</strong><output id="feedbackTop1Out">3 / 5</output></span>
+            <input id="feedbackTop1" type="range" min="1" max="5" step="1" value="3">
+          </label>
+          <label class="feedback-item">
+            <span><strong>Top 5 整体是否合理？</strong><output id="feedbackTop5Out">3 / 5</output></span>
+            <input id="feedbackTop5" type="range" min="1" max="5" step="1" value="3">
+          </label>
+        </div>
+        <div class="feedback-text-grid">
+          <label><span>你原本预期出现哪个国家？（可选）</span><input id="feedbackExpected" type="text" placeholder="例如：贾达尔、隐泉……"></label>
+          <label><span>备注（可选）</span><textarea id="feedbackNotes" rows="3" placeholder="例如：第6题不好选；#1很准但第3名完全不合理……"></textarea></label>
+        </div>
+        <div class="feedback-actions">
+          <button id="copyFeedbackBtn" class="primary">复制反馈 JSON</button>
+          <button id="downloadFeedbackBtn" class="ghost">下载 JSON</button>
+          <span id="feedbackStatus" class="muted"></span>
+        </div>
+      </section>
+    </section>
+
+    <section id="errorBox" class="panel hidden error-box"></section>
+  </main>
+
+  <script src="app.js" defer></script>
+  <script src="question-layout.js" defer></script>
+  <script src="scoring-v03.js" defer></script>
+  <script src="diagnostics.js" defer></script>
+  <script src="feedback.js" defer></script>
+</body>
+</html>

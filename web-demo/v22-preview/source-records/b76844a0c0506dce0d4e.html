@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/哥诺勒哈特普-F66.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 哥诺勒哈特普（Konolkhatep，F66）证据页
+
+核验日：2026-09-16  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：Tag、中文名、形成关系、核心机制和任务风格已确认；英文离线Wiki已补充格丽扎卡、炎爪族群与赫特拉塔继承背景。
+
+## 身份、历史与形成
+
+- 格诺拉迦兹Tag与历史：`common/country_tags/anb_countries.txt:1208`；`history/countries/U09 - Gnollakaz.txt:2-36`。确认部落制、火爪豺狼人、哈佐布秘教、首都487、维亚哥吉宿敌，以及格丽扎卡的姓名、头衔、属性和特质。
+- 哥诺勒哈特普Tag与形成后身份：`common/country_tags/anb_countries.txt:247`；`history/countries/F66 - Konolkhatep.txt:1-10`。确认君主制、伤鬃豺狼人、埃利赫特宗、首都475。
+- 当前中文名：汉化`localisation/anb_countries_l_english.yml:1511-1512,1712-1713`经项目解码脚本读取为“格诺拉迦兹”“哥诺勒哈特普”。
+- 形成决议：`decisions/WestSarhalFormables.txt:1116-1184`。确认豺狼人文化、独立、哀伤河管家／天命、领土和宗教路线限制；U09玩家还需完成`U09_birth_of_an_empire`。
+- U09剧情形成：`events/Flavour_Gnollakaz_U09.txt:57-133`。确认夺取管家权威与`form_konolkhatep_effect`改Tag。
+
+## 任务与核心机制
+
+- 前置任务：`missions/Gnollakaz_Missions.txt`，5组、9个带`position`的U09直接任务。
+- 形成后任务：`missions/Konolkhatep_Missions.txt`，10组、56个带`position`的F66直接任务。连续战役链合计65个直接任务。
+- 奴隶资源：`common/government_mechanics/anb_konolkhatep.txt:1-60`，范围0—1000；随库存区间每月衰减1—5。
+- 奴隶取得渠道：`localisation/Flavour_Konolkhatep_F66_l_english.yml:1195-1196`；包括奴隶贸易、总督法令、奴隶港、萨特拉皮、沿海劫掠和和平条约。
+- 五支军团：任务`missions/Konolkhatep_Missions.txt:2644-2695`；汉化`:1201-1202`确认五支精锐雇佣军、未部署全国修正及每支50,000人力、1,000金币、100奴隶的建立成本。
+- 神化：任务`:2900-3027`；核心门槛包括至少33项头衔与19项奴隶工程，具体效果由任务与事件继续展开。
+- 最后的大火：`common/disasters/konolkhatep_xhaz_disaster.txt:2-83`。确认触发范围、低天命／未整合文化的进度因素、全国惩罚、不能宣战和结束条件。
+- 旧DOCX镜像：`skills/anbennar-country-guide/references/documents/已实装任务树存档.md:5157-5189,5943-5985`。只用于定位“帝国之神”、奴隶工程、军团与霍鲁特普主线；当前实装以本地脚本为准。
+
+## 本地离线Wiki
+
+- [Gnollakaz](https://anbennar.fandom.com/wiki/Gnollakaz)：英文离线页`page_id=891`、`revision_id=29314`；已读取`anbennar-offline/output/chunks/en/md/891/001-01-Gnollakaz.md`。信息页确认格诺拉迦兹位于母泪河流域、由格丽扎卡统治，人口主体为炎爪豺狼人并信奉恶魔崇拜。该页正文很短，不承担完整历史证明。
+- [Pyreclaw Gnoll](https://anbennar.fandom.com/wiki/Pyreclaw_Gnoll)：英文离线页`page_id=3970`、`revision_id=32025`；已读取`anbennar-offline/output/chunks/en/md/3970/001-01-Pyreclaw Gnoll.md`。页面称炎爪豺狼人长期活动于母泪河流域；格丽扎卡于1438年统一诸部建立格诺拉迦兹，1439年向东征服，并于1442年在赫特拉塔城外击杀维亚科克九世。此后她被赫特拉塔军击退，女儿伊兹鲁克特到16世纪才完成征服。她在已控制地区保留当地人类行政与信仰，却以残酷金矿奴役资助战争。
+- [Kingdom of Kheterata](https://anbennar.fandom.com/wiki/Kingdom_of_Kheterata)：英文离线页`page_id=349`、`revision_id=31421`；已读取`anbennar-offline/output/chunks/en/md/349/020-01-Succeeded by.md`与`028-01-The End of Kheterata.md`。后者写格丽扎卡1439年夺取戈尔科拉、打碎旧王国，几年后再次入侵赫特拉塔并获管家之位；哥诺勒哈特普随后被视为精神继承者。该段未给F66固定建国年，且对最终征服者的叙述与炎爪词条不一致。
+- 搜索摘要只用于确认候选页面，不作为本文历史证据。
+
+## Reddit官方开发日志与设计语境
+
+- [Dev Diary #59: The Fires of Forge and Sacrifice](https://www.reddit.com/r/Anbennar/comments/17tghvd)：2023-11-12；确认早期形成国设计、格诺拉迦兹的设定调整、接受赫特信仰与哀伤河管家机制。
+- [Dev Diary #84: Devour the Sun](https://www.reddit.com/r/Anbennar/comments/1k9goj5)：2025-04-27；开发者回复确认格诺拉迦兹征服赫特拉塔并形成哥诺勒哈特普是官方时间线结果。仅用于设定语境。
+- [Dev Diary #93: Gods and Monsters](https://www.reddit.com/r/Anbennar/comments/1li44ny)：2025-06-23；哥诺勒哈特普专属日志，确认赫特信仰转向、管家机制、奴隶工程、霍鲁特普与大型任务树设计。
+- [Dev Diary #109: The Fall of Kheterata](https://www.reddit.com/r/Anbennar/comments/1roe8ox)：2026-03-08；确认格诺拉迦兹短任务树是F66的前置体验，格丽扎卡在1444年前的崛起，以及U09为官方形成者。
+
+## Reddit社区体验（恰选两篇）
+
+- [Konolkhatep Advice](https://www.reddit.com/r/Anbennar/comments/1uwv8ce/konolkhatep_advice/)：2026-07-15；玩家讨论灾难准备、梅达西缓冲、文化转换与后期任务；帖子语境为当前大改后版本，未声明子Mod。
+- [Late-game Slog: Konolkhatep](https://www.reddit.com/r/Anbennar/comments/1vg1ngc/lategame_slog_konolkhatep/)：2026-08-05；支持“前半精彩、后期可能因扩张与属国条件疲劳”的主观体验；未声明子Mod或修改存档。
+
+## 冲突与待核实
+
+- 当前本地文件与官方日志对U09→F66可玩路线和核心玩法没有直接冲突；但两篇离线Wiki对格丽扎卡被击退后究竟由谁完成征服的叙述不一致。当前本地形成脚本只给玩家条件，不裁决设定未来；因此F66正式形成的确年、继位和最终征服者均不硬补。
+- 旧DOCX同时记录了继续走格诺拉迦兹的未来分支设想，但当前U09短树只确认通向F66；本文不把未确认分支写成已实装内容。
+- 离线Wiki补齐了格丽扎卡崛起、炎爪社会与赫特拉塔继承叙事，但Konolkhatep没有独立国家正文页；形成条件、Tag变化和当前机制仍只按本地脚本陈述。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AF66)的`eu4:F66`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。它提示后续边界及继承年代仍有重建成分；本轮已回读上述两篇Wiki原件并显式保留分歧，不据地图推定形成确年或领土。U09→F66仍按本地形成脚本写作**可玩路线**。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F66 / F66_ideas`：`mod/common/ideas/anb_country_ideas.txt:26142-26178`；身份筛选结果：`identity_filter_matches`。
+- `U09 / U09_ideas`：`mod/common/ideas/anb_country_ideas.txt:24484-24522`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

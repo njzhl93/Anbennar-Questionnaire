@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/月河四自由城-A55-A82-A61-Z03.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 月河四自由城：证据与边界
+
+核验于2026-09-26；本体及汉化均支持`v1.37.5.0`。结构化库`doctor.py`为`ok`，本体manifest `2812922911103828520`、汉化manifest `7518363337005727349`。正式溯源为`[local source path omitted]`下的原始Mod与`2818493730/`下的汉化；本页相对路径除注明汉化外均相对于本体根目录。
+
+| 判断 | 原始来源 | 证据边界 |
+|---|---|---|
+| 四个独立起始国 | `common/country_tags/anb_countries.txt:56,62,83,1413`；`history/countries/A55 - Menibor.txt`、`A82 - Napesbay.txt`、`A61 - Bluehart.txt`、`Z03 - Bellacaire.txt`；汉化`localisation/anb_countries_l_english.yml:110,164,122,1379` | A55梅尼博尔、A82纳普斯湾、A61蓝鹿、Z03贝拉凯尔。原评分表误作“纳斯普湾”。四档均为共和自由城、摄政王庭；A55和A82为弗恩文化，A61和Z03为东达梅里亚文化。省份历史分别仅见首都569、50、329、587，故均为单省开局。 |
+| 共通与专属任务 | `common/scripted_triggers/anb_scripted_triggers_missions.txt:2336-2348`；`missions/LRM_Missions.txt:1-1447` | `is_luna_river_minor`覆盖九Tag，20项共通；四国各有2项专属。脚本内共28项任务定义，不等于一国可同时获得全部28项。结构化`country`查询只直连2项，因共通任务通过脚本触发器分配。 |
+| A55冒险者 | `missions/LRM_Missions.txt:274-355`；`common/ideas/anb_country_ideas.txt:19494-19533`；`localisation/anb_powers_and_ideas_l_english.yml:9456-9472`；`localisation/Flavour_Luna_River_Minors_l_english.yml:226-230` | 冒险者防卫、反魔法护符、河石氏族与环道酒馆属于理念回忆；建造冒险者区和历史友好关系为任务路线，不是1444既成。 |
+| A82舰队 | `missions/LRM_Missions.txt:357-424`；`common/ideas/anb_country_ideas.txt:19650-19687`；`localisation/anb_powers_and_ideas_l_english.yml:9531-9542`；`localisation/Flavour_Luna_River_Minors_l_english.yml:233-236` | 旧弗恩军械库及帝国副舰队属于叙事回顾；轻型船和恢复军械库是专属任务。皮尔鲁纳河不同于月河主干。 |
+| A61军团与外交 | `missions/LRM_Missions.txt:166-273`；`common/ideas/anb_country_ideas.txt:19535-19571`；`localisation/anb_powers_and_ideas_l_english.yml:9489-9490`；`localisation/Flavour_Luna_River_Minors_l_english.yml:219-223` | 第21军团和鹿领主为历史记忆，军官、市民兵及关系为任务路线；学院明确建立于1604年，非1444建筑。历史档`history/countries/A61 - Bluehart.txt`的统治者个人特质不代表国家道德路线。 |
+| Z03岩堡与救助 | `missions/LRM_Missions.txt:78-165`；`common/ideas/anb_country_ideas.txt:19573-19610`；`localisation/anb_powers_and_ideas_l_english.yml:9495-9508`；`localisation/Flavour_Luna_River_Minors_l_english.yml:212-216` | 岩堡、历史中立及盐与枪之战属回顾；宗教使节、城墙升级、粉红条纹救助组织属任务发展，不能倒置为开局成果。 |
+| 影响力和形成B59 | `common/on_actions/00_on_actions.txt:144`；`events/Flavour_LRM.txt:1-39,202-278,391-578`；`decisions/LunaRiverDecisions.txt:1-37`；`missions/LRM_Missions.txt:881-930`；`decisions/WescannFormables.txt:305-441` | 开局事件初始化影响力，决议解锁菜单；“谢幕”后四Tag可走形成决议，`change_tag=B59`、`swap_non_generic_missions=yes`。只有特定联盟旗标路线能整合部分属国，非自动吞并所有附庸。 |
+| 道德与人格 | 四国本国理念及专属任务；`missions/LRM_Missions.txt:755-930,1057-1222`；`events/Flavour_LRM.txt:1040-1442` | 四个JSON的评分是对玩家所扮演政治路线的解释性量表，非脚本原生属性。B59后续不倒灌。 |
+
+## 离线英文Wiki
+
+离线Wiki快照更新于2026-09-17，2026-09-26在其工具目录运行`doctor.py`确认`status=ok`。以下各页在定稿检索时已实际读取Markdown正文，不使用搜索摘要填史：
+
+- [Free City of Menibór](https://anbennar.fandom.com/wiki/Free_City_of_Menib%C3%B3r)：`page_id=774`、`revision_id=21134`，`anbennar-offline/output/chunks/en/md/774/004-01-Region.md`、`008-01-Government.md`、`012-01-Ethnic Groups.md`。自由城及居民背景，缺具体建城史。
+- [Free City of Napesbay](https://anbennar.fandom.com/wiki/Free_City_of_Napesbay)：`page_id=791`、`revision_id=23984`，`anbennar-offline/output/chunks/en/md/791/001-01-Free City of Napesbay.md`至`009-01-Ruler Title.md`。主要是政体与首都字段。
+- [Free City of Bluehart](https://anbennar.fandom.com/wiki/Free_City_of_Bluehart)：`page_id=780`、`revision_id=21130`，`anbennar-offline/output/chunks/en/md/780/001-01-Free City of Bluehart.md`及`004-01-Region.md`、`008-01-Government.md`。独立历史极短。
+- [Free City of Bellacaire](https://anbennar.fandom.com/wiki/Free_City_of_Bellacaire)：`page_id=956`、`revision_id=28700`，`anbennar-offline/output/chunks/en/md/956/001-01-Free City of Bellacaire.md`及`003-01-Geography.md`、`008-01-Government.md`。只确认自由城和地区。
+- [Luna River](https://anbennar.fandom.com/wiki/Luna_River)：`page_id=2598`、`revision_id=26214`，`anbennar-offline/output/chunks/en/md/2598/001-01-Luna River.md`。河谷背景。
+- [Pírluna River](https://anbennar.fandom.com/wiki/P%C3%ADrluna_River)：`page_id=2600`、`revision_id=25636`，`anbennar-offline/output/chunks/en/md/2600/001-01-Pírluna River.md`。A82所在河口、葡萄园、退役冒险者和非第一线商港背景。
+- [The Eight Sisters](https://anbennar.fandom.com/wiki/The_Eight_Sisters)：`page_id=2437`、`revision_id=26008`，`anbennar-offline/output/chunks/en/md/2437/001-01-The Eight Sisters.md`。A61及Z03的大城市群地位；词条本身仍是短篇。
+
+中文Wiki四城快照较旧，其旧理念或统治者字段未用于当前版本的身份、历史档或玩法判定。Wiki页没有的具体建城年表不推断。
+
+## Reddit：开发日志与玩家观点
+
+- [EU4 Dev Diary #85: Cannor, Reintroduced](https://www.reddit.com/r/Anbennar/comments/1keiyuz/eu4_dev_diary_85_cannor_reintroduced/)，2025-05-04，已读“Luna River Minors MT”段：四座起始自由城、议程获取影响力与联邦设计，属发布前开发语境。
+- [EU4 Dev Diary #91: Anbennar Means Unity](https://www.reddit.com/r/Anbennar/comments/1laf26k/eu4_dev_diary_91_anbennar_means_unity/)，2025-06-13，已读B59帕沙埃内段；不把后继国剧情倒写入四城开局。未找到其他正文直接以四城为主题的官方开发日志；#85提到的计划发布日期不是另一篇已核实日志。
+- [The Final Empire is out NOW!](https://www.reddit.com/r/Anbennar/comments/1lshhva/the_final_empire_is_out_now/)，2025-07-05，版本发布语境，不证明具体任务。
+- [Best starting tag to form pashaine?](https://www.reddit.com/r/Anbennar/comments/1lz5y78/best_starting_tag_to_form_pashaine/)，2025-07-13，读主帖及少量比较评论。玩家排序和蓝鹿位置、纳普斯湾港口、贝拉凯尔城防均仅为体验；未注明精确补丁、子Mod、测试分支或改档。
+- [New Run](https://www.reddit.com/r/Anbennar/comments/1ofvwc7/new_run/)，2025-10-25，读主帖及相关比较评论。四城共同线与小差异是玩家看法；未注明精确补丁、子Mod、测试分支或改档。
+
+更早的梅尼博尔专项体验另见[已完成战报](https://www.reddit.com/r/Anbennar/comments/1lwlmft/pashaineluna_river_minors_completed_campaign/)（2025-07-10）及[贸易难点帖](https://www.reddit.com/r/Anbennar/comments/1sl4j03/menibor_centre_of_fashion_and_control_of_trade/)（2026-04-14）；不以其旧版本经验覆盖当前脚本。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `A55 / A55_ideas`：`mod/common/ideas/anb_country_ideas.txt:19494-19532`；身份筛选结果：`identity_filter_matches`。
+- `B59 / B59_ideas`：`mod/common/ideas/anb_country_ideas.txt:17486-17528`；身份筛选结果：`identity_filter_matches`。
+- `A82 / A82_ideas`：`mod/common/ideas/anb_country_ideas.txt:19650-19686`；身份筛选结果：`identity_filter_matches`。
+- `A61 / A61_ideas`：`mod/common/ideas/anb_country_ideas.txt:19535-19570`；身份筛选结果：`identity_filter_matches`。
+- `Z03 / Z03_ideas`：`mod/common/ideas/anb_country_ideas.txt:19573-19609`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

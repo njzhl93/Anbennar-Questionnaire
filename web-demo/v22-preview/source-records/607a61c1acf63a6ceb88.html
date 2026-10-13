@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/大氏族-F78.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 大氏族 F78：精简证据与边界
+
+补充核验（2026-10-08）：评分队列“大理石首”对应U15 Marblehead Clan，当前本体`history/countries/U15 - Marble Head Clan.txt:1-43`确认1444开局统治者伊德拉塞夫、继承人佩尔祖克为其兄弟；`missions/Marblehead_Missions.txt`有23项U15直接任务，潜在条件允许`tag=U15`或`tag=F78`且曾为U15。它与已收录的F78构成可连续战役链，不单独虚构第二篇形成国百科。英文离线Wiki[Marblehead Clan](https://anbennar.fandom.com/wiki/Marblehead_Clan)（`page_id=2244`、`revision_id=30296`、`anbennar-offline/output/chunks/en/md/2244/001-01-Marblehead Clan.md`）把佩尔祖克写成儿子；当前脚本及[官方开发日志第24期](https://www.reddit.com/r/Anbennar/comments/qosri4/)写兄弟，故以脚本为准。
+
+核验：2026-10-02。本体 Workshop `1385440355` 与汉化 `2818493730` 的 `descriptor.mod` 均标 `supported_version=&quot;v1.37.5.0&quot;`；这是EU4支持版本，并非安本纳尔独立发行号。结构化库 `doctor.py` 返回`ok`；`missions/Overclan_Missions.txt`本地修改时间2026-07-09，不等于官方宣布的重制日期。国旗由本体`gfx/flags/F78.tga`转换为PNG，未改源文件。
+
+| 判断 | 原始文件与行号 | 证据边界 |
+|---|---|---|
+| 国家身份、中文名、1444边界 | 本体`common/country_tags/anb_countries.txt:259`、`history/countries/F78 - Aqatbar Overclan.txt:1-8`；汉化`localisation/anb_countries_l_english.yml:1547-1548` | F78=The Overclan=大氏族；国家历史是无日期形成模板，未见1444省份归属F78。不可和I98众氏族之国混同。 |
+| 形成资格与效果 | 本体`decisions/BulwarFormables.txt:634-755` | 外来哥布林文化、非部落与独立资格、和平、指定地区25省、两组核心地点及人类／精灵／矮人或鹰身女妖宽容；成功决议改F78并换树。没有固定唯一前身。 |
+| 任务数量 | 本体`missions/Overclan_Missions.txt:3-3265`；`anbennar-local/tools/query.py country F78 --json` | 40项直接F78任务；结构化库列出的129项关联任务还含U11/U13/U14/U15等前身内容，不可误写为129项专属。 |
+| 学院与官僚 | 本体`events/Flavour_Overclan_F78.txt:52-71,530-688`；`common/government_reforms/01_government_reforms_monarchies.txt:9749-9840`；本体`localisation/Flavour_Overclan_F78_l_english.yml:111-128,170,225` | 孤儿及半地精招募、沃尔托季学院、行政职位有当前脚本与文本。文本将无家族忠诚视为优点；不能把旧DOCX关于心灵控制的构想自动算成当前制度。 |
+| 宽容、矿堡与商业 | 本体`missions/Overclan_Missions.txt:675-1032,1126-1296,1917-2059` | 任务同时要求区域征服、行政建筑、豺狼人宽容与议会席位；不是单纯和平乌托邦。 |
+| 火器、魔法、奇械及道路 | 本体`missions/Overclan_Missions.txt:1687-1824,2849-3265`；`events/Flavour_Overclan_F78.txt:103-138,301-323` | 可确认主题和代表性解锁；具体数值、触发频率、全部奖励及实机时长未逐项审计。 |
+
+## 离线Wiki与历史地图
+
+- 英文 [Aqatbar Overclan](https://anbennar.fandom.com/wiki/Aqatbar_Overclan)：`lang=en`、`title=Aqatbar Overclan`、`section=Aqatbar Overclan`、`page_id=897`、`revision_id=33158`；已读`anbennar-offline/output/chunks/en/md/897/001-01-Aqatbar Overclan.md`。用于大理石首到大氏族的设定渊源；页面给出1552成立，不能限制玩家脚本实际形成年份。
+- 英文 [Marblehead Clan](https://anbennar.fandom.com/wiki/Marblehead_Clan)：`lang=en`、`title=Marblehead Clan`、`section=Marblehead Clan`、`page_id=2244`、`revision_id=30296`；已读`anbennar-offline/output/chunks/en/md/2244/001-01-Marblehead Clan.md`。用于1444大理石首和阿卡特巴尔背景；不能将典型历史前身说成唯一可玩形成者。
+- 英文 [Decades of Devastation](https://anbennar.fandom.com/wiki/Decades_of_Devastation)：`lang=en`、`title=Decades of Devastation`、`section=The Great Rebellion (1423-1436)`、`page_id=323`、`revision_id=29259`；已读`anbennar-offline/output/chunks/en/md/323/009-01-The Great Rebellion (1423-1436).md`及`001-01-Decades of Devastation.md`。仅作巴哈尔动乱背景。
+- [哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AF78)将F78放入阶段性政体模型，但其1529与以后节点是社区重建线索；未回读对应原始材料，不据此给EU4战役定年或画领土边界。
+
+## Reddit：官方材料与两篇玩家帖
+
+- 官方 [EU4 Dev Diary #101: Monsters of Bulwar](https://www.reddit.com/r/Anbennar/comments/1qcof26/eu4_dev_diary_101_monsters_of_bulwar/)（2026-01-14，正文Overclan段由Leaffrog署名）：描述出走哥布林、多元社会、沃尔托季学院与混血官僚；它当时称“下次更新”，不证明当前本地脚本状态。
+- 官方 [Light and Dark Release](https://www.reddit.com/r/Anbennar/comments/r3r2d5/light_and_dark_release/)（2021-11-28，正文发布说明及变更日志149—160、234—250行，EU4 1.32语境）：旧版F78可成立国已发布；不是2026重做树的发布证明。直接相关、正文可核实的官方材料共找到这两篇；未找到独立的新树正式发布公告。
+- 玩家 [Overclan is a great time](https://www.reddit.com/r/Anbennar/comments/1sll0od/overclan_is_a_great_time/)（2026-04-14；主帖及少量相关评论）：作者明确使用git开发版本、拥山者前身，称经济与多系统有趣但菜单不直观；不能等同当前Workshop版本。
+- 玩家 [Overclan Guide: Goblin Tolerant Utopia](https://www.reddit.com/r/Anbennar/comments/1w7faxn/overclan_guide_goblin_tolerant_utopia/)（2026-09-04；主帖及少量相关评论）：对官僚化宽容的好恶不一；自称开发者的Leaffrog评论仅说明设计意图，不证明当前机制。
+
+旧`已实装任务树存档`镜像有「大氏族」设计说明，但其中部分构想没有本轮脚本支持，故只作导航。Wiki的1552年、历史地图的1529阶段线索与玩家可变形成时间属于不同口径；正文只将1552当作设定记载。后期宗教全部分支、全部任务奖励、形成后的实机难度仍待核实。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F78 / F78_ideas`：`mod/common/ideas/anb_country_ideas.txt:22112-22152`；身份筛选结果：`identity_filter_matches`。
+- `U15 / U15_ideas`：`mod/common/ideas/anb_country_ideas.txt:2287-2327`；身份筛选结果：`identity_filter_matches`。
+- `U11 / U11_ideas`：`mod/common/ideas/anb_country_ideas.txt:16013-16051`；身份筛选结果：`identity_filter_matches`。
+- `U13 / U13_ideas`：`mod/common/ideas/anb_country_ideas.txt:20200-20236`；身份筛选结果：`identity_filter_matches`。
+- `U14 / U14_ideas`：`mod/common/ideas/anb_country_ideas.txt:16094-16131`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

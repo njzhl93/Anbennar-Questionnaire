@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/阿德尼卡-B58.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 阿德尼卡 B58：精简证据与边界
+
+核验：2026-10-01。本体 Workshop `1385440355`、汉化 `2818493730`；两份 descriptor 均声明支持 EU4 `v1.37.5.0`，这不是 Anbennar 独立发布号。本地结构化库 `doctor.py=status: ok`；离线 Wiki 库从自身目录运行 `doctor.py=status: ok`。以下 `mod/`、`translation/` 均回溯真实 Workshop 原件。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| 身份与当前中文名 | `mod/common/country_tags/anb_countries.txt` 的B58；`translation/localisation/anb_countries_l_english.yml:314` | B58=Adenica=阿德尼卡，汉化名已解码，不使用旧文档代替当前名称 |
+| 1444状态 | `mod/history/countries/B58 - Adenica.txt:2-11`；`mod/history/provinces/774 - Taranton.txt:4-6`；全省份历史精确 `owner/controller=B58` 检索无结果 | B58历史文件是国家模板；774号省份1444所有者与控制者均为B46蚱蜢咀嚼者，不能称B58是当前开局持地国；未进行游戏UI开局实测 |
+| 常规形成 | `mod/decisions/EscannFormables.txt:577-670`；`mod/common/scripted_effects/anb_scripted_effects.txt:12230-12324` | 西卡斯塔诺首都、摄政王庭、东坎诺文化或冒险者改革、塔兰顿、十省、行政科技7等；改B58、迁都与换独立任务。符合条件者不限唯一前身 |
+| 飞犬特殊入口 | `mod/events/Flavour_Flying_Hound_B43.txt:478-515`；`translation/localisation/anb_countries_l_english.yml:284` | B43汉化飞犬；隐藏选项要求非怪物状态及忠诚变量≥3，调用同一形成效果并改显示名，不是普通决议的唯一来源 |
+| 任务数量与主题 | `mod/missions/Adenica_Missions.txt:2-2543`；`translation/localisation/Flavour_Adenica_B58_l_english.yml:22-153` | 结构化库定位54项B58直接任务；五组并行美德、战马和宗教政治，不是54个严格串行步骤 |
+| 骑士改革与竞技 | `mod/missions/Adenica_Missions.txt:690-745,1378-1409,1435-1507`；`mod/events/Flavour_Adenica_B58.txt:1266-1321`；`mod/common/government_reforms/01_government_reforms_monarchies.txt:8567-8583,11048-11066` | 骑士贵族、尘世王庭、传奇长枪和竞技场有当前脚本；冠军任务检查累计胜仗40，胜仗计数由`mod/common/on_actions/00_on_actions.txt:1355,1653-1681`维护。具体战力未实测 |
+| 宗教秩序与价值 | `mod/missions/Adenica_Missions.txt:1879-1926,2349-2543`；`mod/events/Flavour_Adenica_B58.txt:2007-2068`；`translation/localisation/Flavour_Adenica_B58_l_english.yml:47-50,125-129` | 正义、慈善、法院与市政厅提供公共利益；后期目标要求无科琳/揭秘派国家，部分事件可将兽人及半兽人地区改宗。宗教统一本身不扣分，具体强制手段才进入价值判断 |
+
+## 离线英文 Wiki 与历史地图
+
+- [Kingdom of Adenica](https://anbennar.fandom.com/wiki/Kingdom_of_Adenica)：`lang=en`、`page_id=2388`、`revision_id=16168`，已读 `anbennar-offline/output/chunks/en/md/2388/001-01-Kingdom of Adenica.md`。确认古阿德尼卡位于西东坎诺、首都塔兰顿、骑士与阿德恩传统、绿潮毁灭；未提供现代复国年份。
+- [Countries during the Greentide](https://anbennar.fandom.com/wiki/Countries_during_the_Greentide)：`lang=en`、`page_id=98`、`revision_id=33088`，已读 `anbennar-offline/output/chunks/en/md/98/001-02-Countries during the Greentide.md`；列阿德尼卡于毁灭诸国。旧分块路径已随离线刷新失效。
+- [Castanor](https://anbennar.fandom.com/wiki/Castanor)：`lang=en`、`page_id=245`、`revision_id=30778`，已读 `anbennar-offline/output/chunks/en/md/245/007-01-[Chivalric Escann](_wiki_Chivalric_Escann _Chivalric Escann_) (1021 AA - 1424 AA).md`；骑士时代诸国与1424年绿潮背景。骑士决斗减轻过战争但弱化军事准备，是该页的历史解释，不当作B58机制。
+- [哈兰历史地图研究入口](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AB58)：2026-09-23社区研究快照仅登记古国与复国缺口，`provinceIds1444=[]`、`reviewStatus=not-mapped-insufficient-evidence`；未采用任何推演复国年份或疆界。
+
+## Reddit：开发资料与社区观点
+
+官方资料只保留可读取正文且直接相关的材料，均为当时的设计或发布语境；当前实装仍由本地脚本决定：
+
+1. [Dev Diary #16: Upcoming Changes to Cannor](https://www.reddit.com/r/Anbennar/comments/npsi5x/anbennar_dev_diary_16_upcoming_changes_to_cannor/)（2021-06-01，EU4 1.30.6／迁移1.31语境）：正文讨论阿德尼卡反科琳派、推举阿德恩及美德任务。
+2. [Gods and Gears Release](https://www.reddit.com/r/Anbennar/comments/oqmq0n/gods_and_gears_release/)（2021-07-24，EU4 1.31更新语境）：发布公告将阿德尼卡任务树列入正式更新。
+3. [Dev Diary #32: The Young Owl Arrives in Rogieria’s Mission Tree](https://www.reddit.com/r/Anbennar/comments/u0p73g/dev_diary_32_the_young_owl_arrives_in_rogierias/)（2022-04-11）：罗吉尔利亚相关日志提及旧阿德尼卡腹地，仅支持邻接背景，非B58专属机制日志。
+
+两篇玩家讨论均集中于飞犬特殊路线，不能泛化到所有形成者；精确Mod组合和存档条件未独立核验：
+
+- [Flying Hound into Adenica](https://www.reddit.com/r/Anbennar/comments/1u5gx25/flying_hound_into_adenica/)（2026-06-14）：玩家遇到隐藏形成条件；回复描述去怪物化和事件选项，属于版本经验。对应条件已独立回查本地脚本。
+- [100 years of suffering for +20 CCA](https://www.reddit.com/r/Anbennar/comments/1wiu3gn/100_years_of_suffering_for_20_cca/)（2026-09-17）：飞犬转B58后的骑兵强度体验及抱怨，不用帖中数值证明当前通用机制。
+
+## 人格与缺口
+
+v2.1坐标为拓疆84、专制70、魔法方向55但主题强度仅27、多元28。价值四维：尊严75、公共利益82、人格承认65、克制47；加权 `75×0.35+82×0.25+65×0.25+47×0.15=70.05`，取70，归善良。骑士保护、慈善和公共治理是正向具体证据；强势宗教政治和可选改宗压低人格承认与克制，不因战争、王权、宗教本身扣分。未实测各前身形成难度、竞技概率、54项任务的可见顺序、战争计数手感及最终宗教分支的完整结局文本。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `B58 / B58_ideas`：`mod/common/ideas/anb_country_ideas.txt:8811-8846`；身份筛选结果：`identity_filter_matches`。
+- `B43 / B43_ideas`：`mod/common/ideas/anb_country_ideas.txt:34721-34758`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

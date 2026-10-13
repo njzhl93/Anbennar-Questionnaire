@@ -1,0 +1,65 @@
+{
+  "version": "v2.3.2",
+  "source_sha": "d9ea0ce9b08d95af4978223ae9ed3982207527c6",
+  "built_at_utc": "2026-10-13T07:51:18.176183Z",
+  "country_count": 116,
+  "article_count": 108,
+  "map_count": 83,
+  "flag_count": 160,
+  "map_distribution": {
+    "project_authorized": true,
+    "third_party_license_independently_verified": false,
+    "notice": "项目授权允许分发本次生成的区域地图 PNG；第三方素材许可未独立核实。"
+  },
+  "adaptations": [
+    "root index redirects to web-demo/v22-preview while preserving search and hash",
+    "map display is enabled only after all 83 manifest PNGs are copied and hashed",
+    "region-manifest font.path is normalized to a non-machine identifier; map statuses, predecessors, images, tags, crops and markers are unchanged",
+    "local Mod provenance paths are reduced to mod-relative paths and source line offsets are removed",
+    "linked project research records are copied as sanitized static source pages"
+  ],
+  "sanitized_provenance_fields": 16378,
+  "public_source_navigation_pages": 88,
+  "immutable_git_blob_checks": [
+    {
+      "path": "web-demo/v22-preview/scoring.mjs",
+      "sha256": "6bbd185b54a1640154ba57fbb580c42943be4481fe4d826c2aff10931fef21f8",
+      "bytes": 4998
+    },
+    {
+      "path": "web-demo/v22-preview/regions.mjs",
+      "sha256": "32d73a3e1a61caa40a1f4e917a739f3fb772cd8a9ab135c06327ad2d7c8bcf90",
+      "bytes": 2724
+    },
+    {
+      "path": "web-demo/v22-preview/playstyle.mjs",
+      "sha256": "aa3e730391a5f4a3e25c8bc1dfd6d8cfcc7ca22447ac80df1c12df51ed5d9ba6",
+      "bytes": 9459
+    },
+    {
+      "path": "web-demo/v22-preview/questionnaire-v22.mjs",
+      "sha256": "7ecee295fd648f01727787feba22f529449acd07ad0954fbad815c7e9727d1a8",
+      "bytes": 9794
+    },
+    {
+      "path": "web-demo/v22-preview/comparison.mjs",
+      "sha256": "a1584b5d0afe09af1810f2d1c850f01a9adbcd92b079d75d72f82ca3b10cf227",
+      "bytes": 12649
+    },
+    {
+      "path": "web-demo/v22-preview/app.mjs",
+      "sha256": "48b672f486b82c55c1193b93f315974538eb71ac37e751af0ab72519940a90e8",
+      "bytes": 21684
+    },
+    {
+      "path": "web-demo/v22-preview/data/personality-v22.json",
+      "sha256": "540321662944ef57aaa32effaae85a0e97ae8d804382e5b7329a7a8f9c5f9471",
+      "bytes": 236619
+    },
+    {
+      "path": "web-demo/v22-preview/data/playstyle-preferences.json",
+      "sha256": "08b5f02752ba518d40fbc8002fe1d9d267de747e385c6a821b960f5ca5e5c618",
+      "bytes": 27833
+    }
+  ]
+}

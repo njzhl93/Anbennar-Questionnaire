@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/杜瓦尔卡尼-F62.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 杜瓦尔卡尼／普拉赫塔（F62 → F64）精简证据页
+
+核验日期：2026-09-23  
+核验版本：本地 Mod 与汉化 `v1.37.5.0`
+
+## 结论简表
+
+| 项目 | 结论 | 可信度 | 主要证据 |
+|---|---|---|---|
+| 身份 | F62，英文`Duwarkani`，当前中文名“杜瓦尔卡尼” | 高 | Tag、国家历史、当前汉化 |
+| 开局 | 人类主流文化、尼拉赫特宗；人类国王、鹰身女妖王后与继承人 | 高 | `F62 - Duwarkani.txt` |
+| 直接任务数 | 29 | 高 | `anbennar-local`确定性索引 |
+| 连续形成国 | F64普拉赫塔；决议明确保留当前任务 | 高 | `WestSarhalFormables.txt:52-144` |
+| 可选换树 | U01赫特拉塔；形成时交换非通用任务，不并入本条目 | 高 | `WestSarhalFormables.txt:2-50` |
+| 核心风格 | 鹰身女妖—人类共治、多族群整合、阿哈提改革、守护者、暗影沼泽与兽灾 | 高 | 当前任务、事件与灾难脚本 |
+| 道德倾向 | 善良，善良度88 | 高 | 平等整合、保护平民、反种族灭绝与最终宽恕；扩张和改宗是主要扣分项 |
+| Wiki | 完整快照可用；无国家专页，读取3个关联页 | 高（状态）／中（背景） | `doctor.py status=ok`及Markdown chunk |
+
+## 本地证据边界
+
+- `common/country_tags/anb_countries.txt:243,245,1200`：F62 Duwarkani、F64 Prakheta、U01 Kheterata。
+- `history/countries/F62 - Duwarkani.txt:1-55`：君主制、提亚里赫特文化、恩泽里鹰身女妖接受文化、尼拉赫特宗、首都6022，以及肯穆、萨法娜和巴娜芙丽特。
+- `localisation/anb_countries_l_english.yml:1704,1708,1497`：经只读解码确认“杜瓦尔卡尼”“普拉赫塔”“赫特拉塔”。
+- `missions/Duwarkani_Missions.txt:1-1389`：29个直接任务；暗影之坝、种族整合、阿哈提、守护者、双王制、魔法防护和暗影远征。
+- `events/Flavour_Duwarkani_F62.txt:1-850`：王室刺杀、双王制、阿赫特揭示、兽灾与暗影巨魔事件链。
+- `common/disasters/ahati_disaster.txt:2-105`：灾难进度、结束条件及贸易、产出、税收、士气和禁战惩罚。
+- `decisions/WestSarhalFormables.txt:2-50`：形成U01并交换非通用任务；`:52-144`：形成F64，显示保留任务提示且不调用任务交换。
+- `common/estate_privileges/estate_ahati_privileges.txt`：阿哈提及多族群特权的制度载体。
+
+任务数只统计F62任务文件内直接任务实体，不把事件、灾难和形成后的赫特拉塔任务计入。
+
+## 本地离线Wiki
+
+`anbennar-offline/tools/doctor.py`在正确目录返回`status=ok`；快照更新于2026-09-17，含英文3718页、中文1136页。精确标题`Duwarkani`无结果，未访问线上Wiki补洞。
+
+- [Nirakhet](https://anbennar.fandom.com/wiki/Nirakhet)：英文`page_id=2235`、当前`revision_id=33074`、章节`Nirakhet`第2部分；已重读`anbennar-offline/output/chunks/en/md/2235/001-02-Nirakhet.md`。支持尼拉赫特崇拜在下层与恩泽里鹰身女妖中的发展，以及杜瓦尔卡尼王室在1444年的宗教地位；词条对1444以后成败的叙述不覆盖玩家路线。
+- [Aakhet the Bronze](https://anbennar.fandom.com/wiki/Aakhet_the_Bronze)：英文`page_id=382`、`revision_id=31416`、章节`Early Life`；已读`anbennar-offline/output/chunks/en/md/382/012-01-Early Life.md`。支持阿赫特宣称曾以门考恩斯沃特身份统治，并建立早期阿哈提。
+- [Ahati](https://anbennar.fandom.com/wiki/Ahati)：英文`page_id=2683`、`revision_id=20360`、章节`Ahati`第1—2部分；已读`anbennar-offline/output/chunks/en/md/2683/001-01-Ahati.md`与`001-02-Ahati.md`。支持阿哈提的武士兄弟会、平民招募、功绩主义、门考恩斯沃特起源及南北分化。
+
+## 官方开发资料
+
+- [Dev Diary #75 — The Shadows](https://www.reddit.com/r/Anbennar/comments/1go0xc1/dev_diary_75_the_shadows/)（2024-11）：直接介绍杜瓦尔卡尼的人类—鹰身女妖双重身份、可用骑兵的鹰身女妖军队、守护者、多族群平等整合、夜鬼婆、世界树和兽灾谜团。
+- [Fires of Conviction Release](https://www.reddit.com/r/Anbennar/comments/1he79o3/fires_of_conviction_release/)（2024-12-14）：正式发布公告把杜瓦尔卡尼列为新任务树，概括为鹰身女妖圣骑士收复哀伤河、整合萨哈尔“怪物”族群并追查兽灾。
+
+去重检索Duwarkani、F62、Prakheta、Menkaunswt、Nirakhet、Beastbane与Fires of Conviction后，直接且实质讨论该国的官方材料为上述两篇。
+
+## 玩家观点及限制
+
+- [Duwarkani strategy?](https://www.reddit.com/r/Anbennar/comments/1l4ectr/duwarkani_strategy/)（2025-06-05）：玩家讨论早期法师邻国、金矿、守护者、沼泽净化与阿哈提灾难；不同回复给出不同战争顺序，且有人使用GitLab版本语境。只能用于说明常见难点。
+- [Best story driven nations/mission trees?](https://www.reddit.com/r/Anbennar/comments/1hub2zb/best_story_driven_nationsmission_trees_in_your/)（2025-01-05）：玩家称赞兽灾与“怪物”叙事、鹰身女妖骑兵和独特军事，同时批评结尾较突然、阶层特权影响专制度；评论指出部分惩罚会在末期移除。
+
+## 同轮检查
+
+1. 身份：F62／Duwarkani／杜瓦尔卡尼一致；F64／Prakheta／普拉赫塔一致。
+2. 形成关系：F64保留任务，计入连续链；U01交换任务，只列可选改道。
+3. 历史边界：1444王室与流亡背景和任务完成后的阿赫特揭示、兽灾结局明确分开。
+4. 核心机制：共治、族群特权、阿哈提灾难、保护魔法和暗影远征均有当前脚本支持。
+5. 人格：EOIV，依据区域扩张、王权与守护者秩序、制度革新和普世理想。
+6. 道德：善良88；种族平等、保护和宽恕是主线，战争与强制改宗构成扣分。
+7. 来源分层：当前本地脚本与汉化 &gt; 离线Wiki／官方开发资料 &gt; DOCX旧记录 &gt; 玩家观点。
+8. 非核心缺口：未逐项审计任务奖励；未实机测量灾难持续时间和AI外交差异。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AF62)的`eu4:F62`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。旧王朝联合的性质可作追源方向，但婚姻、配偶与继承人不能凭地图推定并吞穆恩泽里的确年。离线Wiki从工具目录复查为`status=ok`；下方补充针对该问题回读的本地原件，并非重审全部旧引文；当前形成机制仍据本地脚本。
+
+### 王朝联合原件回读
+
+- 本体`history/countries/F62 - Duwarkani.txt:14-45`逐一列出肯穆（Menkaunswt王朝）、萨法娜（Duwaran王朝、`nzeri_harpy`文化）和1443年出生的巴娜芙丽特（Menkaunswt王朝、`nzeri_harpy`文化）。开局身份与跨族王室联合可确认；婚礼日期与穆恩泽里领土整合年份未给出。
+- 本体`missions/Duwarkani_missions.txt:518-565`的“迟来的婚礼庆典”以`is_year=1446`、涅泽里文化继承人和合法性等为完成条件，奖励南方地区宣称。1446是**任务最早可满足的年份门槛**，不是婚姻发生年，更不是吞并年份。`missions/Duwarkani_missions.txt:650-673`的门考恩斯沃特王朝修正亦属任务未来。
+- 离线Wiki [Nirakhet](https://anbennar.fandom.com/wiki/Nirakhet)、[Aakhet the Bronze](https://anbennar.fandom.com/wiki/Aakhet_the_Bronze)、[Ahati](https://anbennar.fandom.com/wiki/Ahati)当前已读修订分别为`2235/33074`（`chunks/en/md/2235/001-02-Nirakhet.md`）、`382/31416`（`chunks/en/md/382/012-01-Early Life.md`）、`2683/20360`（`chunks/en/md/2683/001-01-Ahati.md`）；支持宗教与阿哈提背景，但不提供上述婚姻或吞并确年。地图记录`eu4:F62`没有可回读的确年原件；这两项保持`INSUFFICIENT EVIDENCE`。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F62 / F62_ideas`：`mod/common/ideas/anb_country_ideas.txt:34761-34796`；身份筛选结果：`identity_filter_matches`。
+- `F64 / F64_ideas`：`mod/common/ideas/anb_country_ideas.txt:28808-28845`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

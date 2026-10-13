@@ -1,0 +1,259 @@
+import {AXES} from "./scoring.mjs";
+import {matchCountries, UNVERIFIED} from "./regions.mjs";
+import {readMapManifest, mapSection, installMapViewer} from "../map-location.mjs";
+
+const $ = id => document.getElementById(id);
+const esc = value => String(value ?? "").replace(/[&<>"']/g, c => (
+  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]
+));
+const localized = x => x?.text || x?.text_en || x?.key || "文字未收录";
+const all = value => Array.isArray(value) ? value : [];
+
+function countryTypeLabel(raw){
+  const t=String(raw||"");
+  if(t.startsWith("starting") || t==="1444_start")return "开局国家（"+t+"）";
+  if(t.startsWith("formable") || t==="formed_country")return "形成国（"+t+"）";
+  if(t.includes("campaign_chain"))return "连续国家发展线（"+t+"）";
+  return "其他身份（"+(t||"未注明")+"）";
+}
+
+const textList = values => "<ul>"+all(values).map(v=>"<li>"+esc(v)+"</li>").join("")+"</ul>";
+
+export function regionOptions(index) {
+  return [{key:"",name_zh:"全部地区",count:index.countries.length},...index.regions]
+    .map(r=>'<option value="'+esc(r.key)+'">'+esc(r.name_zh)+"（"+r.count+"国）"+
+      (r.key && r.key!==UNVERIFIED?" · "+esc(r.key):"")+"</option>").join("");
+}
+function flag(c, large=false) {
+  const src=c.flag || c.identity?.flags?.find(f=>f.tag===c.tag)?.url;
+  return src ? '<img loading="lazy" class="country-flag'+(large?" hero-flag":"")+
+    '" src="'+esc(src)+'" alt="'+esc(c.name_zh||c.identity?.name_zh)+' 国旗">' :
+    '<span class="country-flag missing">旗帜待核实</span>';
+}
+function effects(x) {
+  if(!x?.effects?.length)return '<span class="field-warning">效果未收录</span>';
+  return '<ul class="idea-effects">'+x.effects.map(e=>{
+    const label=e.display || [e.modifier,e.raw_value].filter(x=>x!=null).join(" = ");
+    return '<li><strong>'+esc(label||"未知效果")+"</strong>"+
+      (e.display?"":'<span class="field-warning">单位待核实</span>')+
+      "</li>";
+  }).join("")+"</ul>";
+}
+function ideaPart(x,title,open=false) {
+  if(!x)return '<p class="field-warning">'+esc(title)+"资料缺口</p>";
+  // Missing original localization is not descriptive prose. Do not fabricate
+  // a banner for traditions, ambitions OR any of the seven ordinary ideas.
+  // Provenance stays in static source JSON but no local file path renders.
+  const desc=x.description?.text||x.description?.text_en||"";
+  return '<details class="idea-piece"'+(open?" open":"")+'><summary>'+
+    esc(title)+" · "+esc(localized(x.name))+"</summary>"+
+    (desc?'<p class="idea-description">'+esc(desc)+"</p>":"")+
+    effects(x)+"</details>";
+}
+function ideaGroup(data,index) {
+  const sets=all(data.national_ideas?.sets),chosen=sets[index]||sets[0];
+  if(!chosen)return "<h3>国家理念</h3><p>无结构化理念数据</p>";
+  const own=chosen.country_tag===data.tag;
+  return '<h2>国家理念</h2><p class="fine">按适用 Tag、触发条件和来源分套组展示。不同套组不自动叠加，不代表已解锁。国家理念不等于可选理念组。</p>'+
+    '<label class="idea-selector">切换理念套组（'+sets.length+' 套）<select id="ideaSetSelect">'+
+    sets.map((s,i)=>'<option value="'+i+'"'+(i===index?" selected":"")+">"+
+      esc(s.country_tag||"未知Tag")+" · "+esc(localized(s.name))+
+      (s.country_tag===data.tag?" · 本国":" · 后继／条件")+"</option>").join("")+
+    '</select></label><div class="idea-scope"><strong>'+
+    esc(localized(chosen.name))+"</strong><p>适用国家："+
+    esc(chosen.country_tag||"未注明")+"；角色："+esc(chosen.role||"未注明")+
+    "；匹配条件："+esc(chosen.eligibility||"未注明")+"</p>"+
+    (own?"":"<p>此套组属于相关后继或条件状态，不能假定已自动更换。</p>")+
+    (chosen.trigger?'<details><summary>原始生效条件</summary><pre>'+
+      esc(chosen.trigger)+"</pre></details>":"")+
+    "</div>"+
+    ideaPart(chosen.traditions,"国家传统",true)+
+    all(chosen.ideas).map((x,i)=>ideaPart(x,"理念"+(i+1))).join("")+
+    ideaPart(chosen.ambition,"国家野心",true);
+}
+function personalityPanel(data,entries) {
+  const base=entries.find(e=>e.profile_type==="baseline");
+  if(!base)return "<p>尚未收录本国v2.2基线</p>";
+  const conditionals=entries.filter(e=>e.profile_type!=="baseline");
+  const types={choice:"政策选择／条件画像",stage:"任务阶段／阈值结算",formation:"形成国／后继"};
+  const table=AXES.map(([k,label])=>'<tr><th>'+esc(label)+'</th><td>'+
+    base.personality[k]+"</td></tr>").join("");
+  const branches=conditionals.map(p=>'<details class="profile-reference"><summary>'+
+    esc(p.name_zh)+" · "+esc(types[p.profile_type]||p.profile_type)+
+    (p.applicable_tag===p.owner_tag?"":" · "+esc(p.applicable_tag))+
+    '</summary><p>原始发展线：'+esc(p.owner_tag)+"；实际适用Tag："+esc(p.applicable_tag)+
+    "</p><p>"+esc(p.player_summary_zh||p.scoring_rationale||"无独立玩家概述")+"</p>"+
+    "<p>"+esc(AXES.map(([k,name])=>name+" "+p.personality[k]).join("；"))+"</p>"+
+    "<p>实际差异轴："+esc(Object.entries(p.axis_overrides||{}).map(([k,v])=>k+" "+v).join("；")||"无")+"</p>"+
+    textList(p.conditions)+
+    (p.equivalent_profile_ids?.length?"<p>等价条件："+esc(p.equivalent_profile_ids.join("、"))+
+       "（不重复计数）</p>"+textList(all(p.equivalent_conditions).flat(Infinity)):"")+
+    "<p class='fine'>置信度："+esc(p.confidence)+"。研究条件状态非已验证的游戏存档。</p></details>").join("");
+  return '<h2>v2.2 五轴人格与条件画像</h2><p class="fine">仅使用P0已验收评分；魔奇轴代表方向不是强度，多元轴不是道德。</p>'+
+    '<table class="simple-table"><thead><tr><th>轴</th><th>国家共同基线</th></tr></thead><tbody>'+
+    table+"</tbody></table><h3>条件画像（"+conditionals.length+"）</h3>"+
+    (branches||"<p>只有共同基线，无额外五轴条件画像。</p>");
+}
+function gamePanel(data) {
+  const v=data.values||{},g=data.gameplay||{};
+  const names={warfare:"战争",tall_play:"经营",diplomacy:"外交",colonization:"殖民",
+    trade_economy:"贸易",magic_artifice_intensity:"魔奇玩法强度",
+    narrative_density:"叙事密度",complexity:"机制复杂度",early_pressure:"前期压力",
+    difficulty:"难度",campaign_length:"战役长度",dark_story:"黑暗叙事"};
+  const rows=Object.entries(names).filter(([k])=>typeof g[k]==="number").map(([k,name])=>
+    "<tr><th>"+esc(name)+"</th><td>"+g[k]+"</td></tr>").join("");
+  return "<h2>v2.1 价值观与玩法</h2><p>价值观："+esc(v.label_zh||v.classification||"未注明")+
+    "（"+(typeof v.score==="number"?v.score:"无评分")+"），不参与v2.2匹配。</p>"+
+    textList(Object.entries(v.dimensions||{}).map(([k,n])=>k+"："+n))+
+    '<details><summary>展开玩法评分</summary><table class="simple-table"><tbody>'+
+    rows+"</tbody></table></details>";
+}
+function card(c) {
+  const r=c.survey_region||{};
+  return '<a class="encyclopedia-country-card" data-country="'+esc(c.tag)+
+    '" href="?country='+encodeURIComponent(c.tag)+'">'+flag(c)+
+    '<div><strong>'+esc(c.name_zh)+'</strong> <code>'+esc(c.tag)+'</code>'+
+    '<p class="muted">'+esc(c.name_en)+"</p><p>"+
+    esc(c.tagline||c.short_overview||"暂无介绍")+'</p><small>'+
+    esc(r.name_zh||"地区待核实")+
+    (c.idea_set_count>1?" · 多套条件理念":"")+
+    (all(c.successors).length?" · 后继关联":"")+
+    '</small></div><span class="open-arrow">↗</span></a>';
+}
+
+export function createEncyclopedia(index,entries,{onStartRegionTest}) {
+  const countryIndex=new Map(index.countries.map(c=>[c.tag,c]));
+  const profiles=new Map();
+  for(const e of entries){
+    if(!profiles.has(e.owner_tag)) profiles.set(e.owner_tag,[]);
+    profiles.get(e.owner_tag).push(e);
+  }
+  const detailCache=new Map(),articleCache=new Map();
+  const mapManifest=readMapManifest();
+  installMapViewer($("encyclopediaDetail"));
+  const saved = key => { try { return sessionStorage.getItem(key) || ""; } catch { return ""; } };
+  const persist = (key,value) => { try { sessionStorage.setItem(key,value); } catch { /* optional */ } };
+  let directoryRegion=saved("anbennar-v22-directory-region"),token=0,currentCountry=null;
+  if (directoryRegion && !index.regions.some(r=>r.key===directoryRegion)) directoryRegion="";
+  $("encyclopediaRegion").value=directoryRegion;
+  $("encyclopediaSearch").value=saved("anbennar-v22-directory-query");
+  $("encyclopediaRegion").innerHTML=regionOptions(index);
+  $("encyclopediaRegion").disabled=false;
+  function directory() {
+    const matched=matchCountries(index,directoryRegion,$("encyclopediaSearch").value);
+    const region=index.regions.find(r=>r.key===directoryRegion);
+    $("directorySummary").textContent="正在展示 "+matched.length+" / "+index.country_count+" 国"+
+      (region?" · "+region.name_zh:"");
+    $("encyclopediaCards").innerHTML=matched.length?matched.map(card).join(""):
+      '<p class="panel">当前地区和搜索条件下没有国家。</p>';
+    $("regionToQuiz").disabled=!directoryRegion;
+    $("regionToQuiz").textContent=directoryRegion?"只匹配本地区国家 ↗":"请先选择一个地区";
+  }
+  $("encyclopediaRegion").addEventListener("change",e=>{
+    directoryRegion=e.target.value;
+    persist("anbennar-v22-directory-region",directoryRegion);
+    directory();
+  });
+  $("encyclopediaSearch").addEventListener("input",()=>{
+    persist("anbennar-v22-directory-query",$("encyclopediaSearch").value);
+    directory();
+  });
+  $("regionToQuiz").addEventListener("click",()=>{
+    if(directoryRegion)onStartRegionTest(directoryRegion);
+  });
+  async function readJson(path) {
+    const response=await fetch("./"+path,{cache:"force-cache"});
+    if(!response.ok)throw new Error("HTTP "+response.status+" "+path);
+    return response.json();
+  }
+  async function showCountry(tag,selectedProfile="") {
+    const idx=countryIndex.get(tag),thisToken=++token;
+    $("encyclopediaDirectory").classList.add("hidden");
+    $("encyclopediaDetail").classList.remove("hidden");
+    if(!idx){
+      $("encyclopediaDetail").innerHTML='<p class="panel">未收录国家：'+esc(tag)+"</p>";
+      return;
+    }
+    $("encyclopediaDetail").innerHTML='<div class="panel">加载'+esc(idx.name_zh)+"的国家理念和历史正文…</div>";
+    try{
+      if(!detailCache.has(tag))detailCache.set(tag,readJson("data/countries/"+encodeURIComponent(tag)+".json"));
+      if(!articleCache.has(idx.article_id))articleCache.set(idx.article_id,readJson(idx.article_data_path));
+      const [data,article,maps]=await Promise.all([detailCache.get(tag),articleCache.get(idx.article_id),mapManifest]);
+      if(thisToken!==token)return;
+      if(data.tag!==tag||article.article_id!==idx.article_id||
+         article.article_path!==idx.article_path)throw new Error("国家与文章关联不一致");
+      currentCountry=tag;
+      const overview=data.player_overview||{},identity=data.identity||{};
+      const ideas=all(data.national_ideas?.sets);
+      let own=ideas.findIndex(s=>s.country_tag===tag&&s.eligibility==="identity_filter_matches");
+      if(own<0)own=Math.max(0,ideas.findIndex(s=>s.country_tag===tag));
+      const r=idx.survey_region||{};
+      const recommend=data.recommendation||{};
+      $("encyclopediaDetail").innerHTML=
+        '<div class="detail-tools"><a href="?view=encyclopedia" data-encyclopedia-back>← 返回目录</a>'+
+        '<a href="./" data-show-quiz>返回测试 ↗</a>'+
+        '<button type="button" class="secondary compare-inline" data-compare-add="'+esc(tag)+
+        '">加入国家比较</button></div>'+
+        '<header class="country-hero panel">'+flag(idx,true)+
+        '<div><p class="eyebrow">ANBENNAR · COUNTRY ENCYCLOPEDIA</p><h1>'+
+        esc(idx.name_zh)+' <small>'+esc(tag)+'</small></h1>'+
+        '<p>'+esc(idx.name_en)+'</p><p>国家百科分区：'+
+        esc(r.name_zh||"地区待核实")+"（"+esc(r.name_en||"未核实")+"）</p>"+
+        '<p>国家身份：'+esc(countryTypeLabel(identity.country_type))+
+        '</p><p class="lead">'+esc(overview.tagline||"")+'</p>'+
+        (all(identity.successors).length?'<p>相关后继：'+esc(identity.successors.join("、"))+"</p>":"")+
+        '</div></header>'+
+        mapSection(tag,maps.data,{assetsApprovedAndHosted:true,assetPrefix:"../../",identity})+
+        '<section class="panel"><h2>国家概览与玩法</h2><p>'+
+        esc(overview.overview||identity.appearance||"资料缺失")+'</p><h3>核心特色</h3>'+
+        textList(overview.signature_features)+'<h3>任务路线与战役节奏</h3><p>'+
+        esc(overview.how_it_plays||"请参阅下方原始百科文章")+
+        '</p><p><b>适合玩家：</b>'+esc(overview.recommended_for||"暂无")+
+        '</p><p><b>不推荐：</b>'+esc(overview.avoid_if||"暂无")+
+        '</p>'+(recommend.reasons?.length?'<p>推荐理由：</p>'+textList(recommend.reasons):"")+
+        (recommend.warnings?.length?'<p>注意事项：</p>'+textList(recommend.warnings):"")+
+        (identity.formation_scope?'<p><b>形成国与任务继承限制：</b>'+
+        esc(identity.formation_scope)+"</p>":"")+'</section>'+
+        '<section class="panel" id="ideaPanel">'+ideaGroup(data,own)+'</section>'+
+        '<section class="panel">'+personalityPanel(data,profiles.get(tag)||[])+'</section>'+
+        '<section class="panel">'+gamePanel(data)+'</section>'+
+        '<section class="panel article-panel"><h2>完整历史与世界观原文</h2>'+
+        '<p class="fine">以下为已编写的百科Markdown正文原样转换，包含可能属于旧版v2.1的数字。'+
+        '其人格坐标不等于上方P0已验收的v2.2评分。任务未来和传说不代表1444年已实现。'+
+        '若多国共用此文，保留共享范围，请核对小节标题。</p>'+
+        '<div class="article-content">'+article.html+'</div></section>'+
+        '<section class="panel"><h2>来源与缺口</h2><p>文章来源：<code>'+
+        esc(idx.article_path)+'</code></p><p>理念状态：'+
+        esc(data.national_ideas?.status||"未注明")+'，套组 '+ideas.length+
+        ' 套。</p><p class="fine">本地 Workshop 文件仅显示为来源记录，不假装可以在网页访问。</p></section>';
+      $("ideaPanel").addEventListener("change",e=>{
+        if(e.target.id==="ideaSetSelect")$("ideaPanel").innerHTML=ideaGroup(data,Number(e.target.value));
+      });
+      if(selectedProfile){
+        const p=all(profiles.get(tag)).find(p=>p.profile_id===selectedProfile);
+        if(p)$("encyclopediaDetail").insertAdjacentHTML("afterbegin",'<div class="notice">来自匹配的条件画像：'+
+          esc(p.name_zh)+'。详见下方条件画像栏目。</div>');
+      }
+    } catch(e){
+      if(thisToken!==token)return;
+      detailCache.delete(tag);articleCache.delete(idx.article_id);
+      $("encyclopediaDetail").innerHTML='<p class="notice error">百科数据加载失败：'+
+        esc(e.message)+"。请检查静态构建产物。</p>";
+    }
+  }
+  function showDirectory(region) {
+    token++;currentCountry=null;
+    if(typeof region==="string"){
+      directoryRegion=region;
+      $("encyclopediaRegion").value=region;
+      persist("anbennar-v22-directory-region",region);
+    }
+    $("encyclopediaRegion").value=directoryRegion;
+    $("encyclopediaDirectory").classList.remove("hidden");
+    $("encyclopediaDetail").classList.add("hidden");
+    directory();
+  }
+  directory();
+  return {showCountry,showDirectory,get currentCountry(){return currentCountry},
+    get currentRegion(){return directoryRegion}};
+}

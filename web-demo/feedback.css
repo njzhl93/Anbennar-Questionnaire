@@ -1,0 +1,88 @@
+.feedback-panel {
+  margin-top: 28px;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.feedback-item {
+  display: grid;
+  gap: 14px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.feedback-item > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.feedback-item strong {
+  font-size: .92rem;
+}
+
+.feedback-item output {
+  color: var(--accent-2);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.feedback-item input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.feedback-text-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 12px;
+}
+
+.feedback-text-grid label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: .86rem;
+}
+
+.feedback-text-grid input,
+.feedback-text-grid textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #10161e;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+}
+
+.feedback-text-grid textarea {
+  resize: vertical;
+}
+
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.feedback-actions .muted {
+  font-size: .84rem;
+}
+
+@media (max-width: 760px) {
+  .feedback-grid,
+  .feedback-text-grid {
+    grid-template-columns: 1fr;
+  }
+}

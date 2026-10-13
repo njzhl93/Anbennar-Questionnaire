@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/黑色牧群-I55.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 黑色牧群（I55）证据页
+
+## 身份与范围
+
+- 当前本体 `common/country_tags/anb_countries.txt:535` 将 I55 指向 `countries/Black Herd.txt`；本地汉化解码器读取 `anb_countries_l_english.yml:868-869`，确认中文名“黑色牧群”。版本边界：本体/汉化 descriptor 均为 `v1.37.5.0`，本体 Workshop ID `1385440355`，汉化 Workshop ID `2818493730`。
+- 开局历史：`history/countries/I55 - Black Herd.txt:1-37`；国家定义：`common/countries/Black Herd.txt:1-48`。I55 为起始国，不把后续形成国倒灌为 I55 身份。
+- 结构化查询 `python -X utf8 anbennar-local/tools/query.py country I55 --json` 确定直接任务数为 **18**，来源均为 `missions/Black_Herd_Missions.txt`；已有随机国家脚本的启发式计数会因共享/命名规则显示不同数字，本文采用结构化解析的 country ownership 计数，不人工重数。
+
+## 代表机制与行号
+
+- `missions/Black_Herd_Missions.txt:6-145`：死灵任务组与不朽/牺牲条件；`:152-295`：失传魔法、渗透与食人魔路线；`:299-451`、`:602-825`、`:965-1155`：魔法项目、谷地、顾问、死灵军团和终局效果。
+- `events/Flavour_Black_Herd_I55.txt:8-70,96-157`：揭开项目、设置 I55 项目/死灵旗、替换非通用任务、谷地历史事件；`:128-157` 的 `black_herd_events.5` 选项后设置 `I55_enable_formables_flag`。
+- `decisions/ForbiddenPlainsFormables.txt:138-235,237-370,372-468,470-570` 与 `common/scripted_effects/anb_scripted_effects_for_missions.txt:37-48`、`common/scripted_effects/forbidden_land_scripted_effects.txt:2817-2821`：I55在取得该旗帜后可进入半人马通用形成分支；`form_khuraen_ulaeg` 最终改为 I89 呼兰兀剌，`form_altorzamh` 以 `change_tag = J54`（安脱儿咱），`form_lejdazamh` 效果改为 J55（列只答咱），`form_taryeanzamh` 以 `change_tag = J56`（塔儿颜咱）。决议还要求半人马行政修正、无战争、禁忌平原首都和各自领土条件。
+- `localisation/Flavour_Black_Herd_I55_l_english.yml:9-34`：第10行把妻子写成可用牺牲品；第12行的“数万牺牲并复活”明确描述暴食王过去在洛厄特克勒德的行为，不归于I55；第19行写明马格哈格玛征服后军队恐吓幸存居民、掠走可用文献并焚毁其余档案；第30行把普通食人魔称为对凯恩特运作无用，同时只说过去发生过若干解剖并计划给予幸存施法者层级位置，未证明活体实验或强制研究。第26行的尸体爆炸、第28行的死灵提取和第32-34行的巫妖/死者叙事仅证明机制与路线性质，不单独当作人格侵害。`anb_magic_projects_l_english.yml:1491-1502`：Markhentakruan 与“拒绝伊克·玛格萨尔”项目。
+
+## 外部与旧文档
+
+- DOCX 镜像 `已实装任务树存档.md:3771-3797` 已读，仅作主题导航；它描述食人魔谷地、变化/死灵法术、战争罪行和半人马终局，不能替代当前脚本。
+- Reddit 正文实际读取并记录：官方 Dev Diary #100（2026-01-06）与 #116（2026-04-05）；玩家帖两篇——`After playing Black Herd game I have only one question`（2026-06-10）与 `Which of the new Centauric formables have mission trees?`（2026-09-28）。前者支持设计语境与体验，不证明当前机制。
+- 离线 Wiki：严格在 `[local source path omitted]` cwd 运行 `.venv/Scripts/python.exe -X utf8 tools/doctor.py`，结果 `status=ok`，快照 `updated_at=2026-10-01T08:04:33.526085+00:00`。随后对 `Black Herd`、`I55`、`Beldelk` 作精确标题查询均无结果，保留 `OFFLINE_WIKI_NO_RESULT`；不采用模糊查询摘要。Wiki正式采用页面数为 **0**。
+- 哈兰历史地图按 `references/halann-timeline.md` 检索，研究页/参考原件本轮未得到可读取的 I55 原件，正式采用数 **0**，不把目录摘要当事实。
+
+## 冲突与缺口
+
+- 旧 DOCX 的主题与当前脚本总体一致；当前脚本已确认 J54/J55/J56 三个半人马通用形成后继，不能把它们写成 I55 专属任务继承。
+- 当前 I55 有接纳食人魔法师的任务路线，同时明确写出妻子牺牲、军队恐吓幸存居民、档案焚毁和对一般食人魔的贬抑；Study的暴食王旧事、Tearbloom未明确活体或强制研究，均不作为I55自身伤害证据。尸体爆炸、死灵军团和巫妖化不单独计入人格侵害。四维均为24，加权邪恶24；档位阈值为0-32邪恶、33-67中立、68-100善良，正文与JSON一致。
+- 两篇官方开发日志属于官方设计语境；两篇玩家帖均实际读到正文，但前一篇未注明本地Mod支持版本或子Mod，后一篇仅以“new Centauric formables”为语境，未给精确版本或子Mod。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `I55 / I55_ideas`：`mod/common/ideas/anb_country_ideas.txt:40249-40286`；身份筛选结果：`identity_filter_matches`。
+- `I89 / I89_ideas`：`mod/common/ideas/anb_country_ideas.txt:11430-11466`；身份筛选结果：`identity_filter_matches`。
+- `J54 / J54_ideas`：`mod/common/ideas/anb_country_ideas.txt:49087-49126`；身份筛选结果：`identity_filter_matches`。
+- `J55 / J55_ideas`：`mod/common/ideas/anb_country_ideas.txt:49211-49249`；身份筛选结果：`identity_filter_matches`。
+- `J56 / J56_ideas`：`mod/common/ideas/anb_country_ideas.txt:49251-49293`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

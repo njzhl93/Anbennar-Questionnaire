@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/命令秩序-R62.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 命令秩序（The Command，R62）证据页
+
+核验日：2026-09-16  
+版本：本体与汉化均支持`v1.37.5.0`。  
+状态：Tag、中文名、1444身份、任务归属、形成关系和核心风格已确认；英文Wiki主词条已纳入本地离线快照。
+
+## 身份与历史
+
+- Tag：`common/country_tags/anb_countries.txt:1062`，R62指向`countries/The Command.txt`。
+- 当前中文名：汉化`localisation/anb_countries_l_english.yml:1172`经项目解码器读取为“命令秩序”。
+- 1444开局：`history/countries/R62 - The Command.txt:1-88`确认君主制、地精军事阶层改革、狼大地精、弃神者、首都4630、默古紊·狼裔及巴鲁吉·狮裔、奇托坎·猪裔。
+- 开局结构：同文件`:76-88`确认狼／猪／狮三令作战室特权；`history/diplomacy/Rahen.txt:430-460`确认R63—R66四个附庸。
+- 前史补充：[Dev Diary #42: The March to War](https://www.reddit.com/r/Anbennar/comments/ynskn7/dev_diary_42_the_march_to_war/)说明南下北罗祆、夺取翠玉矿都、三令联盟及反萨满历史。它是官方设计语境，不覆盖当前脚本。
+- Wiki前史：[The Command](https://anbennar.fandom.com/wiki/The_Command)的“Creation of The Command”章节记载1136—1392年的军令制度形成、14世纪三令整合、1392年结盟、1431年入侵沙摩朅，以及1435年征服西尔后正式成为帝国。
+
+## 任务与机制
+
+- 任务文件：`missions/TheCommand_Missions.txt`，确定性脚本统计得到215个`R62_*`直接任务块。
+- 作战室：同文件`:1-180`确认作战室入口与区域战役任务；官方第42期日志记载25场战役。
+- 六令：同文件`:7681-7800`确认虎、象、龙三令的建立及阶层解锁；开局三令见历史文件。
+- 终局：同文件`:7998-8066`确认统一三大超区域、继承仍为附庸的R63／R64、完成全部战役、350个武勋文化省份和`the_command.45`改名事件。汉化`Flavour_TheCommand_R62_l_english.yml:1858,1995`将两个终局键均显示为“至高命令秩序”。没有`change_tag`证据。
+- 黑凝之晶：`common/government_mechanics/anb_command_korashi.txt:1-180`；资源0—100、初始约41、每月自然下降，高储备降低稳定和陆军维护成本，低储备损害合法性与防御。
+- 两场灾难：`common/disasters/command_rise_of_the_shamans.txt:1-88`和`command_insubordination.txt:1-112`；前者由黑凝之晶耗尽引发，后者要求三大新令及大规模征服后进入内战。
+- 武勋文化：汉化`anb_cultures_l_english.yml:357`解码为“武勋”；最终任务按`culture_is_wuhyun`计数。
+
+## 英文官方Wiki
+
+- [The Command](https://anbennar.fandom.com/wiki/The_Command)：已从完整本地离线快照读取，状态`OFFLINE_WIKI_OK`；`page_id=1253`，`revision_id=30147`，快照时间戳`2026-06-01T03:10:15Z`。完整Markdown为`anbennar-offline/output/en/markdown/The Command__9f1aeb4e.md`。
+- 实际读取范围：本地证据块`en:1253:020`至`en:1253:072`，包括Politics、Military、Religion、Slave States、Creation of The Command、Rise of the Command、War for Dhujat、A New Command、Great Dhujat Wars、Conflict in Yanshen、Decline of The Command、The Rending of Realms、Great Insubordination及1835年旧体制终结；关键前史正文位于`anbennar-offline/output/chunks/en/md/1253/025-01-Command System.md`。
+- 页面确认命令秩序1392年成立，1431年入侵沙摩朅，1435年征服西尔后成为帝国；狼令负责后勤与规划，猪令负责基层军队与先锋，狮令负责将领、外交和士气。
+- 页面还记载奴隶国的分工、弃神者思想对家庭／秩序／纪律的强调、武勋身份形成、1569年十项改革，以及官方编年史中1835年中央命令秩序解体。所有1445年后的内容均作为设定未来，不倒写为EU4开局历史。
+- [Ten Reforms](https://anbennar.fandom.com/wiki/Ten_Reforms)与[Godlost](https://anbennar.fandom.com/wiki/Godlost)没有另行打开：主词条正文已经包含本条目所需的十项改革与弃神者概述，继续读取不会改变国家历史和玩法风格结论。
+- 当前英中离线库健康检查为`status: ok`；搜索摘要与线上页面均未用于本次复核。
+
+## Reddit官方开发日志
+
+- [Dev Diary 21: Development Roadmap](https://www.reddit.com/r/Anbennar/comments/qa3rlm/anbennar_dev_diary_21_development_roadmap/)：2021-10-18；任务树与Haless系统的规划记录，只作历史开发语境。
+- [Dev Diary #42: The March to War](https://www.reddit.com/r/Anbennar/comments/ynskn7/dev_diary_42_the_march_to_war/)：2022-11-06；命令秩序专属日志，覆盖开局位置、三令、作战室、25场战役、武勋、黑凝之晶和帝国改革。
+- [Dev Diary Delay Notice](https://www.reddit.com/r/Anbennar/comments/1ddwlhn/dev_diary_delay_notice/)：2024-06-12；只记录Haless日志延期和后续内容预告，没有用于证明当前机制。
+- [Vic3 Dev Diary #2: The World](https://www.reddit.com/r/Anbennar/comments/1jgord4/vic3_dev_diary_2_the_world/)：2025-03-21；关联作品1820设定称命令秩序在位面撕裂后的大抗命中崩解，不能当作EU4必然结局。
+- [EU4 Dev Diary #81: Break the Chimera](https://www.reddit.com/r/Anbennar/comments/1jtbj2u/eu4_dev_diary_81_break_the_chimera/)：2025-04-07；萨满叛乱、黑凝之晶重制和“终结存在”战争目标的官方语境。当前资源与灾难只按本地脚本陈述。
+
+## Reddit社区体验（恰选两篇）
+
+- [Beginner&#x27;s Guide to The Command](https://www.reddit.com/r/Anbennar/comments/10inljp/beginners_guide_to_the_command/)：2023-01-22；未注明精确游戏版本、子Mod或修改存档。用于记录黑凝之晶决定早期战役顺序，以及玩家提前规划大抗命、要塞和盟友的经验；旧数值不作为当前机制证据。
+- [Can someone explain to me the concept behind the Command?](https://www.reddit.com/r/Anbennar/comments/1kl073n/can_someone_explain_to_me_the_concept_behind_the/)：2025-05-12；正文未注明精确版本，评论混有Steam版、开发版和子Mod语境。只用于说明“区域终局Boss”与“挤压其他东洲国家玩法”之间的社区争议。
+
+## 冲突与待核实
+
+- Wiki主词条提供了完整的大事编年史，但没有显示可见更新时间；其1445年后内容属于官方设定未来，不能覆盖当前EU4脚本或玩家战役。
+- Wiki将中央命令秩序的最终解体定在1835年；2025年的《维多利亚3》开发日志则以1820世界概览方式称其已被大抗命击碎。两者可能反映设定版本或叙述尺度差异，本文只把共同结论概括为“位面撕裂后因大抗命崩解”。
+- 2023攻略中的大抗命条件和要塞数值已经过时风险较高；当前触发只按本地灾难脚本概述。
+- 官方2025日志描述“终结存在”战争目标与萨满叛乱的开发状态；本条目的命令秩序自身玩法只采用当前本地脚本已存在部分。
+- 未逐项审计215个任务的奖励、所有事件调用或全部阶层特权，也未进行运行时开档测试；这些缺口不影响身份、历史边界和核心风格判断。
+
+## 最新Skill来源对齐（2026-09-26）
+
+[哈兰历史地图研究记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AR62)的`eu4:R62`为`in_progress`，站点快照`2026-09-23T07:23:00Z`。其后期贾达北征、Babhagama边界及1805—1809年代矛盾属于待查史料问题；没有回读新增原件，不把1820／1835不同资料的结局拼成单一必然年表。1444前史与当前机制仍分属既有Wiki修订及本地脚本。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `R62 / hobgoblin_ideas`：`mod/common/ideas/anb_group_ideas.txt:1545-1581`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

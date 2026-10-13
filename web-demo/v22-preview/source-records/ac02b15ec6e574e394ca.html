@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/希索斯特亚莫克-S23.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 希索斯特亚莫克 S23：精简证据与边界
+
+核验日期：2026-09-30。本体 Workshop `1385440355`、汉化 `2818493730` 支持 `v1.37.5.0`；本地资料库 `update.py` 返回 `unchanged`，本体／汉化 manifest 为 `2812922911103828520`／`7518363337005727349`，`doctor.py` 为 `ok`。本轮离线 Wiki 唯一一次 `resume_sync.py` 返回 `status=ok, action=already_complete`，其 `doctor.py` 也报告 `ok`（英文3718页、中文1136页）。下列 `mod/`、`translation/` 分别对应 `[local source path omitted]` 和 `2818493730/`。
+
+| 结论 | 当前原件 | 边界 |
+|---|---|---|
+| 当前身份与中文名 | `mod/common/country_tags/anb_countries.txt` 的S23标签、`mod/history/countries/S23 - Hisost Yamok.txt:1-42`、`mod/localisation/anb_countries_l_english.yml:2181`、`translation/localisation/anb_countries_l_english.yml:1937` | 1444开局国，当前汉化“希索斯特亚莫克”；未核实到主线必经的形成Tag |
+| 建国与塞布尔前史 | `mod/localisation/anb_powers_and_ideas_l_english.yml:16307-16309`、`mod/history/countries/S23 - Hisost Yamok.txt:13-31` | 理念文本叙述1309年桑宗渡河、五年内建国及1442年国王被刺；历史脚本1443年记录塞布尔为继承人并设置摄政，非明确即位日期 |
+| 独特任务与军事 | `mod/missions/Hisost_Yamok_Missions.txt`；`mod/localisation/anb_powers_and_ideas_l_english.yml:16310-16319` | 本地库39项直接任务；犀牛骑士、豺狼人Rabwag、天圣域／革万迦背景。理念中的未来战绩不是1444既成事实 |
+| 集体劳役与赎罪 | `mod/localisation/Flavour_Hisost_Yamok_S23_l_english.yml:47-48,75-81,101-117`；`mod/missions/Hisost_Yamok_Missions.txt:904-1063,1402-1518,1596-1655` | 前段把罗祆平民集体服劳役，后段否认集体罪责、修复政变受害豺狼人；均为任务文本和目标路线，不等于已完成 |
+| 废奴效果边界 | `mod/missions/Hisost_Yamok_Missions.txt:2020-2143,2570-2697` | `S23_our_own_sins`奖励含废奴修正和最多22次随机奴隶产地转产；没有遍历全部剩余奴隶商品省份，叙事中的“全国废奴”效果不能无条件保证 |
+
+## 离线 Wiki 与历史地图
+
+S23国家主页面以 `Hisost Yamok`、`S23`、中文名和标题定位均未命中：`OFFLINE_WIKI_NO_RESULT`。英文关联页面只采用读取过的两个 Markdown chunk：
+
+1. [Countries during the Greentide](https://anbennar.fandom.com/wiki/Countries_during_the_Greentide)：`lang=en`，`section=Countries during the Greentide / Madriamilak`，`page_id=98`，`revision_id=33088`，`local_source=anbennar-offline/output/chunks/en/md/98/001-08-Countries during the Greentide.md`。离线刷新后已回读新证据块；仅证实地区王国名单有 Hisost Yamok，不补国家细史。
+2. [Cheese](https://anbennar.fandom.com/wiki/Cheese)：`lang=en`，`section=Cheese`，`page_id=3812`，`revision_id=32075`，`local_source=anbennar-offline/output/chunks/en/md/3812/001-13-Cheese.md`。提及当地用驯养犀牛乳制作的乳酪，只作物产旁证。
+
+中文离线查询无命中；中文名由当前汉化确定。[哈兰历史地图 S23 记录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AS23) 的 `record_id=eu4:S23`、[研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)与[参考材料目录](https://shen-hhao.github.io/anbennar-timeline/references.html)只用于发现并回读 `mod/localisation/anb_powers_and_ideas_l_english.yml:16307-16319`。站点对S23全期领土研究仍在进行；1451年龄推算与其他1453地名锚点有冲突，1760／1790逐省边界为地图推演，本条均未采用。
+
+## Reddit：设计语境和两篇玩家体验
+
+- [Dev Diary #59: The Fires of Forge and Sacrifice](https://www.reddit.com/r/Anbennar/comments/17tghvd/)，2023-11-12。作者Astera以 Sarhal 更新贡献者身份介绍S23的人类行政、豺狼人军事、Rabwag和犀牛骑士；已读主帖S23段落。属于当时基础国家设计。
+- [Dev Diary #80: Light and Dark 2 Mengi Edition](https://www.reddit.com/r/Anbennar/comments/1jhm7kh/)，2025-03-23。主帖由5camps发布，S23部分署名任务树作者Liv，已读相关正文；说明塞布尔复仇与新任务树的发布前设计。两篇日志都不能单独证明当前数值或正式实装；直接相关官方发布公告未找到。
+- [Who needs discipline when you got morale](https://www.reddit.com/r/Anbennar/comments/1lr40xw/)，2025-07-03。作者明确使用GitLab测试版，主帖体验是骑兵军队极强；数值不搬入当前版本。
+- [Hisost Yamok Post-Playthrough review/thoughts](https://www.reddit.com/r/Anbennar/comments/1o0rlc4/)，2025-10-07。作者说明困难难度和延迟伟大征服者设置，未给精确Mod版本；已读主帖及少量相关回复。两幕任务、贵族政变与贸易公司自治度提醒属于其单局经验。
+
+## v2.1定标与待核实
+
+人格E93/A72/M-T50/I12/P72；阶段 A83/P48 → A61/P77。`I&lt;30`意味着魔法／奇械方向不应显著参加匹配。价值四维尊严60、公共利益70、人格承认75、克制50：`60×0.35+70×0.25+75×0.25+50×0.15=64.75`，四舍五入为65，中立；阶段25→84，轨迹为`redemption`。早期集体奴役与本国奴隶贸易是明确扣分依据，后期赔偿、承认平民无集体罪责与废奴措施是加分依据。与绿原Z51“征服不自动邪恶”、杜瓦尔卡尼F62“多族平权”、阿墨翁G52“同化优先进入多元轴”及埃斯蒂尔B54“好意不能洗去人格侵害”锚点比较；这是解读性定标，非Mod属性。
+
+未实机测试塞布尔遗产点的全部分支、女王身后事件的具体难度、任务随机转产在奴隶产地多于22时的最终状态，也没有逐项审计完整任务树。离线 Wiki 国家专页、中文背景页均缺；Reddit两篇玩家帖与当前本地版本并非精确对应。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `S23 / S23_ideas`：`mod/common/ideas/anb_country_ideas.txt:34643-34677`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>
