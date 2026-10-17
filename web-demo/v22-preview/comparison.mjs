@@ -100,12 +100,19 @@ export function createComparison(index, entries, {onNavigate}) {
   const cache = new Map(), profilePicks = new Map();
   const root = $("comparisonView");
   const selectedKey = "anbennar-v232-comparison-tags";
+  const profilesKey = "anbennar-v235-comparison-profiles";
   let tags = [], generation=0, warning="";
   try {
     tags=selectionFromQuery(sessionStorage.getItem(selectedKey),index);
+    for (const [tag,id] of Object.entries(JSON.parse(sessionStorage.getItem(profilesKey)||"{}"))) {
+      if(catalogue.has(tag)&&entries.some(e=>e.owner_tag===tag&&e.id===id))profilePicks.set(tag,id);
+    }
   } catch { /* comparison still works without browser storage */ }
 
-  const persist = () => {try {sessionStorage.setItem(selectedKey,tags.join(","));} catch {}};
+  const persist = () => {try {
+    sessionStorage.setItem(selectedKey,tags.join(","));
+    sessionStorage.setItem(profilesKey,JSON.stringify(Object.fromEntries(profilePicks)));
+  } catch {}};
   const updateUrl = () => {persist();onNavigate(comparisonPath(tags));};
   let comparisonAutocomplete=null;
 

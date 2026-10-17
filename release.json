@@ -1,7 +1,7 @@
 {
   "version": "v2.3.5",
-  "source_sha": "567c58efa2f1ed4085cb127ce34d902f76797072",
-  "built_at_utc": "2026-10-17T03:45:16.103204Z",
+  "source_sha": "1673c225f4ceddd59026509d9c6ed99cff55fa57",
+  "built_at_utc": "2026-10-17T12:57:37.817863Z",
   "country_count": 116,
   "article_count": 108,
   "content_counts": {
@@ -63,8 +63,8 @@
     },
     {
       "path": "web-demo/v22-preview/comparison.mjs",
-      "sha256": "559c3245c8b2e3fe749c6967b0497d932b59a9e70022492030243ba555b31984",
-      "bytes": 15679
+      "sha256": "f912854ae62a93a3020508d4b3ac57907d0bee2af82d9a2d021474905511be0b",
+      "bytes": 16043
     },
     {
       "path": "web-demo/v22-preview/app.mjs",
