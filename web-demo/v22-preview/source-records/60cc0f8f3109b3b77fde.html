@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/蹴桥-Z60.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 蹴桥 Z60 → 路终 V23：精简证据与版本边界
+
+核验：2026-09-28。本体 `1385440355`、汉化 `2818493730`，均为 `v1.37.5.0`；`anbennar-local/tools/update.py` 返回 `unchanged`，manifest 分别为 `2812922911103828520`、`7518363337005727349`。本轮唯一一次 `resume_sync.py` 返回 `status=ok, action=already_complete`；`doctor.py` 解析为 `status=ok`（英文3718页、中文1136页）。
+
+| 判断 | 当前证据 | 边界 |
+|---|---|---|
+| Z60为蹴桥／Tsukqiao | `history/countries/Z60 - Tsukqiao.txt:1-58`；英文 `localisation/anb_countries_l_english.yml:2889`，汉化同名文件`:1616` | 1444已有北岭噬道国家；汉化解码后名称为蹴桥 |
+| V23为路终／Luzhong | 英文国家汉化`:2547`，中文汉化`:2672`；`decisions/HalessFormables.txt:1143-1204`；`events/anb_beikling_events.txt:266-304` | 北岭噬道国家通用形成，非Z60独占；`events/Flavour_Tsukqiao.txt:5-34`的`tsukqiao.0`明确注释为调试事件，不作为正常形成入口 |
+| 同一连续战役链 | `missions/Tsukqiao_Missions.txt:59-215,1014-1017,1529-1531,3798-3855` | 初期仅Z60，后续组检查`was_tag=Z60`及`tag=V23`；17项Z60直接任务是结构化索引计数，不代表全战役任务总数 |
+| 人物与开局 | `history/countries/Z60 - Tsukqiao.txt:16-58`；`localisation/Flavour_Tsukqiao_Z60_l_english.yml:4,28,51-52` | Youji I、Fuyuan Jiao的中文译名未找到当前汉化直接证据，正文保留英文名 |
+| 恶鬼、宦官与后期风险 | `missions/Tsukqiao_Missions.txt:76-163,233-269,895-1006,3798-3855`；`common/disasters/tsukqiao_the_broken_lies_disaster.txt:1-49`；`events/Flavour_Tsukqiao.txt:1980-2005` | DOCX旧记录的具体正统性数值、任务总量不直接采用；终章灾难的实机进度未验证 |
+
+## 离线Wiki与历史地图
+
+- [Mandate of Tsukqiao](https://anbennar.fandom.com/wiki/Mandate_of_Tsukqiao)：`lang=en`，`title=Mandate of Tsukqiao`，`section=Mandate of Tsukqiao`，`page_id=5786`，`revision_id=30823`；已读 `anbennar-offline/output/chunks/en/md/5786/001-01-Mandate of Tsukqiao.md` 与 `001-02-Mandate of Tsukqiao.md`。支持1197年雄氏控制Tiaochi、玉税、宦官和王朝伪史传统。页面记述的1453年边方征服是Wiki历史线，不能写成1444开局后玩家必然结局。
+- [Eternal Council of Jinqiu](https://anbennar.fandom.com/wiki/Eternal_Council_of_Jinqiu)：`lang=en`，`title=Eternal Council of Jinqiu`，`section=Eternal Council of Jinqiu`，`page_id=2782`，`revision_id=31506`，已读 `anbennar-offline/output/chunks/en/md/2782/001-01-Eternal Council of Jinqiu.md`；只用作锦秋宗教／统治背景，不推导蹴桥宗属起止年。
+- [Kingdom of Bianfang](https://anbennar.fandom.com/wiki/Kingdom_of_Bianfang)：`lang=en`，`title=Kingdom of Bianfang`，`section=Kingdom of Bianfang`，`page_id=4835`，`revision_id=32561`，已读 `anbennar-offline/output/chunks/en/md/4835/001-01-Kingdom of Bianfang.md`；页面未提供可独立确认蹴桥征服过程的细节。
+- 中文离线查询蹴桥／Tsukqiao无命中：`OFFLINE_WIKI_NO_RESULT`。这只表示本地快照此次检索无可用中文页面。
+- [哈兰历史地图 `eu4:Z60`](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AZ60) 状态 `in_progress`。记录 `ca09-text-hl26-ys-bianfang-jinqiu-1453` 指向固定Wiki原件 `manual:hl26-census-wiki-5786-30823`（本地 `docs/research/haless-library-20260921/wiki-census/wiki-5786-30823.wikitext`）；`hlm26-bc-ys-jinqiu-tsuk-bianfang-1453` 的八省包络明确是 `hypothesis`、`historicalFact=false`。中间年份疆界和Vic3投影未采用为EU4正史。
+
+## Reddit读取范围
+
+- [EU4 Dev Diary #105: Masked Intentions](https://www.reddit.com/r/Anbennar/comments/1qyf11i/eu4_dev_diary_105_masked_intentions/)，2026-02-07，`TheForsaken-Anb`，读取正文 Tsukqiao 专节；属直接相关官方开发日志，支持当时雄氏谎言、面具、正统性和北岭复兴设计。当前实装另由本地脚本核验。未发现正文实质介绍该国的独立发布公告。
+- [ATTENTION SUBJECTS OF GREAT LUZHONG...](https://www.reddit.com/r/Anbennar/comments/1twc2kt/attention_subjects_of_great_luzhong_your/)，2026-06-04，读取主帖及相关评论；2026-05-08更新后的玩家体验，无精确补丁号。称正统性玩法有趣，但后期有等待事件的空档。
+- [It&#x27;s fine I&#x27;m fine](https://www.reddit.com/r/Anbennar/comments/1u1dl55/its_fine_im_fine/)，2026-06-09，读取主帖及首层评论；同为更新后玩家体验，无精确补丁号。称赞奇迹建设和终局灾难，不能据此断言当前版本每条灾难路径均可完成。
+
+## 待核实
+
+Wiki王朝谱系带伪史问题；宗属关系的具体起止、终章灾难的实机完成情况及玩家帖所涉精确补丁仍待核实。DOCX旧计划与当前任务文件有长度口径差异，正文不写固定总数。价值分将北岭自主与公共建设计入正面，将具体掠取、恐惧治理与历史欺骗计入负面；扩张、统一和集权本身不改变价值分。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Z60 / Z60_ideas`：`mod/common/ideas/anb_country_ideas.txt:47391-47438`；身份筛选结果：`identity_filter_matches`。
+- `V23 / V23_ideas`：`mod/common/ideas/anb_country_ideas.txt:47576-47620`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

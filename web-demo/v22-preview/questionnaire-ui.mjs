@@ -1,5 +1,7 @@
 // P2 UI converts completed scenarios into a P1-compatible five-axis vector.
 import {AXES} from "./scoring.mjs";
+import {english,t,labelForAxis} from "./i18n.mjs";
+import {PERSONALITY_EN} from "./question-translations.mjs";
 import {QUESTIONNAIRE_VERSION,QUESTIONS,CHOICES,answeredCount,
   calculateVector,axisConsistency,hydrateAnswers} from "./questionnaire-v22.mjs";
 
@@ -21,8 +23,8 @@ export function createQuestionnaireUI({onComplete}){
   }
   function progress(){
     const done=answeredCount(answers);
-    $("questionPosition").textContent="第 "+(current+1)+" / "+QUESTIONS.length+" 题";
-    $("questionAnswered").textContent="已作答 "+done+" / "+QUESTIONS.length;
+    $("questionPosition").textContent=english() ? t("question.position")+" "+(current+1)+" / "+QUESTIONS.length : "第 "+(current+1)+" / "+QUESTIONS.length+" 题";
+    $("questionAnswered").textContent=english() ? t("question.answered")+" "+done+" / "+QUESTIONS.length : "已作答 "+done+" / "+QUESTIONS.length;
     $("questionProgressFill").style.width=(100*done/QUESTIONS.length)+"%";
     $("questionProgressFill").parentElement.setAttribute("aria-valuenow",String(done));
     $("questionCalculate").disabled=done!==QUESTIONS.length;
@@ -32,17 +34,19 @@ export function createQuestionnaireUI({onComplete}){
   }
   function render(){
     const q=QUESTIONS[current],old=answers[q.id];
+    const translated=english()?PERSONALITY_EN[q.id]:null;
+    const text=translated?{prompt:translated[0],left:translated[1],right:translated[2]}:q;
     $("questionBody").innerHTML=
-      '<legend class="sr-only">第 '+(current+1)+' 题</legend>'+
+      '<legend class="sr-only">'+esc(t("question.position","第"))+' '+(current+1)+'</legend>'+
       '<p class="question-context"><span class="small-cap">QUESTION '+String(current+1).padStart(2,"0")+
-      ' / 25</span> <span class="muted">假设你负责制定国家的长期方针</span></p>'+
-      '<h3 id="questionPrompt">'+esc(q.prompt)+'</h3>'+
-      '<div class="question-poles"><section><small>方案 A</small><p>'+esc(q.left)+
-      '</p></section><section><small>方案 B</small><p>'+esc(q.right)+
+      ' / 25</span> <span class="muted">'+esc(t("question.context","假设你负责制定国家的长期方针"))+'</span></p>'+
+      '<h3 id="questionPrompt">'+esc(text.prompt)+'</h3>'+
+      '<div class="question-poles"><section><small>'+esc(t("question.optionA","方案 A"))+'</small><p>'+esc(text.left)+
+      '</p></section><section><small>'+esc(t("question.optionB","方案 B"))+'</small><p>'+esc(text.right)+
       '</p></section></div><div class="response-options" role="radiogroup" aria-labelledby="questionPrompt">'+
       CHOICES.map((label,value)=>'<label class="response-option'+
         (old===value?" chosen":"")+'"><input type="radio" name="questionResponse" value="'+
-        value+'"'+(old===value?" checked":"")+'><span>'+esc(label)+"</span></label>").join("")+
+        value+'"'+(old===value?" checked":"")+'><span>'+esc(t("choices."+value,label))+"</span></label>").join("")+
       "</div>";
     $("questionBody").querySelectorAll("input[name=questionResponse]").forEach(input=>{
       input.addEventListener("change",()=>{
@@ -66,23 +70,22 @@ export function createQuestionnaireUI({onComplete}){
   function calculate(){
     try{
       if(answeredCount(answers)!==QUESTIONS.length){
-        throw new Error("请先回答全部25题；未回答的题目不会默认为中间值。");
+        throw new Error(t("question.incomplete","请先回答全部25题；未回答的题目不会默认为中间值。"));
       }
       const vector=calculateVector(answers);
       const consistency=axisConsistency(answers);
       const variation=AXES.filter(([key])=>consistency[key].needsReview)
-        .map(([,label])=>label);
-      $("questionSummary").innerHTML='<h3>五维情境偏好结果</h3>'+
+        .map(([key,label])=>labelForAxis(key,label));
+      $("questionSummary").innerHTML='<h3>'+esc(t("question.summary","五维情境偏好结果"))+'</h3>'+
         '<div class="question-vector">'+AXES.map(([key,label])=>
-          '<div><span>'+esc(label)+'</span><strong>'+vector[key]+'</strong></div>').join("")+
-        '</div><p class="fine">每轴5题，各题等权平均并四舍五入为0–100。'+
-        '数值表达题目所覆盖情境中的偏好，不是科学测量的置信区间，也不是国家评分。</p>'+
+          '<div><span>'+esc(labelForAxis(key,label))+'</span><strong>'+vector[key]+'</strong></div>').join("")+
+        '</div><p class="fine">'+esc(t("question.scoreNote","每轴5题，各题等权平均并四舍五入为0–100。数值不是科学测量的置信区间，也不是国家评分。"))+'</p>'+
         (variation.length?
-          '<p class="question-caution">这些维度在不同情境中的答案差别较大：'+
-          esc(variation.join("、"))+'。可以检查原题；这不代表回答错误。</p>':"")+
+          '<p class="question-caution">'+esc(t("question.variation","这些维度在不同情境中的答案差别较大："))+
+          esc(variation.join("、"))+'。'+esc(t("question.variationNote","可以检查原题；这不代表回答错误。"))+'</p>':"")+
         '<p class="fine">已将五轴向量应用于当前的匹配地区；下方结果仍采用P1等权距离与原发展线去重。</p>';
       $("questionSummary").classList.remove("hidden");
-      $("questionValidation").textContent="问卷已完成，正在使用 P0 已验收的国家画像计算匹配。";
+      $("questionValidation").textContent=t("question.completed","问卷已完成，正在使用 P0 已验收的国家画像计算匹配。");
       onComplete(vector,{
         version:QUESTIONNAIRE_VERSION,answers:{...answers},
         variation,
@@ -100,7 +103,7 @@ export function createQuestionnaireUI({onComplete}){
   $("questionCalculate").addEventListener("click",calculate);
   $("questionClear").addEventListener("click",()=>{
     answers={};current=0;persist();
-    $("questionValidation").textContent="答卷已清空，请重新作答。";
+    $("questionValidation").textContent=t("question.cleared","答卷已清空，请重新作答。");
     $("questionSummary").classList.add("hidden");
     render();
   });

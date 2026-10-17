@@ -12,178 +12,179 @@
     <header class="mast">
       <div>
         <p class="eyebrow">ANBENNAR · COUNTRY PERSONALITY · V2.2 / P2 DRAFT</p>
-        <h1>哪条国家发展线，与你最契合？</h1>
-        <p class="lead">人格与剧情偏好预览：109 国共同基线与 57 条有明确条件的国家画像。用五个维度探索不同国家的愿景与制度，不混入旧版玩法或价值评分。</p>
+        <h1 data-i18n="site.title">哪条国家发展线，与你最契合？</h1>
+        <p class="lead" data-i18n="site.lead">人格与剧情偏好预览：109 国共同基线与 57 条有明确条件的国家画像。用五个维度探索不同国家的愿景与制度，不混入旧版玩法或价值评分。</p>
         <div class="facts">
-          <span><strong>109</strong> 国基线</span><span><strong>57</strong> 条条件画像</span>
-          <span><strong>Top 5</strong> 不同发展线</span>
+          <span><strong>109</strong> <span data-i18n="header.baselines">国基线</span></span><span><strong>57</strong> <span data-i18n="header.profiles">条条件画像</span></span>
+          <span><strong>Top 5</strong> <span data-i18n="header.top">不同发展线</span></span>
         </div>
       </div>
-      <div class="edition"><span class="flag">非生产预览</span><a href="../index.html">返回旧版 v0.3 ↗</a><small>未关联游戏存档，不证明条件已达成</small></div>
+      <div class="edition"><label class="locale-select">Language / 语言 <select id="siteLanguage" aria-label="Website language"><option value="zh">中文</option><option value="en">English</option></select></label><span class="flag" data-i18n="site.preview">非生产预览</span><a href="../index.html" data-i18n="site.legacy">返回旧版 v0.3 ↗</a><small data-i18n="site.noSave">未关联游戏存档，不证明条件已达成</small></div>
     </header>
 
-    <nav class="site-tabs" aria-label="站点功能">
-      <a id="navQuiz" class="active" href="./">人格测试</a>
-      <a id="navEncyclopedia" href="?view=encyclopedia">国家百科</a>
-      <a id="navCompare" href="?view=compare">国家对比</a>
+    <nav class="site-tabs" aria-label="站点功能" data-i18n-aria-label="nav.label">
+      <a id="navQuiz" class="active" href="./" data-i18n="nav.quiz">人格测试</a>
+      <a id="navEncyclopedia" href="?view=encyclopedia" data-i18n="nav.encyclopedia">国家百科</a>
+      <a id="navCompare" href="?view=compare" data-i18n="nav.compare">国家对比</a>
     </nav>
     <div id="quizView">
     <section class="panel questionnaire-panel" id="questionnairePanel" aria-labelledby="questionnaire-title">
       <div class="section-head">
-        <div><p class="eyebrow">P2 / INTERACTIVE QUESTIONNAIRE</p><h2 id="questionnaire-title">情境问卷 · 25 道题</h2></div>
-        <p class="aside">逐题选择你更倾向的治理方向。五轴各 5 题，均匀计分；未答完不会自动把空题当作中立。</p>
+        <div><p class="eyebrow">P2 / INTERACTIVE QUESTIONNAIRE</p><h2 id="questionnaire-title" data-i18n="quiz.title">情境问卷 · 25 道题</h2></div>
+        <p class="aside" data-i18n="quiz.desc">逐题选择你更倾向的治理方向。五轴各 5 题，均匀计分；未答完不会自动把空题当作中立。</p>
       </div>
-      <p class="fine">此题库是 P2 的可交互、可审查版本，尚未经真实玩家样本验证。它评估你在假设情境中的国家治理偏好，不评价道德，不代表临床人格测验。</p>
+      <p class="fine" data-i18n="quiz.fullNote">此题库是 P2 的可交互、可审查版本，尚未经真实玩家样本验证。它评估你在假设情境中的国家治理偏好，不评价道德，不代表临床人格测验。</p>
       <div class="question-progress">
         <span id="questionPosition" aria-live="polite">第 1 / 25 题</span>
         <strong id="questionAnswered">已作答 0 / 25</strong>
-        <div class="progress-track" role="progressbar" aria-label="已完成题数" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0"><i id="questionProgressFill"></i></div>
+        <div class="progress-track" role="progressbar" aria-label="已完成题数" data-i18n-aria-label="quiz.progressLabel" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0"><i id="questionProgressFill"></i></div>
       </div>
-      <fieldset id="questionBody" class="question-body"><legend class="sr-only">当前情境题</legend></fieldset>
+      <fieldset id="questionBody" class="question-body"><legend class="sr-only" data-i18n="quiz.current">当前情境题</legend></fieldset>
       <p id="questionValidation" role="status" class="fine" aria-live="polite"></p>
       <div class="form-actions questionnaire-actions">
-        <button id="questionPrev" type="button" class="secondary">上一题</button>
-        <button id="questionNext" type="button" class="secondary">下一题</button>
-        <button id="questionFirstUnanswered" type="button" class="secondary">前往未答题</button>
-        <button id="questionCalculate" type="button" class="primary" disabled>生成五轴人格并匹配</button>
-        <button id="questionClear" type="button" class="secondary">清空答卷</button>
+        <button id="questionPrev" type="button" class="secondary" data-i18n="quiz.previous">上一题</button>
+        <button id="questionNext" type="button" class="secondary" data-i18n="quiz.next">下一题</button>
+        <button id="questionFirstUnanswered" type="button" class="secondary" data-i18n="quiz.unanswered">前往未答题</button>
+        <button id="questionCalculate" type="button" class="primary" disabled data-i18n="quiz.calculate">生成五轴人格并匹配</button>
+        <button id="questionClear" type="button" class="secondary" data-i18n="quiz.clear">清空答卷</button>
       </div>
       <div id="questionSummary" class="question-summary hidden" aria-live="polite"></div>
-      <p class="fine">答卷仅保存在当前浏览器会话中以便刷新恢复；不会自动发送或上传。完成后与下方手动五轴测试共用同一 P1 匹配引擎和地区过滤。</p>
+      <p class="fine" data-i18n="quiz.storageNote">答卷仅保存在当前浏览器会话中以便刷新恢复；不会自动发送或上传。完成后与下方手动五轴测试共用同一 P1 匹配引擎和地区过滤。</p>
     </section>
 
     <section class="panel preference-panel" id="preferencePanel" aria-labelledby="pref-title">
       <div class="section-head">
-        <div><p class="eyebrow">FINAL / STORY & PLAYSTYLE</p><h2 id="pref-title">最后：剧情价值与玩法条件</h2></div>
-        <p class="aside">不是测量你现实中的善恶。这里问的是你愿意扮演怎样的虚构国家，包括黑暗领域、佐迦这类极端路线。</p>
+        <div><p class="eyebrow">FINAL / STORY & PLAYSTYLE</p><h2 id="pref-title" data-i18n="values.title">最后：剧情价值与玩法条件</h2></div>
+        <p class="aside" data-i18n="values.desc">不是测量你现实中的善恶。这里问的是你愿意扮演怎样的虚构国家，包括黑暗领域、佐迦这类极端路线。</p>
       </div>
-      <label class="value-toggle"><input type="checkbox" id="useValues" checked> 启用剧情价值取向匹配（额外8题）</label>
-      <p class="fine">这是单独的 v2.1 国家价值资料，仅用于推荐偏好，不会改写已验收的 v2.2 五轴国家人格或故事阶段分数。回答全部8题后才启用；也可关闭后只按五轴匹配。</p>
+      <label class="value-toggle"><input type="checkbox" id="useValues" checked> <span data-i18n="values.enable">启用剧情价值取向匹配（额外8题）</span></label>
+      <p class="fine" data-i18n="values.fullNote">这是单独的 v2.1 国家价值资料，仅用于推荐偏好，不会改写已验收的 v2.2 五轴国家人格或故事阶段分数。回答全部8题后才启用；也可关闭后只按五轴匹配。</p>
       <p id="valueAnswered" class="fine" aria-live="polite">价值剧情选择：0 / 8</p>
       <div id="valueQuestionList"></div>
-      <div class="section-head"><div><p class="eyebrow">FILTERS & PREFERENCES</p><h3>最终筛选与玩法强度</h3></div><p class="aside">地区和重度殖民使用明确筛选条件；难度、压力和黑暗叙事使用偏好距离，而不是未经核实的硬性排除。</p></div>
+      <div class="section-head"><div><p class="eyebrow">FILTERS & PREFERENCES</p><h3 data-i18n="filters.title">最终筛选与玩法强度</h3></div><p class="aside" data-i18n="filters.desc">地区和重度殖民使用明确筛选条件；难度、压力和黑暗叙事使用偏好距离，而不是未经核实的硬性排除。</p></div>
       <div class="final-filters">
-        <label>限定国家地区
+        <label><span data-i18n="filters.region">限定国家地区</span>
           <select id="finalRegion" disabled><option value="">全部地区（109国）</option></select>
         </label>
-        <label>是否包含重度殖民玩法
+        <label><span data-i18n="filters.colonization">是否包含重度殖民玩法</span>
           <select id="pref-colonization">
-            <option value="any">不限</option>
-            <option value="heavy">希望是重度殖民玩法（殖民评分至少70）</option>
-            <option value="avoid">避免重度殖民玩法（殖民评分不超过69）</option>
+            <option value="any" data-i18n="option.any">不限</option>
+            <option value="heavy" data-i18n="option.heavy">希望是重度殖民玩法（殖民评分至少70）</option>
+            <option value="avoid" data-i18n="option.avoid">避免重度殖民玩法（殖民评分不超过69）</option>
           </select>
         </label>
-        <label>你希望体验的国家游玩难度
+        <label><span data-i18n="filters.difficulty">你希望体验的国家游玩难度</span>
           <select id="pref-difficulty">
-            <option value="any">不限</option>
-            <option value="relaxed">较轻松（目标25）</option>
-            <option value="moderate">中等挑战（目标55）</option>
-            <option value="hard">高难挑战（目标90）</option>
+            <option value="any" data-i18n="option.any">不限</option>
+            <option value="relaxed" data-i18n="option.relaxed">较轻松（目标25）</option>
+            <option value="moderate" data-i18n="option.moderate">中等挑战（目标55）</option>
+            <option value="hard" data-i18n="option.hard">高难挑战（目标90）</option>
           </select>
         </label>
-        <label>你能接受的前期压力
+        <label><span data-i18n="filters.pressure">你能接受的前期压力</span>
           <select id="pref-early_pressure">
-            <option value="any">不限</option>
-            <option value="low">尽量低（目标20）</option>
-            <option value="moderate">适中（目标55）</option>
-            <option value="high">高压开局也很有趣（目标90）</option>
+            <option value="any" data-i18n="option.any">不限</option>
+            <option value="low" data-i18n="option.lowPressure">尽量低（目标20）</option>
+            <option value="moderate" data-i18n="option.mediumPressure">适中（目标55）</option>
+            <option value="high" data-i18n="option.highPressure">高压开局也很有趣（目标90）</option>
           </select>
         </label>
-        <label>你希望体验的黑暗叙事程度
+        <label><span data-i18n="filters.dark">你希望体验的黑暗叙事程度</span>
           <select id="pref-dark_story">
-            <option value="any">不限</option>
-            <option value="light">较轻（目标15）</option>
-            <option value="mixed">灰暗与明亮并存（目标55）</option>
-            <option value="dark">非常黑暗也可以（目标95）</option>
+            <option value="any" data-i18n="option.any">不限</option>
+            <option value="light" data-i18n="option.light">较轻（目标15）</option>
+            <option value="mixed" data-i18n="option.mixed">灰暗与明亮并存（目标55）</option>
+            <option value="dark" data-i18n="option.dark">非常黑暗也可以（目标95）</option>
           </select>
         </label>
       </div>
       <div class="form-actions">
-        <button type="button" class="primary" id="applyPreferences">应用完整偏好并重新匹配</button>
-        <button type="button" class="secondary" id="clearValueAnswers">清空8道价值题答案</button>
+        <button type="button" class="primary" id="applyPreferences" data-i18n="filters.apply">应用完整偏好并重新匹配</button>
+        <button type="button" class="secondary" id="clearValueAnswers" data-i18n="filters.clear">清空8道价值题答案</button>
       </div>
       <p id="preferenceStatus" class="fine" role="status" aria-live="polite">完成五轴问卷、价值剧情取向和玩法设置后应用。</p>
-      <p class="fine">地区依据原国家 owner_tag；后继国家仍属原发展线。价值观与玩法评分沿用国家百科已有编辑性数据，不代表游戏难度经过实机量化验证。严格筛选可能使结果少于5国。</p>
+      <p class="fine" data-i18n="filters.note">地区依据原国家 owner_tag；后继国家仍属原发展线。价值观与玩法评分沿用国家百科已有编辑性数据，不代表游戏难度经过实机量化验证。严格筛选可能使结果少于5国。</p>
     </section>
 
     <section class="panel inputs" aria-labelledby="input-title">
       <div class="section-head">
-        <div><p class="eyebrow">01 / PERSONALITY VECTOR</p><h2 id="input-title">匹配地区与五轴数值校验</h2></div>
-        <p class="aside">问卷完成后自动把结果填入此处；也可以直接输入 0–100 整数模拟人格，以复核 P1 原排序。</p>
+        <div><p class="eyebrow">01 / PERSONALITY VECTOR</p><h2 id="input-title" data-i18n="vector.title">匹配地区与五轴数值校验</h2></div>
+        <p class="aside" data-i18n="vector.desc">问卷完成后自动把结果填入此处；也可以直接输入 0–100 整数模拟人格，以复核 P1 原排序。</p>
       </div>
       <form id="vectorForm">
-        <label class="region-select-label" for="matchRegion">匹配地区（评分表分区）
+        <label class="region-select-label" for="matchRegion"><span data-i18n="vector.region">匹配地区（评分表分区）</span>
           <select id="matchRegion" disabled><option value="">全部地区（109国）</option></select>
         </label>
         <div id="axisInputs" class="axis-inputs"></div>
         <div class="form-actions">
-          <button type="submit" class="primary" id="runBtn" disabled>计算 Top 5 匹配</button>
-          <button type="button" id="randomBtn" class="secondary">随机模拟</button>
-          <button type="button" id="resetBtn" class="secondary">恢复中间值</button>
+          <button type="submit" class="primary" id="runBtn" disabled data-i18n="vector.run">计算 Top 5 匹配</button>
+          <button type="button" id="randomBtn" class="secondary" data-i18n="vector.random">随机模拟</button>
+          <button type="button" id="resetBtn" class="secondary" data-i18n="vector.reset">恢复中间值</button>
         </div>
       </form>
-      <p class="fine">魔法—奇械衡量方向，不衡量魔法或奇械的使用强度。多元整合衡量制度方式，不代表善恶。所有分数为研究编辑性人格尺度。</p>
+      <p class="fine" data-i18n="vector.note">魔法—奇械衡量方向，不衡量魔法或奇械的使用强度。多元整合衡量制度方式，不代表善恶。所有分数为研究编辑性人格尺度。</p>
     </section>
 
     <section id="notice" class="notice" role="status" aria-live="polite">正在读取经 P0 验收的 v2.2 预览数据…</section>
 
     <section id="results" class="hidden" aria-labelledby="results-title">
-      <div class="section-head"><div><p class="eyebrow">02 / TOP FIVE</p><h2 id="results-title">最匹配的五条国家发展线</h2></div>
-      <p class="aside">每条国家发展线仅占一个名额。组内可能是国家共同基线，也可能是某个带条件的后期状态。</p></div>
+      <div class="section-head"><div><p class="eyebrow">02 / TOP FIVE</p><h2 id="results-title" data-i18n="results.title">最匹配的五条国家发展线</h2></div>
+      <p class="aside" data-i18n="results.desc">每条国家发展线仅占一个名额。组内可能是国家共同基线，也可能是某个带条件的后期状态。</p></div>
       <div id="resultCards" class="result-list"></div>
-      <p class="fine">基础匹配保持 v2.2 五轴等权距离。启用价值/玩法后显示明确的分项与混合相似度：这是推荐偏好分数，不是历史准确率或国家现实道德判定。未满足的条件画像仅作为假设性匹配对象。</p>
+      <p class="fine" data-i18n="results.note">基础匹配保持 v2.2 五轴等权距离。启用价值/玩法后显示明确的分项与混合相似度：这是推荐偏好分数，不是历史准确率或国家现实道德判定。未满足的条件画像仅作为假设性匹配对象。</p>
     </section>
 
     <section class="panel explorer" aria-labelledby="catalog-title">
-      <div class="section-head"><div><p class="eyebrow">03 / RESEARCH CATALOG</p><h2 id="catalog-title">国家与条件画像档案</h2></div><p class="aside">直接查阅全部 109 国，以及每国所有已评分条件。保留路线、任务前提、Tag 和证据引用。</p></div>
-      <div class="catalog-toolbar">
-        <label for="countrySearch">搜索国家名 / Tag<input id="countrySearch" type="search" placeholder="如 Z18、格罗姆巴尔、F42"></label>
-        <label for="countrySelect">选择研究发展线<select id="countrySelect" disabled><option>数据加载中…</option></select></label>
+      <div class="section-head"><div><p class="eyebrow">03 / RESEARCH CATALOG</p><h2 id="catalog-title" data-i18n="catalog.title">国家与条件画像档案</h2></div><p class="aside" data-i18n="catalog.desc">直接查阅全部 109 国，以及每国所有已评分条件。保留路线、任务前提、Tag 和证据引用。</p></div>
+      <div class="catalog-toolbar country-search-toolbar">
+        <label for="countrySearch"><span data-i18n="catalog.search">搜索国家中文名、英文名或 Tag</span>
+          <span class="country-search-field"><input id="countrySearch" type="text" placeholder="输入中文名、English name 或 F42" data-i18n-placeholder="catalog.search"></span>
+        </label>
+        <p class="fine" data-i18n="catalog.help">输入后从下拉候选选择国家，查看其已批准的共同基线与条件画像（109 国）。</p>
       </div>
       <div id="catalogDetail" class="catalog-detail"></div>
     </section>
 
     </div>
-    <section id="encyclopediaView" class="hidden" aria-label="国家百科">
+    <section id="encyclopediaView" class="hidden" aria-label="国家百科" data-i18n-aria-label="encyclopedia.label">
       <div id="encyclopediaDirectory">
-        <div class="section-head"><div><p class="eyebrow">THE COUNTRY ENCYCLOPEDIA · V2.2</p><h2>按地区浏览国家百科</h2></div>
-        <p class="aside">目前收录109国；地区采用项目2026年任务树评分表分区，并非模组地图的省份分区。</p></div>
+        <div class="section-head"><div><p class="eyebrow">THE COUNTRY ENCYCLOPEDIA · V2.2</p><h2 data-i18n="encyclopedia.title">按地区浏览国家百科</h2></div>
+        <p class="aside" data-i18n="encyclopedia.desc">目前收录116国；地区采用项目2026年任务树评分表分区，并非模组地图的省份分区。</p></div>
         <div class="panel">
           <div class="catalog-toolbar">
-            <label>国家百科分区<select id="encyclopediaRegion" disabled><option value="">全部地区（109国）</option></select></label>
-            <label>搜索中文名、英文名或国家Tag<input id="encyclopediaSearch" type="search" placeholder="例如：塞纳、Cenág、I29"></label>
+            <label><span data-i18n="encyclopedia.region">国家百科分区</span><select id="encyclopediaRegion" disabled><option value="">全部地区（109国）</option></select></label>
+            <label for="encyclopediaSearch"><span data-i18n="encyclopedia.search">搜索中文名、英文名或国家 Tag</span>
+              <span class="country-search-field"><input id="encyclopediaSearch" type="text" placeholder="输入塞纳、Cenág 或 I29" data-i18n-placeholder="encyclopedia.search"></span>
+            </label>
           </div>
           <p id="directorySummary" class="fine"></p>
-          <button id="regionToQuiz" class="secondary region-test-link">只匹配本地区国家 ↗</button>
+          <button id="regionToQuiz" class="secondary region-test-link" data-i18n="encyclopedia.regionQuiz">只匹配本地区国家 ↗</button>
         </div>
         <div id="encyclopediaCards" class="encyclopedia-cards"></div>
       </div>
       <article id="encyclopediaDetail" class="hidden" aria-live="polite"></article>
     </section>
-    <section id="comparisonView" class="hidden" aria-label="国家横向比较">
+    <section id="comparisonView" class="hidden" aria-label="国家横向比较" data-i18n-aria-label="compare.label">
       <div class="section-head">
-        <div><p class="eyebrow">COUNTRY COMPARISON · V2.3.2</p><h2>国家横向比较</h2></div>
-        <p class="aside">从116国百科中选择2–3国；对比现有五轴人格、发展分支、国家理念与玩法评价，不新增排名模型。</p>
+        <div><p class="eyebrow">COUNTRY COMPARISON · V2.3.2</p><h2 data-i18n="compare.title">国家横向比较</h2></div>
+        <p class="aside" data-i18n="compare.desc">从116国百科中选择2–3国；对比现有五轴人格、发展分支、国家理念与玩法评价，不新增排名模型。</p>
       </div>
       <div class="panel comparison-controls">
         <p id="comparisonCount" class="fine">正在加载国家目录…</p>
-        <div id="comparisonSelected" class="comparison-tags" aria-label="已选择的国家"></div>
-        <div class="catalog-toolbar">
-          <label for="comparisonSearch">搜索国家中文名、英文名或 Tag
-            <input id="comparisonSearch" type="search" placeholder="例如 G64、拉兰卡尔、Larankar">
+        <div id="comparisonSelected" class="comparison-tags" aria-label="已选择的国家" data-i18n-aria-label="compare.selected"></div>
+        <div class="catalog-toolbar country-search-toolbar">
+          <label for="comparisonSearch"><span data-i18n="catalog.search">搜索国家中文名、英文名或 Tag</span>
+            <span class="country-search-field"><input id="comparisonSearch" type="text" placeholder="输入 G64、拉兰卡尔或 Larankar" data-i18n-placeholder="compare.search"></span>
           </label>
-          <label for="comparisonCandidate">选择国家
-            <select id="comparisonCandidate" disabled><option>正在加载…</option></select>
-          </label>
+          <p class="fine" data-i18n="compare.help">选择下拉候选即可加入比较，最多 3 国。</p>
         </div>
-        <div class="form-actions"><button id="comparisonAdd" type="button" class="primary" disabled>加入比较</button></div>
         <p id="comparisonMessage" class="fine" role="status" aria-live="polite"></p>
       </div>
       <div id="comparisonResult" aria-live="polite"></div>
     </section>
     <footer class="footer">
-      <p>数据来源：PR #9 已验收 v2.2 实用人格评分 · 源提交 <code id="sourceCommit">—</code></p>
-      <p>仅供 UI 与匹配体验验证；不更改现有 v2.1 国家人格、玩法、价值评分和生产站点。</p>
+      <p><span data-i18n="footer.source">数据来源：PR #9 已验收 v2.2 实用人格评分 · 源提交</span> <code id="sourceCommit">—</code></p>
+      <p data-i18n="footer.fullNote">仅供 UI 与匹配体验验证；不更改现有 v2.1 国家人格、玩法、价值评分和生产站点。</p>
     </footer>
   </main>
   <script type="module" src="./app.mjs"></script>

@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/弗恩-A33.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 弗恩（A33）精简证据页
+
+核验日期：2026-09-26。本体与汉化均支持`v1.37.5.0`；本地结构化库`doctor.py`报告`status=ok`，使用的Workshop manifest为`1385440355=2812922911103828520`、`2818493730=7518363337005727349`。当前任务文件修改时间：2026-07-09。以下本体相对路径均接在`[local source path omitted]`，汉化接在同位置的`2818493730/`。
+
+## 身份、任务与判断边界
+
+| 项目 | 结论 | 证据与边界 |
+|---|---|---|
+| 身份 | Verne／弗恩／A33，1444帝国公国 | `history/countries/A33 - Verne.txt:1-55`；汉化`localisation/anb_countries_l_english.yml:66` |
+| 敌友与统治者 | 阿尔瓦四世；历史宿敌A11珍珠边地、友邦A47埃博蒂尔 | 当前历史脚本；不是战争结果保证 |
+| 任务 | 48项A33直接任务，`missions/Verne_Missions.txt:1-4899` | 结构化索引计数；不把事件数加进任务数 |
+| 飞龙 | 任务后期启用飞龙神话骑兵，需法师与巢穴准备 | `missions/Verne_Missions.txt:4058-4400`；不是开局兵种 |
+| 新弗恩 | 殖民属国可覆盖名称为New Verne | `missions/Verne_Missions.txt:1920-1965`；A33自身不换Tag |
+| 道德 | 中立62／100 | 废奴、遗民容忍与反压迫理想，对照殖民、战争与宗教改造；评价性结论 |
+
+## 当前本地原件
+
+- `common/country_tags/anb_countries.txt`的A33标签、`history/countries/A33 - Verne.txt:1-55`及两版`localisation/anb_countries_l_english.yml:66`交叉确认身份与中文名。后两者分别解码为`Verne`与`弗恩`。A11与A47汉化分别为“珍珠边地”“埃博蒂尔”。
+- `localisation/anb_powers_and_ideas_l_english.yml:405-417`：王国旧梦、飞龙失传、海权、冒险者和后世纪年。1461年的阿尔瓦宣言表达“将恢复”而非已完成；Wiki另记1504年复兴。理念中的1519、1523、1553、1648、1675年等后世叙述，不是本局任务触发的保证日期。
+- `missions/Verne_Missions.txt:1-4899`：A33任务组与48项直接任务。代表节点：阿尔瓦改革`:992-1102`，跨海`:1232-1491`，新弗恩殖民属国`:1900-1970`，科琳教路线`:2531-2625`，帝国与王冠联合`:3271-3698`，飞龙巢穴和神话骑兵`:4058-4400`，后期奇械`:4856-4899`。这只用于历史／风格核对，未逐项审计奖励。
+- `missions/Verne_Missions.txt:1466-1483`：永久废奴措施、移除奴隶贸易相关效果，同时解锁冒险系统；`:2660-2758`提升遗民容忍；`:1950-1963`含殖民省份科琳教改宗。道德评分取舍基于这些直接行为，而非理想口号。
+- `decisions/VerneDecisions.txt:2-41,43-562`：飞龙骑士招募与跨区域指定地点探险决议；`events/Flavour_Verne_A33.txt:181-349,755-773`：飞龙骑手生成及博览馆探险队功能。任务`:4270-4325`有`enable_mythical_cavalry = { mount = wyvern }`和法师资源不足时的长期负债修正。
+- 本地DOCX镜像`安本纳尔/skills/anbennar-country-guide/references/documents/已实装任务树存档.md:593-633`记录弗恩“重做”设计；现行脚本已证实主轴，但DOCX的任务预估约40项不可替换现行48项。旧推荐文档`:189-204`描述旧树“简单、纯数值”，不能用于新版定稿。
+
+## 离线英文Wiki与哈兰历史地图
+
+离线Wiki健康状态为`ok`。已读取以下英文Markdown正文；它们支持前史，不决定现行机制：
+
+1. [Duchy of Verne](https://anbennar.fandom.com/wiki/Duchy_of_Verne)：`page_id=654; revision_id=31908; lang=en`。`anbennar-offline/output/chunks/en/md/654/018-01-Founding.md`记1207年由王国改制、1257年脱离达梅里亚；`.../019-01-[Lilac Wars](_wiki_Lilac_Wars _Lilac Wars_).md`记与西尔穆纳、月派及埃博蒂尔合作；完整阅读页`anbennar-offline/output/en/markdown/Duchy of Verne__2a1da7e1.md`还记飞龙骑术复兴与冒险者后史。
+2. [Kingdom of Verne](https://anbennar.fandom.com/wiki/Kingdom_of_Verne)：`page_id=4929; revision_id=30766; lang=en; local_source=anbennar-offline/output/chunks/en/md/4929/001-01-Kingdom of Verne.md`。记阿尔莫克一世先驯龙、479年建国及1207年王国结束。长王朝史存在文本瑕疵，本条只取主线。
+3. [Lilac Wars](https://anbennar.fandom.com/wiki/Lilac_Wars)：`page_id=169; revision_id=32900; lang=en; local_source=anbennar-offline/output/chunks/en/md/169/006-01-Result.md`。用于战争整体结果语境，未以该页推断本局战果。
+
+[哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)的`eu4:A33`为`in_progress`，关注阿尔瓦四世、帝国宗教与后世边界。其指向的当前本地理念、任务和事件原件已回读；目录所列PPTX、wikitext等不在当前工作区，不把未取得原件的节点或跨游戏推演当作既成史实。站点2026-09-23首发研究快照的地位是二手线索。
+
+## 官方材料与两篇玩家帖
+
+- [EU4 Dev Diary #91 – Anbennar Means Unity](https://www.reddit.com/r/Anbennar/comments/1laf26k/eu4_dev_diary_91_anbennar_means_unity/)（2025-06-13，正文L23-24、L53-60）：《最终帝国》前瞻，谈弗恩重做、第四次紫丁香战争后的复兴、飞龙与跨海故事；属于设计语境。
+- [Fires of Conviction Release](https://www.reddit.com/r/Anbennar/comments/1he79o3/fires_of_conviction_release/)（2024-12-14，正文L24-26、L45-54）：发布当时重做的弗恩国家理念，不等于完整任务树已经发布。
+- [The Final Empire is out NOW!](https://www.reddit.com/r/Anbennar/comments/1lshhva/the_final_empire_is_out_now/)（2025-07-05，正文L17-28、L36-46）：正式公告将新版弗恩任务树列为已发布；现行内容仍以本地文件为准。
+- [So you wanna… | A Guide to Verne](https://www.reddit.com/r/Anbennar/comments/1q0i04d/so_you_wanna_a_guide_to_verne/)（2025-12-31，正文L21-79、L100-112、L167-192、L242-300、L328-350）：长攻略，谈资金压力和多线规划；作者使用Responsible Warfare、Ages Expanded、更多理念槽、GitLab分支和存档回滚，数值不可照搬。
+- [First Impressions on New Vern’s MT](https://www.reddit.com/r/Anbennar/comments/1luj0lz/first_impressions_on_new_verns_mt/)（2025-07-08，正文L17-40）：新版Steam任务树约玩到1510年的初期体验，认为早期花费高、飞龙出现较晚；不是完整战役评测。
+
+## 同轮自检
+
+身份与中文名、48项任务、A33自身与殖民属国“新弗恩”的边界、1444摄政王庭与后期科琳教、古代王国与任务未来均已分开。人格与道德评分有本地脚本理由；社区帖只影响手感判断。未进行实机游玩和完整任务奖励审计。
+
+## 最新Skill复查状态（2026-09-26）
+
+地图`eu4:A33`先前只作沿革目录，未取得的PPTX／wikitext仍是不可回读线索；不把殖民路线与宗教分支合并为必然史实。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。涉及子Mod／读档的玩家攻略不提升为当前规则。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `A33 / A33_ideas`：`mod/common/ideas/anb_country_ideas.txt:1208-1250`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

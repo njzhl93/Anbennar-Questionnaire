@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/丰水城-L36.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 丰水城 L36：精简证据与边界
+
+核验日期：2026-10-03。本体Workshop `1385440355`、汉化`2818493730`；两者`descriptor.mod`声明支持EU4 `v1.37.5.0`。本地结构化库`doctor.py`为`ok`，当前manifest与快照一致；引用行号仍指向Workshop原件。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| 身份与1444 | `mod/common/country_tags/anb_countries.txt:707`；`mod/history/countries/L36 - Lelanàn.txt:1-31`；`mod/history/provinces/6599 - Lelanan.txt:3-31` | L36为原生开局神权国家，首都省份拥有圣地、神殿、贸易中心和堡垒。1408是Rangita上任设置，不是1444事件。 |
+| 当前中文名 | `translation/localisation/anb_countries_l_english.yml:1789`；`anbennar-local/tools/query.py country L36 --json` | 解码显示“丰水城”，英文Lelanàn；旧无重音拼法不作当前正式名称。 |
+| 任务及边界 | `mod/missions/Lelanan_Missions.txt:5-1585` | 结构化库与源文件均显示五组、25项直接任务，组的potential均为`tag = L36`。任务愿景不等于1444既成历史。 |
+| 爱与省份仪式 | `mod/common/government_mechanics/anb_lelanan_love.txt:1-21`；`mod/decisions/FahvanosyDecisions.txt:191-243`；`mod/missions/Lelanan_Missions.txt:855-965`；`mod/localisation/Flavour_Lelanan_L36_l_english.yml:464-472` | 资源、决议和行为有当前脚本；实际游玩时的操作成本与收益未实机复核。 |
+| 花香与魔法 | `mod/missions/Lelanan_Missions.txt:12-252,1077-1136`；`translation/localisation/anb_magic_projects_l_english.yml:1306-1309` | Ixora贸易、花田和“分享生命赠礼”是任务路线与项目，不是开局成就。 |
+| 形成关系 | `mod/decisions/WestSarhalFormables.txt:879-945`；`mod/missions/Lelanan_Missions.txt:10,257,697` | L36可满足法瓦诺西形成决议的潜在条件；决议`change_tag = S71`且注释掉`swap_non_generic_missions`。因L36任务组仅限L36，不能声称形成后必有连续专属任务。 |
+| 价值判断 | `mod/localisation/Flavour_Lelanan_L36_l_english.yml:175-178,399,464-472`；`mod/localisation/anb_magic_projects_l_english.yml:1565-1569` | 救济、治疗、接纳多元伴侣和共享生命魔法是加分证据；勒尔独尊是权力集中与多元限制。未以神权、战争或扩张本身直接定善恶。 |
+
+## 离线Wiki与历史地图
+
+离线英文Wiki快照`status=ok`，3735页，快照更新时间`2026-10-01T08:04:33Z`。国家主页面检索状态：`OFFLINE_WIKI_NO_RESULT`。精确检索`Lelanàn`、`Lelanan`、`L36`均无国家主页面；不能把搜索结果当成已读正文。
+
+- [Countries during the Greentide](https://anbennar.fandom.com/wiki/Countries_during_the_Greentide)：`page_id=98`、`revision_id=33088`，已回读`anbennar-offline/output/chunks/en/md/98/001-06-Countries during the Greentide.md`。只在Fahvanosy项下链接“Shrine of Lelanán”；不说明1444制度与建国时间。
+- [Malia síl Chalaal’s Grand Voyage](https://anbennar.fandom.com/wiki/Malia_s%C3%ADl_Chalaal%E2%80%99s_Grand_Voyage)：`page_id=4870`、`revision_id=30997`，已回读`anbennar-offline/output/chunks/en/md/4870/001-02-Malia síl Chalaal’s Grand Voyage.md`。提到来自Lelanàn的Ixora香水；不证明该时点国家规模或当前贸易收益。
+
+本次Wiki没有提供可供哈兰历史地图核对的具体日期，因此未从地图采用额外沿革结论。若未来取得丰水城主页面，需重读原件再补历史，而不是用旧的搜索摘要填空。
+
+## Reddit：开发语境与玩家体验
+
+- 官方[EU4 Dev Diary #108: Freedom! Love! Gambling! Halflings!](https://www.reddit.com/r/Anbennar/comments/1ri7c74/eu4_dev_diary_108_freedom_love_gambling_halflings/)（2026-03-01）在正文直接介绍Lelanàn、Nakavy Avo、Rangita、Kyola、“爱”机制、劳作、爱情故事和魔法项目；发布语境为下一次尚未命名更新，内容可能变化。正文不提供正式版本号，不能作为现行数值证明。未找到第二篇正文实质相关的官方开发公告。
+- 玩家帖[Lelanan review: can a paladin dream of sapphic polycule?](https://www.reddit.com/r/Anbennar/comments/1tgz6l1/lelanan_review_can_a_paladin_dream_of_sapphic/)（2026-05-18）：一次完整游玩称开局相对容易，机制强但移动佣兵、核对省份修正与仪式有操作负担；提到魔法研究和贸易控制门槛。未注明正式版本号或子Mod，不能推断当前平衡。
+- 玩家帖[Lelanan](https://www.reddit.com/r/Anbennar/comments/1tb8m8j/lelanan/)（2026-05-12）：玩家赞赏正面爱情叙事与Kyola角色；评论中作者自称Sapphic Goddess，并谈创作意图。它支持玩家感受和作者自述，不支持任务奖励或国家Tag。未注明正式版本号或子Mod。
+
+## 同轮检查
+
+L36身份、中文名、版本、25项直接任务、1444与任务未来边界、S71可选形成关系已交叉核对。未实机核验形成S71后任务UI如何刷新、Kyola各分支实际出现率、魔法项目完整可达性和具体游戏难度。价值分为模型解释，不是游戏内善恶属性。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `L36 / L36_ideas`：`mod/common/ideas/anb_country_ideas.txt:28446-28484`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

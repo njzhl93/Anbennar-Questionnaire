@@ -1,10 +1,24 @@
 {
-  "version": "v2.3.2",
-  "source_sha": "d9ea0ce9b08d95af4978223ae9ed3982207527c6",
-  "built_at_utc": "2026-10-13T07:51:18.176183Z",
+  "version": "v2.3.5",
+  "source_sha": "567c58efa2f1ed4085cb127ce34d902f76797072",
+  "built_at_utc": "2026-10-17T03:45:16.103204Z",
   "country_count": 116,
   "article_count": 108,
-  "map_count": 83,
+  "content_counts": {
+    "zh-CN": {
+      "countries": 116,
+      "articles": 108
+    },
+    "en": {
+      "countries": 116,
+      "articles": 108
+    }
+  },
+  "map_count": 166,
+  "map_counts": {
+    "zh-CN": 83,
+    "en": 83
+  },
   "flag_count": 160,
   "map_distribution": {
     "project_authorized": true,
@@ -13,13 +27,19 @@
   },
   "adaptations": [
     "root index redirects to web-demo/v22-preview while preserving search and hash",
-    "map display is enabled only after all 83 manifest PNGs are copied and hashed",
+    "map display is enabled only after all 83 Chinese and 83 English manifest PNGs are copied and hashed",
     "region-manifest font.path is normalized to a non-machine identifier; map statuses, predecessors, images, tags, crops and markers are unchanged",
     "local Mod provenance paths are reduced to mod-relative paths and source line offsets are removed",
     "linked project research records are copied as sanitized static source pages"
   ],
-  "sanitized_provenance_fields": 16378,
-  "public_source_navigation_pages": 88,
+  "sanitized_provenance_fields": 32921,
+  "public_source_navigation_pages": {
+    "pages": 128,
+    "rewritten_articles": {
+      "zh-CN": 88,
+      "en": 104
+    }
+  },
   "immutable_git_blob_checks": [
     {
       "path": "web-demo/v22-preview/scoring.mjs",
@@ -43,13 +63,43 @@
     },
     {
       "path": "web-demo/v22-preview/comparison.mjs",
-      "sha256": "a1584b5d0afe09af1810f2d1c850f01a9adbcd92b079d75d72f82ca3b10cf227",
-      "bytes": 12649
+      "sha256": "559c3245c8b2e3fe749c6967b0497d932b59a9e70022492030243ba555b31984",
+      "bytes": 15679
     },
     {
       "path": "web-demo/v22-preview/app.mjs",
-      "sha256": "48b672f486b82c55c1193b93f315974538eb71ac37e751af0ab72519940a90e8",
-      "bytes": 21684
+      "sha256": "d713c89f40a0fe8b3f5cc16e1e26e158a69b10565aa3c0e33fc656be177a21f3",
+      "bytes": 25793
+    },
+    {
+      "path": "web-demo/v22-preview/country-search.mjs",
+      "sha256": "e9cfcf453a7cf0b96c1c7cacdf90b6deb75981e725a7ea9eaad31df2c5136034",
+      "bytes": 5542
+    },
+    {
+      "path": "web-demo/v22-preview/i18n.mjs",
+      "sha256": "074ea150a3a4cb1a33be327b1462cec4d43f35b46afa9485cb33b57774f32915",
+      "bytes": 13031
+    },
+    {
+      "path": "web-demo/v22-preview/localization.mjs",
+      "sha256": "c33b3d1a921588d4ae60646a9e2ab46c398a0174096aa8577cb6cf155fcc291a",
+      "bytes": 1265
+    },
+    {
+      "path": "web-demo/v22-preview/preferences-ui.mjs",
+      "sha256": "ecfc763acdc9c5ee27fe3b51d40f8ba5e6930a79f716d97448a392806b9d82f8",
+      "bytes": 5896
+    },
+    {
+      "path": "web-demo/v22-preview/question-translations.mjs",
+      "sha256": "85e7aa065379e0c41992c08caedf85e6cc016701d488f3142872fa5a70601324",
+      "bytes": 8788
+    },
+    {
+      "path": "web-demo/v22-preview/questionnaire-ui.mjs",
+      "sha256": "3c4ed394faff82c644e16675c02c7f522a79d472bea7f50cbbb02ea82c95e90e",
+      "bytes": 6389
     },
     {
       "path": "web-demo/v22-preview/data/personality-v22.json",
@@ -60,6 +110,16 @@
       "path": "web-demo/v22-preview/data/playstyle-preferences.json",
       "sha256": "08b5f02752ba518d40fbc8002fe1d9d267de747e385c6a821b960f5ca5e5c618",
       "bytes": 27833
+    },
+    {
+      "path": "web-demo/v22-preview/data/en/personality-v22.json",
+      "sha256": "1ac6c33f7beaa12219d082ecf9dceca33f4a6f11bda0de2c74091b9bd1735838",
+      "bytes": 250395
+    },
+    {
+      "path": "web-demo/v22-preview/data/en/playstyle-preferences.json",
+      "sha256": "559c28157d2521829f860798fe67819b71e5e824c3aaf075758f49fa8b74945b",
+      "bytes": 27879
     }
   ]
 }

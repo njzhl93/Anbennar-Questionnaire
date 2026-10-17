@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/盖姆拉德库特-H16.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 盖姆拉德库特 H16：精简证据与边界
+
+核验日期：2026-10-03。本体Workshop `1385440355`、汉化`2818493730`，两者声明支持EU4 `v1.37.5.0`。本地结构化库`doctor.py`为`ok`且manifest与当前Workshop一致，行号仍指向原始文件。评分表名称“盖姆拉德库尔特”与本地汉化**盖姆拉德库特**不同。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| H16开局身份 | `mod/common/country_tags/anb_countries.txt:395`；`mod/history/countries/H16 - Gemradcurt.txt:1-38` | H16是1444原生冬庭神权国；伊玛莱尔出生于1420、1431即位，1444是强力法师而非既成巫妖。 |
+| 当前中文名 | `translation/localisation/anb_countries_l_english.yml:604`；`skills/anbennar-country-guide/scripts/decode_localisation.py --key H16` | 解码稳定为“盖姆拉德库特”，原表多一“尔”字。 |
+| 专属与共通任务 | `mod/missions/Gemradcurt_Missions.txt:1-2950`；`mod/missions/Snecboth_Missions.txt`；`anbennar-local/tools/query.py country H16 --json` | 结构化库归入53项Gemradcurt文件专属任务与17项Snecboth共通任务，合计70项可分配定义；专属任务包含条件组，不能理解为70项独占且能同局全部完成。 |
+| 红伤之冬 | `mod/common/disasters/gemradcurt_red_winter.txt:1-68`；`mod/events/Flavour_Gemradcurt_H16.txt:1329起`；`translation/localisation/Flavour_Gemradcurt_H16_l_english.yml:377` | 灾难潜在条件含H16与伊玛莱尔巫妖标记；触发、结束及长期经济压力由当前脚本支持。中文“红伤之冬”来自现行汉化。 |
+| 保暖与治理 | `mod/missions/Gemradcurt_Missions.txt:1068-1337`；`mod/decisions/GemradcurtDecisions.txt:1-54` | 壁炉城与较小壁炉卫戍为灾后核心省份循环；后者需50行政点、200金币与特定佣兵驻地。实际难度未实机核验。 |
+| 劳役与价值 | `mod/localisation/Flavour_Gemradcurt_H16_l_english.yml:24,57,153`；`mod/missions/Gemradcurt_Missions.txt:2737-2832` | 任务描述写明抓捕“被诅咒者”入营劳动；脚本使地区获得修正与文化变更。加重尊严、人格承认、克制扣分；战争、冬庭信仰或亡灵兵种本身不计善恶。 |
+| 条件性形成 | `mod/decisions/NorthAelantirFormables.txt:750-829`；`mod/events/Flavour_Eordand.txt:2480-2505`；`mod/missions/Gemradcurt_Missions.txt:617-644` | H21奥尔丹德决议排除仍有伊玛莱尔统治标记者；形成事件改Tag并换树。H16非伊玛莱尔路线可走形成方向，但并非巫妖主线必然续篇。 |
+
+## 离线英文Wiki与历史边界
+
+离线库`status=ok`，英文3735页，快照`2026-10-01T08:04:33Z`。国家主页面按Gemradcurt精确查找未命中：`OFFLINE_WIKI_NO_RESULT`。以下三页已实际回读Markdown chunk；它们是世界观补充，不覆盖当前脚本。
+
+- [Early Modern Eordand Timeline](https://anbennar.fandom.com/wiki/Early_Modern_Eordand_Timeline)：`page_id=5615`、`revision_id=31672`，已读`anbennar-offline/output/chunks/en/md/5615/001-02-Early Modern Eordand Timeline.md`。叙述红冬后伊玛莱尔失势、盖姆拉德库特分裂及长期冬庭战争；属于Wiki后续历史线，非玩家必然结局。
+- [The Everfrost Prince](https://anbennar.fandom.com/wiki/The_Everfrost_Prince)：`page_id=4110`、`revision_id=30393`，已读`anbennar-offline/output/chunks/en/md/4110/001-01-The Everfrost Prince.md`。伊玛莱尔力量是否来自亲王在正文明确只是难证传闻，不写成1444已核史实。
+- [Witch-King](https://anbennar.fandom.com/wiki/Witch-King)：`page_id=3770`、`revision_id=30288`，已读`anbennar-offline/output/chunks/en/md/3770/001-01-Witch-King.md`。后见列表把伊玛莱尔列为1430年代至1461年的非东坎诺巫王；玩家路线与该时间表可分歧。
+
+[哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AH16)的静态快照可读，资料时间`2026-09-23T07:23:00+00:00`；`eu4:H16`仅为`registered`，只含1444开局归属记录，没有可回读的新增国史原件。仍不采用其后世年代或省份推演。
+
+## Reddit：官方开发语境与两篇玩家体验
+
+- 官方[Dev Diary 23: A Light in the West](https://www.reddit.com/r/Anbennar/comments/qj4uyz/dev_diary_23_a_light_in_the_west/)（2021-10-31）：作者以开发日志介绍奥尔丹德季节宗教与形成后任务树，是H16所处地区及冬庭路线的**相关官方日志**，不是后来H16专属53任务的发布说明；当时Steam与开发版内容不同，不据此判断当前实装。
+- 玩家[Gemradcurt AAR *SPOILERS*](https://www.reddit.com/r/Anbennar/comments/1f6m528/gemradcurt_aar_spoilers/)（2024-09-01）：作者报告巫妖后红冬、贷款、要塞及壁炉设施造成独特经营压力，称叙事精彩；还明确使用控制台跳过自己误锁的奇械阶层任务，因此不能把该次全任务体验当成无修改存档的可达性证明。
+- 玩家[Gemradcurt post-disaster advice](https://www.reddit.com/r/Anbennar/comments/1k717o8/gemradcurt_postdisaster_advice/)（2025-04-24）：新玩家在灾后担心要塞费、治理容量与殖民负担，后续更新说财政好转。帖子未给正式版本号或子Mod清单，只能支持当时玩家感受，不能证明现版平衡。
+
+## 同轮检查
+
+H16、当前汉化名、开局统治者、专属/共通任务计数、巫妖—红冬—灾后阶段、条件性H21形成均已交叉核对。未实机核验灾难所有分支和完整任务可达性。Wiki的1461时间线与玩家替代历史严格分开；Reddit只用于开发和体验层。价值分为v2.1解释，不是游戏内属性。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `H16 / H16_ideas`：`mod/common/ideas/anb_country_ideas.txt:21385-21424`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

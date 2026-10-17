@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/阿娅拉伦-F27.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 阿娅拉伦 F27：精简证据与版本边界
+
+核验：2026-09-26。本体 `1385440355`、汉化 `2818493730` 均支持 `v1.37.5.0`。本地结构化库 `doctor.py` 为 `ok`，manifest 分别为 `2812922911103828520`、`7518363337005727349`。正式证据仍指向Workshop源路径，不以缓存代替原件。
+
+| 判断 | 当前本地证据 | 边界 |
+|---|---|---|
+| 1444年F27阿娅拉伦已存在；双附庸 | `common/country_tags/anb_countries.txt:209`；`history/countries/F27 - Ayarallen.txt:1-42`；`history/diplomacy/bulwar.txt:179-194`；汉化 `localisation/anb_countries_l_english.yml:328` | 史档显示菲兰雅鹰身女妖、狩猎之道、法师女统治者；统治者姓名在原历史文件出现编码损坏，正文不据此给中文名 |
+| F27直接任务20项 | `missions/Ayarallen_Missions.txt:1-1281`，结构化查询 `country F27 --json` 返回 `mission_count=20`，各组 `potential={tag=F27}` | 旧《已实装任务树存档》写“30项”，属旧记录，不覆盖当前文件。F98任务单独计数 |
+| 已有附庸、亲族整合与多族群治理 | `missions/Ayarallen_Missions.txt:8-230,239-460,469-720,792-1047,1056-1281`；`localisation/Flavour_Ayarallen_F27_l_english.yml:3-60` | 某些任务可继承附庸，但若附庸另有领土会给核心等不同结果，不写作无条件吞并 |
+| 女王国宣称在F27中段解锁 | `missions/Ayarallen_Missions.txt:538-578`；`events/flavour_Ayarallen_F27.txt:166-208`；`common/government_reforms/01_government_reforms_monarchies.txt:12440-12480`；`common/government_mechanics/anb_harpylen_queendom.txt:1-125` | 1444初始改革为 `harpy_matriarchy_reform`，不可把早期宣称权力条当开局能力 |
+| F27终章形成F98哈比伦 | `missions/Ayarallen_Missions.txt:722-783` 调事件 `flavour_ayarallen.6`；`events/flavour_Ayarallen_F27.txt:211-224`；`common/scripted_effects/harpylen_scripted_effects.txt:153-210` | 普通路径 `change_tag=F98` 并 `swap_non_generic_missions=yes`。F50穆伦另有保留Tag例外，与F27无关。通用形成决议在 `decisions/BulwarFormables.txt:750-845` |
+| 道德倾向善良72 | `missions/Ayarallen_Missions.txt:112-230,339-460,642-720,953-1047`；`localisation/Flavour_Ayarallen_F27_l_english.yml:6,21,36,48,51` | 和解、文化接纳与去怪物化是明确任务线；扩张、附庸臣服和女王权威也明确存在。评分只给F27前传，不代替F98评分 |
+
+## 离线英文Wiki：补背景，不能倒灌当前形成关系
+
+- [Ayarallen Queendom](https://anbennar.fandom.com/wiki/Ayarallen_Queendom)，`page_id=915`，`revision_id=33156`。离线刷新后已读 `anbennar-offline/output/chunks/en/md/915/001-01-Ayarallen Queendom.md`；页面简短，称阿娅拉伦女王国为“第四女王国”，首都Heunthume，其配图仍为Harpylen旗帜。旧分块路径已失效；此页混有旧名称语境，不能用来认定当前F27已是F98。
+- [Harpy Roosts](https://anbennar.fandom.com/wiki/Harpy_Roosts)，`page_id=4068`，`revision_id=32593`，读取 `anbennar-offline/output/chunks/en/md/4068/001-01-Harpy Roosts.md`。该页说明阿娅拉伦是Ayaran传统巢城，Heunthume是Firanyan女王国的传统权力中心。它支持巢穴社会背景，不证明任务机制。
+- [哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html)分别登记F27与F98。2026-09-23的社区预览把1444双附庸列为静态起点，中间年份的学院保护关系和约1600年转国是推演；未回读其全部原始资料，未把这些年份写入正文。
+
+## Reddit：官方开发语境与恰好两篇玩家帖
+
+- [Dev Diary #55: Back to the Garden](https://www.reddit.com/r/Anbennar/comments/17dzlg9/dev_diary55_back_to_the_garden/)，2023-10-22，正文L21、L27–44。旧版将Harpylen视为Ayarallen改名或尚待扩充的形成机制，提到F80/F81开局附庸。名称关系已被后来的设计与本地脚本改变。
+- [EU4 Dev Diary #101: Monsters of Bulwar](https://www.reddit.com/r/Anbennar/comments/1qcof26/eu4_dev_diary_101_monsters_of_bulwar/)，2026-01-14，正文L21–28、L39–54。重制预告明确F27的附庸、巢穴与扩张方向，并将F98描述为独立形成国。当时为未来计划；本地脚本另行证明其现已实装。
+- 官方负责人问答 [Sarhal/Insyaa Lead AMA](https://www.reddit.com/r/Anbennar/comments/1t1pfo8/sarhal_insyaa_lead_ama/)（2026-05-02，L24–28）和[后续问答](https://www.reddit.com/r/Anbennar/comments/1tn9zx8/sarhal_insyaa_lead_ama/)（2026-05-25，L20–21）分别用于开发时点及作者身份，不是机制证据，亦非该国专属开发日志。
+- [AAR: Ayarallen → Harpylen, First and Final](https://www.reddit.com/r/Anbennar/comments/1urvzs0/aar_ayarallen_harpylen_first_and_final/)，2026-07-09，读正文L47–49。玩家赞赏两树衔接、附庸和巢穴内容，也认为全链很长；单局意见，不代表当前机制保证。
+- [Which Harpy to play?](https://www.reddit.com/r/Anbennar/comments/1dxvffv/which_harpy_to_play/)，2024-07-08，读评论L58–61、L84–94。旧版讨论将F27概括为附庸整合并走向哈比伦；其“刚重制”语境早于2026开发日志，不能与现行任务树等同。
+
+## 排除与留白
+
+- `已实装任务树存档.md:5659` 的“30项”及 `推荐国文档3.0（上古文档仅供参考）.md:3259-3291` 的旧评价均只作导航。现行任务数为20。
+- F27历史档的统治者拼写因编码损坏无法从本地原文稳定复原；Wiki写 `Ištara I Arayato`，但家族拼法与本地 `Ayarato` 也不完全一致，所以正文只写“法师女统治者”。
+- F98后续已有独立百科，本条不重复评价其38项任务、世界迁徙或终局。Wiki固定页与历史地图不决定玩家形成F98的年份。
+
+## 最新Skill复查状态（2026-09-26）
+
+地图`eu4:F27`与`eu4:F98`在2026-09-23站点快照均为`in_progress`；约1600年转国是推演而非玩家必然形成日期。统治者姓名编码与Wiki异拼继续留白，不借地图补全。离线Wiki从工具目录复查为`status=ok`；本轮未重新逐页复读旧修订正文。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `F27 / F27_ideas`：`mod/common/ideas/anb_country_ideas.txt:19729-19764`；身份筛选结果：`identity_filter_matches`。
+- `F98 / harpylen_ideas`：`mod/common/ideas/anb_country_ideas.txt:33723-33767`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/黑暗领域-Z99.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># 黑暗领域 Z99：精简证据与边界
+
+核验日期：2026-10-03。本体Workshop `1385440355`与汉化`2818493730`均声明支持EU4 `v1.37.5.0`；本地结构化库`doctor.py`为`ok`。下列行号指原始Workshop文件。原评分表“黑域”只是旧简称，当前汉化解码结果为**黑暗领域**。
+
+| 判断 | 原始位置 | 边界 |
+|---|---|---|
+| Z99身份与非开局 | `mod/common/country_tags/anb_countries.txt:1504`；`mod/history/countries/Z99 - Black Demesne.txt:1-14`；`mod/common/bookmarks/b_escann.txt:4-16`；`translation/localisation/anb_countries_l_english.yml:1491` | 国史模板定义政体和首都，但1444东坎诺书签没有Z99，不能当作开局政权。评分名“黑域”与现行显示名不同。 |
+| 形成资格 | `mod/events/EscanniWars.txt:386-414`；`mod/decisions/BlackDemesneNation.txt:551-600` | 东坎诺统一战争奖励设置`can_form_bd`，再由“踏上星辰之路”决议判断；当前允许B54、Z37、B53、B39或巫王统治者。决议换Z99与非通用任务，**不是**埃斯蒂尔自动进化。 |
+| 前身汉化 | `translation/localisation/anb_countries_l_english.yml:276,304,1447`；`mod/decisions/BlackDemesneNation.txt:575-580` | B39双足飞龙之心、B53努尔塞斯提尔、Z37剑锋盟会已按当前文件解码；B54埃斯蒂尔已有独立条目。2021开发日志中的名单不是现行脚本。 |
+| 任务数量与方向 | `mod/missions/Black_Demesne_Missions.txt:1-3076` | 结构化库与确定性一级任务键统计为**92项Z99直接任务定义**；B54的31项任务不并入。某些任务有条件触发与DLC依赖，定义数不等于同局可完成数。 |
+| 门徒政治 | `mod/common/government_reforms/03_government_reforms_theocracies.txt:4678-4754`；`mod/common/subject_types/00_subject_types.txt:2817-2857`；`mod/decisions/BlackDemesneNation.txt:64-114,256-353` | 法师/巫王专属政体、门徒属国、影响力与魔法竞赛是Z99独有手感。当前汉化`Flavour_BlackDemesne_Z99_l_english.yml:599-601`把Blackpurgis称作“黑暗浸礼”，不是大清洗灾难。 |
+| 宗教时间点 | `mod/missions/Black_Demesne_Missions.txt:1907-1926`；`mod/events/Flavour_Black_Demesne_Z99.txt:3952-4015` | 形成决议未直接改教；后续“呼吸之神”任务触发事件才把国家及门徒领改为黑暗教义。历史模板中的摄政宫廷不能代表任务终局。 |
+| 价值判断 | `mod/localisation/Flavour_BlackDemesne_Z99_l_english.yml:260-261,947,990,1107`；`mod/localisation/anb_powers_and_ideas_l_english.yml:10716-10725` | 政府改革明确让非施法者法律从属，任务只选择性释放潜在法师并把智慧精怪用作非自愿实验；因此价值9分。亡灵兵种、魔法研究、战争和神权本身不扣分。 |
+
+## 离线英文Wiki与历史分歧
+
+离线库`status=ok`，英文3735页，快照更新于2026-10-01。实际读取：
+
+- [Black Demesne](https://anbennar.fandom.com/wiki/Black_Demesne)：`page_id=2635`、`revision_id=24373`、`section=Black Demesne`，`anbennar-offline/output/chunks/en/md/2635/001-01-Black Demesne.md`。描述Adelar síl na Whistlehill在赤红洪灾期间构思魔法至上思想，随后流传、形成骷髅王座蓝图；这不是Z99在1444已存在的证明。
+- [Mages&#x27; Peace](https://anbennar.fandom.com/wiki/Mages%27_Peace)：`page_id=2452`、`revision_id=30352`、`section=Mages&#x27; Peace / Black Demesne`，`anbennar-offline/output/chunks/en/md/2452/001-01-Mages&#x27; Peace.md`。把黑暗领域定位为法师和平观念的激进扩张。
+
+Wiki的Adelar成书叙事与当前国策理念中“尼克默是原初升格者”的叙事侧重点不同：理论作者不等于被追认为先例的早期巫王，不能合成为固定形成时间线。离线Wiki提供设定背景；当前可形成条件及宗教转换节点仍由Mod脚本裁定。[哈兰历史地图研究目录](https://shen-hhao.github.io/anbennar-timeline/research.html#country=eu4%3AZ99)的静态快照可读，资料时间`2026-09-23T07:23:00+00:00`，`eu4:Z99`状态`in_progress`但无国家历史节点；其“思想存在不等于同名政权成立”的注释可由上述Wiki原件与本地形成决议各自核实。目录未提供可采的Z99建国确年或版图，不据地图补写疆界。
+
+## Reddit：三篇官方材料与两篇玩家帖
+
+以下网页正文在本轮通过网页工具实际打开；官方材料说明当时设计／发布，玩家帖只说明当时体验，不证明v1.37.5.0数值。
+
+- 官方[Dev Diary 21: Development Roadmap](https://www.reddit.com/r/Anbennar/comments/qa3rlm/)（2021-10-17）：黑暗领域被预告为东坎诺统一后的巫王、门徒与迪普伍兹路线；当时仍是开发计划。
+- 官方[Dev Diary #27: Light and Dark, but this is the Dark part](https://www.reddit.com/r/Anbennar/comments/r47qg8/)（2021-11-28）：介绍2021年的形成名单、门徒领分地/影响力、黑暗浸礼决斗及魔法研究；发布时为EU4 1.32语境。旧前身名单与本地脚本不同，以脚本为准。
+- 官方[Light and Dark发布公告](https://www.reddit.com/r/Anbennar/comments/r3r2d5/)（2021-11-28）：确认当时加入黑暗领域形成国与任务树、兼容EU4 1.32；不证明现版全部机制不变。
+- 玩家[Tips for forming/playing Black Demesne?](https://www.reddit.com/r/Anbennar/comments/rijydn/)（2021-12-17）：建议铁杖骑士团→埃斯蒂尔，提醒巫王外交压力、亡灵军移动与门徒领管理；帖子未标注精确Mod版本、子Mod或改档，时间属于旧版语境。
+- 玩家[Finished the Black Demesne MT and I truly believe it can&#x27;t be beat](https://www.reddit.com/r/Anbennar/comments/1ce6ycg/)（2024-04-27）：作者称瓦里娜路线与Z99叙事精彩，但微操与投入时间很高；未声明精确版本、子Mod或改档。
+
+## 同轮检查
+
+Tag、现行汉化、形成资格、92项专属任务、黑暗教义的后期转换与价值依据已交叉核对。未逐任务审计92项条件、没有实机测试所有前身或门徒法律分支；Wiki思想史、Mod可玩时间线、官方开发计划与玩家个人体验均分层。
+
+## 国家理念来源
+
+当前缓存健康状态：ok；理念核验日期：2026-10-09；本体manifest：2812922911103828520；汉化manifest：7518363337005727349。
+
+各理念名称、说明、原始效果值及汉化出处行号保存在主JSON的`national_ideas`。以下为理念定义定位：
+
+- `Z99 / Z99_ideas`：`mod/common/ideas/anb_country_ideas.txt:22194-22230`；身份筛选结果：`identity_filter_matches`。
+</pre></main></body></html>

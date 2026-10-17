@@ -1,0 +1,60 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/bilingual-v235-text-Y85-review.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># Y85 / Balrijin bilingual text review
+
+## Scope
+
+- Tag: `Y85`
+- Article ID: `18494ec5dc61ca89b7b3`
+- Chinese text source: `安本纳尔/国家百科/样稿/金陵-Y85.md`
+- English outputs: `translations/en/countries/Y85.json` and `translations/en/articles/18494ec5dc61ca89b7b3.md`
+- This receipt covers only the bounded English-text and source check requested for this batch. No webpage, validator, test, or site build was run; webpage validation and modification remain with ChatGPT.
+
+## Source hashes
+
+- Article source SHA-256: `5fc5a86d199521a7a7cc6c929bcca5970195aef2fc27ab363821646af2c28579` (UTF-8 text, BOM removed, newlines normalized to LF).
+- Input overlay SHA-256: `8b0350781dde9be8cad1c95d81656d707230b70d56b6189132abc998412e952b`.
+- The country overlay retains the input metadata hashes: country source `749fcc411963f22eeaa44b70171f2caa84ef595f072f114b9c5f8a3b37870f06`; article source `5fc5a86d199521a7a7cc6c929bcca5970195aef2fc27ab363821646af2c28579`.
+
+## Mod evidence actually read
+
+Workshop root: `[local source path omitted]`.
+
+| Relative path | SHA-256 | Lines / claim checked |
+|---|---|---|
+| `history/countries/Y85 - Balrijin.txt` | `28d31b8313546ce6bd948ac5962060407d87a704a219c8e716fd88e6318ee66a` | 2–25: Y85, theocracy, Sage Council reform, Goldscale Kobold, Accretive Path, historical friends Y05/V22, 1397 Fax Akar |
+| `localisation/anb_countries_l_english.yml` | `99c77d57a797a86b64ab74061431343fa6fa3352a1e5314329cf0cdb75c4ea3b` | 2740–2741: `Y85` / `Y85_ADJ` = Balrijin |
+| `localisation/anb_powers_and_ideas_l_english.yml` | `3505fae0d2eb8d30b7fa8e584e1a25d47fd59c67376e9219688579884822e35c` | 10866–10882: current native English idea names and descriptions; SHA-256 recomputed from raw bytes |
+| `common/ideas/anb_country_ideas.txt` | `b80457b698a2412e28ff2752e68774de59b3ea1e82a205936cbe970d1106a95d` | 23266–23306: Y85 idea script values |
+| `missions/Balrijin_Missions.txt` | `523de459d1b50f5dd4f918dce8e9c681067b39a62d69f962c45a28f469035ab6` | 1–3300: representative Y85 diplomacy, clan, dragon-search, banking, reform, and ruin-kingdom mission branches |
+| `events/Flavour_Balrijin_Y85.txt` | `4fca1e9d2944fd20d261f2b73291a5499dad6bbd61544eb4ca73e6042edc18e8` | 1–400: representative narrative event text for the dragon search and return |
+| `localisation/Flavour_Balrijin_Y91_l_english.yml` | `c6ee7315a3909cbe588524516c4e3ee0345d96d30eb94988e4fab486f0b98e13` | 5–121: Y85 mission titles and descriptions |
+| `common/government_reforms/03_government_reforms_theocracies.txt` | `6e8300001c318ba654d34f7a60373eb8c961bde8d118442597043031da848431` | 1955–1971: `balrijin_sage_council_reform` and its Goldscale trigger boundary |
+| `common/government_reforms/02_government_reforms_republics.txt` | `88f569a789280966a083ff24bde5a83e5b3e0e2fe8117e1009bd59605b0dfa6b` | 3369–3399: `golden_republic_reform`; 5372–5377 and 5659–5664: later Y85-linked reform gates |
+
+### Diplomatic-reputation display issue
+
+The Chinese source and input display `Diplomatic reputation: +200%`. The current native English localisation also names the idea, while the actual script at `common/ideas/anb_country_ideas.txt` uses `diplomatic_reputation = 2`. The English output deliberately preserves the source number as an inherited display and adds `unit conversion unverified`; it does not certify `+200%` as the literal current percentage bonus and does not alter the Chinese source.
+
+## Offline English Wiki query and read scope
+
+The required query was run with cwd `[local source path omitted]`:
+
+```text
+python -X utf8 tools/query.py &#x27;Balrijin&#x27; --lang en --json --limit 3
+```
+
+Actual result scope: 3 returned chunks, 2 independent pages plus 1 redirect.
+
+1. **Sage Council of Balrijin** — `page_id=3253`, `revision_id=31508`, section `Sage Council of Balrijin`, `History`, `Society`; local source `output/chunks/en/md/3253/001-01-Sage Council of Balrijin.md`; source URL `https://anbennar.fandom.com/wiki/Sage_Council_of_Balrijin`. Read the Markdown chunk. It supports Balrijin&#x27;s Goldscale Kobold identity, Upper Yanshen/Haless setting, Accretive Path, approximate 500 AA Balris account, Jiangdu/Blue Scarf history, Sage Council, clans, martial arts, and merchant diaspora.
+2. **Balrijin** — `page_id=3256`, `revision_id=15854`, section `Balrijin`; local source `output/chunks/en/md/3256/001-01-Balrijin.md`; source URL `https://anbennar.fandom.com/wiki/Balrijin`. Read the Markdown chunk; it is only a redirect to Sage Council of Balrijin and is not independent corroboration.
+3. **Rak Six Points** — `page_id=3104`, `revision_id=19816`, section `Rak Six Points`; local source `output/chunks/en/md/3104/001-01-Rak Six Points.md`; source URL `https://anbennar.fandom.com/wiki/Rak_Six_Points`. Read the Markdown chunk. It supplies related Goldscale/Balrijin martial-arts and diaspora context only, not current Y85 mechanics.
+
+Wiki status is `checked`: **Sage Council of Balrijin** is the substantive country page and was read as the country&#x27;s main page. The **Balrijin** result is a redirect, and **Rak Six Points** is related context; neither is counted as additional country-page corroboration. No online Wiki or Reddit search was used.
+
+## Coverage and gaps
+
+- Country fields translated: 83 / 83 input fields.
+- Article structure preserved: 116 source lines, 18 headings, all appendices and visible effect numbers retained; no hidden numeric padding added.
+- Native `reference_english` text was reused for all available original English national-idea names/descriptions.
+- Remaining uncertainty: the Wiki does not validate current mission implementation or every route/branch; the community claims in the Chinese source were not rechecked; the `diplomatic_reputation = 2` to `+200%` display-unit mapping remains unverified.
+- This is not a claim of webpage completion or formal bilingual validation.
+</pre></main></body></html>

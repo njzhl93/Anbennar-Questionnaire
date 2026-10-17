@@ -1,3 +1,5 @@
+import {english,t,regionName} from "./i18n.mjs";
+import {VALUE_EN,VALUE_CHOICES_EN} from "./question-translations.mjs";
 import {VALUE_AXES,VALUE_QUESTIONS,VALUE_CHOICES,valueAnswered,calculateValues,
   DEFAULT_PREFERENCES,validatePreferences} from "./playstyle.mjs";
 
@@ -24,8 +26,9 @@ export function createPreferenceUI(index,{onApply,onChangeRegion,onInvalidate=()
   for(const id of ["colonization","difficulty","early_pressure","dark_story"]){
     $("pref-"+id).value=prefs[id];
   }
-  $("finalRegion").innerHTML='<option value="">全部地区（109国）</option>'+
-    index.regions.map(r=>'<option value="'+esc(r.key)+'">'+esc(r.name_zh)+"（"+r.count+"国）</option>").join("");
+  $("finalRegion").innerHTML='<option value="">'+esc(t("filters.all","全部地区（109国）"))+'</option>'+
+    index.regions.map(r=>'<option value="'+esc(r.key)+'">'+esc(regionName(r))+
+      "（"+r.count+(english()?" countries":"国")+"）</option>").join("");
   $("finalRegion").value=prefs.region;
   function persist(applied=false){
     try{sessionStorage.setItem(KEY,JSON.stringify({version,answers,preferences:prefs,
@@ -35,27 +38,29 @@ export function createPreferenceUI(index,{onApply,onChangeRegion,onInvalidate=()
   function invalidate(){
     applied=null;
     onInvalidate();
-    $("preferenceStatus").textContent="设置已改变，请点击“应用完整偏好并重新匹配”更新结果。";
+    $("preferenceStatus").textContent=t("value.stale","设置已改变，请点击“应用完整偏好并重新匹配”更新结果。");
     $("preferenceStatus").classList.remove("error");
     persist(false);
   }
   function updateProgress(){
     const count=valueAnswered(answers);
-    $("valueAnswered").textContent="价值剧情选择："+count+" / 8";
+    $("valueAnswered").textContent=t("value.progress","价值剧情选择")+"："+count+" / 8";
     $("valueQuestionList").classList.toggle("values-disabled",!$("useValues").checked);
     $("valueQuestionList").querySelectorAll("input").forEach(input=>{
       input.disabled=!$("useValues").checked;
     });
   }
-  $("valueQuestionList").innerHTML=VALUE_QUESTIONS.map((q,i)=>
-    '<fieldset class="value-question"><legend><span class="small-cap">'+
-    "价值剧情 "+(i+1)+" / 8"+'</span> · '+esc(q.question)+'</legend>'+
-    '<div class="value-question-poles"><p><b>A · </b>'+esc(q.left)+
-    '</p><p><b>B · </b>'+esc(q.right)+'</p></div>'+
+  $("valueQuestionList").innerHTML=VALUE_QUESTIONS.map((q,i)=>{
+    const values=english()?VALUE_EN[q.id]:null;
+    const prompt=values?.[0]||q.question,left=values?.[1]||q.left,right=values?.[2]||q.right;
+    return '<fieldset class="value-question"><legend><span class="small-cap">'+
+    t("value.question","价值剧情")+" "+(i+1)+" / 8"+'</span> · '+esc(prompt)+'</legend>'+
+    '<div class="value-question-poles"><p><b>A · </b>'+esc(left)+
+    '</p><p><b>B · </b>'+esc(right)+'</p></div>'+
     '<div class="value-answer-options">'+VALUE_CHOICES.map((label,n)=>
       '<label><input type="radio" name="'+q.id+'" value="'+n+'"'+
-      (answers[q.id]===n?" checked":"")+'> '+esc(label)+'</label>').join("")+
-    "</div></fieldset>").join("");
+      (answers[q.id]===n?" checked":"")+'> '+esc(english()?VALUE_CHOICES_EN[n]:label)+'</label>').join("")+
+    "</div></fieldset>";}).join("");
   $("valueQuestionList").addEventListener("change",event=>{
     const input=event.target;
     if(!input?.name||!VALUE_QUESTIONS.some(q=>q.id===input.name))return;
@@ -78,10 +83,10 @@ export function createPreferenceUI(index,{onApply,onChangeRegion,onInvalidate=()
       const values=$("useValues").checked?calculateValues(answers):null;
       prefs=validatePreferences(prefs);
       if($("useValues").checked&&valueAnswered(answers)!==8)
-        throw new Error("还需要回答全部8道价值剧情问题；如只想匹配五维人格，可取消勾选“启用价值剧情匹配”。");
+        throw new Error(t("value.incomplete","还需要回答全部8道价值剧情问题；如只想匹配五维人格，可取消勾选“启用价值剧情匹配”。"));
       persist(true);
       $("preferenceStatus").classList.remove("error");
-      $("preferenceStatus").textContent=
+      $("preferenceStatus").textContent=english()?t("value.applied") :
         "设置已应用：价值剧情"+(values?"启用":"关闭")+"；殖民"+
         $("pref-colonization").selectedOptions[0].textContent+
         "；难度"+$("pref-difficulty").selectedOptions[0].textContent+

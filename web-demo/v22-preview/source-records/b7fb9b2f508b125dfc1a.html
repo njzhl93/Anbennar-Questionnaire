@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>安本纳尔百科来源记录</title><body><main><h1>安本纳尔百科来源记录</h1><p>项目内相对身份：<code>安本纳尔/国家百科/_evidence/bilingual-v235-text-Y86-review.md</code></p><p>保留文章链接的研究说明与不确定性；本机绝对路径已移除，未包含任何 Mod 原始文件、缓存或机器信息。</p><pre># Y86 / Azkare — English text review receipt
+
+## Scope
+
+- Tag: `Y86`
+- Article ID: `15f8198bd51af25d1afe`
+- Source: `安本纳尔/国家百科/样稿/阿兹卡雷-Y86.md`
+- Source text SHA-256 (UTF-8-SIG read, BOM removed, LF-normalised): `8aa208d2c9da40321c9947ae22b60a58d098d957fcf3b147029c4db77570b9f5`
+- Chinese baseline source SHA-256 from the translation input: `5994dfbe8af2f1185a21160dc3fc148017d2edf46995e7825dcf6f0a232f7ee2`
+- This batch supplies English text only. No webpage, test, validator, build, production JSON, score, map, or Chinese source was modified.
+
+## Local Mod checks
+
+The Workshop Mod was read from `[local source path omitted]`. Hashes below are SHA-256 of the original file bytes.
+
+| File | Lines / keys inspected | SHA-256 |
+|---|---|---|
+| `localisation/anb_countries_l_english.yml` | 2569–2570 (`Y00`), 2742–2743 (`Y86`) | `99c77d57a797a86b64ab74061431343fa6fa3352a1e5314329cf0cdb75c4ea3b` |
+| `localisation/anb_powers_and_ideas_l_english.yml` | 9311–9327 (Y00 ideas), 9329–9340 and following Y86 block | `3505fae0d2eb8d30b7fa8e584e1a25d47fd59c67376e9219688579884822e35c` |
+| `common/ideas/anb_country_ideas.txt` | 19454–19491 (Y00); 20678–20715 (Y86) | `b80457b698a2412e28ff2752e68774de59b3ea1e82a205936cbe970d1106a95d` |
+| `localisation/Flavour_Azkare_Y86_l_english.yml` | 13–110 and later Y86 mission names/descriptions | `1b6e2de059d0160ce7565583f0548ece48c6a2e7d9fb0589481eb59c12fd9eb5` |
+| `missions/Azkare_Missions.txt` | 3139–3172 (`azkare_dawn_of_a_new_era`), 1804–1820 (Y86/Y00 inherited mission potential) | `7e511ef0f800070f79dc0925b79fe346ea021fff9036fcb20b60377bf935c1ff` |
+| `decisions/HalessFormables.txt` | 813–918 (`form_sunrise_empire`); 828 explicitly excludes Y86 | `ebd813029d69d3b9527c5eae7a9249e37db26676b1004c4a79dff4c49aabb8c4` |
+| `events/Flavour_Azkare_Y86.txt` | 1519–1572 (`azkare.42`); 1529 requires Y86, 1547 changes to Y00, 1555/1562 add Sunrise Court | `8ad736c7dcfcd729d8145ebcccceea41d8880c72318e19c69477108f8ce5d9d0` |
+| `history/countries/Y86 - Azkare.txt` | 2–13 setup; 17–31 Hiderion and 1438 accession | `944bfdba1e3a93e5c005ed32f9089270b48401d009b2b00bfbe39778e337d7e0` |
+
+Important unit note: the Chinese inherited display supplies `外交声誉：+100%`; this is not an English localisation display value. The current script at `common/ideas/anb_country_ideas.txt:19454–19458` stores `diplomatic_reputation = 1`. The English article and display field retain the inherited `+100%` source display and mark the unit conversion as unverified; the Chinese source is unchanged.
+
+## Offline English Wiki scope
+
+Required query was run with cwd `[local source path omitted]`:
+
+```text
+python -X utf8 tools/query.py &#x27;阿兹卡雷&#x27; --lang en --json --limit 3
+```
+
+It returned no result. The English-name follow-up `Azkare` returned and the following three independent pages were actually read from Markdown chunks (no online supplementation):
+
+1. `Township of Azkare` — `page_id=2390`, `revision_id=33089`, section `Township of Azkare`, local source `output/chunks/en/md/2390/001-01-Township of Azkare.md`, source URL `https://anbennar.fandom.com/wiki/Township_of_Azkare`. Used for the Kai Township identity, Hiderion’s 1438 election, the 1441 Battle of Lektonmai, the Shining Lancers, and the Wiki’s historical claims.
+2. `Hiderion Tonanzuir` — `page_id=2306`, `revision_id=28083`, section `Hiderion Tonanzuir`, local source `output/chunks/en/md/2306/001-01-Hiderion Tonanzuir.md`, source URL `https://anbennar.fandom.com/wiki/Hiderion_Tonanzuir`. Used for the distinction between Hiderion’s theoretical Sunrise Empire and a historically completed empire.
+3. `Azkare` — `page_id=3397`, `revision_id=16958`, section `Azkare`, local source `output/chunks/en/md/3397/001-01-Azkare.md`, source URL `https://anbennar.fandom.com/wiki/Azkare`. This is a redirect to `Township of Azkare`; it supplied no additional facts.
+
+Wiki evidence is background only. It does not override current Mod scripts, and the article keeps the Wiki religion mismatch and historical/game-route boundary explicit.
+
+## Conflicts and gaps
+
+- SUPPORTED: Y86 is Azkare; Y00 is Sunrise Empire; current Mod names and Tag keys were read directly.
+- SUPPORTED: the current Y86 history setup is a republic with Sikai primary culture, accepted Sunrise Elf culture, Transmutative Path religion, capital 4789, and historical friend Y59; Hiderion’s scripted accession is 1438.
+- SUPPORTED: the Y86 mission `azkare_dawn_of_a_new_era` requires prestige 75, republican tradition 95, no unrepresented culture, and several construction/integration flags before firing `azkare.42`.
+- SUPPORTED: `azkare.42` changes Y86 to Y00 and adds the Sunrise Court reform; the generic formation decision excludes Y86.
+- SUPPORTED, LIMITED: the read Hiderion short page calls the Sunrise Empire theoretical. The Township page confirms Azkare’s Hiderion/Kai-Township background, but it does not independently verify the detailed criticisms of the Sunrise Empire.
+- INSUFFICIENT EVIDENCE: this batch did not read a Sunrise Empire main page. The claims about insufficient administrative personnel, the lack of a shared Halessi political tradition, and exclusion of outsider religions/cultures come from the existing Chinese research, not independent verification by the three Wiki pages read in this batch.
+- INSUFFICIENT EVIDENCE: the offline Wiki does not establish current mission rewards, current event implementation, or the 2026 meaning of the displayed diplomatic-reputation unit.
+- CONTESTED / VERSION-BOUND: Wiki religion and historical narrative details differ from current local start-script data; both boundaries are preserved rather than reconciled silently.
+- NOT independently audited: the complete mission tree, every decision, every event chain, and every source claim outside the bounded representative checks above.
+</pre></main></body></html>
