@@ -83,7 +83,7 @@ export function createQuestionnaireUI({onComplete}){
         (variation.length?
           '<p class="question-caution">'+esc(t("question.variation","这些维度在不同情境中的答案差别较大："))+
           esc(variation.join("、"))+'。'+esc(t("question.variationNote","可以检查原题；这不代表回答错误。"))+'</p>':"")+
-        '<p class="fine">已将五轴向量应用于当前的匹配地区；下方结果仍采用P1等权距离与原发展线去重。</p>';
+        '<p class="fine">'+esc(t("question.applied","已将五轴向量应用于当前的匹配地区；下方结果仍采用P1等权距离与原发展线去重。"))+'</p>';
       $("questionSummary").classList.remove("hidden");
       $("questionValidation").textContent=t("question.completed","问卷已完成，正在使用 P0 已验收的国家画像计算匹配。");
       onComplete(vector,{

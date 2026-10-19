@@ -1,7 +1,7 @@
 {
   "version": "v2.3.5",
-  "source_sha": "1673c225f4ceddd59026509d9c6ed99cff55fa57",
-  "built_at_utc": "2026-10-17T12:57:37.817863Z",
+  "source_sha": "2ecbb8968d9d9baf5fbc2282412cb7e3d670f58c",
+  "built_at_utc": "2026-10-19T05:42:57.312896Z",
   "country_count": 116,
   "article_count": 108,
   "content_counts": {
@@ -78,8 +78,8 @@
     },
     {
       "path": "web-demo/v22-preview/i18n.mjs",
-      "sha256": "074ea150a3a4cb1a33be327b1462cec4d43f35b46afa9485cb33b57774f32915",
-      "bytes": 13031
+      "sha256": "f594b0f51c865e9c3ef369903a378ce61d3434e53a58b4c8573f58f809235416",
+      "bytes": 13486
     },
     {
       "path": "web-demo/v22-preview/localization.mjs",
@@ -98,8 +98,8 @@
     },
     {
       "path": "web-demo/v22-preview/questionnaire-ui.mjs",
-      "sha256": "3c4ed394faff82c644e16675c02c7f522a79d472bea7f50cbbb02ea82c95e90e",
-      "bytes": 6389
+      "sha256": "3d158dba3103ac04d564727039d4d2049e3d3832c15163199595d2a6306e077b",
+      "bytes": 6422
     },
     {
       "path": "web-demo/v22-preview/data/personality-v22.json",

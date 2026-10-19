@@ -24,7 +24,7 @@ export function regionName(r){return english()?((r?.name_en==="EoA"?ENGLISH_REGI
 
 const en={
   "site.title":"Which Anbennar nation suits you best?",
-  "site.preview":"Non-production preview",
+  "site.release":"v2.3.5 release",
   "site.legacy":"Legacy v0.3 (Chinese) ↗",
   "site.noSave":"Not connected to a game save; this does not establish that route conditions have been met.",
   "nav.label":"Site navigation",
@@ -53,7 +53,7 @@ const en={
   "vector.note":"Magic versus artifice measures direction, not intensity of use. Institutional pluralism describes governance, not good or evil. All scores are editorial research scales.",
   "results.note":"Basic v2.2 matching retains equal-weight five-axis distance. Values/gameplay options show separate components and a blended similarity: a recommendation preference score, not historical accuracy or real-world moral judgment. Unmet conditional profiles are hypothetical matches only.",
   "footer.source":"Data: approved PR #9 practical v2.2 personality scores · source commit",
-  "footer.fullNote":"For interface and matching-experience validation only; this does not alter existing v2.1 personality, gameplay or value scores, or the production site.",
+  "footer.fullNote":"The encyclopedia and matching tools share the same research data. Personality, gameplay and values use their existing editorial scales; conditional profiles do not establish that in-game conditions have been met.",
   "site.lead":"Discover 109 approved nation personalities and 57 conditional profiles. Explore the encyclopedia of 116 countries and compare up to three.",
   "nav.quiz":"Personality quiz","nav.encyclopedia":"Country encyclopedia","nav.compare":"Compare countries",
   "header.baselines":"nation baselines","header.profiles":"conditional profiles","header.top":"distinct development lines",
@@ -117,6 +117,7 @@ const en={
   "question.variation":"Your answers varied substantially across these situations:",
   "question.variationNote":"You can review your answers; variation is not an error.",
   "question.scoreNote":"Five questions per axis, equally weighted. Values are descriptive, not confidence intervals or national scores.",
+  "question.applied":"The five-axis vector has been applied to the current matching region. Results retain P1 equal-weight distance and deduplication by development line.",
   "question.completed":"Questionnaire complete. Calculating matches using the approved national profiles.",
   "question.cleared":"Answers cleared. Please start again.",
   "question.incomplete":"Please answer all 25 questions; unanswered items are not scored as neutral.",
@@ -145,13 +146,13 @@ export function routeInLocale(route, baseUrl, locale=language()){
   return url.pathname+url.search+url.hash;
 }
 export function setLanguage(value){
-  current=normalizedLanguage(value);
-  try{localStorage.setItem("anbennar-locale",current);}catch{}
+  const next=normalizedLanguage(value);
+  try{localStorage.setItem("anbennar-locale",next);}catch{}
   if(typeof location!=="undefined"){
     const link=new URL(location.href);
-    link.searchParams.set("lang",current);
+    link.searchParams.set("lang",next);
     location.assign(link.pathname+link.search+link.hash);
-  }
+  }else current=next;
 }
 export function installLanguageSwitch(){
   if(typeof document==="undefined")return;
@@ -159,7 +160,13 @@ export function installLanguageSwitch(){
   const select=document.getElementById("siteLanguage");
   if(select){
     select.value=current;
-    select.addEventListener("change",()=>setLanguage(select.value));
+    select.addEventListener("change",()=>{
+      const next=select.value;
+      // Preserve the old document's locale and form state in browser history.
+      select.value=current;
+      setLanguage(next);
+    });
+    window.addEventListener("pageshow",()=>{select.value=current;});
   }
   if(english()){
     for(const el of document.querySelectorAll("[data-i18n]")){

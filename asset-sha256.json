@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "source_sha": "1673c225f4ceddd59026509d9c6ed99cff55fa57",
+  "source_sha": "2ecbb8968d9d9baf5fbc2282412cb7e3d670f58c",
   "maps": {
     "zh-CN": [
       {
@@ -694,7 +694,7 @@
     },
     {
       "path": "release.json",
-      "sha256": "bec04f6e7a8cd2cb3ec1227a8869b79364fc14214950f80c11427fd7fdcd6005",
+      "sha256": "3add785fd2271d071504f66b3d6a502c46ca1255b9e6961901d98282336bb69b",
       "bytes": 4232
     },
     {
@@ -3059,13 +3059,13 @@
     },
     {
       "path": "web-demo/v22-preview/i18n.mjs",
-      "sha256": "074ea150a3a4cb1a33be327b1462cec4d43f35b46afa9485cb33b57774f32915",
-      "bytes": 13031
+      "sha256": "f594b0f51c865e9c3ef369903a378ce61d3434e53a58b4c8573f58f809235416",
+      "bytes": 13486
     },
     {
       "path": "web-demo/v22-preview/index.html",
-      "sha256": "ac152368c6ad7ff1c990eaf914dc4691b9a2de0b6b393db63d719398b1bc1fe2",
-      "bytes": 15567
+      "sha256": "dde9e62241cde03310c3801fb33bd3b3dca79362add2716dd87b0b3605beb77c",
+      "bytes": 15601
     },
     {
       "path": "web-demo/v22-preview/localization.mjs",
@@ -3094,8 +3094,8 @@
     },
     {
       "path": "web-demo/v22-preview/questionnaire-ui.mjs",
-      "sha256": "3c4ed394faff82c644e16675c02c7f522a79d472bea7f50cbbb02ea82c95e90e",
-      "bytes": 6389
+      "sha256": "3d158dba3103ac04d564727039d4d2049e3d3832c15163199595d2a6306e077b",
+      "bytes": 6422
     },
     {
       "path": "web-demo/v22-preview/questionnaire-v22.mjs",
