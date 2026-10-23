@@ -24,7 +24,7 @@ export function regionName(r){return english()?((r?.name_en==="EoA"?ENGLISH_REGI
 
 const en={
   "site.title":"Which Anbennar nation suits you best?",
-  "site.release":"v2.3.5 release",
+  "site.release":"v2.4 routes & missions pilot",
   "site.legacy":"Legacy v0.3 (Chinese) ↗",
   "site.noSave":"Not connected to a game save; this does not establish that route conditions have been met.",
   "nav.label":"Site navigation",

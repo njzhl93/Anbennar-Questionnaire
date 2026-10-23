@@ -184,3 +184,41 @@ html[lang=en] .site-tabs a{min-width:0;white-space:normal}
 html[lang=en] .question-poles{overflow-wrap:anywhere}
 html[lang=en] .catalog-toolbar label{line-height:1.45}
 @media(max-width:650px){.locale-select select{max-width:100%}}
+
+/* v2.4 optional development routes. Scope all styling to the new panel. */
+.development-routes{overflow-wrap:anywhere}
+.development-routes h2{font-family:Georgia,"Songti SC",serif}
+.development-routes .development-route-card{margin-top:20px;padding-top:20px;border-top:1px solid var(--stroke)}
+.development-routes .development-route-nodes{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.development-routes .development-route-node{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:8px;min-width:0;max-width:100%;padding:9px 12px;border:1px solid var(--stroke);border-radius:8px;text-decoration:none}
+.development-routes .development-route-node:hover{border-color:var(--mint)}
+.development-routes .development-route-node:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.development-routes .development-route-node.is-focused{border-color:var(--gold);background:var(--panel2);color:var(--gold)}
+.development-routes code{font-size:.85em}
+.development-routes .development-route-entries{list-style:none;margin:18px 0 0;padding:0}
+.development-routes .development-route-entries>li{padding:16px 0;border-top:1px solid var(--stroke)}
+.development-routes p{max-width:80ch}
+.development-routes .route-status{color:var(--muted)}
+@media(max-width:600px){.development-routes .development-route-nodes{gap:8px}.development-routes .development-route-node{padding:8px 10px}.development-routes h2{font-size:1.3rem}}
+
+/* Optional PR3B task reader. Keep all rules inside its panel. */
+.mission-reader{overflow-wrap:anywhere;scroll-margin-top:24px}
+.mission-reader>summary{cursor:pointer;font:700 1.5rem Georgia,"Songti SC",serif;color:var(--gold);padding:6px 0}
+.mission-reader .mission-notice{color:var(--muted);max-width:85ch;margin:20px 0}
+.mission-reader .mission-layout{display:grid;grid-template-columns:minmax(210px,1fr) minmax(0,2fr);gap:28px}
+.mission-reader .mission-list{list-style:none;padding:0;margin:12px 0 24px}
+.mission-reader .mission-list li+li{margin-top:8px}
+.mission-reader .mission-list a{display:block;padding:12px;border:1px solid var(--stroke);border-radius:8px;text-decoration:none}
+.mission-reader a[aria-current="true"]{border-color:var(--gold);color:var(--gold);background:var(--panel2)}
+.mission-reader code{font-size:.82em;overflow-wrap:anywhere;white-space:normal}
+.mission-reader .mission-list code{display:block;margin-top:6px;color:var(--muted)}
+.mission-reader .mission-tabs{display:flex;gap:10px;margin:20px 0}
+.mission-reader .mission-tabs a{padding:8px 16px;border:1px solid var(--stroke);border-radius:6px;text-decoration:none}
+.mission-reader #missionSelected{border-top:2px solid var(--gold);padding-top:14px;scroll-margin-top:24px;min-width:0}
+.mission-reader h4{margin-bottom:8px;color:var(--muted)}
+.mission-reader .mission-description{white-space:pre-wrap;line-height:1.85}
+.mission-reader .mission-condition,.mission-reader .mission-verification{font-size:.9em;color:var(--muted);border-left:2px solid var(--gold);padding-left:12px}
+.mission-reader #missionInheritance{border-top:1px solid var(--stroke);padding-top:16px}
+.mission-reader #missionInheritance>summary{cursor:pointer;font-weight:700}
+.mission-reader :is(a,button,summary):focus-visible,.mission-reader #missionSelected:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:760px){.mission-reader .mission-layout{grid-template-columns:minmax(0,1fr);gap:12px}.mission-reader>summary{font-size:1.3rem}}

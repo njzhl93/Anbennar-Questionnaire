@@ -1,7 +1,7 @@
 {
-  "version": "v2.3.5",
-  "source_sha": "2ecbb8968d9d9baf5fbc2282412cb7e3d670f58c",
-  "built_at_utc": "2026-10-19T05:42:57.312896Z",
+  "version": "v2.4",
+  "source_sha": "c4c861c8385ed234a5118fffdd96475cf1af0908",
+  "built_at_utc": "2026-10-23T04:33:07.233407Z",
   "country_count": 116,
   "article_count": 108,
   "content_counts": {
@@ -78,8 +78,8 @@
     },
     {
       "path": "web-demo/v22-preview/i18n.mjs",
-      "sha256": "f594b0f51c865e9c3ef369903a378ce61d3434e53a58b4c8573f58f809235416",
-      "bytes": 13486
+      "sha256": "c9be82bedc860d2b21bd72a65c3abd79d531a92ccbc7bb125f89df5a1c311206",
+      "bytes": 13500
     },
     {
       "path": "web-demo/v22-preview/localization.mjs",
@@ -120,6 +120,76 @@
       "path": "web-demo/v22-preview/data/en/playstyle-preferences.json",
       "sha256": "559c28157d2521829f860798fe67819b71e5e824c3aaf075758f49fa8b74945b",
       "bytes": 27879
+    },
+    {
+      "path": "web-demo/v22-preview/routes-v24.mjs",
+      "sha256": "a308a00082a41edba061aa20eda2f13c000028cc139941c305f8206fd6d58d3a",
+      "bytes": 11646
+    },
+    {
+      "path": "web-demo/v22-preview/missions-v24.mjs",
+      "sha256": "94215074813ea05d80d05fd1d2650b0cf9f7953458fcfd5e67a95dcb184c7bdd",
+      "bytes": 16343
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24/relations.json",
+      "sha256": "e91d5250b354ffeaeb8cd0c92510b6d9284b0cc968f0c87ad66b01245348f465",
+      "bytes": 12610
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24/locales/en.json",
+      "sha256": "fe3f3e2c775d1e159e67d41dd83bd4e48a53be7b8e84261c468ba94bfbe3f50a",
+      "bytes": 4459
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24/locales/zh.json",
+      "sha256": "81ee621e77e52d2489a83f89a0e0dae61dd33e575856cb3e24d3598490f73fca",
+      "bytes": 4005
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/mission-trees/G64.json",
+      "sha256": "6b902227f508fdbdf0f7dac993a7eaff3c9a37ac5ae6a897f8f7923347b46dcd",
+      "bytes": 9165
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/mission-trees/J84.json",
+      "sha256": "a6a8ad2b603d91510d9a71e5435916c942f3604bfb3b37e427f7067efe60c893",
+      "bytes": 7253
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/mission-trees/A21.json",
+      "sha256": "41bef155b5c053d6c5a035c406332bc3ed4615f992ac8dfd60e6a5a5b2c67a90",
+      "bytes": 22362
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/en/mission-trees/G64.json",
+      "sha256": "a796f738259ac15d377bb45d6c7f941975bc4ff96056d547f2876421703d6f4f",
+      "bytes": 7964
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/en/mission-trees/J84.json",
+      "sha256": "75a115f4f379d1c803865ba534fffd9240af9aa425b8ffa9d5e63af82d208a57",
+      "bytes": 5596
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/en/mission-trees/A21.json",
+      "sha256": "8e4891eda7feee5c080ed9615db5468608d6aa3f5f3dfa9e726770374c71e411",
+      "bytes": 14397
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/zh/mission-trees/G64.json",
+      "sha256": "27f5fd7b7bcdf321290a45d251f3bf0b453d5d6cc6a474bd2e1dbe34222ad911",
+      "bytes": 7626
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/zh/mission-trees/J84.json",
+      "sha256": "8668c76faf51f24f0c3d034e5107896e1d10d79ad8fb1dcfdc25ebc353d91f7f",
+      "bytes": 5098
+    },
+    {
+      "path": "web-demo/v22-preview/data/v24-missions/locales/zh/mission-trees/A21.json",
+      "sha256": "f201c500854ed095466bd1c3598a86851e224519423ea23307e3eb3b70878407",
+      "bytes": 13365
     }
   ]
 }

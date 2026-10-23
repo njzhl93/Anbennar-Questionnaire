@@ -4,6 +4,8 @@ import {attachCountryAutocomplete} from "./country-search.mjs";
 import {matchCountries, UNVERIFIED} from "./regions.mjs";
 import {readMapManifest, mapSection, installMapViewer} from "../map-location.mjs";
 import {localizedDataPath,localizedArticlePath} from "./localization.mjs";
+import {createRouteReader,renderDevelopmentRoutes,routePlaceholder} from "./routes-v24.mjs";
+import {createMissionReader,renderMissionContent,missionPlaceholder,missionStatus} from "./missions-v24.mjs";
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, c => (
@@ -140,6 +142,32 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
     profiles.get(e.owner_tag).push(e);
   }
   const detailCache=new Map(),articleCache=new Map();
+  const readRoutes=createRouteReader();
+  const readMissions=createMissionReader();
+  let missionSession=null;
+  // Keep the pinned app router unchanged. Route links retain their complete
+  // URL, while its existing popstate listener renders the new owner detail.
+  $("encyclopediaDetail").addEventListener("click",event=>{
+    if(event.target.closest("[data-mission-retry]")){
+      if(missionSession){
+        if(event.target.closest("#missionInheritedContent"))void loadInheritedMissions(missionSession);
+        else void loadMissions(missionSession);
+      }
+      return;
+    }
+    const link=event.target.closest("a[data-route-focus],a[data-mission-focus]");
+    if(!link||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    event.stopPropagation();
+    history.replaceState({...history.state,scrollY:window.scrollY},"",location.href);
+    history.pushState({scrollY:0},"",link.getAttribute("href"));
+    window.dispatchEvent(new PopStateEvent("popstate",{state:history.state}));
+  });
+  $("encyclopediaDetail").addEventListener("toggle",event=>{
+    if(!event.target.open||!missionSession)return;
+    if(event.target.id==="missionReader")void loadMissions(missionSession);
+    if(event.target.id==="missionInheritance")void loadInheritedMissions(missionSession);
+  },true);
   const mapManifest=readMapManifest();
   installMapViewer($("encyclopediaDetail"),{language:language()});
   const saved = key => { try { return sessionStorage.getItem(key) || ""; } catch { return ""; } };
@@ -184,8 +212,78 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
     if(!response.ok)throw new Error("HTTP "+response.status+" "+path);
     return response.json();
   }
+  async function showRoutes(tag,focusTag,thisToken) {
+    let html;
+    try {
+      const bundle=await readRoutes.load(language());
+      html=renderDevelopmentRoutes(bundle,{ownerTag:tag,focusTag,index,baseUrl:location.href});
+    } catch {
+      html=routePlaceholder(language());
+    }
+    if(thisToken!==token||currentCountry!==tag)return;
+    const panel=$("developmentRoutes");
+    if(panel)panel.outerHTML=html;
+  }
+  function activeMissionSession(session){
+    return missionSession===session&&session.token===token&&currentCountry===session.tag&&language()===session.locale;
+  }
+  function drawMissions(session,restoreSelection=false){
+    if(!activeMissionSession(session))return;
+    $("missionContent").innerHTML=renderMissionContent(session.bundle,{
+      focusTag:session.focusTag,missionId:session.missionId,baseUrl:location.href,index,inherited:session.inherited
+    });
+    if(restoreSelection&&session.deepLink){
+      requestAnimationFrame(()=>{
+        if(!activeMissionSession(session)||!$("missionReader")?.open)return;
+        const target=$("missionSelected")||$("missionReader");
+        target.focus({preventScroll:true});target.scrollIntoView({block:"start"});
+      });
+    }
+  }
+  async function loadMissions(session){
+    if(!activeMissionSession(session)||session.pending||session.bundle)return;
+    session.pending=true;
+    $("missionContent").innerHTML=missionStatus(session.locale,true);
+    try{
+      const bundle=await readMissions.load(session.tag,session.locale);
+      if(!activeMissionSession(session))return;
+      session.bundle=bundle;
+      drawMissions(session,true);
+      if(session.tag==="J84"&&session.missionId.startsWith("G64_"))await loadInheritedMissions(session);
+    }catch{
+      if(activeMissionSession(session)){
+        session.bundle=null;
+        readMissions.forget(session.tag,session.locale);
+        $("missionContent").innerHTML=missionStatus(session.locale);
+      }
+    }finally{session.pending=false;}
+  }
+  async function loadInheritedMissions(session){
+    if(!activeMissionSession(session)||!session.bundle||session.inherited||session.inheritedPending)return;
+    const ref=session.bundle.data.inherited_catalogs[0];
+    if(!ref)return;
+    session.inheritedPending=true;
+    const content=$("missionInheritedContent");
+    if(content)content.innerHTML=missionStatus(session.locale,true);
+    try{
+      const inherited=await readMissions.load(ref.owner_tag,session.locale);
+      if(!activeMissionSession(session))return;
+      session.inherited=inherited;
+      drawMissions(session,session.missionId.startsWith("G64_"));
+    }catch{
+      if(activeMissionSession(session)){
+        session.inherited=null;
+        readMissions.forget(ref.owner_tag,session.locale);
+        const target=$("missionInheritedContent");
+        if(target)target.innerHTML=missionStatus(session.locale);
+      }
+    }finally{session.inheritedPending=false;}
+  }
   async function showCountry(tag,selectedProfile="") {
+    const params=new URLSearchParams(location.search);
+    const focusTag=params.get("focusTag")||"";
     const idx=countryIndex.get(tag),thisToken=++token;
+    missionSession=null;
     $("encyclopediaDirectory").classList.add("hidden");
     $("encyclopediaDetail").classList.remove("hidden");
     if(!idx){
@@ -235,6 +333,8 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
         (recommend.warnings?.length?'<p>'+ui("Cautions:","注意事项：")+'</p>'+textList(recommend.warnings):"")+
         (identity.formation_scope?'<p><b>'+ui("Formable and mission-inheritance limits: ","形成国与任务继承限制：")+'</b>'+
         esc(identity.formation_scope)+"</p>":"")+'</section>'+
+        routePlaceholder(language(),true)+
+        missionPlaceholder(tag,language(),{open:params.get("panel")==="missions"||!!params.get("mission")})+
         '<section class="panel" id="ideaPanel">'+ideaGroup(data,own)+'</section>'+
         '<section class="panel">'+personalityPanel(data,profiles.get(tag)||[])+'</section>'+
         '<section class="panel">'+gamePanel(data)+'</section>'+
@@ -254,6 +354,12 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
         if(p)$("encyclopediaDetail").insertAdjacentHTML("afterbegin",'<div class="notice">'+ui("Conditional profile from match: ","来自匹配的条件画像：")+
           esc(p.name_zh)+ui(". See the conditional-profile section below.","。详见下方条件画像栏目。")+'</div>');
       }
+      void showRoutes(tag,focusTag,thisToken);
+      if($("missionReader")){
+        missionSession={tag,token:thisToken,locale:language(),focusTag,missionId:params.get("mission")||"",
+          deepLink:params.get("panel")==="missions"||!!params.get("mission"),bundle:null,inherited:null};
+        if($("missionReader").open)void loadMissions(missionSession);
+      }
     } catch(e){
       if(thisToken!==token)return;
       detailCache.delete(tag);articleCache.delete(idx.article_id);
@@ -263,6 +369,7 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
   }
   function showDirectory(region) {
     token++;currentCountry=null;
+    missionSession=null;
     if(typeof region==="string"){
       directoryRegion=region;
       $("encyclopediaRegion").value=region;
