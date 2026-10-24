@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "source_sha": "c4c861c8385ed234a5118fffdd96475cf1af0908",
+  "source_sha": "dcac1b2c0b4c3c734c8da251ee93130acf47506a",
   "maps": {
     "zh-CN": [
       {
@@ -694,7 +694,7 @@
     },
     {
       "path": "release.json",
-      "sha256": "ae4677a9b436830c23fddf285ef4b5535f9afbd90883da19ac3bcaf8c9f361b5",
+      "sha256": "da4b4174fbbd101322d9ec0e415ebfac177b121e84b6defbd0f3e2d52bfc906e",
       "bytes": 6947
     },
     {
@@ -3114,8 +3114,8 @@
     },
     {
       "path": "web-demo/v22-preview/encyclopedia.mjs",
-      "sha256": "90e8d751b86b364c167c6948d8bbd365492018fbd7e8c5caaacc3d8c074b545e",
-      "bytes": 25940
+      "sha256": "1513a07e8ab9fb3fe808c4fa904d5146cbf0e7a2eeb045b499cb69ca5296d7f3",
+      "bytes": 27477
     },
     {
       "path": "web-demo/v22-preview/i18n.mjs",

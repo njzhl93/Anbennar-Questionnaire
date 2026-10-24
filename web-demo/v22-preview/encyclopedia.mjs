@@ -144,9 +144,9 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
   const detailCache=new Map(),articleCache=new Map();
   const readRoutes=createRouteReader();
   const readMissions=createMissionReader();
-  let missionSession=null;
-  // Keep the pinned app router unchanged. Route links retain their complete
-  // URL, while its existing popstate listener renders the new owner detail.
+  let missionSession=null,routeBundle=null;
+  // Cross-country links still use the app router. Task selections within the
+  // loaded owner update the reader and route focus, preserving the article.
   $("encyclopediaDetail").addEventListener("click",event=>{
     if(event.target.closest("[data-mission-retry]")){
       if(missionSession){
@@ -159,8 +159,35 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
     if(!link||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
     event.preventDefault();
     event.stopPropagation();
-    history.replaceState({...history.state,scrollY:window.scrollY},"",location.href);
-    history.pushState({scrollY:0},"",link.getAttribute("href"));
+    const next=new URL(link.href,location.href),session=missionSession;
+    const localMission=link.hasAttribute("data-mission-focus")&&session?.bundle&&
+      activeMissionSession(session)&&next.searchParams.get("country")===session.tag;
+    const {scrollX,scrollY}=window;
+    history.replaceState({...history.state,scrollY},"",location.href);
+    history.pushState({scrollY:localMission?scrollY:0},"",next.href);
+    if(localMission){
+      const previousFocus=session.focusTag;
+      session.focusTag=next.searchParams.get("focusTag")||"";
+      session.missionId=next.searchParams.get("mission")||"";
+      session.deepLink=true;
+      if(previousFocus!==session.focusTag){
+        if(routeBundle?.locale===session.locale){
+          const panel=$("developmentRoutes");
+          if(panel)panel.outerHTML=renderDevelopmentRoutes(routeBundle,{
+            ownerTag:session.tag,focusTag:session.focusTag,index,baseUrl:location.href
+          });
+        }else void showRoutes(session.tag,session.focusTag,session.token);
+      }
+      drawMissions(session);
+      const selected=$("missionSelected");
+      selected?.focus({preventScroll:true});
+      // CSS smooth scrolling must not animate a viewport restoration. On the
+      // stacked mobile layout, reveal the new detail directly instead.
+      window.scrollTo({left:scrollX,top:scrollY,behavior:"instant"});
+      if(window.matchMedia("(max-width:760px)").matches)
+        selected?.scrollIntoView({block:"start",behavior:"instant"});
+      return;
+    }
     window.dispatchEvent(new PopStateEvent("popstate",{state:history.state}));
   });
   $("encyclopediaDetail").addEventListener("toggle",event=>{
@@ -213,14 +240,17 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
     return response.json();
   }
   async function showRoutes(tag,focusTag,thisToken) {
-    let html;
+    let html,loadedBundle=null;
     try {
       const bundle=await readRoutes.load(language());
       html=renderDevelopmentRoutes(bundle,{ownerTag:tag,focusTag,index,baseUrl:location.href});
+      loadedBundle=bundle;
     } catch {
       html=routePlaceholder(language());
     }
-    if(thisToken!==token||currentCountry!==tag)return;
+    if(thisToken!==token||currentCountry!==tag||
+       (new URLSearchParams(location.search).get("focusTag")||"")!==focusTag)return;
+    routeBundle=loadedBundle;
     const panel=$("developmentRoutes");
     if(panel)panel.outerHTML=html;
   }
