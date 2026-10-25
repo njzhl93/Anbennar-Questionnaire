@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "source_sha": "dcac1b2c0b4c3c734c8da251ee93130acf47506a",
+  "source_sha": "6fdace15a78de246610d4c908f8471c1dac30938",
   "maps": {
     "zh-CN": [
       {
@@ -694,7 +694,7 @@
     },
     {
       "path": "release.json",
-      "sha256": "da4b4174fbbd101322d9ec0e415ebfac177b121e84b6defbd0f3e2d52bfc906e",
+      "sha256": "dfe63e18946b1aa19e50605182183f2c0068999afbcce74a57ce735afd5f9eb6",
       "bytes": 6947
     },
     {
@@ -3114,8 +3114,8 @@
     },
     {
       "path": "web-demo/v22-preview/encyclopedia.mjs",
-      "sha256": "1513a07e8ab9fb3fe808c4fa904d5146cbf0e7a2eeb045b499cb69ca5296d7f3",
-      "bytes": 27477
+      "sha256": "2c03d67434a0b41e8dabba89d5fd3c6e568eedfd62e3a63774d6f6a1119129bd",
+      "bytes": 28800
     },
     {
       "path": "web-demo/v22-preview/i18n.mjs",
@@ -3134,8 +3134,8 @@
     },
     {
       "path": "web-demo/v22-preview/missions-v24.mjs",
-      "sha256": "94215074813ea05d80d05fd1d2650b0cf9f7953458fcfd5e67a95dcb184c7bdd",
-      "bytes": 16343
+      "sha256": "f226c7422b7584e76208e452b795d3154215e5a168c06e3e328922ebf05a54dc",
+      "bytes": 24594
     },
     {
       "path": "web-demo/v22-preview/playstyle.mjs",
@@ -3824,8 +3824,8 @@
     },
     {
       "path": "web-demo/v22-preview/style.css",
-      "sha256": "7d291930b27fa6b36e9feddf84e546bb6015003534da01be41216c446b14f47b",
-      "bytes": 26929
+      "sha256": "581295f1cb543cc70e99bd6a338034f53062d29d49d337999c088518dcaf7f4d",
+      "bytes": 29638
     },
     {
       "path": "安本纳尔/国家百科/assets/flags/Adenica-B58.png",

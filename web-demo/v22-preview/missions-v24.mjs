@@ -31,8 +31,8 @@ export const isMissionOwner=tag=>Object.hasOwn(DOMAINS,tag);
 const localeKey=locale=>locale==="en"?"en":"zh";
 const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const copy={
-  en:{title:"Mission samples",notice:"Twenty-one source-verified samples across two routes, not a complete mission tree. Conditions and rewards are static summaries, not save-game eligibility or completion states.",list:"Selected country samples",native:"Original mission description",groups:"Mission group and applicability · editorial summary",trigger:"Completion conditions · editorial summary",effect:"Rewards · editorial summary",requires:"Direct prerequisites",none:"No direct prerequisite recorded.",outside:"Definition exists; outside this pilot",unchecked:"not_checked · Upstream definition not verified in this pilot",events:"Event references · call does not prove outcome",decisions:"Decision references · dependency does not execute a decision",complex:"complex_unverified · Compound execution semantics remain unverified.",runtime:"not_tested · EU4 runtime has not been tested.",inherited:"Conditional G64 inheritance",inheritLoad:"Expand to load inherited samples.",inheritScope:"This requires the historical G64 identity; no eligibility is inferred for your game.",source:"Native source",unknown:"This mission is not covered in the selected country view.",loading:"Loading mission samples…",error:"Mission samples are temporarily unavailable. The encyclopedia remains available.",retry:"Retry",indexMiss:"Native text verified; description was missed by the old index (index_miss).",placeholder:"Game placeholders are shown literally; no save-game values are substituted.",count:"samples displayed",branch:"Conditional group; not a universal or mandatory sequence.",called:"called",flag_required:"flag dependency"},
-  zh:{title:"任务样本",notice:"两条路线共二十一个经来源核验的样本，并非完整任务树。条件和奖励为静态摘要，不代表存档中的资格或完成状态。",list:"当前国家任务样本",native:"任务原生描述",groups:"任务组及适用条件 · 编辑说明",trigger:"完成条件 · 编辑说明",effect:"任务奖励 · 编辑说明",requires:"直接前置",none:"未记录直接前置。",outside:"定义存在，未纳入本次试点",unchecked:"not_checked · 上游任务定义未在本次试点核验",events:"事件引用 · 调用不代表结果已发生",decisions:"决议引用 · 依赖不代表执行决议",complex:"complex_unverified · 复杂执行语义尚未完整核实。",runtime:"not_tested · 未执行EU4实机验证。",inherited:"G64条件继承样本",inheritLoad:"展开后载入继承样本。",inheritScope:"要求历史身份为G64；不会判断你的游戏是否满足资格。",source:"原生来源",unknown:"当前国家视图未覆盖此任务。",loading:"正在加载任务样本…",error:"任务样本暂时无法载入，原百科仍可使用。",retry:"重试",indexMiss:"原生文本已核实；旧索引漏收此描述（index_miss）。",placeholder:"游戏变量占位符原样显示，不代入存档数值。",count:"个展示样本",branch:"条件任务组，不代表普遍可用或必做顺序。",called:"调用",flag_required:"旗标依赖"}
+  en:{title:"Mission samples",notice:"Twenty-one source-verified samples across two routes, not a complete mission tree. Conditions and rewards are static summaries, not save-game eligibility or completion states.",list:"Selected country samples",native:"Original mission description",groups:"Mission group and applicability · editorial summary",trigger:"Completion conditions · editorial summary",effect:"Rewards · editorial summary",requires:"Direct prerequisites",none:"No direct prerequisite recorded.",outside:"Definition exists; outside this pilot",unchecked:"not_checked · Upstream definition not verified in this pilot",events:"Event references · call does not prove outcome",decisions:"Decision references · dependency does not execute a decision",complex:"complex_unverified · Compound execution semantics remain unverified.",runtime:"not_tested · EU4 runtime has not been tested.",inherited:"Conditional G64 inheritance",inheritLoad:"Expand to load inherited samples.",inheritScope:"This requires the historical G64 identity; no eligibility is inferred for your game.",source:"Native source",unknown:"This mission is not covered in the selected country view.",loading:"Loading mission samples…",error:"Mission samples are temporarily unavailable. The encyclopedia remains available.",retry:"Retry",indexMiss:"Native text verified; description was missed by the old index (index_miss).",placeholder:"Game placeholders are shown literally; no save-game values are substituted.",count:"samples displayed",branch:"Conditional group; not a universal or mandatory sequence.",called:"called",flag_required:"flag dependency",listView:"List",graphView:"Prerequisite graph",graphUnavailable:"The graph is temporarily unavailable. The mission list remains available.",graphExternal:"Unexpanded prerequisite references",graphNoPrerequisites:"No in-pilot prerequisite recorded.",graphPrerequisites:"Direct prerequisites",graphSelected:"Selected mission",graphPredecessor:"Prerequisite of selected mission",graphSuccessor:"Direct successor of selected mission",graphLayer:"Sample layer"},
+  zh:{title:"任务样本",notice:"两条路线共二十一个经来源核验的样本，并非完整任务树。条件和奖励为静态摘要，不代表存档中的资格或完成状态。",list:"当前国家任务样本",native:"任务原生描述",groups:"任务组及适用条件 · 编辑说明",trigger:"完成条件 · 编辑说明",effect:"任务奖励 · 编辑说明",requires:"直接前置",none:"未记录直接前置。",outside:"定义存在，未纳入本次试点",unchecked:"not_checked · 上游任务定义未在本次试点核验",events:"事件引用 · 调用不代表结果已发生",decisions:"决议引用 · 依赖不代表执行决议",complex:"complex_unverified · 复杂执行语义尚未完整核实。",runtime:"not_tested · 未执行EU4实机验证。",inherited:"G64条件继承样本",inheritLoad:"展开后载入继承样本。",inheritScope:"要求历史身份为G64；不会判断你的游戏是否满足资格。",source:"原生来源",unknown:"当前国家视图未覆盖此任务。",loading:"正在加载任务样本…",error:"任务样本暂时无法载入，原百科仍可使用。",retry:"重试",indexMiss:"原生文本已核实；旧索引漏收此描述（index_miss）。",placeholder:"游戏变量占位符原样显示，不代入存档数值。",count:"个展示样本",branch:"条件任务组，不代表普遍可用或必做顺序。",called:"调用",flag_required:"旗标依赖",listView:"列表",graphView:"前置图",graphUnavailable:"图暂时不可用；任务列表仍可使用。",graphExternal:"未展开的前置引用",graphNoPrerequisites:"未记录试点内前置。",graphPrerequisites:"直接前置",graphSelected:"当前任务",graphPredecessor:"当前任务的前置",graphSuccessor:"当前任务的直接后续",graphLayer:"样本层"}
 };
 const fail=reason=>{throw new Error(`Mission data: ${reason}`);};
 const list=(value,label)=>{if(!Array.isArray(value))fail(label);return value;};
@@ -138,7 +138,87 @@ function missionLink(bundle,mission,{owner,focus,baseUrl,selected=""}){
   return `<a data-mission-focus="${esc(mission.mission_id)}" href="${esc(route(baseUrl,owner,focus,mission.mission_id,bundle.locale))}"${selected===mission.mission_id?' aria-current="true"':""}>${esc(nativeFor(bundle,mission).name)} <code>${esc(mission.mission_id)}</code></a>`;
 }
 
-export function renderMissionContent(bundle,{focusTag="",missionId="",baseUrl,index,inherited=null}={}){
+export function buildMissionGraph(bundle,{sourceDomain}={}){
+  const {data,texts}=bundle||{};
+  if(typeof sourceDomain!=="string"||!sourceDomain.trim())fail("graph source domain");
+  const missions=list(data?.missions,"graph missions").filter(m=>m?.source_domain===sourceDomain);
+  if(!missions.length)fail("graph source domain has no missions");
+  const nodes=[],byId=new Map();
+  for(const mission of missions){
+    const missionId=string(mission?.mission_id,"graph mission_id"),id=`${sourceDomain}:${missionId}`;
+    if(mission.id!==id||byId.has(id))fail("graph duplicate mission identity");
+    const nativeEntries=list(texts?.missions,"graph native missions").filter(entry=>entry?.id===id);
+    if(nativeEntries.length!==1)fail("graph native mission identity");
+    const name=string(nativeEntries[0].name,"graph native mission name");
+    // Graph nodes expose link identity only; full native task data stays in the bundle.
+    const node={id,mission:{id,mission_id:missionId},name,rank:null};
+    nodes.push(node);byId.set(id,node);
+  }
+  const edges=[],externalReferences=[];
+  for(const mission of missions){
+    const node=byId.get(mission.id);
+    for(const required of list(mission.required_missions,"graph required missions")){
+      const missionId=string(required?.mission_id,"graph prerequisite ID");
+      if(required.status==="not_checked"){
+        externalReferences.push({from:node.id,missionId,status:required.status});
+        continue;
+      }
+      if(required.status!=="verified")fail("graph prerequisite status");
+      const from=`${sourceDomain}:${missionId}`;
+      if(!byId.has(from))fail("graph verified prerequisite definition");
+      edges.push({from,to:node.id});
+    }
+  }
+  edges.sort((a,b)=>a.from.localeCompare(b.from)||a.to.localeCompare(b.to));
+  const incoming=new Map(nodes.map(node=>[node.id,0])),outgoing=new Map(nodes.map(node=>[node.id,[]]));
+  for(const edge of edges){incoming.set(edge.to,incoming.get(edge.to)+1);outgoing.get(edge.from).push(edge.to);}
+  const ready=nodes.filter(node=>incoming.get(node.id)===0).map(node=>node.id).sort(),ordered=[];
+  while(ready.length){
+    const id=ready.shift(),node=byId.get(id);ordered.push(node);
+    for(const target of outgoing.get(id).sort()){
+      const targetNode=byId.get(target);targetNode.rank=Math.max(targetNode.rank??0,(node.rank??0)+1);
+      incoming.set(target,incoming.get(target)-1);
+      if(incoming.get(target)===0){ready.push(target);ready.sort();}
+    }
+  }
+  if(ordered.length!==nodes.length)fail("graph prerequisite cycle");
+  for(const node of ordered)node.rank??=0;
+  const levels=[];
+  for(const node of [...nodes].sort((a,b)=>a.rank-b.rank||a.id.localeCompare(b.id))){
+    const level=levels[node.rank]??{rank:node.rank,nodes:[]};levels[node.rank]=level;level.nodes.push(node);
+  }
+  nodes.sort((a,b)=>a.rank-b.rank||a.id.localeCompare(b.id));
+  externalReferences.sort((a,b)=>a.from.localeCompare(b.from)||a.missionId.localeCompare(b.missionId)||a.status.localeCompare(b.status));
+  return {sourceDomain,nodes,edges,externalReferences,levels};
+}
+
+export function renderMissionGraph(bundle,{owner,focus,selected="",baseUrl,sourceDomain}={}){
+  const graph=buildMissionGraph(bundle,{sourceDomain}),c=copy[localeKey(bundle.locale)],linkOptions={owner,focus,baseUrl,selected};
+  const nodesById=new Map(graph.nodes.map(node=>[node.id,node])),incoming=new Map(graph.nodes.map(node=>[node.id,[]])),outgoing=new Map(graph.nodes.map(node=>[node.id,[]]));
+  for(const edge of graph.edges){incoming.get(edge.to).push(edge.from);outgoing.get(edge.from).push(edge.to);}
+  const selectedId=selected?`${sourceDomain}:${selected}`:"",predecessors=new Set(incoming.get(selectedId)||[]),successors=new Set(outgoing.get(selectedId)||[]);
+  const rows=graph.levels.flatMap(level=>level.nodes),rowIndex=new Map(rows.map((node,index)=>[node.id,index])),height=Math.max(128,rows.length*144-16),markerId=`mission-graph-arrow-${sourceDomain}`;
+  const paths=graph.edges.map(edge=>{
+    const fromY=64+rowIndex.get(edge.from)*144,toY=64+rowIndex.get(edge.to)*144,related=edge.from===selectedId||edge.to===selectedId;
+    return `<path class="mission-graph-edge${related?" is-related":""}" data-from="${esc(edge.from)}" data-to="${esc(edge.to)}" d="M 52 ${fromY} C 4 ${fromY}, 4 ${toY}, 52 ${toY}" marker-end="url(#${esc(markerId)})" aria-hidden="true"/>`;
+  }).join("");
+  const nodeHtml=node=>{
+    const prerequisiteIds=incoming.get(node.id),prerequisiteNames=prerequisiteIds.map(id=>nodesById.get(id).name);
+    const relations=[];
+    if(node.id===selectedId)relations.push(c.graphSelected);
+    if(predecessors.has(node.id))relations.push(c.graphPredecessor);
+    if(successors.has(node.id))relations.push(c.graphSuccessor);
+    const relation=relations.length?`<span class="mission-graph-relation">${esc(relations.join(" · "))}</span>`:"";
+    const dependencies=prerequisiteNames.length?`${c.graphPrerequisites}: ${prerequisiteNames.join("; ")}`:c.graphNoPrerequisites;
+    const states=[node.id===selectedId?" is-selected":"",predecessors.has(node.id)?" is-predecessor":"",successors.has(node.id)?" is-successor":""].join("");
+    return `<article class="mission-graph-node${states}" data-node-id="${esc(node.id)}" title="${esc(`${node.name} · ${node.mission.mission_id}`)}"><span class="mission-graph-layer">${esc(c.graphLayer)} ${node.rank+1}</span>${relation}${missionLink(bundle,node.mission,linkOptions)}<p class="mission-graph-dependencies">${esc(dependencies)}</p></article>`;
+  };
+  const levels=graph.levels.map(level=>`<div class="mission-graph-level" data-rank="${level.rank}">${level.nodes.map(nodeHtml).join("")}</div>`).join("");
+  const external=graph.externalReferences.length?`<section class="mission-graph-externals"><h4>${esc(c.graphExternal)}</h4><ul>${graph.externalReferences.map(ref=>{const caller=nodesById.get(ref.from);return `<li class="mission-graph-external" data-caller-id="${esc(ref.from)}"><span class="mission-graph-external-caller">${esc(caller.name)} <code>${esc(caller.mission.mission_id)}</code></span> → <code>${esc(ref.missionId)}</code> · ${esc(c.unchecked)}</li>`;}).join("")}</ul></section>`:"";
+  return `<section class="mission-graph" data-source-domain="${esc(sourceDomain)}" style="--mission-graph-rows:${rows.length}"><svg class="mission-graph-lines" viewBox="0 0 52 ${height}" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="${esc(markerId)}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path class="mission-graph-arrow" d="M 0 0 L 8 4 L 0 8 z"/></marker></defs>${paths}</svg><div class="mission-graph-levels">${levels}</div>${external}</section>`;
+}
+
+export function renderMissionContent(bundle,{focusTag="",missionId="",baseUrl,index,inherited=null,view="list"}={}){
   const {data,texts,locale}=bundle,c=copy[locale],owner=data.owner_tag;
   if(!index?.countries?.some(country=>country.tag===owner&&country.article_id===data.article_id))fail("owner/article linkage");
   const focus=DOMAINS[owner].includes(focusTag)?focusTag:owner;
@@ -153,9 +233,16 @@ export function renderMissionContent(bundle,{focusTag="",missionId="",baseUrl,in
   const candidates=[...own.map(m=>({mission:m,bundle})),...extra.map(m=>({mission:m,bundle:inherited}))];
   const chosen=missionId?candidates.find(n=>n.mission.mission_id===missionId):candidates[0];
   const linkOptions={owner,focus,baseUrl,selected:chosen?.mission.mission_id};
-  const taskList=(items,source)=>`<ul class="mission-list">${items.map(m=>`<li>${missionLink(source,m,linkOptions)}</li>`).join("")}</ul>`;
+  const selectedView=view==="graph"?"graph":"list";
+  const listView=(items,source)=>`<ul class="mission-list">${items.map(m=>`<li>${missionLink(source,m,linkOptions)}</li>`).join("")}</ul>`;
+  const taskList=(items,source,sourceDomain)=>{
+    if(selectedView!=="graph")return listView(items,source);
+    try{return renderMissionGraph(source,{...linkOptions,sourceDomain});}
+    catch(error){return `<p role="status" class="mission-graph-error">${esc(c.graphUnavailable)}</p>${listView(items,source)}`;}
+  };
+  const viewControls=`<div class="mission-view-controls" role="group" aria-label="${esc(c.list)}"><button type="button" data-mission-view="list" aria-pressed="${selectedView==="list"}">${esc(c.listView)}</button><button type="button" data-mission-view="graph" aria-pressed="${selectedView==="graph"}">${esc(c.graphView)}</button></div>`;
   const tabs=DOMAINS[owner].length>1?`<nav class="mission-tabs" aria-label="${esc(c.list)}">${DOMAINS[owner].map(tag=>`<a data-mission-focus="" href="${esc(route(baseUrl,owner,tag,"",locale))}"${tag===focus?' aria-current="true"':""}>${esc(tag)}</a>`).join("")}</nav>`:"";
-  const inheritance=ref?`<details id="missionInheritance"${inherited?" open":""}><summary>${esc(c.inherited)}</summary><p>${esc(summary(texts,ref))}</p><p class="mission-condition"><code>${esc(ref.applicability)}</code> · ${esc(c.inheritScope)}</p><div id="missionInheritedContent">${inherited?taskList(extra,inherited):`<p>${esc(c.inheritLoad)}</p>`}</div></details>`:"";
+  const inheritance=ref?`<details id="missionInheritance"${inherited?" open":""}><summary>${esc(c.inherited)}</summary><p>${esc(summary(texts,ref))}</p><p class="mission-condition"><code>${esc(ref.applicability)}</code> · ${esc(c.inheritScope)}</p><div id="missionInheritedContent">${inherited?taskList(extra,inherited,ref.source_domain):`<p>${esc(c.inheritLoad)}</p>`}</div></details>`:"";
   let detail=missionId&&!chosen?`<p role="status" class="mission-unknown">${esc(c.unknown)}</p>`:"";
   if(chosen){
     const m=chosen.mission,b=chosen.bundle,n=nativeFor(b,m);
@@ -170,5 +257,5 @@ export function renderMissionContent(bundle,{focusTag="",missionId="",baseUrl,in
     const references=(key,label,idKey)=>m[key].length?`<h4>${esc(label)}</h4><ul>${m[key].map(r=>`<li><code>${esc(r[idKey])}</code> · ${esc(c[r.relation]||r.relation)}</li>`).join("")}</ul>`:"";
     detail=`<article id="missionSelected" data-mission-id="${esc(m.mission_id)}" tabindex="-1"><h3>${esc(n.name)}</h3><p><code>${esc(m.mission_id)}</code> · ${esc(c.source)}: ${esc(m.source_domain)}</p><h4>${esc(c.native)}</h4><p class="mission-description">${esc(n.description.replace(/\\n/g,"\n"))}</p>${n.description.includes("[Root.")?`<p class="fine">${esc(c.placeholder)}</p>`:""}${n.description_provenance.index_status==="index_miss"?`<p class="fine">${esc(c.indexMiss)}</p>`:""}<h4>${esc(c.groups)}</h4>${groups}<h4>${esc(c.requires)}</h4>${required?`<ul class="mission-prerequisites">${required}</ul>`:`<p>${esc(c.none)}</p>`}<h4>${esc(c.trigger)}</h4><p class="mission-trigger">${esc(summary(b.texts,m.trigger))}</p><h4>${esc(c.effect)}</h4><p class="mission-effect">${esc(summary(b.texts,m.effect))}</p><p class="mission-verification">${esc(c.complex)}</p><p class="mission-verification">${esc(c.runtime)}</p>${references("event_refs",c.events,"event_id")}${references("decision_refs",c.decisions,"decision_id")}</article>`;
   }
-  return `<p class="mission-notice">${esc(c.notice)}</p>${tabs}<div class="mission-layout"><div><h3>${esc(c.list)} · ${esc(focus)}</h3><p class="fine">${own.length} ${esc(c.count)}</p>${taskList(own,bundle)}${inheritance}</div><div class="mission-detail">${detail}</div></div>`;
+  return `<p class="mission-notice">${esc(c.notice)}</p>${tabs}${viewControls}<div class="mission-layout"><div><h3>${esc(c.list)} · ${esc(focus)}</h3><p class="fine">${own.length} ${esc(c.count)}</p>${taskList(own,bundle,focus)}${inheritance}</div><div class="mission-detail">${detail}</div></div>`;
 }

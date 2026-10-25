@@ -148,6 +148,19 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
   // Cross-country links still use the app router. Task selections within the
   // loaded owner update the reader and route focus, preserving the article.
   $("encyclopediaDetail").addEventListener("click",event=>{
+    const viewButton=event.target.closest("[data-mission-view]");
+    if(viewButton&&missionSession?.bundle&&activeMissionSession(missionSession)){
+      const view=viewButton.dataset.missionView;
+      if(view!=="list"&&view!=="graph")return;
+      event.preventDefault();event.stopPropagation();
+      const {scrollX,scrollY}=window;
+      missionSession.view=view;
+      persist("anbennar-v24-mission-view",view);
+      drawMissions(missionSession);
+      $("missionContent").querySelector(`[data-mission-view="${view}"]`)?.focus({preventScroll:true});
+      window.scrollTo({left:scrollX,top:scrollY,behavior:"instant"});
+      return;
+    }
     if(event.target.closest("[data-mission-retry]")){
       if(missionSession){
         if(event.target.closest("#missionInheritedContent"))void loadInheritedMissions(missionSession);
@@ -252,7 +265,19 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
        (new URLSearchParams(location.search).get("focusTag")||"")!==focusTag)return;
     routeBundle=loadedBundle;
     const panel=$("developmentRoutes");
-    if(panel)panel.outerHTML=html;
+    if(panel){
+      const selected=$("missionSelected");
+      const before=selected?.getBoundingClientRect();
+      const keepPosition=!window.matchMedia("(max-width:760px)").matches&&
+        $("missionReader")?.open&&before?.top<innerHeight&&before.bottom>0;
+      panel.outerHTML=html;
+      // Late route content grows above the reader. Keep a visible desktop
+      // detail anchored without moving readers who are elsewhere on the page.
+      if(keepPosition){
+        const shift=selected.getBoundingClientRect().top-before.top;
+        if(shift)window.scrollBy({top:shift,behavior:"instant"});
+      }
+    }
   }
   function activeMissionSession(session){
     return missionSession===session&&session.token===token&&currentCountry===session.tag&&language()===session.locale;
@@ -260,7 +285,7 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
   function drawMissions(session,restoreSelection=false){
     if(!activeMissionSession(session))return;
     $("missionContent").innerHTML=renderMissionContent(session.bundle,{
-      focusTag:session.focusTag,missionId:session.missionId,baseUrl:location.href,index,inherited:session.inherited
+      focusTag:session.focusTag,missionId:session.missionId,baseUrl:location.href,index,inherited:session.inherited,view:session.view
     });
     if(restoreSelection&&session.deepLink){
       requestAnimationFrame(()=>{
@@ -387,7 +412,8 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
       void showRoutes(tag,focusTag,thisToken);
       if($("missionReader")){
         missionSession={tag,token:thisToken,locale:language(),focusTag,missionId:params.get("mission")||"",
-          deepLink:params.get("panel")==="missions"||!!params.get("mission"),bundle:null,inherited:null};
+          deepLink:params.get("panel")==="missions"||!!params.get("mission"),bundle:null,inherited:null,
+          view:saved("anbennar-v24-mission-view")==="graph"?"graph":"list"};
         if($("missionReader").open)void loadMissions(missionSession);
       }
     } catch(e){

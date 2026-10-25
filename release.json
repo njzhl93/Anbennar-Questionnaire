@@ -1,7 +1,7 @@
 {
   "version": "v2.4",
-  "source_sha": "dcac1b2c0b4c3c734c8da251ee93130acf47506a",
-  "built_at_utc": "2026-10-24T03:05:57.013422Z",
+  "source_sha": "6fdace15a78de246610d4c908f8471c1dac30938",
+  "built_at_utc": "2026-10-25T01:35:20.898827Z",
   "country_count": 116,
   "article_count": 108,
   "content_counts": {
@@ -128,8 +128,8 @@
     },
     {
       "path": "web-demo/v22-preview/missions-v24.mjs",
-      "sha256": "94215074813ea05d80d05fd1d2650b0cf9f7953458fcfd5e67a95dcb184c7bdd",
-      "bytes": 16343
+      "sha256": "f226c7422b7584e76208e452b795d3154215e5a168c06e3e328922ebf05a54dc",
+      "bytes": 24594
     },
     {
       "path": "web-demo/v22-preview/data/v24/relations.json",
