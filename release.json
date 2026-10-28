@@ -1,7 +1,7 @@
 {
   "version": "v2.4",
-  "source_sha": "6fdace15a78de246610d4c908f8471c1dac30938",
-  "built_at_utc": "2026-10-25T01:35:20.898827Z",
+  "source_sha": "7aaad08d153a3faa3dbf0afab6e2df21d7cc2f55",
+  "built_at_utc": "2026-10-28T15:05:11.596034Z",
   "country_count": 116,
   "article_count": 108,
   "content_counts": {
@@ -68,8 +68,8 @@
     },
     {
       "path": "web-demo/v22-preview/app.mjs",
-      "sha256": "d713c89f40a0fe8b3f5cc16e1e26e158a69b10565aa3c0e33fc656be177a21f3",
-      "bytes": 25793
+      "sha256": "b7a24b7bd4e0e9ad27a9927878615f5cee24e4aad2d32229ce105203e5dabfbc",
+      "bytes": 26120
     },
     {
       "path": "web-demo/v22-preview/country-search.mjs",

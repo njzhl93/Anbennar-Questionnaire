@@ -371,18 +371,27 @@ function bind() {
 async function init() {
   bind();
   try {
-    const payload = await fetchLocalizedJson("personality-v22.json");
+    // Settle optional failures immediately, even if a required request fails first.
+    const playstyleRequest=fetchLocalizedJson("playstyle-preferences.json").then(
+      value=>({ok:true,value}), error=>({ok:false,error})
+    );
+    const [payload,indexPayload]=await Promise.all([
+      fetchLocalizedJson("personality-v22.json"),
+      fetchLocalizedJson("encyclopedia-index.json")
+    ]);
     validateDataset(payload);
     if (payload.source?.commit !== "0a4811355058f12c919bce45c2ee86f0323c749a" ||
         payload.source?.blob_sha !== "409e5b01c990dca5d629bd06ff82db4aae5ff4e7") {
       throw new Error("研究源提交标识不符合当前 P0 固定基准");
     }
-    const index=compatibleEncyclopediaIndex(await fetchLocalizedJson("encyclopedia-index.json"));
+    const index=compatibleEncyclopediaIndex(indexPayload);
     validateEncyclopediaIndex(index,payload.entries);
     data = payload;
     encyclopediaIndex=index;
     try {
-      playstyleData=await fetchLocalizedJson("playstyle-preferences.json");
+      const result=await playstyleRequest;
+      if(!result.ok)throw result.error;
+      playstyleData=result.value;
       validatePlaystyleData(playstyleData);
     } catch(error) {
       playstyleData=null;

@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "source_sha": "6fdace15a78de246610d4c908f8471c1dac30938",
+  "source_sha": "7aaad08d153a3faa3dbf0afab6e2df21d7cc2f55",
   "maps": {
     "zh-CN": [
       {
@@ -694,7 +694,7 @@
     },
     {
       "path": "release.json",
-      "sha256": "dfe63e18946b1aa19e50605182183f2c0068999afbcce74a57ce735afd5f9eb6",
+      "sha256": "684934c4b2aac4dbeb98c7e11552593fea7552603582c46a5175fb219faae270",
       "bytes": 6947
     },
     {
@@ -769,8 +769,8 @@
     },
     {
       "path": "web-demo/v22-preview/app.mjs",
-      "sha256": "d713c89f40a0fe8b3f5cc16e1e26e158a69b10565aa3c0e33fc656be177a21f3",
-      "bytes": 25793
+      "sha256": "b7a24b7bd4e0e9ad27a9927878615f5cee24e4aad2d32229ce105203e5dabfbc",
+      "bytes": 26120
     },
     {
       "path": "web-demo/v22-preview/comparison.mjs",
