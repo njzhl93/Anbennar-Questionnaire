@@ -279,6 +279,33 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
       }
     }
   }
+  async function showMaps(tag,identity,thisToken,locale){
+    let html;
+    try{
+      const maps=await mapManifest;
+      html=mapSection(tag,maps.data,{assetsApprovedAndHosted:true,assetPrefix:"../../",identity,language:language()});
+    }catch{
+      html=mapSection(tag,null,{language:locale});
+    }
+    if(thisToken!==token||currentCountry!==tag||language()!==locale)return;
+    const panel=$("countryMaps");
+    if(!panel)return;
+    // Keep the visible task or text below the map in place. Readers above the
+    // map stay where they are; no task is brought into view merely by loading.
+    const anchor=panel.getBoundingClientRect().bottom<=0?
+      [$("missionSelected"),...$("encyclopediaDetail").querySelectorAll(".panel")].find(node=>{
+      if(!node||panel.contains(node)||!(panel.compareDocumentPosition(node)&Node.DOCUMENT_POSITION_FOLLOWING))return false;
+      const rect=node.getBoundingClientRect();
+      return rect.top<innerHeight&&rect.bottom>0;
+      }):null;
+    const before=anchor?.getBoundingClientRect().top;
+    panel.innerHTML=html;
+    panel.setAttribute("aria-busy","false");
+    if(anchor){
+      const shift=anchor.getBoundingClientRect().top-before;
+      if(shift)window.scrollBy({top:shift,behavior:"instant"});
+    }
+  }
   function activeMissionSession(session){
     return missionSession===session&&session.token===token&&currentCountry===session.tag&&language()===session.locale;
   }
@@ -350,7 +377,7 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
     try{
       if(!detailCache.has(tag))detailCache.set(tag,readJson(localizedDataPath("countries/"+encodeURIComponent(tag)+".json").replace(/^\.\//,"")));
       if(!articleCache.has(idx.article_id))articleCache.set(idx.article_id,readJson(localizedArticlePath(idx.article_id).replace(/^\.\//,"")));
-      const [data,article,maps]=await Promise.all([detailCache.get(tag),articleCache.get(idx.article_id),mapManifest]);
+      const [data,article]=await Promise.all([detailCache.get(tag),articleCache.get(idx.article_id)]);
       if(thisToken!==token)return;
       if(data.tag!==tag||article.article_id!==idx.article_id||
          article.article_path!==idx.article_path)throw new Error(ui("Country/article linkage mismatch","国家与文章关联不一致"));
@@ -376,7 +403,8 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
         '</p><p class="lead">'+esc(overview.tagline||"")+'</p>'+
         (all(identity.successors).length?'<p>'+ui("Related successors: ","相关后继：")+esc(identity.successors.map(x=>typeof x==="string"?x:(x.name_en||x.name_zh||x.tag)).join(ui(", ","、")))+"</p>":"")+
         '</div></header>'+
-        mapSection(tag,maps.data,{assetsApprovedAndHosted:true,assetPrefix:"../../",identity,language:language()})+
+        '<div id="countryMaps" data-country="'+esc(tag)+'" aria-busy="true"><section class="panel map-location"><p>'+
+        ui("Loading map…","地图加载中…")+'</p></section></div>'+
         '<section class="panel"><h2>'+esc(t("country.overview","国家概览与玩法"))+'</h2>'+
         (english()&&data.translation_status!=="complete"?'<p class="notice translation-gap">'+esc(t("translation.countryGap"))+'</p>':"")+'<p>'+
         esc(overview.overview||identity.appearance||missing())+'</p><h3>'+ui("Signature features","核心特色")+'</h3>'+
@@ -409,6 +437,7 @@ export function createEncyclopedia(index,entries,{onStartRegionTest,onNavigateCo
         if(p)$("encyclopediaDetail").insertAdjacentHTML("afterbegin",'<div class="notice">'+ui("Conditional profile from match: ","来自匹配的条件画像：")+
           esc(p.name_zh)+ui(". See the conditional-profile section below.","。详见下方条件画像栏目。")+'</div>');
       }
+      void showMaps(tag,identity,thisToken,language());
       void showRoutes(tag,focusTag,thisToken);
       if($("missionReader")){
         missionSession={tag,token:thisToken,locale:language(),focusTag,missionId:params.get("mission")||"",
